@@ -55,7 +55,7 @@ const topicPool={
 function buildExercises(){
   const list=[];
   let id=1;
-  const per=[32,32,32,45,45,38,45,24,24,40,40,24,22,24,32,35,45,28,30,30,24,35,32,30,55,32,28,30,35,22,25,30,30,28,25,25,54];
+  const per=[32,32,32,32,32,32,32,32,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31];
   categories.forEach((cat,ci)=>{
     const n=per[ci]||30;
     const topics=topicPool[cat]||["تمرین عملی"];
@@ -64,7 +64,7 @@ function buildExercises(){
       const difficulty=j<Math.ceil(n*.45)?"آسان":j<Math.ceil(n*.82)?"متوسط":"سخت";
       const number=id++;
       list.push({
-        id:number,title:`${topic} — تمرین عملی`,level:difficulty,category:cat,
+        id:number,title:`${topic} — سناریوی ${j+1}`,level:difficulty,category:cat,
         statement:makeStatement(cat,topic,j,difficulty),
         example:makeExample(cat,topic,j),
         starter:starterCode(cat,topic),
