@@ -171,32 +171,27 @@ async function runCode(){
   $("output").textContent="در حال اجرای Python...";
   try{
     const py=await loadPyodide();
-    const inputs=e.tests.map(t=>t.input);
-    const result=await py.runPythonAsync(`
+    const results=[];
+    for(const test of e.tests){
+      const result=await py.runPythonAsync(`
 import io, contextlib, builtins
-_inputs = ${JSON.stringify(inputs)}
-_i = 0
 _old = builtins.input
-def _input(prompt=""):
-    global _i
-    v = _inputs[_i]
-    _i += 1
-    return v
-builtins.input = _input
+builtins.input = lambda prompt="": ${JSON.stringify(test.input)}
 _out = io.StringIO()
 try:
     with contextlib.redirect_stdout(_out):
         exec(${JSON.stringify(code)}, {})
-    print(_out.getvalue())
+    print(_out.getvalue().rstrip())
 finally:
     builtins.input = _old
 `);
-    $("output").textContent=result||"برنامه خروجی تولید نکرد.";
-    const lines=(result||"").trim().split(/\n/);
+      results.push(result.trim());
+    }
+    $("output").textContent=results.map((x,i)=>"Test "+(i+1)+": "+(x||"بدون خروجی")).join("\\n");
     let passed=0;
     document.querySelectorAll(".test").forEach((el,i)=>{
-      const ok=(lines[i]||"").trim()===String(e.tests[i].expected).trim();
-      el.textContent=(ok?"✅":"❌")+ " Test "+(i+1); el.className="test "+(ok?"ok":"fail"); if(ok)passed++;
+      const ok=results[i]===String(e.tests[i].expected).trim();
+      el.textContent=(ok?"✅":"❌")+" Test "+(i+1); el.className="test "+(ok?"ok":"fail"); if(ok)passed++;
     });
     if(passed===e.tests.length){if(!solved.includes(e.id)){solved.push(e.id);localStorage.setItem("python-mastery-solved",JSON.stringify(solved));updateProgress()}}
   }catch(err){$("output").textContent="خطا: "+err}
