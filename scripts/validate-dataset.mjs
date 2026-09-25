@@ -12,6 +12,9 @@ const required = ["id","title","level","category","topic","statement","examples"
 const ids = new Set();
 const titles = new Map();
 const statements = new Map();
+const solutions = new Map();
+const starterCodes = new Map();
+const testSignatures = new Map();
 
 for (const e of exercises) {
   for (const key of required) {
@@ -26,13 +29,34 @@ for (const e of exercises) {
   if (!Array.isArray(e.hints) || e.hints.length < 2) errors.push(`Exercise ${e.id}: fewer than 2 hints`);
   const title = String(e.title);
   const statement = String(e.statement);
+  const solution = String(e.solution);
+  const starterCode = String(e.starter_code);
+  const testSignature = JSON.stringify(e.tests);
   titles.set(title, (titles.get(title) || 0) + 1);
   statements.set(statement, (statements.get(statement) || 0) + 1);
+  solutions.set(solution, (solutions.get(solution) || 0) + 1);
+  starterCodes.set(starterCode, (starterCodes.get(starterCode) || 0) + 1);
+  testSignatures.set(testSignature, (testSignatures.get(testSignature) || 0) + 1);
+
+  const genericMarkers = [
+    "نمونه تمرین",
+    "تمرین مشابه",
+    "کد مناسب",
+    "پیاده سازی کنید",
+    "مقدار ورودی را دریافت کنید"
+  ];
+  const searchable = `${e.statement} ${e.solution} ${e.starter_code}`;
+  if (genericMarkers.some(marker => searchable.includes(marker))) {
+    warnings.push(`Exercise ${e.id}: possible generic/template content`);
+  }
 }
 
 for (let i=1;i<=1155;i++) if (!ids.has(i)) errors.push(`Missing id: ${i}`);
 for (const [k,v] of titles) if (v>1) warnings.push(`Duplicate title x${v}: ${k}`);
 for (const [k,v] of statements) if (v>5) warnings.push(`Repeated statement x${v}: ${k}`);
+for (const [k,v] of solutions) if (v>3) warnings.push(`Repeated solution x${v}: ${k.slice(0,120)}`);
+for (const [k,v] of starterCodes) if (v>3) warnings.push(`Repeated starter_code x${v}: ${k.slice(0,120)}`);
+for (const [k,v] of testSignatures) if (v>3) warnings.push(`Repeated test suite x${v}: ${k.slice(0,160)}`);
 
 if (warnings.length) console.warn(warnings.join("\n"));
 if (errors.length) {
