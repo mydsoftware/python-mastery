@@ -195,13 +195,24 @@ function exportExercises(){
   const blob=new Blob([JSON.stringify(exercises.map(buildExerciseRecord),null,2)],{type:"application/json"});
   const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="exercises.json";a.click();
 }
-const exercises=buildExercises();
+let exercises=[];
 let current=0, pyodide=null;
 const solved=JSON.parse(localStorage.getItem("python-mastery-solved")||"[]");
 
 const $=id=>document.getElementById(id);
 function fa(n){return String(n).replace(/\d/g,d=>"۰۱۲۳۴۵۶۷۸۹"[d]);}
-function init(){
+async function init(){
+  try{
+    const response=await fetch("./data/exercises.json",{cache:"no-store"});
+    if(!response.ok) throw new Error("خطا در دریافت دیتاست: "+response.status);
+    exercises=await response.json();
+    if(!Array.isArray(exercises)||exercises.length!==1155) throw new Error("دیتاست باید دقیقاً ۱۱۵۵ تمرین داشته باشد.");
+    exercises=exercises.map(e=>({...e,example:Array.isArray(e.examples)?e.examples.join("\n"):String(e.examples||""),starter:e.starter_code||"",answer:e.solution||""}));
+  }catch(error){
+    console.error(error);
+    $("exercise").innerHTML='<div class="card"><h2>خطا در بارگذاری تمرین‌ها</h2><p>'+escapeHtml(String(error))+'</p></div>';
+    return;
+  }
   $("category").innerHTML='<option value="">همه مباحث</option>'+categories.map(x=>`<option>${x}</option>`).join("");
   renderList(); renderExercise(0); updateProgress();
   $("search").oninput=renderList; $("category").onchange=renderList; $("difficulty").onchange=renderList;
