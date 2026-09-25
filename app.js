@@ -184,6 +184,17 @@ function hintsFor(cat,topic){
   return [`ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.`,`منطق «${topic}» را به چند گام کوچک تقسیم کنید.`,`خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید.`];
 }
 
+function buildExerciseRecord(e){
+  return {
+    id:e.id,title:e.title,level:e.level,category:e.category,topic:e.title.split(" — ")[0],
+    statement:e.statement,examples:[e.example],starter_code:e.starter,solution:e.answer,
+    tests:e.tests,hints:e.hints,concepts:[e.category]
+  };
+}
+function exportExercises(){
+  const blob=new Blob([JSON.stringify(exercises.map(buildExerciseRecord),null,2)],{type:"application/json"});
+  const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="exercises.json";a.click();
+}
 const exercises=buildExercises();
 let current=0, pyodide=null;
 const solved=JSON.parse(localStorage.getItem("python-mastery-solved")||"[]");
@@ -273,5 +284,5 @@ function updateProgress(){
   $("progressText").textContent=fa(solved.length)+" / ۱۱۵۵";
   $("progressBar").style.width=(solved.length/1155*100)+"%";
 }
-window.runCode=runCode;window.toggleAnswer=toggleAnswer;window.resetCode=resetCode;
+window.runCode=runCode;window.toggleAnswer=toggleAnswer;window.resetCode=resetCode;window.exportExercises=exportExercises;
 init();
