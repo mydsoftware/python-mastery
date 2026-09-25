@@ -162,7 +162,7 @@ async function loadPyodide(){
   const script=document.createElement("script"); script.src=PYODIDE_MIRRORS[0]+"pyodide.js";
   document.head.appendChild(script);
   await new Promise((resolve,reject)=>{script.onload=resolve;script.onerror=reject});
-  pyodide=await loadPyodide({indexURL:PYODIDE_MIRRORS[0]});
+  pyodide=await window.loadPyodide({indexURL:PYODIDE_MIRRORS[0]});
   return pyodide;
 }
 async function runCode(){
