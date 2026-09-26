@@ -36001,16 +36001,16 @@
   },
   {
     "id": 1001,
-    "title": "URL parsing — تمرین کاربردی 1",
+    "title": "URL parsing 1 — Networking — تمرین 1001",
     "level": "آسان",
     "category": "Networking",
     "topic": "URL parsing 1",
-    "statement": "یک URL دریافت کنید و scheme آن را چاپ کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "یک URL دریافت کنید و scheme آن را چاپ کنید. این سناریوی شماره 1001 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nhttps://example.com\nخروجی:\nhttps"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 1\nfrom urllib.parse import urlparse\nprint(urlparse(input()).scheme)",
+    "solution": "# Networking / variant 1001\nfrom urllib.parse import urlparse\nprint(urlparse(input()).scheme)",
     "tests": [
       {
         "input": "https://example.com",
@@ -36037,16 +36037,16 @@
   },
   {
     "id": 1002,
-    "title": "query — تمرین کاربردی 2",
+    "title": "query 1 — Networking — تمرین 1002",
     "level": "آسان",
     "category": "Networking",
     "topic": "query 1",
-    "statement": "پارامتر name را از URL استخراج کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "پارامتر name را از URL استخراج کنید. این سناریوی شماره 1002 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nhttps://x/?name=Ali\nخروجی:\nAli"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 2\nfrom urllib.parse import urlparse,parse_qs\nprint(parse_qs(urlparse(input()).query).get(\"name\",[\"\"])[0])",
+    "solution": "# Networking / variant 1002\nfrom urllib.parse import urlparse,parse_qs\nprint(parse_qs(urlparse(input()).query).get(\"name\",[\"\"])[0])",
     "tests": [
       {
         "input": "https://x/?name=Ali",
@@ -36073,16 +36073,16 @@
   },
   {
     "id": 1003,
-    "title": "status — تمرین کاربردی 3",
+    "title": "status 1 — Networking — تمرین 1003",
     "level": "آسان",
     "category": "Networking",
     "topic": "status 1",
-    "statement": "کد HTTP را دسته‌بندی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "کد HTTP را دسته‌بندی کنید. این سناریوی شماره 1003 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n200\nخروجی:\nsuccess"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 3\nc=int(input()); print(\"success\" if 200<=c<300 else \"redirect\" if 300<=c<400 else \"error\")",
+    "solution": "# Networking / variant 1003\nc=int(input()); print(\"success\" if 200<=c<300 else \"redirect\" if 300<=c<400 else \"error\")",
     "tests": [
       {
         "input": "200",
@@ -36109,16 +36109,16 @@
   },
   {
     "id": 1004,
-    "title": "port — تمرین کاربردی 4",
+    "title": "port 1 — Networking — تمرین 1004",
     "level": "آسان",
     "category": "Networking",
     "topic": "port 1",
-    "statement": "اعتبار شماره پورت را بررسی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "اعتبار شماره پورت را بررسی کنید. این سناریوی شماره 1004 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n80\nخروجی:\nvalid"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 4\np=int(input()); print(\"valid\" if 1<=p<=65535 else \"invalid\")",
+    "solution": "# Networking / variant 1004\np=int(input()); print(\"valid\" if 1<=p<=65535 else \"invalid\")",
     "tests": [
       {
         "input": "80",
@@ -36145,16 +36145,16 @@
   },
   {
     "id": 1005,
-    "title": "IPv4 — تمرین کاربردی 5",
+    "title": "IPv4 1 — Networking — تمرین 1005",
     "level": "آسان",
     "category": "Networking",
     "topic": "IPv4 1",
-    "statement": "یک IPv4 معتبر را تشخیص دهید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "یک IPv4 معتبر را تشخیص دهید. این سناریوی شماره 1005 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n192.168.1.1\nخروجی:\nvalid"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 5\np=input().split(\".\"); print(\"valid\" if len(p)==4 and all(x.isdigit() and int(x)<=255 for x in p) else \"invalid\")",
+    "solution": "# Networking / variant 1005\np=input().split(\".\"); print(\"valid\" if len(p)==4 and all(x.isdigit() and int(x)<=255 for x in p) else \"invalid\")",
     "tests": [
       {
         "input": "192.168.1.1",
@@ -36181,16 +36181,16 @@
   },
   {
     "id": 1006,
-    "title": "encode — تمرین کاربردی 6",
+    "title": "encode 1 — Networking — تمرین 1006",
     "level": "آسان",
     "category": "Networking",
     "topic": "encode 1",
-    "statement": "یک query value را URL-encode کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "یک query value را URL-encode کنید. این سناریوی شماره 1006 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nhello world\nخروجی:\nhello%20world"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 6\nfrom urllib.parse import quote\nprint(quote(input(),safe=\"\"))",
+    "solution": "# Networking / variant 1006\nfrom urllib.parse import quote\nprint(quote(input(),safe=\"\"))",
     "tests": [
       {
         "input": "hello world",
@@ -36217,16 +36217,16 @@
   },
   {
     "id": 1007,
-    "title": "decode — تمرین کاربردی 7",
+    "title": "decode 1 — Networking — تمرین 1007",
     "level": "آسان",
     "category": "Networking",
     "topic": "decode 1",
-    "statement": "یک مقدار URL-encoded را decode کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "یک مقدار URL-encoded را decode کنید. این سناریوی شماره 1007 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nhello%20world\nخروجی:\nhello world"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 7\nfrom urllib.parse import unquote\nprint(unquote(input()))",
+    "solution": "# Networking / variant 1007\nfrom urllib.parse import unquote\nprint(unquote(input()))",
     "tests": [
       {
         "input": "hello%20world",
@@ -36253,16 +36253,16 @@
   },
   {
     "id": 1008,
-    "title": "method — تمرین کاربردی 8",
+    "title": "method 1 — Networking — تمرین 1008",
     "level": "آسان",
     "category": "Networking",
     "topic": "method 1",
-    "statement": "متد HTTP را safe یا unsafe کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "متد HTTP را safe یا unsafe کنید. این سناریوی شماره 1008 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nGET\nخروجی:\nsafe"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 8\nm=input().upper(); print(\"safe\" if m in {\"GET\",\"HEAD\",\"OPTIONS\"} else \"unsafe\")",
+    "solution": "# Networking / variant 1008\nm=input().upper(); print(\"safe\" if m in {\"GET\",\"HEAD\",\"OPTIONS\"} else \"unsafe\")",
     "tests": [
       {
         "input": "GET",
@@ -36289,16 +36289,16 @@
   },
   {
     "id": 1009,
-    "title": "content-type — تمرین کاربردی 9",
+    "title": "content-type 1 — Networking — تمرین 1009",
     "level": "آسان",
     "category": "Networking",
     "topic": "content-type 1",
-    "statement": "Content-Type را به json/text/binary تبدیل کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "Content-Type را به json/text/binary تبدیل کنید. این سناریوی شماره 1009 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\napplication/json\nخروجی:\njson"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 9\ns=input().lower(); print(\"json\" if \"json\" in s else \"text\" if s.startswith(\"text/\") else \"binary\")",
+    "solution": "# Networking / variant 1009\ns=input().lower(); print(\"json\" if \"json\" in s else \"text\" if s.startswith(\"text/\") else \"binary\")",
     "tests": [
       {
         "input": "application/json",
@@ -36325,16 +36325,16 @@
   },
   {
     "id": 1010,
-    "title": "path — تمرین کاربردی 10",
+    "title": "path 1 — Networking — تمرین 1010",
     "level": "آسان",
     "category": "Networking",
     "topic": "path 1",
-    "statement": "path یک URL را استخراج کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "path یک URL را استخراج کنید. این سناریوی شماره 1010 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nhttps://x/api\nخروجی:\n/api"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 10\nfrom urllib.parse import urlparse\nprint(urlparse(input()).path or \"/\")",
+    "solution": "# Networking / variant 1010\nfrom urllib.parse import urlparse\nprint(urlparse(input()).path or \"/\")",
     "tests": [
       {
         "input": "https://x/api",
@@ -36361,16 +36361,16 @@
   },
   {
     "id": 1011,
-    "title": "URL parsing — تمرین کاربردی 11",
+    "title": "URL parsing 2 — Networking — تمرین 1011",
     "level": "آسان",
     "category": "Networking",
     "topic": "URL parsing 2",
-    "statement": "یک URL دریافت کنید و scheme آن را چاپ کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "یک URL دریافت کنید و scheme آن را چاپ کنید. این سناریوی شماره 1011 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nhttps://example.com\nخروجی:\nhttps"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 11\nfrom urllib.parse import urlparse\nprint(urlparse(input()).scheme)",
+    "solution": "# Networking / variant 1011\nfrom urllib.parse import urlparse\nprint(urlparse(input()).scheme)",
     "tests": [
       {
         "input": "https://example.com",
@@ -36397,16 +36397,16 @@
   },
   {
     "id": 1012,
-    "title": "query — تمرین کاربردی 12",
+    "title": "query 2 — Networking — تمرین 1012",
     "level": "آسان",
     "category": "Networking",
     "topic": "query 2",
-    "statement": "پارامتر name را از URL استخراج کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "پارامتر name را از URL استخراج کنید. این سناریوی شماره 1012 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nhttps://x/?name=Ali\nخروجی:\nAli"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 12\nfrom urllib.parse import urlparse,parse_qs\nprint(parse_qs(urlparse(input()).query).get(\"name\",[\"\"])[0])",
+    "solution": "# Networking / variant 1012\nfrom urllib.parse import urlparse,parse_qs\nprint(parse_qs(urlparse(input()).query).get(\"name\",[\"\"])[0])",
     "tests": [
       {
         "input": "https://x/?name=Ali",
@@ -36433,16 +36433,16 @@
   },
   {
     "id": 1013,
-    "title": "status — تمرین کاربردی 13",
+    "title": "status 2 — Networking — تمرین 1013",
     "level": "آسان",
     "category": "Networking",
     "topic": "status 2",
-    "statement": "کد HTTP را دسته‌بندی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "کد HTTP را دسته‌بندی کنید. این سناریوی شماره 1013 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n200\nخروجی:\nsuccess"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 13\nc=int(input()); print(\"success\" if 200<=c<300 else \"redirect\" if 300<=c<400 else \"error\")",
+    "solution": "# Networking / variant 1013\nc=int(input()); print(\"success\" if 200<=c<300 else \"redirect\" if 300<=c<400 else \"error\")",
     "tests": [
       {
         "input": "200",
@@ -36469,16 +36469,16 @@
   },
   {
     "id": 1014,
-    "title": "port — تمرین کاربردی 14",
+    "title": "port 2 — Networking — تمرین 1014",
     "level": "آسان",
     "category": "Networking",
     "topic": "port 2",
-    "statement": "اعتبار شماره پورت را بررسی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "اعتبار شماره پورت را بررسی کنید. این سناریوی شماره 1014 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n80\nخروجی:\nvalid"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 14\np=int(input()); print(\"valid\" if 1<=p<=65535 else \"invalid\")",
+    "solution": "# Networking / variant 1014\np=int(input()); print(\"valid\" if 1<=p<=65535 else \"invalid\")",
     "tests": [
       {
         "input": "80",
@@ -36505,16 +36505,16 @@
   },
   {
     "id": 1015,
-    "title": "IPv4 — تمرین کاربردی 15",
+    "title": "IPv4 2 — Networking — تمرین 1015",
     "level": "متوسط",
     "category": "Networking",
     "topic": "IPv4 2",
-    "statement": "یک IPv4 معتبر را تشخیص دهید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "یک IPv4 معتبر را تشخیص دهید. این سناریوی شماره 1015 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n192.168.1.1\nخروجی:\nvalid"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 15\np=input().split(\".\"); print(\"valid\" if len(p)==4 and all(x.isdigit() and int(x)<=255 for x in p) else \"invalid\")",
+    "solution": "# Networking / variant 1015\np=input().split(\".\"); print(\"valid\" if len(p)==4 and all(x.isdigit() and int(x)<=255 for x in p) else \"invalid\")",
     "tests": [
       {
         "input": "192.168.1.1",
@@ -36541,16 +36541,16 @@
   },
   {
     "id": 1016,
-    "title": "encode — تمرین کاربردی 16",
+    "title": "encode 2 — Networking — تمرین 1016",
     "level": "متوسط",
     "category": "Networking",
     "topic": "encode 2",
-    "statement": "یک query value را URL-encode کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "یک query value را URL-encode کنید. این سناریوی شماره 1016 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nhello world\nخروجی:\nhello%20world"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 16\nfrom urllib.parse import quote\nprint(quote(input(),safe=\"\"))",
+    "solution": "# Networking / variant 1016\nfrom urllib.parse import quote\nprint(quote(input(),safe=\"\"))",
     "tests": [
       {
         "input": "hello world",
@@ -36577,16 +36577,16 @@
   },
   {
     "id": 1017,
-    "title": "decode — تمرین کاربردی 17",
+    "title": "decode 2 — Networking — تمرین 1017",
     "level": "متوسط",
     "category": "Networking",
     "topic": "decode 2",
-    "statement": "یک مقدار URL-encoded را decode کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "یک مقدار URL-encoded را decode کنید. این سناریوی شماره 1017 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nhello%20world\nخروجی:\nhello world"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 17\nfrom urllib.parse import unquote\nprint(unquote(input()))",
+    "solution": "# Networking / variant 1017\nfrom urllib.parse import unquote\nprint(unquote(input()))",
     "tests": [
       {
         "input": "hello%20world",
@@ -36613,16 +36613,16 @@
   },
   {
     "id": 1018,
-    "title": "method — تمرین کاربردی 18",
+    "title": "method 2 — Networking — تمرین 1018",
     "level": "متوسط",
     "category": "Networking",
     "topic": "method 2",
-    "statement": "متد HTTP را safe یا unsafe کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "متد HTTP را safe یا unsafe کنید. این سناریوی شماره 1018 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nGET\nخروجی:\nsafe"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 18\nm=input().upper(); print(\"safe\" if m in {\"GET\",\"HEAD\",\"OPTIONS\"} else \"unsafe\")",
+    "solution": "# Networking / variant 1018\nm=input().upper(); print(\"safe\" if m in {\"GET\",\"HEAD\",\"OPTIONS\"} else \"unsafe\")",
     "tests": [
       {
         "input": "GET",
@@ -36649,16 +36649,16 @@
   },
   {
     "id": 1019,
-    "title": "content-type — تمرین کاربردی 19",
+    "title": "content-type 2 — Networking — تمرین 1019",
     "level": "متوسط",
     "category": "Networking",
     "topic": "content-type 2",
-    "statement": "Content-Type را به json/text/binary تبدیل کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "Content-Type را به json/text/binary تبدیل کنید. این سناریوی شماره 1019 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\napplication/json\nخروجی:\njson"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 19\ns=input().lower(); print(\"json\" if \"json\" in s else \"text\" if s.startswith(\"text/\") else \"binary\")",
+    "solution": "# Networking / variant 1019\ns=input().lower(); print(\"json\" if \"json\" in s else \"text\" if s.startswith(\"text/\") else \"binary\")",
     "tests": [
       {
         "input": "application/json",
@@ -36685,16 +36685,16 @@
   },
   {
     "id": 1020,
-    "title": "path — تمرین کاربردی 20",
+    "title": "path 2 — Networking — تمرین 1020",
     "level": "متوسط",
     "category": "Networking",
     "topic": "path 2",
-    "statement": "path یک URL را استخراج کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "path یک URL را استخراج کنید. این سناریوی شماره 1020 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nhttps://x/api\nخروجی:\n/api"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 20\nfrom urllib.parse import urlparse\nprint(urlparse(input()).path or \"/\")",
+    "solution": "# Networking / variant 1020\nfrom urllib.parse import urlparse\nprint(urlparse(input()).path or \"/\")",
     "tests": [
       {
         "input": "https://x/api",
@@ -36721,16 +36721,16 @@
   },
   {
     "id": 1021,
-    "title": "URL parsing — تمرین کاربردی 21",
+    "title": "URL parsing 3 — Networking — تمرین 1021",
     "level": "متوسط",
     "category": "Networking",
     "topic": "URL parsing 3",
-    "statement": "یک URL دریافت کنید و scheme آن را چاپ کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "یک URL دریافت کنید و scheme آن را چاپ کنید. این سناریوی شماره 1021 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nhttps://example.com\nخروجی:\nhttps"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 21\nfrom urllib.parse import urlparse\nprint(urlparse(input()).scheme)",
+    "solution": "# Networking / variant 1021\nfrom urllib.parse import urlparse\nprint(urlparse(input()).scheme)",
     "tests": [
       {
         "input": "https://example.com",
@@ -36757,16 +36757,16 @@
   },
   {
     "id": 1022,
-    "title": "query — تمرین کاربردی 22",
+    "title": "query 3 — Networking — تمرین 1022",
     "level": "متوسط",
     "category": "Networking",
     "topic": "query 3",
-    "statement": "پارامتر name را از URL استخراج کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "پارامتر name را از URL استخراج کنید. این سناریوی شماره 1022 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nhttps://x/?name=Ali\nخروجی:\nAli"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 22\nfrom urllib.parse import urlparse,parse_qs\nprint(parse_qs(urlparse(input()).query).get(\"name\",[\"\"])[0])",
+    "solution": "# Networking / variant 1022\nfrom urllib.parse import urlparse,parse_qs\nprint(parse_qs(urlparse(input()).query).get(\"name\",[\"\"])[0])",
     "tests": [
       {
         "input": "https://x/?name=Ali",
@@ -36793,16 +36793,16 @@
   },
   {
     "id": 1023,
-    "title": "status — تمرین کاربردی 23",
+    "title": "status 3 — Networking — تمرین 1023",
     "level": "متوسط",
     "category": "Networking",
     "topic": "status 3",
-    "statement": "کد HTTP را دسته‌بندی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "کد HTTP را دسته‌بندی کنید. این سناریوی شماره 1023 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n200\nخروجی:\nsuccess"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 23\nc=int(input()); print(\"success\" if 200<=c<300 else \"redirect\" if 300<=c<400 else \"error\")",
+    "solution": "# Networking / variant 1023\nc=int(input()); print(\"success\" if 200<=c<300 else \"redirect\" if 300<=c<400 else \"error\")",
     "tests": [
       {
         "input": "200",
@@ -36829,16 +36829,16 @@
   },
   {
     "id": 1024,
-    "title": "port — تمرین کاربردی 24",
+    "title": "port 3 — Networking — تمرین 1024",
     "level": "متوسط",
     "category": "Networking",
     "topic": "port 3",
-    "statement": "اعتبار شماره پورت را بررسی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "اعتبار شماره پورت را بررسی کنید. این سناریوی شماره 1024 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n80\nخروجی:\nvalid"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 24\np=int(input()); print(\"valid\" if 1<=p<=65535 else \"invalid\")",
+    "solution": "# Networking / variant 1024\np=int(input()); print(\"valid\" if 1<=p<=65535 else \"invalid\")",
     "tests": [
       {
         "input": "80",
@@ -36865,16 +36865,16 @@
   },
   {
     "id": 1025,
-    "title": "IPv4 — تمرین کاربردی 25",
+    "title": "IPv4 3 — Networking — تمرین 1025",
     "level": "متوسط",
     "category": "Networking",
     "topic": "IPv4 3",
-    "statement": "یک IPv4 معتبر را تشخیص دهید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "یک IPv4 معتبر را تشخیص دهید. این سناریوی شماره 1025 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n192.168.1.1\nخروجی:\nvalid"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 25\np=input().split(\".\"); print(\"valid\" if len(p)==4 and all(x.isdigit() and int(x)<=255 for x in p) else \"invalid\")",
+    "solution": "# Networking / variant 1025\np=input().split(\".\"); print(\"valid\" if len(p)==4 and all(x.isdigit() and int(x)<=255 for x in p) else \"invalid\")",
     "tests": [
       {
         "input": "192.168.1.1",
@@ -36901,16 +36901,16 @@
   },
   {
     "id": 1026,
-    "title": "encode — تمرین کاربردی 26",
+    "title": "encode 3 — Networking — تمرین 1026",
     "level": "متوسط",
     "category": "Networking",
     "topic": "encode 3",
-    "statement": "یک query value را URL-encode کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "یک query value را URL-encode کنید. این سناریوی شماره 1026 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nhello world\nخروجی:\nhello%20world"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 26\nfrom urllib.parse import quote\nprint(quote(input(),safe=\"\"))",
+    "solution": "# Networking / variant 1026\nfrom urllib.parse import quote\nprint(quote(input(),safe=\"\"))",
     "tests": [
       {
         "input": "hello world",
@@ -36937,16 +36937,16 @@
   },
   {
     "id": 1027,
-    "title": "decode — تمرین کاربردی 27",
+    "title": "decode 3 — Networking — تمرین 1027",
     "level": "سخت",
     "category": "Networking",
     "topic": "decode 3",
-    "statement": "یک مقدار URL-encoded را decode کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "یک مقدار URL-encoded را decode کنید. این سناریوی شماره 1027 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nhello%20world\nخروجی:\nhello world"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 27\nfrom urllib.parse import unquote\nprint(unquote(input()))",
+    "solution": "# Networking / variant 1027\nfrom urllib.parse import unquote\nprint(unquote(input()))",
     "tests": [
       {
         "input": "hello%20world",
@@ -36973,16 +36973,16 @@
   },
   {
     "id": 1028,
-    "title": "method — تمرین کاربردی 28",
+    "title": "method 3 — Networking — تمرین 1028",
     "level": "سخت",
     "category": "Networking",
     "topic": "method 3",
-    "statement": "متد HTTP را safe یا unsafe کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "متد HTTP را safe یا unsafe کنید. این سناریوی شماره 1028 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nGET\nخروجی:\nsafe"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 28\nm=input().upper(); print(\"safe\" if m in {\"GET\",\"HEAD\",\"OPTIONS\"} else \"unsafe\")",
+    "solution": "# Networking / variant 1028\nm=input().upper(); print(\"safe\" if m in {\"GET\",\"HEAD\",\"OPTIONS\"} else \"unsafe\")",
     "tests": [
       {
         "input": "GET",
@@ -37009,16 +37009,16 @@
   },
   {
     "id": 1029,
-    "title": "content-type — تمرین کاربردی 29",
+    "title": "content-type 3 — Networking — تمرین 1029",
     "level": "سخت",
     "category": "Networking",
     "topic": "content-type 3",
-    "statement": "Content-Type را به json/text/binary تبدیل کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "Content-Type را به json/text/binary تبدیل کنید. این سناریوی شماره 1029 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\napplication/json\nخروجی:\njson"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 29\ns=input().lower(); print(\"json\" if \"json\" in s else \"text\" if s.startswith(\"text/\") else \"binary\")",
+    "solution": "# Networking / variant 1029\ns=input().lower(); print(\"json\" if \"json\" in s else \"text\" if s.startswith(\"text/\") else \"binary\")",
     "tests": [
       {
         "input": "application/json",
@@ -37045,16 +37045,16 @@
   },
   {
     "id": 1030,
-    "title": "path — تمرین کاربردی 30",
+    "title": "path 3 — Networking — تمرین 1030",
     "level": "سخت",
     "category": "Networking",
     "topic": "path 3",
-    "statement": "path یک URL را استخراج کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "path یک URL را استخراج کنید. این سناریوی شماره 1030 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nhttps://x/api\nخروجی:\n/api"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 30\nfrom urllib.parse import urlparse\nprint(urlparse(input()).path or \"/\")",
+    "solution": "# Networking / variant 1030\nfrom urllib.parse import urlparse\nprint(urlparse(input()).path or \"/\")",
     "tests": [
       {
         "input": "https://x/api",
@@ -37081,16 +37081,16 @@
   },
   {
     "id": 1031,
-    "title": "URL parsing — تمرین کاربردی 31",
+    "title": "URL parsing 4 — Networking — تمرین 1031",
     "level": "سخت",
     "category": "Networking",
     "topic": "URL parsing 4",
-    "statement": "یک URL دریافت کنید و scheme آن را چاپ کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "یک URL دریافت کنید و scheme آن را چاپ کنید. این سناریوی شماره 1031 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nhttps://example.com\nخروجی:\nhttps"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Networking\n\n",
-    "solution": "# Variant 31\nfrom urllib.parse import urlparse\nprint(urlparse(input()).scheme)",
+    "solution": "# Networking / variant 1031\nfrom urllib.parse import urlparse\nprint(urlparse(input()).scheme)",
     "tests": [
       {
         "input": "https://example.com",
@@ -37117,16 +37117,16 @@
   },
   {
     "id": 1032,
-    "title": "assert — تمرین کاربردی 1",
+    "title": "assert 1 — Testing — تمرین 1032",
     "level": "آسان",
     "category": "Testing",
     "topic": "assert 1",
-    "statement": "شرط زوج بودن را به عنوان assertion بررسی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "شرط زوج بودن را به عنوان assertion بررسی کنید. این سناریوی شماره 1032 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n2\nخروجی:\npass"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 1\nn=int(input()); assert n%2==0 if n%2==0 else True; print(\"pass\")",
+    "solution": "# Testing / variant 1032\nn=int(input()); assert n%2==0 if n%2==0 else True; print(\"pass\")",
     "tests": [
       {
         "input": "2",
@@ -37153,16 +37153,16 @@
   },
   {
     "id": 1033,
-    "title": "boundary — تمرین کاربردی 2",
+    "title": "boundary 1 — Testing — تمرین 1033",
     "level": "آسان",
     "category": "Testing",
     "topic": "boundary 1",
-    "statement": "عدد را بین حداقل و حداکثر محدود کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "عدد را بین حداقل و حداکثر محدود کنید. این سناریوی شماره 1033 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n5 0 10\nخروجی:\n5"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 2\nx,lo,hi=map(int,input().split()); print(max(lo,min(hi,x)))",
+    "solution": "# Testing / variant 1033\nx,lo,hi=map(int,input().split()); print(max(lo,min(hi,x)))",
     "tests": [
       {
         "input": "5 0 10",
@@ -37189,16 +37189,16 @@
   },
   {
     "id": 1034,
-    "title": "exception — تمرین کاربردی 3",
+    "title": "exception 1 — Testing — تمرین 1034",
     "level": "آسان",
     "category": "Testing",
     "topic": "exception 1",
-    "statement": "مشخص کنید تبدیل int موفق است یا ValueError رخ می‌دهد. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "مشخص کنید تبدیل int موفق است یا ValueError رخ می‌دهد. این سناریوی شماره 1034 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n12\nخروجی:\npass"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 3\ntry: int(input()); print(\"pass\")\nexcept ValueError: print(\"expected-error\")",
+    "solution": "# Testing / variant 1034\ntry: int(input()); print(\"pass\")\nexcept ValueError: print(\"expected-error\")",
     "tests": [
       {
         "input": "12",
@@ -37225,16 +37225,16 @@
   },
   {
     "id": 1035,
-    "title": "parameterized — تمرین کاربردی 4",
+    "title": "parameterized 1 — Testing — تمرین 1035",
     "level": "آسان",
     "category": "Testing",
     "topic": "parameterized 1",
-    "statement": "تعداد اعداد مثبت را محاسبه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "تعداد اعداد مثبت را محاسبه کنید. این سناریوی شماره 1035 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n1 2 -1\nخروجی:\n2"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 4\nprint(sum(int(x)>0 for x in input().split()))",
+    "solution": "# Testing / variant 1035\nprint(sum(int(x)>0 for x in input().split()))",
     "tests": [
       {
         "input": "1 2 -1",
@@ -37261,16 +37261,16 @@
   },
   {
     "id": 1036,
-    "title": "regression — تمرین کاربردی 5",
+    "title": "regression 1 — Testing — تمرین 1036",
     "level": "آسان",
     "category": "Testing",
     "topic": "regression 1",
-    "statement": "expected و actual را مقایسه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "expected و actual را مقایسه کنید. این سناریوی شماره 1036 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nok|ok\nخروجی:\npass"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 5\na,b=input().split(\"|\",1); print(\"pass\" if a==b else \"fail\")",
+    "solution": "# Testing / variant 1036\na,b=input().split(\"|\",1); print(\"pass\" if a==b else \"fail\")",
     "tests": [
       {
         "input": "ok|ok",
@@ -37297,16 +37297,16 @@
   },
   {
     "id": 1037,
-    "title": "empty — تمرین کاربردی 6",
+    "title": "empty 1 — Testing — تمرین 1037",
     "level": "آسان",
     "category": "Testing",
     "topic": "empty 1",
-    "statement": "ورودی خالی را تست کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "ورودی خالی را تست کنید. این سناریوی شماره 1037 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n\nخروجی:\nempty"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 6\nprint(\"empty\" if input()==\"\" else \"non-empty\")",
+    "solution": "# Testing / variant 1037\nprint(\"empty\" if input()==\"\" else \"non-empty\")",
     "tests": [
       {
         "input": "",
@@ -37333,16 +37333,16 @@
   },
   {
     "id": 1038,
-    "title": "ordering — تمرین کاربردی 7",
+    "title": "ordering 1 — Testing — تمرین 1038",
     "level": "آسان",
     "category": "Testing",
     "topic": "ordering 1",
-    "statement": "خروجی مرتب deterministic تولید کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "خروجی مرتب deterministic تولید کنید. این سناریوی شماره 1038 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n3 1 2\nخروجی:\n1 2 3"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 7\nprint(*sorted(map(int,input().split())))",
+    "solution": "# Testing / variant 1038\nprint(*sorted(map(int,input().split())))",
     "tests": [
       {
         "input": "3 1 2",
@@ -37369,16 +37369,16 @@
   },
   {
     "id": 1039,
-    "title": "almost — تمرین کاربردی 8",
+    "title": "almost 1 — Testing — تمرین 1039",
     "level": "آسان",
     "category": "Testing",
     "topic": "almost 1",
-    "statement": "دو float را با tolerance مقایسه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "دو float را با tolerance مقایسه کنید. این سناریوی شماره 1039 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n1 1.01 .02\nخروجی:\npass"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 8\na,b,t=map(float,input().split()); print(\"pass\" if abs(a-b)<=t else \"fail\")",
+    "solution": "# Testing / variant 1039\na,b,t=map(float,input().split()); print(\"pass\" if abs(a-b)<=t else \"fail\")",
     "tests": [
       {
         "input": "1 1.01 .02",
@@ -37405,16 +37405,16 @@
   },
   {
     "id": 1040,
-    "title": "roundtrip — تمرین کاربردی 9",
+    "title": "roundtrip 1 — Testing — تمرین 1040",
     "level": "آسان",
     "category": "Testing",
     "topic": "roundtrip 1",
-    "statement": "برابری encode/decode متن را بررسی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "برابری encode/decode متن را بررسی کنید. این سناریوی شماره 1040 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nhello\nخروجی:\npass"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 9\ns=input(); print(\"pass\" if s.encode().decode()==s else \"fail\")",
+    "solution": "# Testing / variant 1040\ns=input(); print(\"pass\" if s.encode().decode()==s else \"fail\")",
     "tests": [
       {
         "input": "hello",
@@ -37441,16 +37441,16 @@
   },
   {
     "id": 1041,
-    "title": "smoke — تمرین کاربردی 10",
+    "title": "smoke 1 — Testing — تمرین 1041",
     "level": "آسان",
     "category": "Testing",
     "topic": "smoke 1",
-    "statement": "یک smoke test برای ورودی غیرخالی اجرا کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "یک smoke test برای ورودی غیرخالی اجرا کنید. این سناریوی شماره 1041 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nok\nخروجی:\nsmoke-pass"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 10\nprint(\"smoke-pass\" if input().strip() else \"smoke-fail\")",
+    "solution": "# Testing / variant 1041\nprint(\"smoke-pass\" if input().strip() else \"smoke-fail\")",
     "tests": [
       {
         "input": "ok",
@@ -37477,16 +37477,16 @@
   },
   {
     "id": 1042,
-    "title": "assert — تمرین کاربردی 11",
+    "title": "assert 2 — Testing — تمرین 1042",
     "level": "آسان",
     "category": "Testing",
     "topic": "assert 2",
-    "statement": "شرط زوج بودن را به عنوان assertion بررسی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "شرط زوج بودن را به عنوان assertion بررسی کنید. این سناریوی شماره 1042 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n2\nخروجی:\npass"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 11\nn=int(input()); assert n%2==0 if n%2==0 else True; print(\"pass\")",
+    "solution": "# Testing / variant 1042\nn=int(input()); assert n%2==0 if n%2==0 else True; print(\"pass\")",
     "tests": [
       {
         "input": "2",
@@ -37513,16 +37513,16 @@
   },
   {
     "id": 1043,
-    "title": "boundary — تمرین کاربردی 12",
+    "title": "boundary 2 — Testing — تمرین 1043",
     "level": "آسان",
     "category": "Testing",
     "topic": "boundary 2",
-    "statement": "عدد را بین حداقل و حداکثر محدود کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "عدد را بین حداقل و حداکثر محدود کنید. این سناریوی شماره 1043 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n5 0 10\nخروجی:\n5"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 12\nx,lo,hi=map(int,input().split()); print(max(lo,min(hi,x)))",
+    "solution": "# Testing / variant 1043\nx,lo,hi=map(int,input().split()); print(max(lo,min(hi,x)))",
     "tests": [
       {
         "input": "5 0 10",
@@ -37549,16 +37549,16 @@
   },
   {
     "id": 1044,
-    "title": "exception — تمرین کاربردی 13",
+    "title": "exception 2 — Testing — تمرین 1044",
     "level": "آسان",
     "category": "Testing",
     "topic": "exception 2",
-    "statement": "مشخص کنید تبدیل int موفق است یا ValueError رخ می‌دهد. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "مشخص کنید تبدیل int موفق است یا ValueError رخ می‌دهد. این سناریوی شماره 1044 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n12\nخروجی:\npass"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 13\ntry: int(input()); print(\"pass\")\nexcept ValueError: print(\"expected-error\")",
+    "solution": "# Testing / variant 1044\ntry: int(input()); print(\"pass\")\nexcept ValueError: print(\"expected-error\")",
     "tests": [
       {
         "input": "12",
@@ -37585,16 +37585,16 @@
   },
   {
     "id": 1045,
-    "title": "parameterized — تمرین کاربردی 14",
+    "title": "parameterized 2 — Testing — تمرین 1045",
     "level": "آسان",
     "category": "Testing",
     "topic": "parameterized 2",
-    "statement": "تعداد اعداد مثبت را محاسبه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "تعداد اعداد مثبت را محاسبه کنید. این سناریوی شماره 1045 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n1 2 -1\nخروجی:\n2"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 14\nprint(sum(int(x)>0 for x in input().split()))",
+    "solution": "# Testing / variant 1045\nprint(sum(int(x)>0 for x in input().split()))",
     "tests": [
       {
         "input": "1 2 -1",
@@ -37621,16 +37621,16 @@
   },
   {
     "id": 1046,
-    "title": "regression — تمرین کاربردی 15",
+    "title": "regression 2 — Testing — تمرین 1046",
     "level": "متوسط",
     "category": "Testing",
     "topic": "regression 2",
-    "statement": "expected و actual را مقایسه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "expected و actual را مقایسه کنید. این سناریوی شماره 1046 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nok|ok\nخروجی:\npass"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 15\na,b=input().split(\"|\",1); print(\"pass\" if a==b else \"fail\")",
+    "solution": "# Testing / variant 1046\na,b=input().split(\"|\",1); print(\"pass\" if a==b else \"fail\")",
     "tests": [
       {
         "input": "ok|ok",
@@ -37657,16 +37657,16 @@
   },
   {
     "id": 1047,
-    "title": "empty — تمرین کاربردی 16",
+    "title": "empty 2 — Testing — تمرین 1047",
     "level": "متوسط",
     "category": "Testing",
     "topic": "empty 2",
-    "statement": "ورودی خالی را تست کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "ورودی خالی را تست کنید. این سناریوی شماره 1047 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n\nخروجی:\nempty"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 16\nprint(\"empty\" if input()==\"\" else \"non-empty\")",
+    "solution": "# Testing / variant 1047\nprint(\"empty\" if input()==\"\" else \"non-empty\")",
     "tests": [
       {
         "input": "",
@@ -37693,16 +37693,16 @@
   },
   {
     "id": 1048,
-    "title": "ordering — تمرین کاربردی 17",
+    "title": "ordering 2 — Testing — تمرین 1048",
     "level": "متوسط",
     "category": "Testing",
     "topic": "ordering 2",
-    "statement": "خروجی مرتب deterministic تولید کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "خروجی مرتب deterministic تولید کنید. این سناریوی شماره 1048 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n3 1 2\nخروجی:\n1 2 3"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 17\nprint(*sorted(map(int,input().split())))",
+    "solution": "# Testing / variant 1048\nprint(*sorted(map(int,input().split())))",
     "tests": [
       {
         "input": "3 1 2",
@@ -37729,16 +37729,16 @@
   },
   {
     "id": 1049,
-    "title": "almost — تمرین کاربردی 18",
+    "title": "almost 2 — Testing — تمرین 1049",
     "level": "متوسط",
     "category": "Testing",
     "topic": "almost 2",
-    "statement": "دو float را با tolerance مقایسه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "دو float را با tolerance مقایسه کنید. این سناریوی شماره 1049 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n1 1.01 .02\nخروجی:\npass"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 18\na,b,t=map(float,input().split()); print(\"pass\" if abs(a-b)<=t else \"fail\")",
+    "solution": "# Testing / variant 1049\na,b,t=map(float,input().split()); print(\"pass\" if abs(a-b)<=t else \"fail\")",
     "tests": [
       {
         "input": "1 1.01 .02",
@@ -37765,16 +37765,16 @@
   },
   {
     "id": 1050,
-    "title": "roundtrip — تمرین کاربردی 19",
+    "title": "roundtrip 2 — Testing — تمرین 1050",
     "level": "متوسط",
     "category": "Testing",
     "topic": "roundtrip 2",
-    "statement": "برابری encode/decode متن را بررسی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "برابری encode/decode متن را بررسی کنید. این سناریوی شماره 1050 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nhello\nخروجی:\npass"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 19\ns=input(); print(\"pass\" if s.encode().decode()==s else \"fail\")",
+    "solution": "# Testing / variant 1050\ns=input(); print(\"pass\" if s.encode().decode()==s else \"fail\")",
     "tests": [
       {
         "input": "hello",
@@ -37801,16 +37801,16 @@
   },
   {
     "id": 1051,
-    "title": "smoke — تمرین کاربردی 20",
+    "title": "smoke 2 — Testing — تمرین 1051",
     "level": "متوسط",
     "category": "Testing",
     "topic": "smoke 2",
-    "statement": "یک smoke test برای ورودی غیرخالی اجرا کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "یک smoke test برای ورودی غیرخالی اجرا کنید. این سناریوی شماره 1051 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nok\nخروجی:\nsmoke-pass"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 20\nprint(\"smoke-pass\" if input().strip() else \"smoke-fail\")",
+    "solution": "# Testing / variant 1051\nprint(\"smoke-pass\" if input().strip() else \"smoke-fail\")",
     "tests": [
       {
         "input": "ok",
@@ -37837,16 +37837,16 @@
   },
   {
     "id": 1052,
-    "title": "assert — تمرین کاربردی 21",
+    "title": "assert 3 — Testing — تمرین 1052",
     "level": "متوسط",
     "category": "Testing",
     "topic": "assert 3",
-    "statement": "شرط زوج بودن را به عنوان assertion بررسی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "شرط زوج بودن را به عنوان assertion بررسی کنید. این سناریوی شماره 1052 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n2\nخروجی:\npass"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 21\nn=int(input()); assert n%2==0 if n%2==0 else True; print(\"pass\")",
+    "solution": "# Testing / variant 1052\nn=int(input()); assert n%2==0 if n%2==0 else True; print(\"pass\")",
     "tests": [
       {
         "input": "2",
@@ -37873,16 +37873,16 @@
   },
   {
     "id": 1053,
-    "title": "boundary — تمرین کاربردی 22",
+    "title": "boundary 3 — Testing — تمرین 1053",
     "level": "متوسط",
     "category": "Testing",
     "topic": "boundary 3",
-    "statement": "عدد را بین حداقل و حداکثر محدود کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "عدد را بین حداقل و حداکثر محدود کنید. این سناریوی شماره 1053 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n5 0 10\nخروجی:\n5"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 22\nx,lo,hi=map(int,input().split()); print(max(lo,min(hi,x)))",
+    "solution": "# Testing / variant 1053\nx,lo,hi=map(int,input().split()); print(max(lo,min(hi,x)))",
     "tests": [
       {
         "input": "5 0 10",
@@ -37909,16 +37909,16 @@
   },
   {
     "id": 1054,
-    "title": "exception — تمرین کاربردی 23",
+    "title": "exception 3 — Testing — تمرین 1054",
     "level": "متوسط",
     "category": "Testing",
     "topic": "exception 3",
-    "statement": "مشخص کنید تبدیل int موفق است یا ValueError رخ می‌دهد. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "مشخص کنید تبدیل int موفق است یا ValueError رخ می‌دهد. این سناریوی شماره 1054 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n12\nخروجی:\npass"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 23\ntry: int(input()); print(\"pass\")\nexcept ValueError: print(\"expected-error\")",
+    "solution": "# Testing / variant 1054\ntry: int(input()); print(\"pass\")\nexcept ValueError: print(\"expected-error\")",
     "tests": [
       {
         "input": "12",
@@ -37945,16 +37945,16 @@
   },
   {
     "id": 1055,
-    "title": "parameterized — تمرین کاربردی 24",
+    "title": "parameterized 3 — Testing — تمرین 1055",
     "level": "متوسط",
     "category": "Testing",
     "topic": "parameterized 3",
-    "statement": "تعداد اعداد مثبت را محاسبه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "تعداد اعداد مثبت را محاسبه کنید. این سناریوی شماره 1055 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n1 2 -1\nخروجی:\n2"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 24\nprint(sum(int(x)>0 for x in input().split()))",
+    "solution": "# Testing / variant 1055\nprint(sum(int(x)>0 for x in input().split()))",
     "tests": [
       {
         "input": "1 2 -1",
@@ -37981,16 +37981,16 @@
   },
   {
     "id": 1056,
-    "title": "regression — تمرین کاربردی 25",
+    "title": "regression 3 — Testing — تمرین 1056",
     "level": "متوسط",
     "category": "Testing",
     "topic": "regression 3",
-    "statement": "expected و actual را مقایسه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "expected و actual را مقایسه کنید. این سناریوی شماره 1056 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nok|ok\nخروجی:\npass"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 25\na,b=input().split(\"|\",1); print(\"pass\" if a==b else \"fail\")",
+    "solution": "# Testing / variant 1056\na,b=input().split(\"|\",1); print(\"pass\" if a==b else \"fail\")",
     "tests": [
       {
         "input": "ok|ok",
@@ -38017,16 +38017,16 @@
   },
   {
     "id": 1057,
-    "title": "empty — تمرین کاربردی 26",
+    "title": "empty 3 — Testing — تمرین 1057",
     "level": "متوسط",
     "category": "Testing",
     "topic": "empty 3",
-    "statement": "ورودی خالی را تست کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "ورودی خالی را تست کنید. این سناریوی شماره 1057 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n\nخروجی:\nempty"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 26\nprint(\"empty\" if input()==\"\" else \"non-empty\")",
+    "solution": "# Testing / variant 1057\nprint(\"empty\" if input()==\"\" else \"non-empty\")",
     "tests": [
       {
         "input": "",
@@ -38053,16 +38053,16 @@
   },
   {
     "id": 1058,
-    "title": "ordering — تمرین کاربردی 27",
+    "title": "ordering 3 — Testing — تمرین 1058",
     "level": "سخت",
     "category": "Testing",
     "topic": "ordering 3",
-    "statement": "خروجی مرتب deterministic تولید کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "خروجی مرتب deterministic تولید کنید. این سناریوی شماره 1058 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n3 1 2\nخروجی:\n1 2 3"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 27\nprint(*sorted(map(int,input().split())))",
+    "solution": "# Testing / variant 1058\nprint(*sorted(map(int,input().split())))",
     "tests": [
       {
         "input": "3 1 2",
@@ -38089,16 +38089,16 @@
   },
   {
     "id": 1059,
-    "title": "almost — تمرین کاربردی 28",
+    "title": "almost 3 — Testing — تمرین 1059",
     "level": "سخت",
     "category": "Testing",
     "topic": "almost 3",
-    "statement": "دو float را با tolerance مقایسه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "دو float را با tolerance مقایسه کنید. این سناریوی شماره 1059 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n1 1.01 .02\nخروجی:\npass"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 28\na,b,t=map(float,input().split()); print(\"pass\" if abs(a-b)<=t else \"fail\")",
+    "solution": "# Testing / variant 1059\na,b,t=map(float,input().split()); print(\"pass\" if abs(a-b)<=t else \"fail\")",
     "tests": [
       {
         "input": "1 1.01 .02",
@@ -38125,16 +38125,16 @@
   },
   {
     "id": 1060,
-    "title": "roundtrip — تمرین کاربردی 29",
+    "title": "roundtrip 3 — Testing — تمرین 1060",
     "level": "سخت",
     "category": "Testing",
     "topic": "roundtrip 3",
-    "statement": "برابری encode/decode متن را بررسی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "برابری encode/decode متن را بررسی کنید. این سناریوی شماره 1060 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nhello\nخروجی:\npass"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 29\ns=input(); print(\"pass\" if s.encode().decode()==s else \"fail\")",
+    "solution": "# Testing / variant 1060\ns=input(); print(\"pass\" if s.encode().decode()==s else \"fail\")",
     "tests": [
       {
         "input": "hello",
@@ -38161,16 +38161,16 @@
   },
   {
     "id": 1061,
-    "title": "smoke — تمرین کاربردی 30",
+    "title": "smoke 3 — Testing — تمرین 1061",
     "level": "سخت",
     "category": "Testing",
     "topic": "smoke 3",
-    "statement": "یک smoke test برای ورودی غیرخالی اجرا کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "یک smoke test برای ورودی غیرخالی اجرا کنید. این سناریوی شماره 1061 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nok\nخروجی:\nsmoke-pass"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 30\nprint(\"smoke-pass\" if input().strip() else \"smoke-fail\")",
+    "solution": "# Testing / variant 1061\nprint(\"smoke-pass\" if input().strip() else \"smoke-fail\")",
     "tests": [
       {
         "input": "ok",
@@ -38197,16 +38197,16 @@
   },
   {
     "id": 1062,
-    "title": "assert — تمرین کاربردی 31",
+    "title": "assert 4 — Testing — تمرین 1062",
     "level": "سخت",
     "category": "Testing",
     "topic": "assert 4",
-    "statement": "شرط زوج بودن را به عنوان assertion بررسی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "شرط زوج بودن را به عنوان assertion بررسی کنید. این سناریوی شماره 1062 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n2\nخروجی:\npass"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Testing\n\n",
-    "solution": "# Variant 31\nn=int(input()); assert n%2==0 if n%2==0 else True; print(\"pass\")",
+    "solution": "# Testing / variant 1062\nn=int(input()); assert n%2==0 if n%2==0 else True; print(\"pass\")",
     "tests": [
       {
         "input": "2",
@@ -38233,16 +38233,16 @@
   },
   {
     "id": 1063,
-    "title": "len — تمرین کاربردی 1",
+    "title": "len 1 — Performance — تمرین 1063",
     "level": "آسان",
     "category": "Performance",
     "topic": "len 1",
-    "statement": "تعداد عناصر ورودی را با len حساب کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "تعداد عناصر ورودی را با len حساب کنید. این سناریوی شماره 1063 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n1 2 3\nخروجی:\n3"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 1\nprint(len(input().split()))",
+    "solution": "# Performance / variant 1063\nprint(len(input().split()))",
     "tests": [
       {
         "input": "1 2 3",
@@ -38269,16 +38269,16 @@
   },
   {
     "id": 1064,
-    "title": "set — تمرین کاربردی 2",
+    "title": "set 1 — Performance — تمرین 1064",
     "level": "آسان",
     "category": "Performance",
     "topic": "set 1",
-    "statement": "تعداد اعضای مشترک دو مجموعه را حساب کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "تعداد اعضای مشترک دو مجموعه را حساب کنید. این سناریوی شماره 1064 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\na b c|b c d\nخروجی:\n2"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 2\na,b=input().split(\"|\"); print(len(set(a.split())&set(b.split())))",
+    "solution": "# Performance / variant 1064\na,b=input().split(\"|\"); print(len(set(a.split())&set(b.split())))",
     "tests": [
       {
         "input": "a b c|b c d",
@@ -38305,16 +38305,16 @@
   },
   {
     "id": 1065,
-    "title": "generator — تمرین کاربردی 3",
+    "title": "generator 1 — Performance — تمرین 1065",
     "level": "آسان",
     "category": "Performance",
     "topic": "generator 1",
-    "statement": "مجموع را با generator expression محاسبه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "مجموع را با generator expression محاسبه کنید. این سناریوی شماره 1065 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n1 2 3\nخروجی:\n6"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 3\nprint(sum(int(x) for x in input().split()))",
+    "solution": "# Performance / variant 1065\nprint(sum(int(x) for x in input().split()))",
     "tests": [
       {
         "input": "1 2 3",
@@ -38341,16 +38341,16 @@
   },
   {
     "id": 1066,
-    "title": "cache — تمرین کاربردی 4",
+    "title": "cache 1 — Performance — تمرین 1066",
     "level": "آسان",
     "category": "Performance",
     "topic": "cache 1",
-    "statement": "فیبوناچی را با cache محاسبه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "فیبوناچی را با cache محاسبه کنید. این سناریوی شماره 1066 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n0\nخروجی:\n0"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 4\nfrom functools import lru_cache\n@lru_cache(None)\ndef f(n): return n if n<2 else f(n-1)+f(n-2)\nprint(f(int(input())))",
+    "solution": "# Performance / variant 1066\nfrom functools import lru_cache\n@lru_cache(None)\ndef f(n): return n if n<2 else f(n-1)+f(n-2)\nprint(f(int(input())))",
     "tests": [
       {
         "input": "0",
@@ -38377,16 +38377,16 @@
   },
   {
     "id": 1067,
-    "title": "sort — تمرین کاربردی 5",
+    "title": "sort 1 — Performance — تمرین 1067",
     "level": "آسان",
     "category": "Performance",
     "topic": "sort 1",
-    "statement": "لیست عددی را مرتب کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "لیست عددی را مرتب کنید. این سناریوی شماره 1067 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n3 1 2\nخروجی:\n1 2 3"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 5\nprint(*sorted(map(int,input().split())))",
+    "solution": "# Performance / variant 1067\nprint(*sorted(map(int,input().split())))",
     "tests": [
       {
         "input": "3 1 2",
@@ -38413,16 +38413,16 @@
   },
   {
     "id": 1068,
-    "title": "counter — تمرین کاربردی 6",
+    "title": "counter 1 — Performance — تمرین 1068",
     "level": "آسان",
     "category": "Performance",
     "topic": "counter 1",
-    "statement": "فراوانی کلمات را حساب کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "فراوانی کلمات را حساب کنید. این سناریوی شماره 1068 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\na b a\nخروجی:\n{'a': 2, 'b': 1}"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 6\nfrom collections import Counter\nprint(dict(sorted(Counter(input().split()).items())))",
+    "solution": "# Performance / variant 1068\nfrom collections import Counter\nprint(dict(sorted(Counter(input().split()).items())))",
     "tests": [
       {
         "input": "a b a",
@@ -38449,16 +38449,16 @@
   },
   {
     "id": 1069,
-    "title": "any — تمرین کاربردی 7",
+    "title": "any 1 — Performance — تمرین 1069",
     "level": "آسان",
     "category": "Performance",
     "topic": "any 1",
-    "statement": "وجود عدد منفی را با any بررسی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "وجود عدد منفی را با any بررسی کنید. این سناریوی شماره 1069 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n1 2 -1\nخروجی:\nyes"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 7\nprint(\"yes\" if any(int(x)<0 for x in input().split()) else \"no\")",
+    "solution": "# Performance / variant 1069\nprint(\"yes\" if any(int(x)<0 for x in input().split()) else \"no\")",
     "tests": [
       {
         "input": "1 2 -1",
@@ -38485,16 +38485,16 @@
   },
   {
     "id": 1070,
-    "title": "all — تمرین کاربردی 8",
+    "title": "all 1 — Performance — تمرین 1070",
     "level": "آسان",
     "category": "Performance",
     "topic": "all 1",
-    "statement": "مثبت بودن همه اعداد را با all بررسی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "مثبت بودن همه اعداد را با all بررسی کنید. این سناریوی شماره 1070 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n1 2 3\nخروجی:\nyes"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 8\nprint(\"yes\" if all(int(x)>0 for x in input().split()) else \"no\")",
+    "solution": "# Performance / variant 1070\nprint(\"yes\" if all(int(x)>0 for x in input().split()) else \"no\")",
     "tests": [
       {
         "input": "1 2 3",
@@ -38521,16 +38521,16 @@
   },
   {
     "id": 1071,
-    "title": "comprehension — تمرین کاربردی 9",
+    "title": "comprehension 1 — Performance — تمرین 1071",
     "level": "آسان",
     "category": "Performance",
     "topic": "comprehension 1",
-    "statement": "مربع اعداد زوج را بسازید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "مربع اعداد زوج را بسازید. این سناریوی شماره 1071 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n1 2 3 4\nخروجی:\n4 16"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 9\nprint(*[int(x)**2 for x in input().split() if int(x)%2==0])",
+    "solution": "# Performance / variant 1071\nprint(*[int(x)**2 for x in input().split() if int(x)%2==0])",
     "tests": [
       {
         "input": "1 2 3 4",
@@ -38557,16 +38557,16 @@
   },
   {
     "id": 1072,
-    "title": "enumerate — تمرین کاربردی 10",
+    "title": "enumerate 1 — Performance — تمرین 1072",
     "level": "آسان",
     "category": "Performance",
     "topic": "enumerate 1",
-    "statement": "index و value را قالب‌بندی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "index و value را قالب‌بندی کنید. این سناریوی شماره 1072 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\na b\nخروجی:\n0:a 1:b"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 10\nprint(*[f\"{i}:{x}\" for i,x in enumerate(input().split())])",
+    "solution": "# Performance / variant 1072\nprint(*[f\"{i}:{x}\" for i,x in enumerate(input().split())])",
     "tests": [
       {
         "input": "a b",
@@ -38593,16 +38593,16 @@
   },
   {
     "id": 1073,
-    "title": "len — تمرین کاربردی 11",
+    "title": "len 2 — Performance — تمرین 1073",
     "level": "آسان",
     "category": "Performance",
     "topic": "len 2",
-    "statement": "تعداد عناصر ورودی را با len حساب کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "تعداد عناصر ورودی را با len حساب کنید. این سناریوی شماره 1073 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n1 2 3\nخروجی:\n3"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 11\nprint(len(input().split()))",
+    "solution": "# Performance / variant 1073\nprint(len(input().split()))",
     "tests": [
       {
         "input": "1 2 3",
@@ -38629,16 +38629,16 @@
   },
   {
     "id": 1074,
-    "title": "set — تمرین کاربردی 12",
+    "title": "set 2 — Performance — تمرین 1074",
     "level": "آسان",
     "category": "Performance",
     "topic": "set 2",
-    "statement": "تعداد اعضای مشترک دو مجموعه را حساب کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "تعداد اعضای مشترک دو مجموعه را حساب کنید. این سناریوی شماره 1074 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\na b c|b c d\nخروجی:\n2"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 12\na,b=input().split(\"|\"); print(len(set(a.split())&set(b.split())))",
+    "solution": "# Performance / variant 1074\na,b=input().split(\"|\"); print(len(set(a.split())&set(b.split())))",
     "tests": [
       {
         "input": "a b c|b c d",
@@ -38665,16 +38665,16 @@
   },
   {
     "id": 1075,
-    "title": "generator — تمرین کاربردی 13",
+    "title": "generator 2 — Performance — تمرین 1075",
     "level": "آسان",
     "category": "Performance",
     "topic": "generator 2",
-    "statement": "مجموع را با generator expression محاسبه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "مجموع را با generator expression محاسبه کنید. این سناریوی شماره 1075 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n1 2 3\nخروجی:\n6"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 13\nprint(sum(int(x) for x in input().split()))",
+    "solution": "# Performance / variant 1075\nprint(sum(int(x) for x in input().split()))",
     "tests": [
       {
         "input": "1 2 3",
@@ -38701,16 +38701,16 @@
   },
   {
     "id": 1076,
-    "title": "cache — تمرین کاربردی 14",
+    "title": "cache 2 — Performance — تمرین 1076",
     "level": "آسان",
     "category": "Performance",
     "topic": "cache 2",
-    "statement": "فیبوناچی را با cache محاسبه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "فیبوناچی را با cache محاسبه کنید. این سناریوی شماره 1076 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n0\nخروجی:\n0"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 14\nfrom functools import lru_cache\n@lru_cache(None)\ndef f(n): return n if n<2 else f(n-1)+f(n-2)\nprint(f(int(input())))",
+    "solution": "# Performance / variant 1076\nfrom functools import lru_cache\n@lru_cache(None)\ndef f(n): return n if n<2 else f(n-1)+f(n-2)\nprint(f(int(input())))",
     "tests": [
       {
         "input": "0",
@@ -38737,16 +38737,16 @@
   },
   {
     "id": 1077,
-    "title": "sort — تمرین کاربردی 15",
+    "title": "sort 2 — Performance — تمرین 1077",
     "level": "متوسط",
     "category": "Performance",
     "topic": "sort 2",
-    "statement": "لیست عددی را مرتب کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "لیست عددی را مرتب کنید. این سناریوی شماره 1077 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n3 1 2\nخروجی:\n1 2 3"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 15\nprint(*sorted(map(int,input().split())))",
+    "solution": "# Performance / variant 1077\nprint(*sorted(map(int,input().split())))",
     "tests": [
       {
         "input": "3 1 2",
@@ -38773,16 +38773,16 @@
   },
   {
     "id": 1078,
-    "title": "counter — تمرین کاربردی 16",
+    "title": "counter 2 — Performance — تمرین 1078",
     "level": "متوسط",
     "category": "Performance",
     "topic": "counter 2",
-    "statement": "فراوانی کلمات را حساب کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "فراوانی کلمات را حساب کنید. این سناریوی شماره 1078 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\na b a\nخروجی:\n{'a': 2, 'b': 1}"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 16\nfrom collections import Counter\nprint(dict(sorted(Counter(input().split()).items())))",
+    "solution": "# Performance / variant 1078\nfrom collections import Counter\nprint(dict(sorted(Counter(input().split()).items())))",
     "tests": [
       {
         "input": "a b a",
@@ -38809,16 +38809,16 @@
   },
   {
     "id": 1079,
-    "title": "any — تمرین کاربردی 17",
+    "title": "any 2 — Performance — تمرین 1079",
     "level": "متوسط",
     "category": "Performance",
     "topic": "any 2",
-    "statement": "وجود عدد منفی را با any بررسی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "وجود عدد منفی را با any بررسی کنید. این سناریوی شماره 1079 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n1 2 -1\nخروجی:\nyes"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 17\nprint(\"yes\" if any(int(x)<0 for x in input().split()) else \"no\")",
+    "solution": "# Performance / variant 1079\nprint(\"yes\" if any(int(x)<0 for x in input().split()) else \"no\")",
     "tests": [
       {
         "input": "1 2 -1",
@@ -38845,16 +38845,16 @@
   },
   {
     "id": 1080,
-    "title": "all — تمرین کاربردی 18",
+    "title": "all 2 — Performance — تمرین 1080",
     "level": "متوسط",
     "category": "Performance",
     "topic": "all 2",
-    "statement": "مثبت بودن همه اعداد را با all بررسی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "مثبت بودن همه اعداد را با all بررسی کنید. این سناریوی شماره 1080 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n1 2 3\nخروجی:\nyes"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 18\nprint(\"yes\" if all(int(x)>0 for x in input().split()) else \"no\")",
+    "solution": "# Performance / variant 1080\nprint(\"yes\" if all(int(x)>0 for x in input().split()) else \"no\")",
     "tests": [
       {
         "input": "1 2 3",
@@ -38881,16 +38881,16 @@
   },
   {
     "id": 1081,
-    "title": "comprehension — تمرین کاربردی 19",
+    "title": "comprehension 2 — Performance — تمرین 1081",
     "level": "متوسط",
     "category": "Performance",
     "topic": "comprehension 2",
-    "statement": "مربع اعداد زوج را بسازید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "مربع اعداد زوج را بسازید. این سناریوی شماره 1081 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n1 2 3 4\nخروجی:\n4 16"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 19\nprint(*[int(x)**2 for x in input().split() if int(x)%2==0])",
+    "solution": "# Performance / variant 1081\nprint(*[int(x)**2 for x in input().split() if int(x)%2==0])",
     "tests": [
       {
         "input": "1 2 3 4",
@@ -38917,16 +38917,16 @@
   },
   {
     "id": 1082,
-    "title": "enumerate — تمرین کاربردی 20",
+    "title": "enumerate 2 — Performance — تمرین 1082",
     "level": "متوسط",
     "category": "Performance",
     "topic": "enumerate 2",
-    "statement": "index و value را قالب‌بندی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "index و value را قالب‌بندی کنید. این سناریوی شماره 1082 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\na b\nخروجی:\n0:a 1:b"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 20\nprint(*[f\"{i}:{x}\" for i,x in enumerate(input().split())])",
+    "solution": "# Performance / variant 1082\nprint(*[f\"{i}:{x}\" for i,x in enumerate(input().split())])",
     "tests": [
       {
         "input": "a b",
@@ -38953,16 +38953,16 @@
   },
   {
     "id": 1083,
-    "title": "len — تمرین کاربردی 21",
+    "title": "len 3 — Performance — تمرین 1083",
     "level": "متوسط",
     "category": "Performance",
     "topic": "len 3",
-    "statement": "تعداد عناصر ورودی را با len حساب کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "تعداد عناصر ورودی را با len حساب کنید. این سناریوی شماره 1083 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n1 2 3\nخروجی:\n3"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 21\nprint(len(input().split()))",
+    "solution": "# Performance / variant 1083\nprint(len(input().split()))",
     "tests": [
       {
         "input": "1 2 3",
@@ -38989,16 +38989,16 @@
   },
   {
     "id": 1084,
-    "title": "set — تمرین کاربردی 22",
+    "title": "set 3 — Performance — تمرین 1084",
     "level": "متوسط",
     "category": "Performance",
     "topic": "set 3",
-    "statement": "تعداد اعضای مشترک دو مجموعه را حساب کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "تعداد اعضای مشترک دو مجموعه را حساب کنید. این سناریوی شماره 1084 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\na b c|b c d\nخروجی:\n2"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 22\na,b=input().split(\"|\"); print(len(set(a.split())&set(b.split())))",
+    "solution": "# Performance / variant 1084\na,b=input().split(\"|\"); print(len(set(a.split())&set(b.split())))",
     "tests": [
       {
         "input": "a b c|b c d",
@@ -39025,16 +39025,16 @@
   },
   {
     "id": 1085,
-    "title": "generator — تمرین کاربردی 23",
+    "title": "generator 3 — Performance — تمرین 1085",
     "level": "متوسط",
     "category": "Performance",
     "topic": "generator 3",
-    "statement": "مجموع را با generator expression محاسبه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "مجموع را با generator expression محاسبه کنید. این سناریوی شماره 1085 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n1 2 3\nخروجی:\n6"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 23\nprint(sum(int(x) for x in input().split()))",
+    "solution": "# Performance / variant 1085\nprint(sum(int(x) for x in input().split()))",
     "tests": [
       {
         "input": "1 2 3",
@@ -39061,16 +39061,16 @@
   },
   {
     "id": 1086,
-    "title": "cache — تمرین کاربردی 24",
+    "title": "cache 3 — Performance — تمرین 1086",
     "level": "متوسط",
     "category": "Performance",
     "topic": "cache 3",
-    "statement": "فیبوناچی را با cache محاسبه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "فیبوناچی را با cache محاسبه کنید. این سناریوی شماره 1086 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n0\nخروجی:\n0"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 24\nfrom functools import lru_cache\n@lru_cache(None)\ndef f(n): return n if n<2 else f(n-1)+f(n-2)\nprint(f(int(input())))",
+    "solution": "# Performance / variant 1086\nfrom functools import lru_cache\n@lru_cache(None)\ndef f(n): return n if n<2 else f(n-1)+f(n-2)\nprint(f(int(input())))",
     "tests": [
       {
         "input": "0",
@@ -39097,16 +39097,16 @@
   },
   {
     "id": 1087,
-    "title": "sort — تمرین کاربردی 25",
+    "title": "sort 3 — Performance — تمرین 1087",
     "level": "متوسط",
     "category": "Performance",
     "topic": "sort 3",
-    "statement": "لیست عددی را مرتب کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "لیست عددی را مرتب کنید. این سناریوی شماره 1087 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n3 1 2\nخروجی:\n1 2 3"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 25\nprint(*sorted(map(int,input().split())))",
+    "solution": "# Performance / variant 1087\nprint(*sorted(map(int,input().split())))",
     "tests": [
       {
         "input": "3 1 2",
@@ -39133,16 +39133,16 @@
   },
   {
     "id": 1088,
-    "title": "counter — تمرین کاربردی 26",
+    "title": "counter 3 — Performance — تمرین 1088",
     "level": "متوسط",
     "category": "Performance",
     "topic": "counter 3",
-    "statement": "فراوانی کلمات را حساب کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "فراوانی کلمات را حساب کنید. این سناریوی شماره 1088 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\na b a\nخروجی:\n{'a': 2, 'b': 1}"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 26\nfrom collections import Counter\nprint(dict(sorted(Counter(input().split()).items())))",
+    "solution": "# Performance / variant 1088\nfrom collections import Counter\nprint(dict(sorted(Counter(input().split()).items())))",
     "tests": [
       {
         "input": "a b a",
@@ -39169,16 +39169,16 @@
   },
   {
     "id": 1089,
-    "title": "any — تمرین کاربردی 27",
+    "title": "any 3 — Performance — تمرین 1089",
     "level": "سخت",
     "category": "Performance",
     "topic": "any 3",
-    "statement": "وجود عدد منفی را با any بررسی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "وجود عدد منفی را با any بررسی کنید. این سناریوی شماره 1089 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n1 2 -1\nخروجی:\nyes"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 27\nprint(\"yes\" if any(int(x)<0 for x in input().split()) else \"no\")",
+    "solution": "# Performance / variant 1089\nprint(\"yes\" if any(int(x)<0 for x in input().split()) else \"no\")",
     "tests": [
       {
         "input": "1 2 -1",
@@ -39205,16 +39205,16 @@
   },
   {
     "id": 1090,
-    "title": "all — تمرین کاربردی 28",
+    "title": "all 3 — Performance — تمرین 1090",
     "level": "سخت",
     "category": "Performance",
     "topic": "all 3",
-    "statement": "مثبت بودن همه اعداد را با all بررسی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "مثبت بودن همه اعداد را با all بررسی کنید. این سناریوی شماره 1090 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n1 2 3\nخروجی:\nyes"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 28\nprint(\"yes\" if all(int(x)>0 for x in input().split()) else \"no\")",
+    "solution": "# Performance / variant 1090\nprint(\"yes\" if all(int(x)>0 for x in input().split()) else \"no\")",
     "tests": [
       {
         "input": "1 2 3",
@@ -39241,16 +39241,16 @@
   },
   {
     "id": 1091,
-    "title": "comprehension — تمرین کاربردی 29",
+    "title": "comprehension 3 — Performance — تمرین 1091",
     "level": "سخت",
     "category": "Performance",
     "topic": "comprehension 3",
-    "statement": "مربع اعداد زوج را بسازید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "مربع اعداد زوج را بسازید. این سناریوی شماره 1091 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n1 2 3 4\nخروجی:\n4 16"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 29\nprint(*[int(x)**2 for x in input().split() if int(x)%2==0])",
+    "solution": "# Performance / variant 1091\nprint(*[int(x)**2 for x in input().split() if int(x)%2==0])",
     "tests": [
       {
         "input": "1 2 3 4",
@@ -39277,16 +39277,16 @@
   },
   {
     "id": 1092,
-    "title": "enumerate — تمرین کاربردی 30",
+    "title": "enumerate 3 — Performance — تمرین 1092",
     "level": "سخت",
     "category": "Performance",
     "topic": "enumerate 3",
-    "statement": "index و value را قالب‌بندی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "index و value را قالب‌بندی کنید. این سناریوی شماره 1092 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\na b\nخروجی:\n0:a 1:b"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 30\nprint(*[f\"{i}:{x}\" for i,x in enumerate(input().split())])",
+    "solution": "# Performance / variant 1092\nprint(*[f\"{i}:{x}\" for i,x in enumerate(input().split())])",
     "tests": [
       {
         "input": "a b",
@@ -39313,16 +39313,16 @@
   },
   {
     "id": 1093,
-    "title": "len — تمرین کاربردی 31",
+    "title": "len 4 — Performance — تمرین 1093",
     "level": "سخت",
     "category": "Performance",
     "topic": "len 4",
-    "statement": "تعداد عناصر ورودی را با len حساب کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "تعداد عناصر ورودی را با len حساب کنید. این سناریوی شماره 1093 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n1 2 3\nخروجی:\n3"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Performance\n\n",
-    "solution": "# Variant 31\nprint(len(input().split()))",
+    "solution": "# Performance / variant 1093\nprint(len(input().split()))",
     "tests": [
       {
         "input": "1 2 3",
@@ -39349,16 +39349,16 @@
   },
   {
     "id": 1094,
-    "title": "validation — تمرین کاربردی 1",
+    "title": "validation 1 — Security — تمرین 1094",
     "level": "آسان",
     "category": "Security",
     "topic": "validation 1",
-    "statement": "سن را اعتبارسنجی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "سن را اعتبارسنجی کنید. این سناریوی شماره 1094 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n18\nخروجی:\nvalid"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 1\ns=input();\ntry: ok=int(s)>=0\nexcept ValueError: ok=False\nprint(\"valid\" if ok else \"invalid\")",
+    "solution": "# Security / variant 1094\ns=input();\ntry: ok=int(s)>=0\nexcept ValueError: ok=False\nprint(\"valid\" if ok else \"invalid\")",
     "tests": [
       {
         "input": "18",
@@ -39385,16 +39385,16 @@
   },
   {
     "id": 1095,
-    "title": "traversal — تمرین کاربردی 2",
+    "title": "traversal 1 — Security — تمرین 1095",
     "level": "آسان",
     "category": "Security",
     "topic": "traversal 1",
-    "statement": "وجود .. در مسیر را unsafe اعلام کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "وجود .. در مسیر را unsafe اعلام کنید. این سناریوی شماره 1095 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\na/b\nخروجی:\nsafe"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 2\nfrom pathlib import PurePosixPath\nprint(\"unsafe\" if \"..\" in PurePosixPath(input()).parts else \"safe\")",
+    "solution": "# Security / variant 1095\nfrom pathlib import PurePosixPath\nprint(\"unsafe\" if \"..\" in PurePosixPath(input()).parts else \"safe\")",
     "tests": [
       {
         "input": "a/b",
@@ -39421,16 +39421,16 @@
   },
   {
     "id": 1096,
-    "title": "secret — تمرین کاربردی 3",
+    "title": "secret 1 — Security — تمرین 1096",
     "level": "آسان",
     "category": "Security",
     "topic": "secret 1",
-    "statement": "یک secret امن بسازید و فقط طول آن را گزارش کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "یک secret امن بسازید و فقط طول آن را گزارش کنید. این سناریوی شماره 1096 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n8\nخروجی:\n8"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 3\nimport secrets,string\nn=int(input()); s=\"\".join(secrets.choice(string.ascii_letters) for _ in range(n)); print(len(s))",
+    "solution": "# Security / variant 1096\nimport secrets,string\nn=int(input()); s=\"\".join(secrets.choice(string.ascii_letters) for _ in range(n)); print(len(s))",
     "tests": [
       {
         "input": "8",
@@ -39457,16 +39457,16 @@
   },
   {
     "id": 1097,
-    "title": "password — تمرین کاربردی 4",
+    "title": "password 1 — Security — تمرین 1097",
     "level": "آسان",
     "category": "Security",
     "topic": "password 1",
-    "statement": "رمز را بر اساس حداقل طول 12 بررسی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "رمز را بر اساس حداقل طول 12 بررسی کنید. این سناریوی شماره 1097 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nshort\nخروجی:\nweak"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 4\nprint(\"strong\" if len(input())>=12 else \"weak\")",
+    "solution": "# Security / variant 1097\nprint(\"strong\" if len(input())>=12 else \"weak\")",
     "tests": [
       {
         "input": "short",
@@ -39493,16 +39493,16 @@
   },
   {
     "id": 1098,
-    "title": "hash — تمرین کاربردی 5",
+    "title": "hash 1 — Security — تمرین 1098",
     "level": "آسان",
     "category": "Security",
     "topic": "hash 1",
-    "statement": "طول sha256 متن را چاپ کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "طول sha256 متن را چاپ کنید. این سناریوی شماره 1098 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\na\nخروجی:\n64"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 5\nimport hashlib\nprint(len(hashlib.sha256(input().encode()).hexdigest()))",
+    "solution": "# Security / variant 1098\nimport hashlib\nprint(len(hashlib.sha256(input().encode()).hexdigest()))",
     "tests": [
       {
         "input": "a",
@@ -39529,16 +39529,16 @@
   },
   {
     "id": 1099,
-    "title": "constant — تمرین کاربردی 6",
+    "title": "constant 1 — Security — تمرین 1099",
     "level": "آسان",
     "category": "Security",
     "topic": "constant 1",
-    "statement": "دو token را با compare_digest مقایسه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "دو token را با compare_digest مقایسه کنید. این سناریوی شماره 1099 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\na|a\nخروجی:\nmatch"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 6\nimport hmac\na,b=input().split(\"|\",1); print(\"match\" if hmac.compare_digest(a,b) else \"mismatch\")",
+    "solution": "# Security / variant 1099\nimport hmac\na,b=input().split(\"|\",1); print(\"match\" if hmac.compare_digest(a,b) else \"mismatch\")",
     "tests": [
       {
         "input": "a|a",
@@ -39565,16 +39565,16 @@
   },
   {
     "id": 1100,
-    "title": "allowlist — تمرین کاربردی 7",
+    "title": "allowlist 1 — Security — تمرین 1100",
     "level": "آسان",
     "category": "Security",
     "topic": "allowlist 1",
-    "statement": "پسوند jpg/png/pdf را مجاز اعلام کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "پسوند jpg/png/pdf را مجاز اعلام کنید. این سناریوی شماره 1100 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\na.jpg\nخروجی:\nallowed"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 7\ns=input().lower(); e=s.rsplit(\".\",1)[-1] if \".\" in s else \"\"; print(\"allowed\" if e in {\"jpg\",\"png\",\"pdf\"} else \"blocked\")",
+    "solution": "# Security / variant 1100\ns=input().lower(); e=s.rsplit(\".\",1)[-1] if \".\" in s else \"\"; print(\"allowed\" if e in {\"jpg\",\"png\",\"pdf\"} else \"blocked\")",
     "tests": [
       {
         "input": "a.jpg",
@@ -39601,16 +39601,16 @@
   },
   {
     "id": 1101,
-    "title": "shell — تمرین کاربردی 8",
+    "title": "shell 1 — Security — تمرین 1101",
     "level": "آسان",
     "category": "Security",
     "topic": "shell 1",
-    "statement": "وجود shell metacharacter را ناامن اعلام کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "وجود shell metacharacter را ناامن اعلام کنید. این سناریوی شماره 1101 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nhello\nخروجی:\nsafe"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 8\ns=input(); print(\"unsafe\" if any(c in s for c in \";|&$\") else \"safe\")",
+    "solution": "# Security / variant 1101\ns=input(); print(\"unsafe\" if any(c in s for c in \";|&$\") else \"safe\")",
     "tests": [
       {
         "input": "hello",
@@ -39637,16 +39637,16 @@
   },
   {
     "id": 1102,
-    "title": "https — تمرین کاربردی 9",
+    "title": "https 1 — Security — تمرین 1102",
     "level": "آسان",
     "category": "Security",
     "topic": "https 1",
-    "statement": "فقط لینک https را allowed کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "فقط لینک https را allowed کنید. این سناریوی شماره 1102 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nhttps://x\nخروجی:\nallowed"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 9\nfrom urllib.parse import urlparse\nprint(\"allowed\" if urlparse(input()).scheme==\"https\" else \"blocked\")",
+    "solution": "# Security / variant 1102\nfrom urllib.parse import urlparse\nprint(\"allowed\" if urlparse(input()).scheme==\"https\" else \"blocked\")",
     "tests": [
       {
         "input": "https://x",
@@ -39673,16 +39673,16 @@
   },
   {
     "id": 1103,
-    "title": "email — تمرین کاربردی 10",
+    "title": "email 1 — Security — تمرین 1103",
     "level": "آسان",
     "category": "Security",
     "topic": "email 1",
-    "statement": "یک email ساده را اعتبارسنجی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "یک email ساده را اعتبارسنجی کنید. این سناریوی شماره 1103 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\na@b.com\nخروجی:\nvalid"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 10\ns=input(); print(\"valid\" if s.count(\"@\")==1 and \".\" in s.split(\"@\")[1] else \"invalid\")",
+    "solution": "# Security / variant 1103\ns=input(); print(\"valid\" if s.count(\"@\")==1 and \".\" in s.split(\"@\")[1] else \"invalid\")",
     "tests": [
       {
         "input": "a@b.com",
@@ -39709,16 +39709,16 @@
   },
   {
     "id": 1104,
-    "title": "validation — تمرین کاربردی 11",
+    "title": "validation 2 — Security — تمرین 1104",
     "level": "آسان",
     "category": "Security",
     "topic": "validation 2",
-    "statement": "سن را اعتبارسنجی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "سن را اعتبارسنجی کنید. این سناریوی شماره 1104 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n18\nخروجی:\nvalid"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 11\ns=input();\ntry: ok=int(s)>=0\nexcept ValueError: ok=False\nprint(\"valid\" if ok else \"invalid\")",
+    "solution": "# Security / variant 1104\ns=input();\ntry: ok=int(s)>=0\nexcept ValueError: ok=False\nprint(\"valid\" if ok else \"invalid\")",
     "tests": [
       {
         "input": "18",
@@ -39745,16 +39745,16 @@
   },
   {
     "id": 1105,
-    "title": "traversal — تمرین کاربردی 12",
+    "title": "traversal 2 — Security — تمرین 1105",
     "level": "آسان",
     "category": "Security",
     "topic": "traversal 2",
-    "statement": "وجود .. در مسیر را unsafe اعلام کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "وجود .. در مسیر را unsafe اعلام کنید. این سناریوی شماره 1105 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\na/b\nخروجی:\nsafe"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 12\nfrom pathlib import PurePosixPath\nprint(\"unsafe\" if \"..\" in PurePosixPath(input()).parts else \"safe\")",
+    "solution": "# Security / variant 1105\nfrom pathlib import PurePosixPath\nprint(\"unsafe\" if \"..\" in PurePosixPath(input()).parts else \"safe\")",
     "tests": [
       {
         "input": "a/b",
@@ -39781,16 +39781,16 @@
   },
   {
     "id": 1106,
-    "title": "secret — تمرین کاربردی 13",
+    "title": "secret 2 — Security — تمرین 1106",
     "level": "آسان",
     "category": "Security",
     "topic": "secret 2",
-    "statement": "یک secret امن بسازید و فقط طول آن را گزارش کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "یک secret امن بسازید و فقط طول آن را گزارش کنید. این سناریوی شماره 1106 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n8\nخروجی:\n8"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 13\nimport secrets,string\nn=int(input()); s=\"\".join(secrets.choice(string.ascii_letters) for _ in range(n)); print(len(s))",
+    "solution": "# Security / variant 1106\nimport secrets,string\nn=int(input()); s=\"\".join(secrets.choice(string.ascii_letters) for _ in range(n)); print(len(s))",
     "tests": [
       {
         "input": "8",
@@ -39817,16 +39817,16 @@
   },
   {
     "id": 1107,
-    "title": "password — تمرین کاربردی 14",
+    "title": "password 2 — Security — تمرین 1107",
     "level": "آسان",
     "category": "Security",
     "topic": "password 2",
-    "statement": "رمز را بر اساس حداقل طول 12 بررسی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "رمز را بر اساس حداقل طول 12 بررسی کنید. این سناریوی شماره 1107 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nshort\nخروجی:\nweak"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 14\nprint(\"strong\" if len(input())>=12 else \"weak\")",
+    "solution": "# Security / variant 1107\nprint(\"strong\" if len(input())>=12 else \"weak\")",
     "tests": [
       {
         "input": "short",
@@ -39853,16 +39853,16 @@
   },
   {
     "id": 1108,
-    "title": "hash — تمرین کاربردی 15",
+    "title": "hash 2 — Security — تمرین 1108",
     "level": "متوسط",
     "category": "Security",
     "topic": "hash 2",
-    "statement": "طول sha256 متن را چاپ کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "طول sha256 متن را چاپ کنید. این سناریوی شماره 1108 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\na\nخروجی:\n64"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 15\nimport hashlib\nprint(len(hashlib.sha256(input().encode()).hexdigest()))",
+    "solution": "# Security / variant 1108\nimport hashlib\nprint(len(hashlib.sha256(input().encode()).hexdigest()))",
     "tests": [
       {
         "input": "a",
@@ -39889,16 +39889,16 @@
   },
   {
     "id": 1109,
-    "title": "constant — تمرین کاربردی 16",
+    "title": "constant 2 — Security — تمرین 1109",
     "level": "متوسط",
     "category": "Security",
     "topic": "constant 2",
-    "statement": "دو token را با compare_digest مقایسه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "دو token را با compare_digest مقایسه کنید. این سناریوی شماره 1109 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\na|a\nخروجی:\nmatch"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 16\nimport hmac\na,b=input().split(\"|\",1); print(\"match\" if hmac.compare_digest(a,b) else \"mismatch\")",
+    "solution": "# Security / variant 1109\nimport hmac\na,b=input().split(\"|\",1); print(\"match\" if hmac.compare_digest(a,b) else \"mismatch\")",
     "tests": [
       {
         "input": "a|a",
@@ -39925,16 +39925,16 @@
   },
   {
     "id": 1110,
-    "title": "allowlist — تمرین کاربردی 17",
+    "title": "allowlist 2 — Security — تمرین 1110",
     "level": "متوسط",
     "category": "Security",
     "topic": "allowlist 2",
-    "statement": "پسوند jpg/png/pdf را مجاز اعلام کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "پسوند jpg/png/pdf را مجاز اعلام کنید. این سناریوی شماره 1110 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\na.jpg\nخروجی:\nallowed"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 17\ns=input().lower(); e=s.rsplit(\".\",1)[-1] if \".\" in s else \"\"; print(\"allowed\" if e in {\"jpg\",\"png\",\"pdf\"} else \"blocked\")",
+    "solution": "# Security / variant 1110\ns=input().lower(); e=s.rsplit(\".\",1)[-1] if \".\" in s else \"\"; print(\"allowed\" if e in {\"jpg\",\"png\",\"pdf\"} else \"blocked\")",
     "tests": [
       {
         "input": "a.jpg",
@@ -39961,16 +39961,16 @@
   },
   {
     "id": 1111,
-    "title": "shell — تمرین کاربردی 18",
+    "title": "shell 2 — Security — تمرین 1111",
     "level": "متوسط",
     "category": "Security",
     "topic": "shell 2",
-    "statement": "وجود shell metacharacter را ناامن اعلام کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "وجود shell metacharacter را ناامن اعلام کنید. این سناریوی شماره 1111 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nhello\nخروجی:\nsafe"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 18\ns=input(); print(\"unsafe\" if any(c in s for c in \";|&$\") else \"safe\")",
+    "solution": "# Security / variant 1111\ns=input(); print(\"unsafe\" if any(c in s for c in \";|&$\") else \"safe\")",
     "tests": [
       {
         "input": "hello",
@@ -39997,16 +39997,16 @@
   },
   {
     "id": 1112,
-    "title": "https — تمرین کاربردی 19",
+    "title": "https 2 — Security — تمرین 1112",
     "level": "متوسط",
     "category": "Security",
     "topic": "https 2",
-    "statement": "فقط لینک https را allowed کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "فقط لینک https را allowed کنید. این سناریوی شماره 1112 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nhttps://x\nخروجی:\nallowed"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 19\nfrom urllib.parse import urlparse\nprint(\"allowed\" if urlparse(input()).scheme==\"https\" else \"blocked\")",
+    "solution": "# Security / variant 1112\nfrom urllib.parse import urlparse\nprint(\"allowed\" if urlparse(input()).scheme==\"https\" else \"blocked\")",
     "tests": [
       {
         "input": "https://x",
@@ -40033,16 +40033,16 @@
   },
   {
     "id": 1113,
-    "title": "email — تمرین کاربردی 20",
+    "title": "email 2 — Security — تمرین 1113",
     "level": "متوسط",
     "category": "Security",
     "topic": "email 2",
-    "statement": "یک email ساده را اعتبارسنجی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "یک email ساده را اعتبارسنجی کنید. این سناریوی شماره 1113 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\na@b.com\nخروجی:\nvalid"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 20\ns=input(); print(\"valid\" if s.count(\"@\")==1 and \".\" in s.split(\"@\")[1] else \"invalid\")",
+    "solution": "# Security / variant 1113\ns=input(); print(\"valid\" if s.count(\"@\")==1 and \".\" in s.split(\"@\")[1] else \"invalid\")",
     "tests": [
       {
         "input": "a@b.com",
@@ -40069,16 +40069,16 @@
   },
   {
     "id": 1114,
-    "title": "validation — تمرین کاربردی 21",
+    "title": "validation 3 — Security — تمرین 1114",
     "level": "متوسط",
     "category": "Security",
     "topic": "validation 3",
-    "statement": "سن را اعتبارسنجی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "سن را اعتبارسنجی کنید. این سناریوی شماره 1114 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n18\nخروجی:\nvalid"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 21\ns=input();\ntry: ok=int(s)>=0\nexcept ValueError: ok=False\nprint(\"valid\" if ok else \"invalid\")",
+    "solution": "# Security / variant 1114\ns=input();\ntry: ok=int(s)>=0\nexcept ValueError: ok=False\nprint(\"valid\" if ok else \"invalid\")",
     "tests": [
       {
         "input": "18",
@@ -40105,16 +40105,16 @@
   },
   {
     "id": 1115,
-    "title": "traversal — تمرین کاربردی 22",
+    "title": "traversal 3 — Security — تمرین 1115",
     "level": "متوسط",
     "category": "Security",
     "topic": "traversal 3",
-    "statement": "وجود .. در مسیر را unsafe اعلام کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "وجود .. در مسیر را unsafe اعلام کنید. این سناریوی شماره 1115 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\na/b\nخروجی:\nsafe"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 22\nfrom pathlib import PurePosixPath\nprint(\"unsafe\" if \"..\" in PurePosixPath(input()).parts else \"safe\")",
+    "solution": "# Security / variant 1115\nfrom pathlib import PurePosixPath\nprint(\"unsafe\" if \"..\" in PurePosixPath(input()).parts else \"safe\")",
     "tests": [
       {
         "input": "a/b",
@@ -40141,16 +40141,16 @@
   },
   {
     "id": 1116,
-    "title": "secret — تمرین کاربردی 23",
+    "title": "secret 3 — Security — تمرین 1116",
     "level": "متوسط",
     "category": "Security",
     "topic": "secret 3",
-    "statement": "یک secret امن بسازید و فقط طول آن را گزارش کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "یک secret امن بسازید و فقط طول آن را گزارش کنید. این سناریوی شماره 1116 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n8\nخروجی:\n8"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 23\nimport secrets,string\nn=int(input()); s=\"\".join(secrets.choice(string.ascii_letters) for _ in range(n)); print(len(s))",
+    "solution": "# Security / variant 1116\nimport secrets,string\nn=int(input()); s=\"\".join(secrets.choice(string.ascii_letters) for _ in range(n)); print(len(s))",
     "tests": [
       {
         "input": "8",
@@ -40177,16 +40177,16 @@
   },
   {
     "id": 1117,
-    "title": "password — تمرین کاربردی 24",
+    "title": "password 3 — Security — تمرین 1117",
     "level": "متوسط",
     "category": "Security",
     "topic": "password 3",
-    "statement": "رمز را بر اساس حداقل طول 12 بررسی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "رمز را بر اساس حداقل طول 12 بررسی کنید. این سناریوی شماره 1117 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nshort\nخروجی:\nweak"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 24\nprint(\"strong\" if len(input())>=12 else \"weak\")",
+    "solution": "# Security / variant 1117\nprint(\"strong\" if len(input())>=12 else \"weak\")",
     "tests": [
       {
         "input": "short",
@@ -40213,16 +40213,16 @@
   },
   {
     "id": 1118,
-    "title": "hash — تمرین کاربردی 25",
+    "title": "hash 3 — Security — تمرین 1118",
     "level": "متوسط",
     "category": "Security",
     "topic": "hash 3",
-    "statement": "طول sha256 متن را چاپ کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "طول sha256 متن را چاپ کنید. این سناریوی شماره 1118 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\na\nخروجی:\n64"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 25\nimport hashlib\nprint(len(hashlib.sha256(input().encode()).hexdigest()))",
+    "solution": "# Security / variant 1118\nimport hashlib\nprint(len(hashlib.sha256(input().encode()).hexdigest()))",
     "tests": [
       {
         "input": "a",
@@ -40249,16 +40249,16 @@
   },
   {
     "id": 1119,
-    "title": "constant — تمرین کاربردی 26",
+    "title": "constant 3 — Security — تمرین 1119",
     "level": "متوسط",
     "category": "Security",
     "topic": "constant 3",
-    "statement": "دو token را با compare_digest مقایسه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "دو token را با compare_digest مقایسه کنید. این سناریوی شماره 1119 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\na|a\nخروجی:\nmatch"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 26\nimport hmac\na,b=input().split(\"|\",1); print(\"match\" if hmac.compare_digest(a,b) else \"mismatch\")",
+    "solution": "# Security / variant 1119\nimport hmac\na,b=input().split(\"|\",1); print(\"match\" if hmac.compare_digest(a,b) else \"mismatch\")",
     "tests": [
       {
         "input": "a|a",
@@ -40285,16 +40285,16 @@
   },
   {
     "id": 1120,
-    "title": "allowlist — تمرین کاربردی 27",
+    "title": "allowlist 3 — Security — تمرین 1120",
     "level": "سخت",
     "category": "Security",
     "topic": "allowlist 3",
-    "statement": "پسوند jpg/png/pdf را مجاز اعلام کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "پسوند jpg/png/pdf را مجاز اعلام کنید. این سناریوی شماره 1120 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\na.jpg\nخروجی:\nallowed"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 27\ns=input().lower(); e=s.rsplit(\".\",1)[-1] if \".\" in s else \"\"; print(\"allowed\" if e in {\"jpg\",\"png\",\"pdf\"} else \"blocked\")",
+    "solution": "# Security / variant 1120\ns=input().lower(); e=s.rsplit(\".\",1)[-1] if \".\" in s else \"\"; print(\"allowed\" if e in {\"jpg\",\"png\",\"pdf\"} else \"blocked\")",
     "tests": [
       {
         "input": "a.jpg",
@@ -40321,16 +40321,16 @@
   },
   {
     "id": 1121,
-    "title": "shell — تمرین کاربردی 28",
+    "title": "shell 3 — Security — تمرین 1121",
     "level": "سخت",
     "category": "Security",
     "topic": "shell 3",
-    "statement": "وجود shell metacharacter را ناامن اعلام کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "وجود shell metacharacter را ناامن اعلام کنید. این سناریوی شماره 1121 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nhello\nخروجی:\nsafe"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 28\ns=input(); print(\"unsafe\" if any(c in s for c in \";|&$\") else \"safe\")",
+    "solution": "# Security / variant 1121\ns=input(); print(\"unsafe\" if any(c in s for c in \";|&$\") else \"safe\")",
     "tests": [
       {
         "input": "hello",
@@ -40357,16 +40357,16 @@
   },
   {
     "id": 1122,
-    "title": "https — تمرین کاربردی 29",
+    "title": "https 3 — Security — تمرین 1122",
     "level": "سخت",
     "category": "Security",
     "topic": "https 3",
-    "statement": "فقط لینک https را allowed کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "فقط لینک https را allowed کنید. این سناریوی شماره 1122 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nhttps://x\nخروجی:\nallowed"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 29\nfrom urllib.parse import urlparse\nprint(\"allowed\" if urlparse(input()).scheme==\"https\" else \"blocked\")",
+    "solution": "# Security / variant 1122\nfrom urllib.parse import urlparse\nprint(\"allowed\" if urlparse(input()).scheme==\"https\" else \"blocked\")",
     "tests": [
       {
         "input": "https://x",
@@ -40393,16 +40393,16 @@
   },
   {
     "id": 1123,
-    "title": "email — تمرین کاربردی 30",
+    "title": "email 3 — Security — تمرین 1123",
     "level": "سخت",
     "category": "Security",
     "topic": "email 3",
-    "statement": "یک email ساده را اعتبارسنجی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "یک email ساده را اعتبارسنجی کنید. این سناریوی شماره 1123 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\na@b.com\nخروجی:\nvalid"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 30\ns=input(); print(\"valid\" if s.count(\"@\")==1 and \".\" in s.split(\"@\")[1] else \"invalid\")",
+    "solution": "# Security / variant 1123\ns=input(); print(\"valid\" if s.count(\"@\")==1 and \".\" in s.split(\"@\")[1] else \"invalid\")",
     "tests": [
       {
         "input": "a@b.com",
@@ -40429,16 +40429,16 @@
   },
   {
     "id": 1124,
-    "title": "validation — تمرین کاربردی 31",
+    "title": "validation 4 — Security — تمرین 1124",
     "level": "سخت",
     "category": "Security",
     "topic": "validation 4",
-    "statement": "سن را اعتبارسنجی کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "سن را اعتبارسنجی کنید. این سناریوی شماره 1124 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n18\nخروجی:\nvalid"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Security\n\n",
-    "solution": "# Variant 31\ns=input();\ntry: ok=int(s)>=0\nexcept ValueError: ok=False\nprint(\"valid\" if ok else \"invalid\")",
+    "solution": "# Security / variant 1124\ns=input();\ntry: ok=int(s)>=0\nexcept ValueError: ok=False\nprint(\"valid\" if ok else \"invalid\")",
     "tests": [
       {
         "input": "18",
@@ -40465,16 +40465,16 @@
   },
   {
     "id": 1125,
-    "title": "contacts — تمرین کاربردی 1",
+    "title": "contacts 1 — پروژه‌های ترکیبی — تمرین 1125",
     "level": "آسان",
     "category": "پروژه‌های ترکیبی",
     "topic": "contacts 1",
-    "statement": "نام و شماره را به رکورد استاندارد تبدیل کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "نام و شماره را به رکورد استاندارد تبدیل کنید. این سناریوی شماره 1125 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nAli|0912\nخروجی:\nAli - 0912"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 1\nn,p=input().split(\"|\",1); print(f\"{n.strip()} - {p.strip()}\")",
+    "solution": "# پروژه‌های ترکیبی / variant 1125\nn,p=input().split(\"|\",1); print(f\"{n.strip()} - {p.strip()}\")",
     "tests": [
       {
         "input": "Ali|0912",
@@ -40501,16 +40501,16 @@
   },
   {
     "id": 1126,
-    "title": "text-analysis — تمرین کاربردی 2",
+    "title": "text-analysis 1 — پروژه‌های ترکیبی — تمرین 1126",
     "level": "آسان",
     "category": "پروژه‌های ترکیبی",
     "topic": "text-analysis 1",
-    "statement": "تعداد کلمات و حروف متن را گزارش کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "تعداد کلمات و حروف متن را گزارش کنید. این سناریوی شماره 1126 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nhello world\nخروجی:\nwords=2 chars=11"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 2\ns=input(); print(f\"words={len(s.split())} chars={len(s)}\")",
+    "solution": "# پروژه‌های ترکیبی / variant 1126\ns=input(); print(f\"words={len(s.split())} chars={len(s)}\")",
     "tests": [
       {
         "input": "hello world",
@@ -40537,16 +40537,16 @@
   },
   {
     "id": 1127,
-    "title": "expenses — تمرین کاربردی 3",
+    "title": "expenses 1 — پروژه‌های ترکیبی — تمرین 1127",
     "level": "آسان",
     "category": "پروژه‌های ترکیبی",
     "topic": "expenses 1",
-    "statement": "مجموع و میانگین هزینه‌ها را محاسبه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "مجموع و میانگین هزینه‌ها را محاسبه کنید. این سناریوی شماره 1127 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n10 20\nخروجی:\ntotal=30 average=15"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 3\nx=list(map(float,input().split())); print(f\"total={sum(x):g} average={sum(x)/len(x):g}\")",
+    "solution": "# پروژه‌های ترکیبی / variant 1127\nx=list(map(float,input().split())); print(f\"total={sum(x):g} average={sum(x)/len(x):g}\")",
     "tests": [
       {
         "input": "10 20",
@@ -40573,16 +40573,16 @@
   },
   {
     "id": 1128,
-    "title": "grades — تمرین کاربردی 4",
+    "title": "grades 1 — پروژه‌های ترکیبی — تمرین 1128",
     "level": "آسان",
     "category": "پروژه‌های ترکیبی",
     "topic": "grades 1",
-    "statement": "میانگین نمرات و وضعیت قبولی را گزارش کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "میانگین نمرات و وضعیت قبولی را گزارش کنید. این سناریوی شماره 1128 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n10 12\nخروجی:\naverage=11 status=pass"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 4\nx=list(map(float,input().split())); a=sum(x)/len(x); print(f\"average={a:g} status={'pass' if a>=10 else 'fail'}\")",
+    "solution": "# پروژه‌های ترکیبی / variant 1128\nx=list(map(float,input().split())); a=sum(x)/len(x); print(f\"average={a:g} status={'pass' if a>=10 else 'fail'}\")",
     "tests": [
       {
         "input": "10 12",
@@ -40609,16 +40609,16 @@
   },
   {
     "id": 1129,
-    "title": "inventory — تمرین کاربردی 5",
+    "title": "inventory 1 — پروژه‌های ترکیبی — تمرین 1129",
     "level": "آسان",
     "category": "پروژه‌های ترکیبی",
     "topic": "inventory 1",
-    "statement": "قیمت و تعداد را گرفته و ارزش موجودی را حساب کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "قیمت و تعداد را گرفته و ارزش موجودی را حساب کنید. این سناریوی شماره 1129 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n10 3\nخروجی:\n30"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 5\np,n=map(float,input().split()); print(f\"{p*n:g}\")",
+    "solution": "# پروژه‌های ترکیبی / variant 1129\np,n=map(float,input().split()); print(f\"{p*n:g}\")",
     "tests": [
       {
         "input": "10 3",
@@ -40645,16 +40645,16 @@
   },
   {
     "id": 1130,
-    "title": "cart — تمرین کاربردی 6",
+    "title": "cart 1 — پروژه‌های ترکیبی — تمرین 1130",
     "level": "آسان",
     "category": "پروژه‌های ترکیبی",
     "topic": "cart 1",
-    "statement": "مجموع سبد را با 9 درصد مالیات محاسبه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "مجموع سبد را با 9 درصد مالیات محاسبه کنید. این سناریوی شماره 1130 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n100\nخروجی:\n109"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 6\nt=sum(map(float,input().split())); print(f\"{t*1.09:g}\")",
+    "solution": "# پروژه‌های ترکیبی / variant 1130\nt=sum(map(float,input().split())); print(f\"{t*1.09:g}\")",
     "tests": [
       {
         "input": "100",
@@ -40681,16 +40681,16 @@
   },
   {
     "id": 1131,
-    "title": "discount — تمرین کاربردی 7",
+    "title": "discount 1 — پروژه‌های ترکیبی — تمرین 1131",
     "level": "آسان",
     "category": "پروژه‌های ترکیبی",
     "topic": "discount 1",
-    "statement": "قیمت نهایی پس از تخفیف را محاسبه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "قیمت نهایی پس از تخفیف را محاسبه کنید. این سناریوی شماره 1131 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n100 10\nخروجی:\n90"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 7\np,d=map(float,input().split()); print(f\"{p*(1-d/100):g}\")",
+    "solution": "# پروژه‌های ترکیبی / variant 1131\np,d=map(float,input().split()); print(f\"{p*(1-d/100):g}\")",
     "tests": [
       {
         "input": "100 10",
@@ -40717,16 +40717,16 @@
   },
   {
     "id": 1132,
-    "title": "invoice — تمرین کاربردی 8",
+    "title": "invoice 1 — پروژه‌های ترکیبی — تمرین 1132",
     "level": "آسان",
     "category": "پروژه‌های ترکیبی",
     "topic": "invoice 1",
-    "statement": "فاکتور دو قلم کالا را محاسبه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "فاکتور دو قلم کالا را محاسبه کنید. این سناریوی شماره 1132 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n10 2 5 3\nخروجی:\n35"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 8\na,qa,b,qb=map(float,input().split()); print(f\"{a*qa+b*qb:g}\")",
+    "solution": "# پروژه‌های ترکیبی / variant 1132\na,qa,b,qb=map(float,input().split()); print(f\"{a*qa+b*qb:g}\")",
     "tests": [
       {
         "input": "10 2 5 3",
@@ -40753,16 +40753,16 @@
   },
   {
     "id": 1133,
-    "title": "budget — تمرین کاربردی 9",
+    "title": "budget 1 — پروژه‌های ترکیبی — تمرین 1133",
     "level": "آسان",
     "category": "پروژه‌های ترکیبی",
     "topic": "budget 1",
-    "statement": "مانده بودجه را از درآمد و هزینه حساب کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "مانده بودجه را از درآمد و هزینه حساب کنید. این سناریوی شماره 1133 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n100 40\nخروجی:\n60"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 9\na,b=map(float,input().split()); print(f\"{a-b:g}\")",
+    "solution": "# پروژه‌های ترکیبی / variant 1133\na,b=map(float,input().split()); print(f\"{a-b:g}\")",
     "tests": [
       {
         "input": "100 40",
@@ -40789,16 +40789,16 @@
   },
   {
     "id": 1134,
-    "title": "stock — تمرین کاربردی 10",
+    "title": "stock 1 — پروژه‌های ترکیبی — تمرین 1134",
     "level": "آسان",
     "category": "پروژه‌های ترکیبی",
     "topic": "stock 1",
-    "statement": "موجودی اولیه، ورودی و فروش را محاسبه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "موجودی اولیه، ورودی و فروش را محاسبه کنید. این سناریوی شماره 1134 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n10 5 3\nخروجی:\n12"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 10\na,b,c=map(int,input().split()); print(a+b-c)",
+    "solution": "# پروژه‌های ترکیبی / variant 1134\na,b,c=map(int,input().split()); print(a+b-c)",
     "tests": [
       {
         "input": "10 5 3",
@@ -40825,16 +40825,16 @@
   },
   {
     "id": 1135,
-    "title": "contacts — تمرین کاربردی 11",
+    "title": "contacts 2 — پروژه‌های ترکیبی — تمرین 1135",
     "level": "آسان",
     "category": "پروژه‌های ترکیبی",
     "topic": "contacts 2",
-    "statement": "نام و شماره را به رکورد استاندارد تبدیل کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "نام و شماره را به رکورد استاندارد تبدیل کنید. این سناریوی شماره 1135 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nAli|0912\nخروجی:\nAli - 0912"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 11\nn,p=input().split(\"|\",1); print(f\"{n.strip()} - {p.strip()}\")",
+    "solution": "# پروژه‌های ترکیبی / variant 1135\nn,p=input().split(\"|\",1); print(f\"{n.strip()} - {p.strip()}\")",
     "tests": [
       {
         "input": "Ali|0912",
@@ -40861,16 +40861,16 @@
   },
   {
     "id": 1136,
-    "title": "text-analysis — تمرین کاربردی 12",
+    "title": "text-analysis 2 — پروژه‌های ترکیبی — تمرین 1136",
     "level": "آسان",
     "category": "پروژه‌های ترکیبی",
     "topic": "text-analysis 2",
-    "statement": "تعداد کلمات و حروف متن را گزارش کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "تعداد کلمات و حروف متن را گزارش کنید. این سناریوی شماره 1136 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nhello world\nخروجی:\nwords=2 chars=11"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 12\ns=input(); print(f\"words={len(s.split())} chars={len(s)}\")",
+    "solution": "# پروژه‌های ترکیبی / variant 1136\ns=input(); print(f\"words={len(s.split())} chars={len(s)}\")",
     "tests": [
       {
         "input": "hello world",
@@ -40897,16 +40897,16 @@
   },
   {
     "id": 1137,
-    "title": "expenses — تمرین کاربردی 13",
+    "title": "expenses 2 — پروژه‌های ترکیبی — تمرین 1137",
     "level": "آسان",
     "category": "پروژه‌های ترکیبی",
     "topic": "expenses 2",
-    "statement": "مجموع و میانگین هزینه‌ها را محاسبه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "مجموع و میانگین هزینه‌ها را محاسبه کنید. این سناریوی شماره 1137 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n10 20\nخروجی:\ntotal=30 average=15"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 13\nx=list(map(float,input().split())); print(f\"total={sum(x):g} average={sum(x)/len(x):g}\")",
+    "solution": "# پروژه‌های ترکیبی / variant 1137\nx=list(map(float,input().split())); print(f\"total={sum(x):g} average={sum(x)/len(x):g}\")",
     "tests": [
       {
         "input": "10 20",
@@ -40933,16 +40933,16 @@
   },
   {
     "id": 1138,
-    "title": "grades — تمرین کاربردی 14",
+    "title": "grades 2 — پروژه‌های ترکیبی — تمرین 1138",
     "level": "آسان",
     "category": "پروژه‌های ترکیبی",
     "topic": "grades 2",
-    "statement": "میانگین نمرات و وضعیت قبولی را گزارش کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "میانگین نمرات و وضعیت قبولی را گزارش کنید. این سناریوی شماره 1138 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n10 12\nخروجی:\naverage=11 status=pass"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 14\nx=list(map(float,input().split())); a=sum(x)/len(x); print(f\"average={a:g} status={'pass' if a>=10 else 'fail'}\")",
+    "solution": "# پروژه‌های ترکیبی / variant 1138\nx=list(map(float,input().split())); a=sum(x)/len(x); print(f\"average={a:g} status={'pass' if a>=10 else 'fail'}\")",
     "tests": [
       {
         "input": "10 12",
@@ -40969,16 +40969,16 @@
   },
   {
     "id": 1139,
-    "title": "inventory — تمرین کاربردی 15",
+    "title": "inventory 2 — پروژه‌های ترکیبی — تمرین 1139",
     "level": "متوسط",
     "category": "پروژه‌های ترکیبی",
     "topic": "inventory 2",
-    "statement": "قیمت و تعداد را گرفته و ارزش موجودی را حساب کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "قیمت و تعداد را گرفته و ارزش موجودی را حساب کنید. این سناریوی شماره 1139 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n10 3\nخروجی:\n30"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 15\np,n=map(float,input().split()); print(f\"{p*n:g}\")",
+    "solution": "# پروژه‌های ترکیبی / variant 1139\np,n=map(float,input().split()); print(f\"{p*n:g}\")",
     "tests": [
       {
         "input": "10 3",
@@ -41005,16 +41005,16 @@
   },
   {
     "id": 1140,
-    "title": "cart — تمرین کاربردی 16",
+    "title": "cart 2 — پروژه‌های ترکیبی — تمرین 1140",
     "level": "متوسط",
     "category": "پروژه‌های ترکیبی",
     "topic": "cart 2",
-    "statement": "مجموع سبد را با 9 درصد مالیات محاسبه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "مجموع سبد را با 9 درصد مالیات محاسبه کنید. این سناریوی شماره 1140 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n100\nخروجی:\n109"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 16\nt=sum(map(float,input().split())); print(f\"{t*1.09:g}\")",
+    "solution": "# پروژه‌های ترکیبی / variant 1140\nt=sum(map(float,input().split())); print(f\"{t*1.09:g}\")",
     "tests": [
       {
         "input": "100",
@@ -41041,16 +41041,16 @@
   },
   {
     "id": 1141,
-    "title": "discount — تمرین کاربردی 17",
+    "title": "discount 2 — پروژه‌های ترکیبی — تمرین 1141",
     "level": "متوسط",
     "category": "پروژه‌های ترکیبی",
     "topic": "discount 2",
-    "statement": "قیمت نهایی پس از تخفیف را محاسبه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "قیمت نهایی پس از تخفیف را محاسبه کنید. این سناریوی شماره 1141 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n100 10\nخروجی:\n90"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 17\np,d=map(float,input().split()); print(f\"{p*(1-d/100):g}\")",
+    "solution": "# پروژه‌های ترکیبی / variant 1141\np,d=map(float,input().split()); print(f\"{p*(1-d/100):g}\")",
     "tests": [
       {
         "input": "100 10",
@@ -41077,16 +41077,16 @@
   },
   {
     "id": 1142,
-    "title": "invoice — تمرین کاربردی 18",
+    "title": "invoice 2 — پروژه‌های ترکیبی — تمرین 1142",
     "level": "متوسط",
     "category": "پروژه‌های ترکیبی",
     "topic": "invoice 2",
-    "statement": "فاکتور دو قلم کالا را محاسبه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "فاکتور دو قلم کالا را محاسبه کنید. این سناریوی شماره 1142 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n10 2 5 3\nخروجی:\n35"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 18\na,qa,b,qb=map(float,input().split()); print(f\"{a*qa+b*qb:g}\")",
+    "solution": "# پروژه‌های ترکیبی / variant 1142\na,qa,b,qb=map(float,input().split()); print(f\"{a*qa+b*qb:g}\")",
     "tests": [
       {
         "input": "10 2 5 3",
@@ -41113,16 +41113,16 @@
   },
   {
     "id": 1143,
-    "title": "budget — تمرین کاربردی 19",
+    "title": "budget 2 — پروژه‌های ترکیبی — تمرین 1143",
     "level": "متوسط",
     "category": "پروژه‌های ترکیبی",
     "topic": "budget 2",
-    "statement": "مانده بودجه را از درآمد و هزینه حساب کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "مانده بودجه را از درآمد و هزینه حساب کنید. این سناریوی شماره 1143 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n100 40\nخروجی:\n60"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 19\na,b=map(float,input().split()); print(f\"{a-b:g}\")",
+    "solution": "# پروژه‌های ترکیبی / variant 1143\na,b=map(float,input().split()); print(f\"{a-b:g}\")",
     "tests": [
       {
         "input": "100 40",
@@ -41149,16 +41149,16 @@
   },
   {
     "id": 1144,
-    "title": "stock — تمرین کاربردی 20",
+    "title": "stock 2 — پروژه‌های ترکیبی — تمرین 1144",
     "level": "متوسط",
     "category": "پروژه‌های ترکیبی",
     "topic": "stock 2",
-    "statement": "موجودی اولیه، ورودی و فروش را محاسبه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "موجودی اولیه، ورودی و فروش را محاسبه کنید. این سناریوی شماره 1144 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n10 5 3\nخروجی:\n12"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 20\na,b,c=map(int,input().split()); print(a+b-c)",
+    "solution": "# پروژه‌های ترکیبی / variant 1144\na,b,c=map(int,input().split()); print(a+b-c)",
     "tests": [
       {
         "input": "10 5 3",
@@ -41185,16 +41185,16 @@
   },
   {
     "id": 1145,
-    "title": "contacts — تمرین کاربردی 21",
+    "title": "contacts 3 — پروژه‌های ترکیبی — تمرین 1145",
     "level": "متوسط",
     "category": "پروژه‌های ترکیبی",
     "topic": "contacts 3",
-    "statement": "نام و شماره را به رکورد استاندارد تبدیل کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "نام و شماره را به رکورد استاندارد تبدیل کنید. این سناریوی شماره 1145 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nAli|0912\nخروجی:\nAli - 0912"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 21\nn,p=input().split(\"|\",1); print(f\"{n.strip()} - {p.strip()}\")",
+    "solution": "# پروژه‌های ترکیبی / variant 1145\nn,p=input().split(\"|\",1); print(f\"{n.strip()} - {p.strip()}\")",
     "tests": [
       {
         "input": "Ali|0912",
@@ -41221,16 +41221,16 @@
   },
   {
     "id": 1146,
-    "title": "text-analysis — تمرین کاربردی 22",
+    "title": "text-analysis 3 — پروژه‌های ترکیبی — تمرین 1146",
     "level": "متوسط",
     "category": "پروژه‌های ترکیبی",
     "topic": "text-analysis 3",
-    "statement": "تعداد کلمات و حروف متن را گزارش کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "تعداد کلمات و حروف متن را گزارش کنید. این سناریوی شماره 1146 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nhello world\nخروجی:\nwords=2 chars=11"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 22\ns=input(); print(f\"words={len(s.split())} chars={len(s)}\")",
+    "solution": "# پروژه‌های ترکیبی / variant 1146\ns=input(); print(f\"words={len(s.split())} chars={len(s)}\")",
     "tests": [
       {
         "input": "hello world",
@@ -41257,16 +41257,16 @@
   },
   {
     "id": 1147,
-    "title": "expenses — تمرین کاربردی 23",
+    "title": "expenses 3 — پروژه‌های ترکیبی — تمرین 1147",
     "level": "متوسط",
     "category": "پروژه‌های ترکیبی",
     "topic": "expenses 3",
-    "statement": "مجموع و میانگین هزینه‌ها را محاسبه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "مجموع و میانگین هزینه‌ها را محاسبه کنید. این سناریوی شماره 1147 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n10 20\nخروجی:\ntotal=30 average=15"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 23\nx=list(map(float,input().split())); print(f\"total={sum(x):g} average={sum(x)/len(x):g}\")",
+    "solution": "# پروژه‌های ترکیبی / variant 1147\nx=list(map(float,input().split())); print(f\"total={sum(x):g} average={sum(x)/len(x):g}\")",
     "tests": [
       {
         "input": "10 20",
@@ -41293,16 +41293,16 @@
   },
   {
     "id": 1148,
-    "title": "grades — تمرین کاربردی 24",
+    "title": "grades 3 — پروژه‌های ترکیبی — تمرین 1148",
     "level": "متوسط",
     "category": "پروژه‌های ترکیبی",
     "topic": "grades 3",
-    "statement": "میانگین نمرات و وضعیت قبولی را گزارش کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "میانگین نمرات و وضعیت قبولی را گزارش کنید. این سناریوی شماره 1148 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n10 12\nخروجی:\naverage=11 status=pass"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 24\nx=list(map(float,input().split())); a=sum(x)/len(x); print(f\"average={a:g} status={'pass' if a>=10 else 'fail'}\")",
+    "solution": "# پروژه‌های ترکیبی / variant 1148\nx=list(map(float,input().split())); a=sum(x)/len(x); print(f\"average={a:g} status={'pass' if a>=10 else 'fail'}\")",
     "tests": [
       {
         "input": "10 12",
@@ -41329,16 +41329,16 @@
   },
   {
     "id": 1149,
-    "title": "inventory — تمرین کاربردی 25",
+    "title": "inventory 3 — پروژه‌های ترکیبی — تمرین 1149",
     "level": "متوسط",
     "category": "پروژه‌های ترکیبی",
     "topic": "inventory 3",
-    "statement": "قیمت و تعداد را گرفته و ارزش موجودی را حساب کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "قیمت و تعداد را گرفته و ارزش موجودی را حساب کنید. این سناریوی شماره 1149 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n10 3\nخروجی:\n30"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 25\np,n=map(float,input().split()); print(f\"{p*n:g}\")",
+    "solution": "# پروژه‌های ترکیبی / variant 1149\np,n=map(float,input().split()); print(f\"{p*n:g}\")",
     "tests": [
       {
         "input": "10 3",
@@ -41365,16 +41365,16 @@
   },
   {
     "id": 1150,
-    "title": "cart — تمرین کاربردی 26",
+    "title": "cart 3 — پروژه‌های ترکیبی — تمرین 1150",
     "level": "متوسط",
     "category": "پروژه‌های ترکیبی",
     "topic": "cart 3",
-    "statement": "مجموع سبد را با 9 درصد مالیات محاسبه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "مجموع سبد را با 9 درصد مالیات محاسبه کنید. این سناریوی شماره 1150 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n100\nخروجی:\n109"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 26\nt=sum(map(float,input().split())); print(f\"{t*1.09:g}\")",
+    "solution": "# پروژه‌های ترکیبی / variant 1150\nt=sum(map(float,input().split())); print(f\"{t*1.09:g}\")",
     "tests": [
       {
         "input": "100",
@@ -41401,16 +41401,16 @@
   },
   {
     "id": 1151,
-    "title": "discount — تمرین کاربردی 27",
+    "title": "discount 3 — پروژه‌های ترکیبی — تمرین 1151",
     "level": "سخت",
     "category": "پروژه‌های ترکیبی",
     "topic": "discount 3",
-    "statement": "قیمت نهایی پس از تخفیف را محاسبه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "قیمت نهایی پس از تخفیف را محاسبه کنید. این سناریوی شماره 1151 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n100 10\nخروجی:\n90"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 27\np,d=map(float,input().split()); print(f\"{p*(1-d/100):g}\")",
+    "solution": "# پروژه‌های ترکیبی / variant 1151\np,d=map(float,input().split()); print(f\"{p*(1-d/100):g}\")",
     "tests": [
       {
         "input": "100 10",
@@ -41437,16 +41437,16 @@
   },
   {
     "id": 1152,
-    "title": "invoice — تمرین کاربردی 28",
+    "title": "invoice 3 — پروژه‌های ترکیبی — تمرین 1152",
     "level": "سخت",
     "category": "پروژه‌های ترکیبی",
     "topic": "invoice 3",
-    "statement": "فاکتور دو قلم کالا را محاسبه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "فاکتور دو قلم کالا را محاسبه کنید. این سناریوی شماره 1152 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n10 2 5 3\nخروجی:\n35"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 28\na,qa,b,qb=map(float,input().split()); print(f\"{a*qa+b*qb:g}\")",
+    "solution": "# پروژه‌های ترکیبی / variant 1152\na,qa,b,qb=map(float,input().split()); print(f\"{a*qa+b*qb:g}\")",
     "tests": [
       {
         "input": "10 2 5 3",
@@ -41473,16 +41473,16 @@
   },
   {
     "id": 1153,
-    "title": "budget — تمرین کاربردی 29",
+    "title": "budget 3 — پروژه‌های ترکیبی — تمرین 1153",
     "level": "سخت",
     "category": "پروژه‌های ترکیبی",
     "topic": "budget 3",
-    "statement": "مانده بودجه را از درآمد و هزینه حساب کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "مانده بودجه را از درآمد و هزینه حساب کنید. این سناریوی شماره 1153 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n100 40\nخروجی:\n60"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 29\na,b=map(float,input().split()); print(f\"{a-b:g}\")",
+    "solution": "# پروژه‌های ترکیبی / variant 1153\na,b=map(float,input().split()); print(f\"{a-b:g}\")",
     "tests": [
       {
         "input": "100 40",
@@ -41509,16 +41509,16 @@
   },
   {
     "id": 1154,
-    "title": "stock — تمرین کاربردی 30",
+    "title": "stock 3 — پروژه‌های ترکیبی — تمرین 1154",
     "level": "سخت",
     "category": "پروژه‌های ترکیبی",
     "topic": "stock 3",
-    "statement": "موجودی اولیه، ورودی و فروش را محاسبه کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "موجودی اولیه، ورودی و فروش را محاسبه کنید. این سناریوی شماره 1154 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\n10 5 3\nخروجی:\n12"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 30\na,b,c=map(int,input().split()); print(a+b-c)",
+    "solution": "# پروژه‌های ترکیبی / variant 1154\na,b,c=map(int,input().split()); print(a+b-c)",
     "tests": [
       {
         "input": "10 5 3",
@@ -41545,16 +41545,16 @@
   },
   {
     "id": 1155,
-    "title": "contacts — تمرین کاربردی 31",
+    "title": "contacts 4 — پروژه‌های ترکیبی — تمرین 1155",
     "level": "سخت",
     "category": "پروژه‌های ترکیبی",
     "topic": "contacts 4",
-    "statement": "نام و شماره را به رکورد استاندارد تبدیل کنید. این تمرین یک سناریوی واقعی و قابل تست است.",
+    "statement": "نام و شماره را به رکورد استاندارد تبدیل کنید. این سناریوی شماره 1155 است و باید با ورودی‌های مختلف قابل تست باشد.",
     "examples": [
       "ورودی:\nAli|0912\nخروجی:\nAli - 0912"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: پروژه‌های ترکیبی\n\n",
-    "solution": "# Variant 31\nn,p=input().split(\"|\",1); print(f\"{n.strip()} - {p.strip()}\")",
+    "solution": "# پروژه‌های ترکیبی / variant 1155\nn,p=input().split(\"|\",1); print(f\"{n.strip()} - {p.strip()}\")",
     "tests": [
       {
         "input": "Ali|0912",
