@@ -20377,34 +20377,34 @@
   },
   {
     "id": 567,
-    "title": "iterator — رستوران — تمرین 567",
+    "title": "Iterator بازه 1 — تمرین 567",
     "level": "آسان",
     "category": "Iterator / Generator",
     "topic": "iterator",
-    "statement": "در سناریوی «رستوران»، یک مسئله عملی مرتبط با «iterator» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "Iterator بسازید که اعداد 0 تا n-1 را تولید کند.",
     "examples": [
-      "ورودی: نمونه 1\nخروجی: نتیجه پردازش نمونه 1"
+      "ورودی: 4\nخروجی: [0, 1, 2, 3]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 1\nvalue = input()\nprint(value)",
+    "starter_code": "n=int(input())\n# Iterator را کامل کنید\nprint(list(...))",
+    "solution": "n=int(input())\nclass R:\n def __init__(self,n): self.i=0; self.n=n\n def __iter__(self): return self\n def __next__(self):\n  if self.i>=self.n: raise StopIteration\n  x=self.i; self.i+=1; return x\nprint(list(R(n)))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "4",
+        "expected": "[0, 1, 2, 3]"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "[0]"
       },
       {
         "input": "0",
-        "expected": "0"
+        "expected": "[]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «iterator» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -20413,34 +20413,34 @@
   },
   {
     "id": 568,
-    "title": "iter/next — انبار کالا — تمرین 568",
+    "title": "Generator شمارش 2 — تمرین 568",
     "level": "آسان",
     "category": "Iterator / Generator",
     "topic": "iter/next",
-    "statement": "در سناریوی «انبار کالا»، یک برنامه Python برای «iter/next» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "با yield اعداد زوج کمتر از 2n را تولید کنید.",
     "examples": [
-      "ورودی: نمونه 2\nخروجی: نتیجه پردازش نمونه 2"
+      "ورودی: 3\nخروجی: [0, 2, 4]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 2\nvalue = input()\nprint(value)",
+    "starter_code": "n=int(input())\ndef evens(n): pass\nprint(list(evens(n)))",
+    "solution": "n=int(input())\ndef evens(n):\n for x in range(n): yield x*2\nprint(list(evens(n)))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "3",
+        "expected": "[0, 2, 4]"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "[0]"
       },
       {
         "input": "0",
-        "expected": "0"
+        "expected": "[]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «iter/next» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -20449,34 +20449,34 @@
   },
   {
     "id": 569,
-    "title": "generator — اپلیکیشن مالی — تمرین 569",
+    "title": "Generator فیلتر 3 — تمرین 569",
     "level": "آسان",
     "category": "Iterator / Generator",
     "topic": "generator",
-    "statement": "در سناریوی «اپلیکیشن مالی»، مفهوم «generator» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "فقط اعداد مثبت ورودی را lazy تولید کنید.",
     "examples": [
-      "ورودی: نمونه 3\nخروجی: نتیجه پردازش نمونه 3"
+      "ورودی: -2 3 0 4\nخروجی: [3, 4]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 3\nvalue = input()\nprint(value)",
+    "starter_code": "a=list(map(int,input().split()))\nprint(list(...))",
+    "solution": "a=list(map(int,input().split())); print(list(x for x in a if x>0))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "-2 3 0 4",
+        "expected": "[3, 4]"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "-1 -2",
+        "expected": "[]"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "5",
+        "expected": "[5]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «generator» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -20485,34 +20485,34 @@
   },
   {
     "id": 570,
-    "title": "yield — سامانه نوبت‌دهی — تمرین 570",
+    "title": "Generator تجمعی 4 — تمرین 570",
     "level": "آسان",
     "category": "Iterator / Generator",
     "topic": "yield",
-    "statement": "در سناریوی «سامانه نوبت‌دهی»، راه‌حلی خوانا برای مسئله «yield» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "جمع تجمعی اعداد ورودی را با yield تولید کنید.",
     "examples": [
-      "ورودی: نمونه 4\nخروجی: نتیجه پردازش نمونه 4"
+      "ورودی: 1 2 3\nخروجی: [1, 3, 6]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 4\nvalue = input()\nprint(value)",
+    "starter_code": "a=list(map(int,input().split()))\n# generator\nprint(list(...))",
+    "solution": "a=list(map(int,input().split()))\ndef run(a):\n s=0\n for x in a: s+=x; yield s\nprint(list(run(a)))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "1 2 3",
+        "expected": "[1, 3, 6]"
+      },
+      {
+        "input": "5 -2",
+        "expected": "[5, 3]"
       },
       {
         "input": "7",
-        "expected": "7"
-      },
-      {
-        "input": "0",
-        "expected": "0"
+        "expected": "[7]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «yield» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -20521,34 +20521,34 @@
   },
   {
     "id": 571,
-    "title": "generator expression — فروشگاه محلی — تمرین 571",
+    "title": "Generator پنجره 5 — تمرین 571",
     "level": "آسان",
     "category": "Iterator / Generator",
     "topic": "generator expression",
-    "statement": "در سناریوی «فروشگاه محلی»، یک مسئله عملی مرتبط با «generator expression» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "پنجره‌های kتایی متوالی را تولید کنید.",
     "examples": [
-      "ورودی: نمونه 5\nخروجی: نتیجه پردازش نمونه 5"
+      "ورودی: 1 2 3\n2\nخروجی: [[1, 2], [2, 3]]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 5\nvalue = input()\nprint(value)",
+    "starter_code": "a=list(map(int,input().split())); k=int(input())\nprint(list(...))",
+    "solution": "a=list(map(int,input().split())); k=int(input()); print(list(a[i:i+k] for i in range(len(a)-k+1)))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "1 2 3\n2",
+        "expected": "[[1, 2], [2, 3]]"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1 2\n3",
+        "expected": "[]"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "1 2 3\n3",
+        "expected": "[[1, 2, 3]]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «generator expression» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -20557,34 +20557,34 @@
   },
   {
     "id": 572,
-    "title": "iterator — مدرسه — تمرین 572",
+    "title": "Iterator بازه 6 — تمرین 572",
     "level": "آسان",
     "category": "Iterator / Generator",
     "topic": "iterator",
-    "statement": "در سناریوی «مدرسه»، یک برنامه Python برای «iterator» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "Iterator بسازید که اعداد 0 تا n-1 را تولید کند.",
     "examples": [
-      "ورودی: نمونه 6\nخروجی: نتیجه پردازش نمونه 6"
+      "ورودی: 4\nخروجی: [0, 1, 2, 3]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 6\nvalue = input()\nprint(value)",
+    "starter_code": "n=int(input())\n# Iterator را کامل کنید\nprint(list(...))",
+    "solution": "n=int(input())\nclass R:\n def __init__(self,n): self.i=0; self.n=n\n def __iter__(self): return self\n def __next__(self):\n  if self.i>=self.n: raise StopIteration\n  x=self.i; self.i+=1; return x\nprint(list(R(n)))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "4",
+        "expected": "[0, 1, 2, 3]"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "[0]"
       },
       {
         "input": "0",
-        "expected": "0"
+        "expected": "[]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «iterator» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -20593,34 +20593,34 @@
   },
   {
     "id": 573,
-    "title": "iter/next — کتابخانه — تمرین 573",
+    "title": "Generator شمارش 7 — تمرین 573",
     "level": "آسان",
     "category": "Iterator / Generator",
     "topic": "iter/next",
-    "statement": "در سناریوی «کتابخانه»، مفهوم «iter/next» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "با yield اعداد زوج کمتر از 2n را تولید کنید.",
     "examples": [
-      "ورودی: نمونه 7\nخروجی: نتیجه پردازش نمونه 7"
+      "ورودی: 3\nخروجی: [0, 2, 4]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 7\nvalue = input()\nprint(value)",
+    "starter_code": "n=int(input())\ndef evens(n): pass\nprint(list(evens(n)))",
+    "solution": "n=int(input())\ndef evens(n):\n for x in range(n): yield x*2\nprint(list(evens(n)))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "3",
+        "expected": "[0, 2, 4]"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "[0]"
       },
       {
         "input": "0",
-        "expected": "0"
+        "expected": "[]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «iter/next» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -20629,34 +20629,34 @@
   },
   {
     "id": 574,
-    "title": "generator — باشگاه ورزشی — تمرین 574",
+    "title": "Generator فیلتر 8 — تمرین 574",
     "level": "آسان",
     "category": "Iterator / Generator",
     "topic": "generator",
-    "statement": "در سناریوی «باشگاه ورزشی»، راه‌حلی خوانا برای مسئله «generator» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "فقط اعداد مثبت ورودی را lazy تولید کنید.",
     "examples": [
-      "ورودی: نمونه 8\nخروجی: نتیجه پردازش نمونه 8"
+      "ورودی: -2 3 0 4\nخروجی: [3, 4]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 8\nvalue = input()\nprint(value)",
+    "starter_code": "a=list(map(int,input().split()))\nprint(list(...))",
+    "solution": "a=list(map(int,input().split())); print(list(x for x in a if x>0))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "-2 3 0 4",
+        "expected": "[3, 4]"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "-1 -2",
+        "expected": "[]"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "5",
+        "expected": "[5]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «generator» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -20665,34 +20665,34 @@
   },
   {
     "id": 575,
-    "title": "yield — سامانه ثبت‌نام — تمرین 575",
+    "title": "Generator تجمعی 9 — تمرین 575",
     "level": "آسان",
     "category": "Iterator / Generator",
     "topic": "yield",
-    "statement": "در سناریوی «سامانه ثبت‌نام»، یک مسئله عملی مرتبط با «yield» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "جمع تجمعی اعداد ورودی را با yield تولید کنید.",
     "examples": [
-      "ورودی: نمونه 9\nخروجی: نتیجه پردازش نمونه 9"
+      "ورودی: 1 2 3\nخروجی: [1, 3, 6]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 9\nvalue = input()\nprint(value)",
+    "starter_code": "a=list(map(int,input().split()))\n# generator\nprint(list(...))",
+    "solution": "a=list(map(int,input().split()))\ndef run(a):\n s=0\n for x in a: s+=x; yield s\nprint(list(run(a)))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "1 2 3",
+        "expected": "[1, 3, 6]"
+      },
+      {
+        "input": "5 -2",
+        "expected": "[5, 3]"
       },
       {
         "input": "7",
-        "expected": "7"
-      },
-      {
-        "input": "0",
-        "expected": "0"
+        "expected": "[7]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «yield» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -20701,34 +20701,34 @@
   },
   {
     "id": 576,
-    "title": "generator expression — دفتر کار — تمرین 576",
+    "title": "Generator پنجره 10 — تمرین 576",
     "level": "آسان",
     "category": "Iterator / Generator",
     "topic": "generator expression",
-    "statement": "در سناریوی «دفتر کار»، یک برنامه Python برای «generator expression» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "پنجره‌های kتایی متوالی را تولید کنید.",
     "examples": [
-      "ورودی: نمونه 10\nخروجی: نتیجه پردازش نمونه 10"
+      "ورودی: 1 2 3\n2\nخروجی: [[1, 2], [2, 3]]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 10\nvalue = input()\nprint(value)",
+    "starter_code": "a=list(map(int,input().split())); k=int(input())\nprint(list(...))",
+    "solution": "a=list(map(int,input().split())); k=int(input()); print(list(a[i:i+k] for i in range(len(a)-k+1)))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "1 2 3\n2",
+        "expected": "[[1, 2], [2, 3]]"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1 2\n3",
+        "expected": "[]"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "1 2 3\n3",
+        "expected": "[[1, 2, 3]]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «generator expression» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -20737,34 +20737,34 @@
   },
   {
     "id": 577,
-    "title": "iterator — رستوران — تمرین 577",
+    "title": "Iterator بازه 11 — تمرین 577",
     "level": "آسان",
     "category": "Iterator / Generator",
     "topic": "iterator",
-    "statement": "در سناریوی «رستوران»، مفهوم «iterator» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "Iterator بسازید که اعداد 0 تا n-1 را تولید کند.",
     "examples": [
-      "ورودی: نمونه 11\nخروجی: نتیجه پردازش نمونه 11"
+      "ورودی: 4\nخروجی: [0, 1, 2, 3]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 11\nvalue = input()\nprint(value)",
+    "starter_code": "n=int(input())\n# Iterator را کامل کنید\nprint(list(...))",
+    "solution": "n=int(input())\nclass R:\n def __init__(self,n): self.i=0; self.n=n\n def __iter__(self): return self\n def __next__(self):\n  if self.i>=self.n: raise StopIteration\n  x=self.i; self.i+=1; return x\nprint(list(R(n)))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "4",
+        "expected": "[0, 1, 2, 3]"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "[0]"
       },
       {
         "input": "0",
-        "expected": "0"
+        "expected": "[]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «iterator» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -20773,34 +20773,34 @@
   },
   {
     "id": 578,
-    "title": "iter/next — انبار کالا — تمرین 578",
+    "title": "Generator شمارش 12 — تمرین 578",
     "level": "آسان",
     "category": "Iterator / Generator",
     "topic": "iter/next",
-    "statement": "در سناریوی «انبار کالا»، راه‌حلی خوانا برای مسئله «iter/next» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "با yield اعداد زوج کمتر از 2n را تولید کنید.",
     "examples": [
-      "ورودی: نمونه 12\nخروجی: نتیجه پردازش نمونه 12"
+      "ورودی: 3\nخروجی: [0, 2, 4]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 12\nvalue = input()\nprint(value)",
+    "starter_code": "n=int(input())\ndef evens(n): pass\nprint(list(evens(n)))",
+    "solution": "n=int(input())\ndef evens(n):\n for x in range(n): yield x*2\nprint(list(evens(n)))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "3",
+        "expected": "[0, 2, 4]"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "[0]"
       },
       {
         "input": "0",
-        "expected": "0"
+        "expected": "[]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «iter/next» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -20809,34 +20809,34 @@
   },
   {
     "id": 579,
-    "title": "generator — اپلیکیشن مالی — تمرین 579",
+    "title": "Generator فیلتر 13 — تمرین 579",
     "level": "آسان",
     "category": "Iterator / Generator",
     "topic": "generator",
-    "statement": "در سناریوی «اپلیکیشن مالی»، یک مسئله عملی مرتبط با «generator» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "فقط اعداد مثبت ورودی را lazy تولید کنید.",
     "examples": [
-      "ورودی: نمونه 13\nخروجی: نتیجه پردازش نمونه 13"
+      "ورودی: -2 3 0 4\nخروجی: [3, 4]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 13\nvalue = input()\nprint(value)",
+    "starter_code": "a=list(map(int,input().split()))\nprint(list(...))",
+    "solution": "a=list(map(int,input().split())); print(list(x for x in a if x>0))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "-2 3 0 4",
+        "expected": "[3, 4]"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "-1 -2",
+        "expected": "[]"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "5",
+        "expected": "[5]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «generator» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -20845,34 +20845,34 @@
   },
   {
     "id": 580,
-    "title": "yield — سامانه نوبت‌دهی — تمرین 580",
+    "title": "Generator تجمعی 14 — تمرین 580",
     "level": "آسان",
     "category": "Iterator / Generator",
     "topic": "yield",
-    "statement": "در سناریوی «سامانه نوبت‌دهی»، یک برنامه Python برای «yield» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "جمع تجمعی اعداد ورودی را با yield تولید کنید.",
     "examples": [
-      "ورودی: نمونه 14\nخروجی: نتیجه پردازش نمونه 14"
+      "ورودی: 1 2 3\nخروجی: [1, 3, 6]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 14\nvalue = input()\nprint(value)",
+    "starter_code": "a=list(map(int,input().split()))\n# generator\nprint(list(...))",
+    "solution": "a=list(map(int,input().split()))\ndef run(a):\n s=0\n for x in a: s+=x; yield s\nprint(list(run(a)))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "1 2 3",
+        "expected": "[1, 3, 6]"
+      },
+      {
+        "input": "5 -2",
+        "expected": "[5, 3]"
       },
       {
         "input": "7",
-        "expected": "7"
-      },
-      {
-        "input": "0",
-        "expected": "0"
+        "expected": "[7]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «yield» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -20881,34 +20881,34 @@
   },
   {
     "id": 581,
-    "title": "generator expression — فروشگاه محلی — تمرین 581",
+    "title": "Generator پنجره 15 — تمرین 581",
     "level": "متوسط",
     "category": "Iterator / Generator",
     "topic": "generator expression",
-    "statement": "در سناریوی «فروشگاه محلی»، مفهوم «generator expression» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "پنجره‌های kتایی متوالی را تولید کنید.",
     "examples": [
-      "ورودی: نمونه 15\nخروجی: نتیجه پردازش نمونه 15"
+      "ورودی: 1 2 3\n2\nخروجی: [[1, 2], [2, 3]]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 15\nvalue = input()\nprint(value)",
+    "starter_code": "a=list(map(int,input().split())); k=int(input())\nprint(list(...))",
+    "solution": "a=list(map(int,input().split())); k=int(input()); print(list(a[i:i+k] for i in range(len(a)-k+1)))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "1 2 3\n2",
+        "expected": "[[1, 2], [2, 3]]"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1 2\n3",
+        "expected": "[]"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "1 2 3\n3",
+        "expected": "[[1, 2, 3]]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «generator expression» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -20917,34 +20917,34 @@
   },
   {
     "id": 582,
-    "title": "iterator — مدرسه — تمرین 582",
+    "title": "Iterator بازه 16 — تمرین 582",
     "level": "متوسط",
     "category": "Iterator / Generator",
     "topic": "iterator",
-    "statement": "در سناریوی «مدرسه»، راه‌حلی خوانا برای مسئله «iterator» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "Iterator بسازید که اعداد 0 تا n-1 را تولید کند.",
     "examples": [
-      "ورودی: نمونه 16\nخروجی: نتیجه پردازش نمونه 16"
+      "ورودی: 4\nخروجی: [0, 1, 2, 3]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 16\nvalue = input()\nprint(value)",
+    "starter_code": "n=int(input())\n# Iterator را کامل کنید\nprint(list(...))",
+    "solution": "n=int(input())\nclass R:\n def __init__(self,n): self.i=0; self.n=n\n def __iter__(self): return self\n def __next__(self):\n  if self.i>=self.n: raise StopIteration\n  x=self.i; self.i+=1; return x\nprint(list(R(n)))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "4",
+        "expected": "[0, 1, 2, 3]"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "[0]"
       },
       {
         "input": "0",
-        "expected": "0"
+        "expected": "[]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «iterator» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -20953,34 +20953,34 @@
   },
   {
     "id": 583,
-    "title": "iter/next — کتابخانه — تمرین 583",
+    "title": "Generator شمارش 17 — تمرین 583",
     "level": "متوسط",
     "category": "Iterator / Generator",
     "topic": "iter/next",
-    "statement": "در سناریوی «کتابخانه»، یک مسئله عملی مرتبط با «iter/next» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "با yield اعداد زوج کمتر از 2n را تولید کنید.",
     "examples": [
-      "ورودی: نمونه 17\nخروجی: نتیجه پردازش نمونه 17"
+      "ورودی: 3\nخروجی: [0, 2, 4]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 17\nvalue = input()\nprint(value)",
+    "starter_code": "n=int(input())\ndef evens(n): pass\nprint(list(evens(n)))",
+    "solution": "n=int(input())\ndef evens(n):\n for x in range(n): yield x*2\nprint(list(evens(n)))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "3",
+        "expected": "[0, 2, 4]"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "[0]"
       },
       {
         "input": "0",
-        "expected": "0"
+        "expected": "[]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «iter/next» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -20989,34 +20989,34 @@
   },
   {
     "id": 584,
-    "title": "generator — باشگاه ورزشی — تمرین 584",
+    "title": "Generator فیلتر 18 — تمرین 584",
     "level": "متوسط",
     "category": "Iterator / Generator",
     "topic": "generator",
-    "statement": "در سناریوی «باشگاه ورزشی»، یک برنامه Python برای «generator» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "فقط اعداد مثبت ورودی را lazy تولید کنید.",
     "examples": [
-      "ورودی: نمونه 18\nخروجی: نتیجه پردازش نمونه 18"
+      "ورودی: -2 3 0 4\nخروجی: [3, 4]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 18\nvalue = input()\nprint(value)",
+    "starter_code": "a=list(map(int,input().split()))\nprint(list(...))",
+    "solution": "a=list(map(int,input().split())); print(list(x for x in a if x>0))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "-2 3 0 4",
+        "expected": "[3, 4]"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "-1 -2",
+        "expected": "[]"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "5",
+        "expected": "[5]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «generator» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -21025,34 +21025,34 @@
   },
   {
     "id": 585,
-    "title": "yield — سامانه ثبت‌نام — تمرین 585",
+    "title": "Generator تجمعی 19 — تمرین 585",
     "level": "متوسط",
     "category": "Iterator / Generator",
     "topic": "yield",
-    "statement": "در سناریوی «سامانه ثبت‌نام»، مفهوم «yield» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "جمع تجمعی اعداد ورودی را با yield تولید کنید.",
     "examples": [
-      "ورودی: نمونه 19\nخروجی: نتیجه پردازش نمونه 19"
+      "ورودی: 1 2 3\nخروجی: [1, 3, 6]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 19\nvalue = input()\nprint(value)",
+    "starter_code": "a=list(map(int,input().split()))\n# generator\nprint(list(...))",
+    "solution": "a=list(map(int,input().split()))\ndef run(a):\n s=0\n for x in a: s+=x; yield s\nprint(list(run(a)))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "1 2 3",
+        "expected": "[1, 3, 6]"
+      },
+      {
+        "input": "5 -2",
+        "expected": "[5, 3]"
       },
       {
         "input": "7",
-        "expected": "7"
-      },
-      {
-        "input": "0",
-        "expected": "0"
+        "expected": "[7]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «yield» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -21061,34 +21061,34 @@
   },
   {
     "id": 586,
-    "title": "generator expression — دفتر کار — تمرین 586",
+    "title": "Generator پنجره 20 — تمرین 586",
     "level": "متوسط",
     "category": "Iterator / Generator",
     "topic": "generator expression",
-    "statement": "در سناریوی «دفتر کار»، راه‌حلی خوانا برای مسئله «generator expression» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "پنجره‌های kتایی متوالی را تولید کنید.",
     "examples": [
-      "ورودی: نمونه 20\nخروجی: نتیجه پردازش نمونه 20"
+      "ورودی: 1 2 3\n2\nخروجی: [[1, 2], [2, 3]]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 20\nvalue = input()\nprint(value)",
+    "starter_code": "a=list(map(int,input().split())); k=int(input())\nprint(list(...))",
+    "solution": "a=list(map(int,input().split())); k=int(input()); print(list(a[i:i+k] for i in range(len(a)-k+1)))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "1 2 3\n2",
+        "expected": "[[1, 2], [2, 3]]"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1 2\n3",
+        "expected": "[]"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "1 2 3\n3",
+        "expected": "[[1, 2, 3]]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «generator expression» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -21097,34 +21097,34 @@
   },
   {
     "id": 587,
-    "title": "iterator — رستوران — تمرین 587",
+    "title": "Iterator بازه 21 — تمرین 587",
     "level": "متوسط",
     "category": "Iterator / Generator",
     "topic": "iterator",
-    "statement": "در سناریوی «رستوران»، یک مسئله عملی مرتبط با «iterator» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "Iterator بسازید که اعداد 0 تا n-1 را تولید کند.",
     "examples": [
-      "ورودی: نمونه 21\nخروجی: نتیجه پردازش نمونه 21"
+      "ورودی: 4\nخروجی: [0, 1, 2, 3]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 21\nvalue = input()\nprint(value)",
+    "starter_code": "n=int(input())\n# Iterator را کامل کنید\nprint(list(...))",
+    "solution": "n=int(input())\nclass R:\n def __init__(self,n): self.i=0; self.n=n\n def __iter__(self): return self\n def __next__(self):\n  if self.i>=self.n: raise StopIteration\n  x=self.i; self.i+=1; return x\nprint(list(R(n)))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "4",
+        "expected": "[0, 1, 2, 3]"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "[0]"
       },
       {
         "input": "0",
-        "expected": "0"
+        "expected": "[]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «iterator» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -21133,34 +21133,34 @@
   },
   {
     "id": 588,
-    "title": "iter/next — انبار کالا — تمرین 588",
+    "title": "Generator شمارش 22 — تمرین 588",
     "level": "متوسط",
     "category": "Iterator / Generator",
     "topic": "iter/next",
-    "statement": "در سناریوی «انبار کالا»، یک برنامه Python برای «iter/next» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "با yield اعداد زوج کمتر از 2n را تولید کنید.",
     "examples": [
-      "ورودی: نمونه 22\nخروجی: نتیجه پردازش نمونه 22"
+      "ورودی: 3\nخروجی: [0, 2, 4]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 22\nvalue = input()\nprint(value)",
+    "starter_code": "n=int(input())\ndef evens(n): pass\nprint(list(evens(n)))",
+    "solution": "n=int(input())\ndef evens(n):\n for x in range(n): yield x*2\nprint(list(evens(n)))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "3",
+        "expected": "[0, 2, 4]"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "[0]"
       },
       {
         "input": "0",
-        "expected": "0"
+        "expected": "[]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «iter/next» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -21169,34 +21169,34 @@
   },
   {
     "id": 589,
-    "title": "generator — اپلیکیشن مالی — تمرین 589",
+    "title": "Generator فیلتر 23 — تمرین 589",
     "level": "متوسط",
     "category": "Iterator / Generator",
     "topic": "generator",
-    "statement": "در سناریوی «اپلیکیشن مالی»، مفهوم «generator» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "فقط اعداد مثبت ورودی را lazy تولید کنید.",
     "examples": [
-      "ورودی: نمونه 23\nخروجی: نتیجه پردازش نمونه 23"
+      "ورودی: -2 3 0 4\nخروجی: [3, 4]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 23\nvalue = input()\nprint(value)",
+    "starter_code": "a=list(map(int,input().split()))\nprint(list(...))",
+    "solution": "a=list(map(int,input().split())); print(list(x for x in a if x>0))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "-2 3 0 4",
+        "expected": "[3, 4]"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "-1 -2",
+        "expected": "[]"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "5",
+        "expected": "[5]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «generator» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -21205,34 +21205,34 @@
   },
   {
     "id": 590,
-    "title": "yield — سامانه نوبت‌دهی — تمرین 590",
+    "title": "Generator تجمعی 24 — تمرین 590",
     "level": "متوسط",
     "category": "Iterator / Generator",
     "topic": "yield",
-    "statement": "در سناریوی «سامانه نوبت‌دهی»، راه‌حلی خوانا برای مسئله «yield» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "جمع تجمعی اعداد ورودی را با yield تولید کنید.",
     "examples": [
-      "ورودی: نمونه 24\nخروجی: نتیجه پردازش نمونه 24"
+      "ورودی: 1 2 3\nخروجی: [1, 3, 6]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 24\nvalue = input()\nprint(value)",
+    "starter_code": "a=list(map(int,input().split()))\n# generator\nprint(list(...))",
+    "solution": "a=list(map(int,input().split()))\ndef run(a):\n s=0\n for x in a: s+=x; yield s\nprint(list(run(a)))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "1 2 3",
+        "expected": "[1, 3, 6]"
+      },
+      {
+        "input": "5 -2",
+        "expected": "[5, 3]"
       },
       {
         "input": "7",
-        "expected": "7"
-      },
-      {
-        "input": "0",
-        "expected": "0"
+        "expected": "[7]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «yield» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -21241,34 +21241,34 @@
   },
   {
     "id": 591,
-    "title": "generator expression — فروشگاه محلی — تمرین 591",
+    "title": "Generator پنجره 25 — تمرین 591",
     "level": "متوسط",
     "category": "Iterator / Generator",
     "topic": "generator expression",
-    "statement": "در سناریوی «فروشگاه محلی»، یک مسئله عملی مرتبط با «generator expression» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "پنجره‌های kتایی متوالی را تولید کنید.",
     "examples": [
-      "ورودی: نمونه 25\nخروجی: نتیجه پردازش نمونه 25"
+      "ورودی: 1 2 3\n2\nخروجی: [[1, 2], [2, 3]]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 25\nvalue = input()\nprint(value)",
+    "starter_code": "a=list(map(int,input().split())); k=int(input())\nprint(list(...))",
+    "solution": "a=list(map(int,input().split())); k=int(input()); print(list(a[i:i+k] for i in range(len(a)-k+1)))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "1 2 3\n2",
+        "expected": "[[1, 2], [2, 3]]"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1 2\n3",
+        "expected": "[]"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "1 2 3\n3",
+        "expected": "[[1, 2, 3]]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «generator expression» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -21277,34 +21277,34 @@
   },
   {
     "id": 592,
-    "title": "iterator — مدرسه — تمرین 592",
+    "title": "Iterator بازه 26 — تمرین 592",
     "level": "متوسط",
     "category": "Iterator / Generator",
     "topic": "iterator",
-    "statement": "در سناریوی «مدرسه»، یک برنامه Python برای «iterator» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "Iterator بسازید که اعداد 0 تا n-1 را تولید کند.",
     "examples": [
-      "ورودی: نمونه 26\nخروجی: نتیجه پردازش نمونه 26"
+      "ورودی: 4\nخروجی: [0, 1, 2, 3]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 26\nvalue = input()\nprint(value)",
+    "starter_code": "n=int(input())\n# Iterator را کامل کنید\nprint(list(...))",
+    "solution": "n=int(input())\nclass R:\n def __init__(self,n): self.i=0; self.n=n\n def __iter__(self): return self\n def __next__(self):\n  if self.i>=self.n: raise StopIteration\n  x=self.i; self.i+=1; return x\nprint(list(R(n)))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "4",
+        "expected": "[0, 1, 2, 3]"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "[0]"
       },
       {
         "input": "0",
-        "expected": "0"
+        "expected": "[]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «iterator» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -21313,34 +21313,34 @@
   },
   {
     "id": 593,
-    "title": "iter/next — کتابخانه — تمرین 593",
+    "title": "Generator شمارش 27 — تمرین 593",
     "level": "سخت",
     "category": "Iterator / Generator",
     "topic": "iter/next",
-    "statement": "در سناریوی «کتابخانه»، مفهوم «iter/next» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "با yield اعداد زوج کمتر از 2n را تولید کنید.",
     "examples": [
-      "ورودی: نمونه 27\nخروجی: نتیجه پردازش نمونه 27"
+      "ورودی: 3\nخروجی: [0, 2, 4]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 27\nvalue = input()\nprint(value)",
+    "starter_code": "n=int(input())\ndef evens(n): pass\nprint(list(evens(n)))",
+    "solution": "n=int(input())\ndef evens(n):\n for x in range(n): yield x*2\nprint(list(evens(n)))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "3",
+        "expected": "[0, 2, 4]"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "[0]"
       },
       {
         "input": "0",
-        "expected": "0"
+        "expected": "[]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «iter/next» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -21349,34 +21349,34 @@
   },
   {
     "id": 594,
-    "title": "generator — باشگاه ورزشی — تمرین 594",
+    "title": "Generator فیلتر 28 — تمرین 594",
     "level": "سخت",
     "category": "Iterator / Generator",
     "topic": "generator",
-    "statement": "در سناریوی «باشگاه ورزشی»، راه‌حلی خوانا برای مسئله «generator» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "فقط اعداد مثبت ورودی را lazy تولید کنید.",
     "examples": [
-      "ورودی: نمونه 28\nخروجی: نتیجه پردازش نمونه 28"
+      "ورودی: -2 3 0 4\nخروجی: [3, 4]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 28\nvalue = input()\nprint(value)",
+    "starter_code": "a=list(map(int,input().split()))\nprint(list(...))",
+    "solution": "a=list(map(int,input().split())); print(list(x for x in a if x>0))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "-2 3 0 4",
+        "expected": "[3, 4]"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "-1 -2",
+        "expected": "[]"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "5",
+        "expected": "[5]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «generator» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -21385,34 +21385,34 @@
   },
   {
     "id": 595,
-    "title": "yield — سامانه ثبت‌نام — تمرین 595",
+    "title": "Generator تجمعی 29 — تمرین 595",
     "level": "سخت",
     "category": "Iterator / Generator",
     "topic": "yield",
-    "statement": "در سناریوی «سامانه ثبت‌نام»، یک مسئله عملی مرتبط با «yield» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "جمع تجمعی اعداد ورودی را با yield تولید کنید.",
     "examples": [
-      "ورودی: نمونه 29\nخروجی: نتیجه پردازش نمونه 29"
+      "ورودی: 1 2 3\nخروجی: [1, 3, 6]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 29\nvalue = input()\nprint(value)",
+    "starter_code": "a=list(map(int,input().split()))\n# generator\nprint(list(...))",
+    "solution": "a=list(map(int,input().split()))\ndef run(a):\n s=0\n for x in a: s+=x; yield s\nprint(list(run(a)))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "1 2 3",
+        "expected": "[1, 3, 6]"
+      },
+      {
+        "input": "5 -2",
+        "expected": "[5, 3]"
       },
       {
         "input": "7",
-        "expected": "7"
-      },
-      {
-        "input": "0",
-        "expected": "0"
+        "expected": "[7]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «yield» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -21421,34 +21421,34 @@
   },
   {
     "id": 596,
-    "title": "generator expression — دفتر کار — تمرین 596",
+    "title": "Generator پنجره 30 — تمرین 596",
     "level": "سخت",
     "category": "Iterator / Generator",
     "topic": "generator expression",
-    "statement": "در سناریوی «دفتر کار»، یک برنامه Python برای «generator expression» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "پنجره‌های kتایی متوالی را تولید کنید.",
     "examples": [
-      "ورودی: نمونه 30\nخروجی: نتیجه پردازش نمونه 30"
+      "ورودی: 1 2 3\n2\nخروجی: [[1, 2], [2, 3]]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 30\nvalue = input()\nprint(value)",
+    "starter_code": "a=list(map(int,input().split())); k=int(input())\nprint(list(...))",
+    "solution": "a=list(map(int,input().split())); k=int(input()); print(list(a[i:i+k] for i in range(len(a)-k+1)))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "1 2 3\n2",
+        "expected": "[[1, 2], [2, 3]]"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1 2\n3",
+        "expected": "[]"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "1 2 3\n3",
+        "expected": "[[1, 2, 3]]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «generator expression» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -21457,34 +21457,34 @@
   },
   {
     "id": 597,
-    "title": "iterator — رستوران — تمرین 597",
+    "title": "Iterator بازه 31 — تمرین 597",
     "level": "سخت",
     "category": "Iterator / Generator",
     "topic": "iterator",
-    "statement": "در سناریوی «رستوران»، مفهوم «iterator» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "Iterator بسازید که اعداد 0 تا n-1 را تولید کند.",
     "examples": [
-      "ورودی: نمونه 31\nخروجی: نتیجه پردازش نمونه 31"
+      "ورودی: 4\nخروجی: [0, 1, 2, 3]"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Iterator / Generator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 31\nvalue = input()\nprint(value)",
+    "starter_code": "n=int(input())\n# Iterator را کامل کنید\nprint(list(...))",
+    "solution": "n=int(input())\nclass R:\n def __init__(self,n): self.i=0; self.n=n\n def __iter__(self): return self\n def __next__(self):\n  if self.i>=self.n: raise StopIteration\n  x=self.i; self.i+=1; return x\nprint(list(R(n)))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "4",
+        "expected": "[0, 1, 2, 3]"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "[0]"
       },
       {
         "input": "0",
-        "expected": "0"
+        "expected": "[]"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «iterator» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Iterator / Generator",
@@ -21493,34 +21493,34 @@
   },
   {
     "id": 598,
-    "title": "decorator ساده — انبار کالا — تمرین 598",
+    "title": "Decorator uppercase 1 — تمرین 598",
     "level": "آسان",
     "category": "Decorator",
     "topic": "decorator ساده",
-    "statement": "در سناریوی «انبار کالا»، یک مسئله عملی مرتبط با «decorator ساده» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "دکوراتوری بسازید که خروجی رشته‌ای را uppercase کند.",
     "examples": [
-      "ورودی: نمونه 1\nخروجی: نتیجه پردازش نمونه 1"
+      "ورودی: hello\nخروجی: HELLO"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 1\nvalue = input()\nprint(value)",
+    "starter_code": "def deco(f): pass\n@deco\ndef f(): return input()\nprint(f())",
+    "solution": "def deco(f):\n def w(*a,**k): return str(f(*a,**k)).upper()\n return w\n@deco\ndef f(): return input()\nprint(f())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "hello",
+        "expected": "HELLO"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "python",
+        "expected": "PYTHON"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "a",
+        "expected": "A"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «decorator ساده» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -21529,24 +21529,24 @@
   },
   {
     "id": 599,
-    "title": "پارامتر decorator — اپلیکیشن مالی — تمرین 599",
+    "title": "Decorator ضریب 2 — تمرین 599",
     "level": "آسان",
     "category": "Decorator",
     "topic": "پارامتر decorator",
-    "statement": "در سناریوی «اپلیکیشن مالی»، یک برنامه Python برای «پارامتر decorator» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "دکوراتوری بسازید که خروجی را در 4 ضرب کند.",
     "examples": [
-      "ورودی: نمونه 2\nخروجی: نتیجه پردازش نمونه 2"
+      "ورودی: 2\nخروجی: 8"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 2\nvalue = input()\nprint(value)",
+    "starter_code": "def multiply(factor): pass\n@multiply(4)\ndef f(): return int(input())\nprint(f())",
+    "solution": "def multiply(factor):\n def d(f):\n  def w(*a,**k): return f(*a,**k)*factor\n  return w\n return d\n@multiply(4)\ndef f(): return int(input())\nprint(f())",
     "tests": [
       {
-        "input": "8",
+        "input": "2",
         "expected": "8"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "5",
+        "expected": "20"
       },
       {
         "input": "0",
@@ -21554,9 +21554,9 @@
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «پارامتر decorator» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -21565,24 +21565,24 @@
   },
   {
     "id": 600,
-    "title": "wrapper — سامانه نوبت‌دهی — تمرین 600",
+    "title": "Decorator شمارنده 3 — تمرین 600",
     "level": "آسان",
     "category": "Decorator",
     "topic": "wrapper",
-    "statement": "در سناریوی «سامانه نوبت‌دهی»، مفهوم «wrapper» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "تعداد اجرای تابع را در count نگه دارید.",
     "examples": [
-      "ورودی: نمونه 3\nخروجی: نتیجه پردازش نمونه 3"
+      "ورودی: 3\nخروجی: 3"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 3\nvalue = input()\nprint(value)",
+    "starter_code": "def counted(f): pass\n@counted\ndef f(): return 1\nfor _ in range(int(input())): f()\nprint(f.count)",
+    "solution": "def counted(f):\n def w(*a,**k): w.count+=1; return f(*a,**k)\n w.count=0; return w\n@counted\ndef f(): return 1\nfor _ in range(int(input())): f()\nprint(f.count)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "3",
+        "expected": "3"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "1"
       },
       {
         "input": "0",
@@ -21590,9 +21590,9 @@
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «wrapper» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -21601,34 +21601,34 @@
   },
   {
     "id": 601,
-    "title": "چند decorator — فروشگاه محلی — تمرین 601",
+    "title": "Decorator قاب 4 — تمرین 601",
     "level": "آسان",
     "category": "Decorator",
     "topic": "چند decorator",
-    "statement": "در سناریوی «فروشگاه محلی»، راه‌حلی خوانا برای مسئله «چند decorator» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "دکوراتوری بسازید که خروجی را داخل <> قرار دهد.",
     "examples": [
-      "ورودی: نمونه 4\nخروجی: نتیجه پردازش نمونه 4"
+      "ورودی: OK\nخروجی: <OK>"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 4\nvalue = input()\nprint(value)",
+    "starter_code": "def frame(f): pass\n@frame\ndef f(): return input()\nprint(f())",
+    "solution": "def frame(f):\n def w(*a,**k): return '<'+str(f(*a,**k))+'>'\n return w\n@frame\ndef f(): return input()\nprint(f())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "OK",
+        "expected": "<OK>"
+      },
+      {
+        "input": "test",
+        "expected": "<test>"
       },
       {
         "input": "7",
-        "expected": "7"
-      },
-      {
-        "input": "0",
-        "expected": "0"
+        "expected": "<7>"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «چند decorator» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -21637,34 +21637,34 @@
   },
   {
     "id": 602,
-    "title": "حفظ metadata — مدرسه — تمرین 602",
+    "title": "Decorator metadata 5 — تمرین 602",
     "level": "آسان",
     "category": "Decorator",
     "topic": "حفظ metadata",
-    "statement": "در سناریوی «مدرسه»، یک مسئله عملی مرتبط با «حفظ metadata» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "با functools.wraps نام تابع اصلی را حفظ کنید.",
     "examples": [
-      "ورودی: نمونه 5\nخروجی: نتیجه پردازش نمونه 5"
+      "ورودی: بدون ورودی\nخروجی: calculate"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 5\nvalue = input()\nprint(value)",
+    "starter_code": "from functools import wraps\ndef keep(f): pass\n@keep\ndef calculate(): return 1\nprint(calculate.__name__)",
+    "solution": "from functools import wraps\ndef keep(f):\n @wraps(f)\n def w(*a,**k): return f(*a,**k)\n return w\n@keep\ndef calculate(): return 1\nprint(calculate.__name__)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "calculate"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "calculate"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "calculate"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «حفظ metadata» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -21673,34 +21673,34 @@
   },
   {
     "id": 603,
-    "title": "decorator ساده — کتابخانه — تمرین 603",
+    "title": "Decorator uppercase 6 — تمرین 603",
     "level": "آسان",
     "category": "Decorator",
     "topic": "decorator ساده",
-    "statement": "در سناریوی «کتابخانه»، یک برنامه Python برای «decorator ساده» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "دکوراتوری بسازید که خروجی رشته‌ای را uppercase کند.",
     "examples": [
-      "ورودی: نمونه 6\nخروجی: نتیجه پردازش نمونه 6"
+      "ورودی: hello\nخروجی: HELLO"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 6\nvalue = input()\nprint(value)",
+    "starter_code": "def deco(f): pass\n@deco\ndef f(): return input()\nprint(f())",
+    "solution": "def deco(f):\n def w(*a,**k): return str(f(*a,**k)).upper()\n return w\n@deco\ndef f(): return input()\nprint(f())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "hello",
+        "expected": "HELLO"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "python",
+        "expected": "PYTHON"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "a",
+        "expected": "A"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «decorator ساده» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -21709,24 +21709,24 @@
   },
   {
     "id": 604,
-    "title": "پارامتر decorator — باشگاه ورزشی — تمرین 604",
+    "title": "Decorator ضریب 7 — تمرین 604",
     "level": "آسان",
     "category": "Decorator",
     "topic": "پارامتر decorator",
-    "statement": "در سناریوی «باشگاه ورزشی»، مفهوم «پارامتر decorator» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "دکوراتوری بسازید که خروجی را در 9 ضرب کند.",
     "examples": [
-      "ورودی: نمونه 7\nخروجی: نتیجه پردازش نمونه 7"
+      "ورودی: 2\nخروجی: 18"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 7\nvalue = input()\nprint(value)",
+    "starter_code": "def multiply(factor): pass\n@multiply(9)\ndef f(): return int(input())\nprint(f())",
+    "solution": "def multiply(factor):\n def d(f):\n  def w(*a,**k): return f(*a,**k)*factor\n  return w\n return d\n@multiply(9)\ndef f(): return int(input())\nprint(f())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "2",
+        "expected": "18"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "5",
+        "expected": "45"
       },
       {
         "input": "0",
@@ -21734,9 +21734,9 @@
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «پارامتر decorator» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -21745,24 +21745,24 @@
   },
   {
     "id": 605,
-    "title": "wrapper — سامانه ثبت‌نام — تمرین 605",
+    "title": "Decorator شمارنده 8 — تمرین 605",
     "level": "آسان",
     "category": "Decorator",
     "topic": "wrapper",
-    "statement": "در سناریوی «سامانه ثبت‌نام»، راه‌حلی خوانا برای مسئله «wrapper» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "تعداد اجرای تابع را در count نگه دارید.",
     "examples": [
-      "ورودی: نمونه 8\nخروجی: نتیجه پردازش نمونه 8"
+      "ورودی: 3\nخروجی: 3"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 8\nvalue = input()\nprint(value)",
+    "starter_code": "def counted(f): pass\n@counted\ndef f(): return 1\nfor _ in range(int(input())): f()\nprint(f.count)",
+    "solution": "def counted(f):\n def w(*a,**k): w.count+=1; return f(*a,**k)\n w.count=0; return w\n@counted\ndef f(): return 1\nfor _ in range(int(input())): f()\nprint(f.count)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "3",
+        "expected": "3"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "1"
       },
       {
         "input": "0",
@@ -21770,9 +21770,9 @@
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «wrapper» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -21781,34 +21781,34 @@
   },
   {
     "id": 606,
-    "title": "چند decorator — دفتر کار — تمرین 606",
+    "title": "Decorator قاب 9 — تمرین 606",
     "level": "آسان",
     "category": "Decorator",
     "topic": "چند decorator",
-    "statement": "در سناریوی «دفتر کار»، یک مسئله عملی مرتبط با «چند decorator» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "دکوراتوری بسازید که خروجی را داخل <> قرار دهد.",
     "examples": [
-      "ورودی: نمونه 9\nخروجی: نتیجه پردازش نمونه 9"
+      "ورودی: OK\nخروجی: <OK>"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 9\nvalue = input()\nprint(value)",
+    "starter_code": "def frame(f): pass\n@frame\ndef f(): return input()\nprint(f())",
+    "solution": "def frame(f):\n def w(*a,**k): return '<'+str(f(*a,**k))+'>'\n return w\n@frame\ndef f(): return input()\nprint(f())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "OK",
+        "expected": "<OK>"
+      },
+      {
+        "input": "test",
+        "expected": "<test>"
       },
       {
         "input": "7",
-        "expected": "7"
-      },
-      {
-        "input": "0",
-        "expected": "0"
+        "expected": "<7>"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «چند decorator» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -21817,34 +21817,34 @@
   },
   {
     "id": 607,
-    "title": "حفظ metadata — رستوران — تمرین 607",
+    "title": "Decorator metadata 10 — تمرین 607",
     "level": "آسان",
     "category": "Decorator",
     "topic": "حفظ metadata",
-    "statement": "در سناریوی «رستوران»، یک برنامه Python برای «حفظ metadata» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "با functools.wraps نام تابع اصلی را حفظ کنید.",
     "examples": [
-      "ورودی: نمونه 10\nخروجی: نتیجه پردازش نمونه 10"
+      "ورودی: بدون ورودی\nخروجی: calculate"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 10\nvalue = input()\nprint(value)",
+    "starter_code": "from functools import wraps\ndef keep(f): pass\n@keep\ndef calculate(): return 1\nprint(calculate.__name__)",
+    "solution": "from functools import wraps\ndef keep(f):\n @wraps(f)\n def w(*a,**k): return f(*a,**k)\n return w\n@keep\ndef calculate(): return 1\nprint(calculate.__name__)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "calculate"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "calculate"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "calculate"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «حفظ metadata» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -21853,34 +21853,34 @@
   },
   {
     "id": 608,
-    "title": "decorator ساده — انبار کالا — تمرین 608",
+    "title": "Decorator uppercase 11 — تمرین 608",
     "level": "آسان",
     "category": "Decorator",
     "topic": "decorator ساده",
-    "statement": "در سناریوی «انبار کالا»، مفهوم «decorator ساده» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "دکوراتوری بسازید که خروجی رشته‌ای را uppercase کند.",
     "examples": [
-      "ورودی: نمونه 11\nخروجی: نتیجه پردازش نمونه 11"
+      "ورودی: hello\nخروجی: HELLO"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 11\nvalue = input()\nprint(value)",
+    "starter_code": "def deco(f): pass\n@deco\ndef f(): return input()\nprint(f())",
+    "solution": "def deco(f):\n def w(*a,**k): return str(f(*a,**k)).upper()\n return w\n@deco\ndef f(): return input()\nprint(f())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "hello",
+        "expected": "HELLO"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "python",
+        "expected": "PYTHON"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "a",
+        "expected": "A"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «decorator ساده» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -21889,24 +21889,24 @@
   },
   {
     "id": 609,
-    "title": "پارامتر decorator — اپلیکیشن مالی — تمرین 609",
+    "title": "Decorator ضریب 12 — تمرین 609",
     "level": "آسان",
     "category": "Decorator",
     "topic": "پارامتر decorator",
-    "statement": "در سناریوی «اپلیکیشن مالی»، راه‌حلی خوانا برای مسئله «پارامتر decorator» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "دکوراتوری بسازید که خروجی را در 14 ضرب کند.",
     "examples": [
-      "ورودی: نمونه 12\nخروجی: نتیجه پردازش نمونه 12"
+      "ورودی: 2\nخروجی: 28"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 12\nvalue = input()\nprint(value)",
+    "starter_code": "def multiply(factor): pass\n@multiply(14)\ndef f(): return int(input())\nprint(f())",
+    "solution": "def multiply(factor):\n def d(f):\n  def w(*a,**k): return f(*a,**k)*factor\n  return w\n return d\n@multiply(14)\ndef f(): return int(input())\nprint(f())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "2",
+        "expected": "28"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "5",
+        "expected": "70"
       },
       {
         "input": "0",
@@ -21914,9 +21914,9 @@
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «پارامتر decorator» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -21925,24 +21925,24 @@
   },
   {
     "id": 610,
-    "title": "wrapper — سامانه نوبت‌دهی — تمرین 610",
+    "title": "Decorator شمارنده 13 — تمرین 610",
     "level": "آسان",
     "category": "Decorator",
     "topic": "wrapper",
-    "statement": "در سناریوی «سامانه نوبت‌دهی»، یک مسئله عملی مرتبط با «wrapper» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "تعداد اجرای تابع را در count نگه دارید.",
     "examples": [
-      "ورودی: نمونه 13\nخروجی: نتیجه پردازش نمونه 13"
+      "ورودی: 3\nخروجی: 3"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 13\nvalue = input()\nprint(value)",
+    "starter_code": "def counted(f): pass\n@counted\ndef f(): return 1\nfor _ in range(int(input())): f()\nprint(f.count)",
+    "solution": "def counted(f):\n def w(*a,**k): w.count+=1; return f(*a,**k)\n w.count=0; return w\n@counted\ndef f(): return 1\nfor _ in range(int(input())): f()\nprint(f.count)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "3",
+        "expected": "3"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "1"
       },
       {
         "input": "0",
@@ -21950,9 +21950,9 @@
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «wrapper» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -21961,34 +21961,34 @@
   },
   {
     "id": 611,
-    "title": "چند decorator — فروشگاه محلی — تمرین 611",
+    "title": "Decorator قاب 14 — تمرین 611",
     "level": "آسان",
     "category": "Decorator",
     "topic": "چند decorator",
-    "statement": "در سناریوی «فروشگاه محلی»، یک برنامه Python برای «چند decorator» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "دکوراتوری بسازید که خروجی را داخل <> قرار دهد.",
     "examples": [
-      "ورودی: نمونه 14\nخروجی: نتیجه پردازش نمونه 14"
+      "ورودی: OK\nخروجی: <OK>"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 14\nvalue = input()\nprint(value)",
+    "starter_code": "def frame(f): pass\n@frame\ndef f(): return input()\nprint(f())",
+    "solution": "def frame(f):\n def w(*a,**k): return '<'+str(f(*a,**k))+'>'\n return w\n@frame\ndef f(): return input()\nprint(f())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "OK",
+        "expected": "<OK>"
+      },
+      {
+        "input": "test",
+        "expected": "<test>"
       },
       {
         "input": "7",
-        "expected": "7"
-      },
-      {
-        "input": "0",
-        "expected": "0"
+        "expected": "<7>"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «چند decorator» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -21997,34 +21997,34 @@
   },
   {
     "id": 612,
-    "title": "حفظ metadata — مدرسه — تمرین 612",
+    "title": "Decorator metadata 15 — تمرین 612",
     "level": "متوسط",
     "category": "Decorator",
     "topic": "حفظ metadata",
-    "statement": "در سناریوی «مدرسه»، مفهوم «حفظ metadata» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "با functools.wraps نام تابع اصلی را حفظ کنید.",
     "examples": [
-      "ورودی: نمونه 15\nخروجی: نتیجه پردازش نمونه 15"
+      "ورودی: بدون ورودی\nخروجی: calculate"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 15\nvalue = input()\nprint(value)",
+    "starter_code": "from functools import wraps\ndef keep(f): pass\n@keep\ndef calculate(): return 1\nprint(calculate.__name__)",
+    "solution": "from functools import wraps\ndef keep(f):\n @wraps(f)\n def w(*a,**k): return f(*a,**k)\n return w\n@keep\ndef calculate(): return 1\nprint(calculate.__name__)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "calculate"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "calculate"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "calculate"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «حفظ metadata» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -22033,34 +22033,34 @@
   },
   {
     "id": 613,
-    "title": "decorator ساده — کتابخانه — تمرین 613",
+    "title": "Decorator uppercase 16 — تمرین 613",
     "level": "متوسط",
     "category": "Decorator",
     "topic": "decorator ساده",
-    "statement": "در سناریوی «کتابخانه»، راه‌حلی خوانا برای مسئله «decorator ساده» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "دکوراتوری بسازید که خروجی رشته‌ای را uppercase کند.",
     "examples": [
-      "ورودی: نمونه 16\nخروجی: نتیجه پردازش نمونه 16"
+      "ورودی: hello\nخروجی: HELLO"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 16\nvalue = input()\nprint(value)",
+    "starter_code": "def deco(f): pass\n@deco\ndef f(): return input()\nprint(f())",
+    "solution": "def deco(f):\n def w(*a,**k): return str(f(*a,**k)).upper()\n return w\n@deco\ndef f(): return input()\nprint(f())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "hello",
+        "expected": "HELLO"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "python",
+        "expected": "PYTHON"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "a",
+        "expected": "A"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «decorator ساده» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -22069,24 +22069,24 @@
   },
   {
     "id": 614,
-    "title": "پارامتر decorator — باشگاه ورزشی — تمرین 614",
+    "title": "Decorator ضریب 17 — تمرین 614",
     "level": "متوسط",
     "category": "Decorator",
     "topic": "پارامتر decorator",
-    "statement": "در سناریوی «باشگاه ورزشی»، یک مسئله عملی مرتبط با «پارامتر decorator» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "دکوراتوری بسازید که خروجی را در 19 ضرب کند.",
     "examples": [
-      "ورودی: نمونه 17\nخروجی: نتیجه پردازش نمونه 17"
+      "ورودی: 2\nخروجی: 38"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 17\nvalue = input()\nprint(value)",
+    "starter_code": "def multiply(factor): pass\n@multiply(19)\ndef f(): return int(input())\nprint(f())",
+    "solution": "def multiply(factor):\n def d(f):\n  def w(*a,**k): return f(*a,**k)*factor\n  return w\n return d\n@multiply(19)\ndef f(): return int(input())\nprint(f())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "2",
+        "expected": "38"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "5",
+        "expected": "95"
       },
       {
         "input": "0",
@@ -22094,9 +22094,9 @@
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «پارامتر decorator» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -22105,24 +22105,24 @@
   },
   {
     "id": 615,
-    "title": "wrapper — سامانه ثبت‌نام — تمرین 615",
+    "title": "Decorator شمارنده 18 — تمرین 615",
     "level": "متوسط",
     "category": "Decorator",
     "topic": "wrapper",
-    "statement": "در سناریوی «سامانه ثبت‌نام»، یک برنامه Python برای «wrapper» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "تعداد اجرای تابع را در count نگه دارید.",
     "examples": [
-      "ورودی: نمونه 18\nخروجی: نتیجه پردازش نمونه 18"
+      "ورودی: 3\nخروجی: 3"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 18\nvalue = input()\nprint(value)",
+    "starter_code": "def counted(f): pass\n@counted\ndef f(): return 1\nfor _ in range(int(input())): f()\nprint(f.count)",
+    "solution": "def counted(f):\n def w(*a,**k): w.count+=1; return f(*a,**k)\n w.count=0; return w\n@counted\ndef f(): return 1\nfor _ in range(int(input())): f()\nprint(f.count)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "3",
+        "expected": "3"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "1"
       },
       {
         "input": "0",
@@ -22130,9 +22130,9 @@
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «wrapper» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -22141,34 +22141,34 @@
   },
   {
     "id": 616,
-    "title": "چند decorator — دفتر کار — تمرین 616",
+    "title": "Decorator قاب 19 — تمرین 616",
     "level": "متوسط",
     "category": "Decorator",
     "topic": "چند decorator",
-    "statement": "در سناریوی «دفتر کار»، مفهوم «چند decorator» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "دکوراتوری بسازید که خروجی را داخل <> قرار دهد.",
     "examples": [
-      "ورودی: نمونه 19\nخروجی: نتیجه پردازش نمونه 19"
+      "ورودی: OK\nخروجی: <OK>"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 19\nvalue = input()\nprint(value)",
+    "starter_code": "def frame(f): pass\n@frame\ndef f(): return input()\nprint(f())",
+    "solution": "def frame(f):\n def w(*a,**k): return '<'+str(f(*a,**k))+'>'\n return w\n@frame\ndef f(): return input()\nprint(f())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "OK",
+        "expected": "<OK>"
+      },
+      {
+        "input": "test",
+        "expected": "<test>"
       },
       {
         "input": "7",
-        "expected": "7"
-      },
-      {
-        "input": "0",
-        "expected": "0"
+        "expected": "<7>"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «چند decorator» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -22177,34 +22177,34 @@
   },
   {
     "id": 617,
-    "title": "حفظ metadata — رستوران — تمرین 617",
+    "title": "Decorator metadata 20 — تمرین 617",
     "level": "متوسط",
     "category": "Decorator",
     "topic": "حفظ metadata",
-    "statement": "در سناریوی «رستوران»، راه‌حلی خوانا برای مسئله «حفظ metadata» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "با functools.wraps نام تابع اصلی را حفظ کنید.",
     "examples": [
-      "ورودی: نمونه 20\nخروجی: نتیجه پردازش نمونه 20"
+      "ورودی: بدون ورودی\nخروجی: calculate"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 20\nvalue = input()\nprint(value)",
+    "starter_code": "from functools import wraps\ndef keep(f): pass\n@keep\ndef calculate(): return 1\nprint(calculate.__name__)",
+    "solution": "from functools import wraps\ndef keep(f):\n @wraps(f)\n def w(*a,**k): return f(*a,**k)\n return w\n@keep\ndef calculate(): return 1\nprint(calculate.__name__)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "calculate"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "calculate"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "calculate"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «حفظ metadata» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -22213,34 +22213,34 @@
   },
   {
     "id": 618,
-    "title": "decorator ساده — انبار کالا — تمرین 618",
+    "title": "Decorator uppercase 21 — تمرین 618",
     "level": "متوسط",
     "category": "Decorator",
     "topic": "decorator ساده",
-    "statement": "در سناریوی «انبار کالا»، یک مسئله عملی مرتبط با «decorator ساده» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "دکوراتوری بسازید که خروجی رشته‌ای را uppercase کند.",
     "examples": [
-      "ورودی: نمونه 21\nخروجی: نتیجه پردازش نمونه 21"
+      "ورودی: hello\nخروجی: HELLO"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 21\nvalue = input()\nprint(value)",
+    "starter_code": "def deco(f): pass\n@deco\ndef f(): return input()\nprint(f())",
+    "solution": "def deco(f):\n def w(*a,**k): return str(f(*a,**k)).upper()\n return w\n@deco\ndef f(): return input()\nprint(f())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "hello",
+        "expected": "HELLO"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "python",
+        "expected": "PYTHON"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "a",
+        "expected": "A"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «decorator ساده» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -22249,24 +22249,24 @@
   },
   {
     "id": 619,
-    "title": "پارامتر decorator — اپلیکیشن مالی — تمرین 619",
+    "title": "Decorator ضریب 22 — تمرین 619",
     "level": "متوسط",
     "category": "Decorator",
     "topic": "پارامتر decorator",
-    "statement": "در سناریوی «اپلیکیشن مالی»، یک برنامه Python برای «پارامتر decorator» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "دکوراتوری بسازید که خروجی را در 24 ضرب کند.",
     "examples": [
-      "ورودی: نمونه 22\nخروجی: نتیجه پردازش نمونه 22"
+      "ورودی: 2\nخروجی: 48"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 22\nvalue = input()\nprint(value)",
+    "starter_code": "def multiply(factor): pass\n@multiply(24)\ndef f(): return int(input())\nprint(f())",
+    "solution": "def multiply(factor):\n def d(f):\n  def w(*a,**k): return f(*a,**k)*factor\n  return w\n return d\n@multiply(24)\ndef f(): return int(input())\nprint(f())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "2",
+        "expected": "48"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "5",
+        "expected": "120"
       },
       {
         "input": "0",
@@ -22274,9 +22274,9 @@
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «پارامتر decorator» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -22285,24 +22285,24 @@
   },
   {
     "id": 620,
-    "title": "wrapper — سامانه نوبت‌دهی — تمرین 620",
+    "title": "Decorator شمارنده 23 — تمرین 620",
     "level": "متوسط",
     "category": "Decorator",
     "topic": "wrapper",
-    "statement": "در سناریوی «سامانه نوبت‌دهی»، مفهوم «wrapper» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "تعداد اجرای تابع را در count نگه دارید.",
     "examples": [
-      "ورودی: نمونه 23\nخروجی: نتیجه پردازش نمونه 23"
+      "ورودی: 3\nخروجی: 3"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 23\nvalue = input()\nprint(value)",
+    "starter_code": "def counted(f): pass\n@counted\ndef f(): return 1\nfor _ in range(int(input())): f()\nprint(f.count)",
+    "solution": "def counted(f):\n def w(*a,**k): w.count+=1; return f(*a,**k)\n w.count=0; return w\n@counted\ndef f(): return 1\nfor _ in range(int(input())): f()\nprint(f.count)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "3",
+        "expected": "3"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "1"
       },
       {
         "input": "0",
@@ -22310,9 +22310,9 @@
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «wrapper» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -22321,34 +22321,34 @@
   },
   {
     "id": 621,
-    "title": "چند decorator — فروشگاه محلی — تمرین 621",
+    "title": "Decorator قاب 24 — تمرین 621",
     "level": "متوسط",
     "category": "Decorator",
     "topic": "چند decorator",
-    "statement": "در سناریوی «فروشگاه محلی»، راه‌حلی خوانا برای مسئله «چند decorator» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "دکوراتوری بسازید که خروجی را داخل <> قرار دهد.",
     "examples": [
-      "ورودی: نمونه 24\nخروجی: نتیجه پردازش نمونه 24"
+      "ورودی: OK\nخروجی: <OK>"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 24\nvalue = input()\nprint(value)",
+    "starter_code": "def frame(f): pass\n@frame\ndef f(): return input()\nprint(f())",
+    "solution": "def frame(f):\n def w(*a,**k): return '<'+str(f(*a,**k))+'>'\n return w\n@frame\ndef f(): return input()\nprint(f())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "OK",
+        "expected": "<OK>"
+      },
+      {
+        "input": "test",
+        "expected": "<test>"
       },
       {
         "input": "7",
-        "expected": "7"
-      },
-      {
-        "input": "0",
-        "expected": "0"
+        "expected": "<7>"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «چند decorator» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -22357,34 +22357,34 @@
   },
   {
     "id": 622,
-    "title": "حفظ metadata — مدرسه — تمرین 622",
+    "title": "Decorator metadata 25 — تمرین 622",
     "level": "متوسط",
     "category": "Decorator",
     "topic": "حفظ metadata",
-    "statement": "در سناریوی «مدرسه»، یک مسئله عملی مرتبط با «حفظ metadata» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "با functools.wraps نام تابع اصلی را حفظ کنید.",
     "examples": [
-      "ورودی: نمونه 25\nخروجی: نتیجه پردازش نمونه 25"
+      "ورودی: بدون ورودی\nخروجی: calculate"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 25\nvalue = input()\nprint(value)",
+    "starter_code": "from functools import wraps\ndef keep(f): pass\n@keep\ndef calculate(): return 1\nprint(calculate.__name__)",
+    "solution": "from functools import wraps\ndef keep(f):\n @wraps(f)\n def w(*a,**k): return f(*a,**k)\n return w\n@keep\ndef calculate(): return 1\nprint(calculate.__name__)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "calculate"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "calculate"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "calculate"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «حفظ metadata» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -22393,34 +22393,34 @@
   },
   {
     "id": 623,
-    "title": "decorator ساده — کتابخانه — تمرین 623",
+    "title": "Decorator uppercase 26 — تمرین 623",
     "level": "متوسط",
     "category": "Decorator",
     "topic": "decorator ساده",
-    "statement": "در سناریوی «کتابخانه»، یک برنامه Python برای «decorator ساده» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "دکوراتوری بسازید که خروجی رشته‌ای را uppercase کند.",
     "examples": [
-      "ورودی: نمونه 26\nخروجی: نتیجه پردازش نمونه 26"
+      "ورودی: hello\nخروجی: HELLO"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 26\nvalue = input()\nprint(value)",
+    "starter_code": "def deco(f): pass\n@deco\ndef f(): return input()\nprint(f())",
+    "solution": "def deco(f):\n def w(*a,**k): return str(f(*a,**k)).upper()\n return w\n@deco\ndef f(): return input()\nprint(f())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "hello",
+        "expected": "HELLO"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "python",
+        "expected": "PYTHON"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "a",
+        "expected": "A"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «decorator ساده» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -22429,24 +22429,24 @@
   },
   {
     "id": 624,
-    "title": "پارامتر decorator — باشگاه ورزشی — تمرین 624",
+    "title": "Decorator ضریب 27 — تمرین 624",
     "level": "سخت",
     "category": "Decorator",
     "topic": "پارامتر decorator",
-    "statement": "در سناریوی «باشگاه ورزشی»، مفهوم «پارامتر decorator» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "دکوراتوری بسازید که خروجی را در 29 ضرب کند.",
     "examples": [
-      "ورودی: نمونه 27\nخروجی: نتیجه پردازش نمونه 27"
+      "ورودی: 2\nخروجی: 58"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 27\nvalue = input()\nprint(value)",
+    "starter_code": "def multiply(factor): pass\n@multiply(29)\ndef f(): return int(input())\nprint(f())",
+    "solution": "def multiply(factor):\n def d(f):\n  def w(*a,**k): return f(*a,**k)*factor\n  return w\n return d\n@multiply(29)\ndef f(): return int(input())\nprint(f())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "2",
+        "expected": "58"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "5",
+        "expected": "145"
       },
       {
         "input": "0",
@@ -22454,9 +22454,9 @@
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «پارامتر decorator» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -22465,24 +22465,24 @@
   },
   {
     "id": 625,
-    "title": "wrapper — سامانه ثبت‌نام — تمرین 625",
+    "title": "Decorator شمارنده 28 — تمرین 625",
     "level": "سخت",
     "category": "Decorator",
     "topic": "wrapper",
-    "statement": "در سناریوی «سامانه ثبت‌نام»، راه‌حلی خوانا برای مسئله «wrapper» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "تعداد اجرای تابع را در count نگه دارید.",
     "examples": [
-      "ورودی: نمونه 28\nخروجی: نتیجه پردازش نمونه 28"
+      "ورودی: 3\nخروجی: 3"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 28\nvalue = input()\nprint(value)",
+    "starter_code": "def counted(f): pass\n@counted\ndef f(): return 1\nfor _ in range(int(input())): f()\nprint(f.count)",
+    "solution": "def counted(f):\n def w(*a,**k): w.count+=1; return f(*a,**k)\n w.count=0; return w\n@counted\ndef f(): return 1\nfor _ in range(int(input())): f()\nprint(f.count)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "3",
+        "expected": "3"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "1"
       },
       {
         "input": "0",
@@ -22490,9 +22490,9 @@
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «wrapper» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -22501,34 +22501,34 @@
   },
   {
     "id": 626,
-    "title": "چند decorator — دفتر کار — تمرین 626",
+    "title": "Decorator قاب 29 — تمرین 626",
     "level": "سخت",
     "category": "Decorator",
     "topic": "چند decorator",
-    "statement": "در سناریوی «دفتر کار»، یک مسئله عملی مرتبط با «چند decorator» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "دکوراتوری بسازید که خروجی را داخل <> قرار دهد.",
     "examples": [
-      "ورودی: نمونه 29\nخروجی: نتیجه پردازش نمونه 29"
+      "ورودی: OK\nخروجی: <OK>"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 29\nvalue = input()\nprint(value)",
+    "starter_code": "def frame(f): pass\n@frame\ndef f(): return input()\nprint(f())",
+    "solution": "def frame(f):\n def w(*a,**k): return '<'+str(f(*a,**k))+'>'\n return w\n@frame\ndef f(): return input()\nprint(f())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "OK",
+        "expected": "<OK>"
+      },
+      {
+        "input": "test",
+        "expected": "<test>"
       },
       {
         "input": "7",
-        "expected": "7"
-      },
-      {
-        "input": "0",
-        "expected": "0"
+        "expected": "<7>"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «چند decorator» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -22537,34 +22537,34 @@
   },
   {
     "id": 627,
-    "title": "حفظ metadata — رستوران — تمرین 627",
+    "title": "Decorator metadata 30 — تمرین 627",
     "level": "سخت",
     "category": "Decorator",
     "topic": "حفظ metadata",
-    "statement": "در سناریوی «رستوران»، یک برنامه Python برای «حفظ metadata» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "با functools.wraps نام تابع اصلی را حفظ کنید.",
     "examples": [
-      "ورودی: نمونه 30\nخروجی: نتیجه پردازش نمونه 30"
+      "ورودی: بدون ورودی\nخروجی: calculate"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 30\nvalue = input()\nprint(value)",
+    "starter_code": "from functools import wraps\ndef keep(f): pass\n@keep\ndef calculate(): return 1\nprint(calculate.__name__)",
+    "solution": "from functools import wraps\ndef keep(f):\n @wraps(f)\n def w(*a,**k): return f(*a,**k)\n return w\n@keep\ndef calculate(): return 1\nprint(calculate.__name__)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "calculate"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "calculate"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "calculate"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «حفظ metadata» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -22573,34 +22573,34 @@
   },
   {
     "id": 628,
-    "title": "decorator ساده — انبار کالا — تمرین 628",
+    "title": "Decorator uppercase 31 — تمرین 628",
     "level": "سخت",
     "category": "Decorator",
     "topic": "decorator ساده",
-    "statement": "در سناریوی «انبار کالا»، مفهوم «decorator ساده» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "دکوراتوری بسازید که خروجی رشته‌ای را uppercase کند.",
     "examples": [
-      "ورودی: نمونه 31\nخروجی: نتیجه پردازش نمونه 31"
+      "ورودی: hello\nخروجی: HELLO"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Decorator\n\n",
-    "solution": "# راه‌حل نمونه تمرین 31\nvalue = input()\nprint(value)",
+    "starter_code": "def deco(f): pass\n@deco\ndef f(): return input()\nprint(f())",
+    "solution": "def deco(f):\n def w(*a,**k): return str(f(*a,**k)).upper()\n return w\n@deco\ndef f(): return input()\nprint(f())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "hello",
+        "expected": "HELLO"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "python",
+        "expected": "PYTHON"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "a",
+        "expected": "A"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «decorator ساده» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Decorator",
@@ -22609,34 +22609,34 @@
   },
   {
     "id": 629,
-    "title": "with — اپلیکیشن مالی — تمرین 629",
+    "title": "Context ورود و خروج 1 — تمرین 629",
     "level": "آسان",
     "category": "Context Manager",
     "topic": "with",
-    "statement": "در سناریوی «اپلیکیشن مالی»، یک مسئله عملی مرتبط با «with» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "ورود، کار و خروج را در لیست ثبت کنید.",
     "examples": [
-      "ورودی: نمونه 1\nخروجی: نتیجه پردازش نمونه 1"
+      "ورودی: بدون ورودی\nخروجی: ['enter', 'work', 'exit']"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 1\nvalue = input()\nprint(value)",
+    "starter_code": "events=[]\nclass C: pass\nwith C(): events.append('work')\nprint(events)",
+    "solution": "events=[]\nclass C:\n def __enter__(self): events.append('enter')\n def __exit__(self,*a): events.append('exit')\nwith C(): events.append('work')\nprint(events)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "['enter', 'work', 'exit']"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "['enter', 'work', 'exit']"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "['enter', 'work', 'exit']"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «with» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -22645,34 +22645,34 @@
   },
   {
     "id": 630,
-    "title": "__enter__ — سامانه نوبت‌دهی — تمرین 630",
+    "title": "Context مقدار 2 — تمرین 630",
     "level": "آسان",
     "category": "Context Manager",
     "topic": "__enter__",
-    "statement": "در سناریوی «سامانه نوبت‌دهی»، یک برنامه Python برای «__enter__» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "__enter__ باید مقدار 2 را برای with برگرداند.",
     "examples": [
-      "ورودی: نمونه 2\nخروجی: نتیجه پردازش نمونه 2"
+      "ورودی: بدون ورودی\nخروجی: 2"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 2\nvalue = input()\nprint(value)",
+    "starter_code": "class C: pass\nwith C() as x: print(x)",
+    "solution": "class C:\n def __enter__(self): return 2\n def __exit__(self,*a): pass\nwith C() as x: print(x)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "2"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "2"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "2"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «__enter__» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -22681,34 +22681,34 @@
   },
   {
     "id": 631,
-    "title": "__exit__ — فروشگاه محلی — تمرین 631",
+    "title": "Context خطا 3 — تمرین 631",
     "level": "آسان",
     "category": "Context Manager",
     "topic": "__exit__",
-    "statement": "در سناریوی «فروشگاه محلی»، مفهوم «__exit__» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "ValueError را سرکوب و SAFE چاپ کنید.",
     "examples": [
-      "ورودی: نمونه 3\nخروجی: نتیجه پردازش نمونه 3"
+      "ورودی: بدون ورودی\nخروجی: SAFE"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 3\nvalue = input()\nprint(value)",
+    "starter_code": "class C: pass\nwith C(): raise ValueError()",
+    "solution": "class C:\n def __enter__(self): pass\n def __exit__(self,t,e,tb):\n  if t is ValueError: print('SAFE'); return True\nwith C(): raise ValueError()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "SAFE"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "SAFE"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "SAFE"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «__exit__» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -22717,34 +22717,34 @@
   },
   {
     "id": 632,
-    "title": "contextlib — مدرسه — تمرین 632",
+    "title": "contextlib 4 — تمرین 632",
     "level": "آسان",
     "category": "Context Manager",
     "topic": "contextlib",
-    "statement": "در سناریوی «مدرسه»، راه‌حلی خوانا برای مسئله «contextlib» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "با contextmanager شروع و پایان را چاپ کنید.",
     "examples": [
-      "ورودی: نمونه 4\nخروجی: نتیجه پردازش نمونه 4"
+      "ورودی: بدون ورودی\nخروجی: START\nWORK\nEND"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 4\nvalue = input()\nprint(value)",
+    "starter_code": "from contextlib import contextmanager\n@contextmanager\ndef c(): pass\nwith c(): print('WORK')",
+    "solution": "from contextlib import contextmanager\n@contextmanager\ndef c():\n print('START')\n try: yield\n finally: print('END')\nwith c(): print('WORK')",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "START\nWORK\nEND"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "START\nWORK\nEND"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "START\nWORK\nEND"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «contextlib» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -22753,34 +22753,34 @@
   },
   {
     "id": 633,
-    "title": "مدیریت منبع — کتابخانه — تمرین 633",
+    "title": "Context resource 5 — تمرین 633",
     "level": "آسان",
     "category": "Context Manager",
     "topic": "مدیریت منبع",
-    "statement": "در سناریوی «کتابخانه»، یک مسئله عملی مرتبط با «مدیریت منبع» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "منبع را هنگام ورود active و هنگام خروج inactive کنید.",
     "examples": [
-      "ورودی: نمونه 5\nخروجی: نتیجه پردازش نمونه 5"
+      "ورودی: بدون ورودی\nخروجی: True\nFalse"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 5\nvalue = input()\nprint(value)",
+    "starter_code": "state={'active':False}\nclass R: pass\nwith R(state): print(state['active'])\nprint(state['active'])",
+    "solution": "state={'active':False}\nclass R:\n def __init__(self,s): self.s=s\n def __enter__(self): self.s['active']=True\n def __exit__(self,*a): self.s['active']=False\nwith R(state): print(state['active'])\nprint(state['active'])",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "True\nFalse"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "True\nFalse"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "True\nFalse"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «مدیریت منبع» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -22789,34 +22789,34 @@
   },
   {
     "id": 634,
-    "title": "with — باشگاه ورزشی — تمرین 634",
+    "title": "Context ورود و خروج 6 — تمرین 634",
     "level": "آسان",
     "category": "Context Manager",
     "topic": "with",
-    "statement": "در سناریوی «باشگاه ورزشی»، یک برنامه Python برای «with» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "ورود، کار و خروج را در لیست ثبت کنید.",
     "examples": [
-      "ورودی: نمونه 6\nخروجی: نتیجه پردازش نمونه 6"
+      "ورودی: بدون ورودی\nخروجی: ['enter', 'work', 'exit']"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 6\nvalue = input()\nprint(value)",
+    "starter_code": "events=[]\nclass C: pass\nwith C(): events.append('work')\nprint(events)",
+    "solution": "events=[]\nclass C:\n def __enter__(self): events.append('enter')\n def __exit__(self,*a): events.append('exit')\nwith C(): events.append('work')\nprint(events)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "['enter', 'work', 'exit']"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "['enter', 'work', 'exit']"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "['enter', 'work', 'exit']"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «with» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -22825,34 +22825,34 @@
   },
   {
     "id": 635,
-    "title": "__enter__ — سامانه ثبت‌نام — تمرین 635",
+    "title": "Context مقدار 7 — تمرین 635",
     "level": "آسان",
     "category": "Context Manager",
     "topic": "__enter__",
-    "statement": "در سناریوی «سامانه ثبت‌نام»، مفهوم «__enter__» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "__enter__ باید مقدار 7 را برای with برگرداند.",
     "examples": [
-      "ورودی: نمونه 7\nخروجی: نتیجه پردازش نمونه 7"
+      "ورودی: بدون ورودی\nخروجی: 7"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 7\nvalue = input()\nprint(value)",
+    "starter_code": "class C: pass\nwith C() as x: print(x)",
+    "solution": "class C:\n def __enter__(self): return 7\n def __exit__(self,*a): pass\nwith C() as x: print(x)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
-      },
-      {
-        "input": "7",
+        "input": "",
         "expected": "7"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "7"
+      },
+      {
+        "input": "",
+        "expected": "7"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «__enter__» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -22861,34 +22861,34 @@
   },
   {
     "id": 636,
-    "title": "__exit__ — دفتر کار — تمرین 636",
+    "title": "Context خطا 8 — تمرین 636",
     "level": "آسان",
     "category": "Context Manager",
     "topic": "__exit__",
-    "statement": "در سناریوی «دفتر کار»، راه‌حلی خوانا برای مسئله «__exit__» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "ValueError را سرکوب و SAFE چاپ کنید.",
     "examples": [
-      "ورودی: نمونه 8\nخروجی: نتیجه پردازش نمونه 8"
+      "ورودی: بدون ورودی\nخروجی: SAFE"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 8\nvalue = input()\nprint(value)",
+    "starter_code": "class C: pass\nwith C(): raise ValueError()",
+    "solution": "class C:\n def __enter__(self): pass\n def __exit__(self,t,e,tb):\n  if t is ValueError: print('SAFE'); return True\nwith C(): raise ValueError()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "SAFE"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "SAFE"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "SAFE"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «__exit__» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -22897,34 +22897,34 @@
   },
   {
     "id": 637,
-    "title": "contextlib — رستوران — تمرین 637",
+    "title": "contextlib 9 — تمرین 637",
     "level": "آسان",
     "category": "Context Manager",
     "topic": "contextlib",
-    "statement": "در سناریوی «رستوران»، یک مسئله عملی مرتبط با «contextlib» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "با contextmanager شروع و پایان را چاپ کنید.",
     "examples": [
-      "ورودی: نمونه 9\nخروجی: نتیجه پردازش نمونه 9"
+      "ورودی: بدون ورودی\nخروجی: START\nWORK\nEND"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 9\nvalue = input()\nprint(value)",
+    "starter_code": "from contextlib import contextmanager\n@contextmanager\ndef c(): pass\nwith c(): print('WORK')",
+    "solution": "from contextlib import contextmanager\n@contextmanager\ndef c():\n print('START')\n try: yield\n finally: print('END')\nwith c(): print('WORK')",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "START\nWORK\nEND"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "START\nWORK\nEND"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "START\nWORK\nEND"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «contextlib» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -22933,34 +22933,34 @@
   },
   {
     "id": 638,
-    "title": "مدیریت منبع — انبار کالا — تمرین 638",
+    "title": "Context resource 10 — تمرین 638",
     "level": "آسان",
     "category": "Context Manager",
     "topic": "مدیریت منبع",
-    "statement": "در سناریوی «انبار کالا»، یک برنامه Python برای «مدیریت منبع» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "منبع را هنگام ورود active و هنگام خروج inactive کنید.",
     "examples": [
-      "ورودی: نمونه 10\nخروجی: نتیجه پردازش نمونه 10"
+      "ورودی: بدون ورودی\nخروجی: True\nFalse"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 10\nvalue = input()\nprint(value)",
+    "starter_code": "state={'active':False}\nclass R: pass\nwith R(state): print(state['active'])\nprint(state['active'])",
+    "solution": "state={'active':False}\nclass R:\n def __init__(self,s): self.s=s\n def __enter__(self): self.s['active']=True\n def __exit__(self,*a): self.s['active']=False\nwith R(state): print(state['active'])\nprint(state['active'])",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "True\nFalse"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "True\nFalse"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "True\nFalse"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «مدیریت منبع» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -22969,34 +22969,34 @@
   },
   {
     "id": 639,
-    "title": "with — اپلیکیشن مالی — تمرین 639",
+    "title": "Context ورود و خروج 11 — تمرین 639",
     "level": "آسان",
     "category": "Context Manager",
     "topic": "with",
-    "statement": "در سناریوی «اپلیکیشن مالی»، مفهوم «with» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "ورود، کار و خروج را در لیست ثبت کنید.",
     "examples": [
-      "ورودی: نمونه 11\nخروجی: نتیجه پردازش نمونه 11"
+      "ورودی: بدون ورودی\nخروجی: ['enter', 'work', 'exit']"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 11\nvalue = input()\nprint(value)",
+    "starter_code": "events=[]\nclass C: pass\nwith C(): events.append('work')\nprint(events)",
+    "solution": "events=[]\nclass C:\n def __enter__(self): events.append('enter')\n def __exit__(self,*a): events.append('exit')\nwith C(): events.append('work')\nprint(events)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "['enter', 'work', 'exit']"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "['enter', 'work', 'exit']"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "['enter', 'work', 'exit']"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «with» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -23005,34 +23005,34 @@
   },
   {
     "id": 640,
-    "title": "__enter__ — سامانه نوبت‌دهی — تمرین 640",
+    "title": "Context مقدار 12 — تمرین 640",
     "level": "آسان",
     "category": "Context Manager",
     "topic": "__enter__",
-    "statement": "در سناریوی «سامانه نوبت‌دهی»، راه‌حلی خوانا برای مسئله «__enter__» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "__enter__ باید مقدار 12 را برای with برگرداند.",
     "examples": [
-      "ورودی: نمونه 12\nخروجی: نتیجه پردازش نمونه 12"
+      "ورودی: بدون ورودی\nخروجی: 12"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 12\nvalue = input()\nprint(value)",
+    "starter_code": "class C: pass\nwith C() as x: print(x)",
+    "solution": "class C:\n def __enter__(self): return 12\n def __exit__(self,*a): pass\nwith C() as x: print(x)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "12"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "12"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "12"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «__enter__» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -23041,34 +23041,34 @@
   },
   {
     "id": 641,
-    "title": "__exit__ — فروشگاه محلی — تمرین 641",
+    "title": "Context خطا 13 — تمرین 641",
     "level": "آسان",
     "category": "Context Manager",
     "topic": "__exit__",
-    "statement": "در سناریوی «فروشگاه محلی»، یک مسئله عملی مرتبط با «__exit__» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "ValueError را سرکوب و SAFE چاپ کنید.",
     "examples": [
-      "ورودی: نمونه 13\nخروجی: نتیجه پردازش نمونه 13"
+      "ورودی: بدون ورودی\nخروجی: SAFE"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 13\nvalue = input()\nprint(value)",
+    "starter_code": "class C: pass\nwith C(): raise ValueError()",
+    "solution": "class C:\n def __enter__(self): pass\n def __exit__(self,t,e,tb):\n  if t is ValueError: print('SAFE'); return True\nwith C(): raise ValueError()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "SAFE"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "SAFE"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "SAFE"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «__exit__» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -23077,34 +23077,34 @@
   },
   {
     "id": 642,
-    "title": "contextlib — مدرسه — تمرین 642",
+    "title": "contextlib 14 — تمرین 642",
     "level": "آسان",
     "category": "Context Manager",
     "topic": "contextlib",
-    "statement": "در سناریوی «مدرسه»، یک برنامه Python برای «contextlib» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "با contextmanager شروع و پایان را چاپ کنید.",
     "examples": [
-      "ورودی: نمونه 14\nخروجی: نتیجه پردازش نمونه 14"
+      "ورودی: بدون ورودی\nخروجی: START\nWORK\nEND"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 14\nvalue = input()\nprint(value)",
+    "starter_code": "from contextlib import contextmanager\n@contextmanager\ndef c(): pass\nwith c(): print('WORK')",
+    "solution": "from contextlib import contextmanager\n@contextmanager\ndef c():\n print('START')\n try: yield\n finally: print('END')\nwith c(): print('WORK')",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "START\nWORK\nEND"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "START\nWORK\nEND"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "START\nWORK\nEND"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «contextlib» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -23113,34 +23113,34 @@
   },
   {
     "id": 643,
-    "title": "مدیریت منبع — کتابخانه — تمرین 643",
+    "title": "Context resource 15 — تمرین 643",
     "level": "متوسط",
     "category": "Context Manager",
     "topic": "مدیریت منبع",
-    "statement": "در سناریوی «کتابخانه»، مفهوم «مدیریت منبع» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "منبع را هنگام ورود active و هنگام خروج inactive کنید.",
     "examples": [
-      "ورودی: نمونه 15\nخروجی: نتیجه پردازش نمونه 15"
+      "ورودی: بدون ورودی\nخروجی: True\nFalse"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 15\nvalue = input()\nprint(value)",
+    "starter_code": "state={'active':False}\nclass R: pass\nwith R(state): print(state['active'])\nprint(state['active'])",
+    "solution": "state={'active':False}\nclass R:\n def __init__(self,s): self.s=s\n def __enter__(self): self.s['active']=True\n def __exit__(self,*a): self.s['active']=False\nwith R(state): print(state['active'])\nprint(state['active'])",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "True\nFalse"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "True\nFalse"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "True\nFalse"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «مدیریت منبع» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -23149,34 +23149,34 @@
   },
   {
     "id": 644,
-    "title": "with — باشگاه ورزشی — تمرین 644",
+    "title": "Context ورود و خروج 16 — تمرین 644",
     "level": "متوسط",
     "category": "Context Manager",
     "topic": "with",
-    "statement": "در سناریوی «باشگاه ورزشی»، راه‌حلی خوانا برای مسئله «with» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "ورود، کار و خروج را در لیست ثبت کنید.",
     "examples": [
-      "ورودی: نمونه 16\nخروجی: نتیجه پردازش نمونه 16"
+      "ورودی: بدون ورودی\nخروجی: ['enter', 'work', 'exit']"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 16\nvalue = input()\nprint(value)",
+    "starter_code": "events=[]\nclass C: pass\nwith C(): events.append('work')\nprint(events)",
+    "solution": "events=[]\nclass C:\n def __enter__(self): events.append('enter')\n def __exit__(self,*a): events.append('exit')\nwith C(): events.append('work')\nprint(events)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "['enter', 'work', 'exit']"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "['enter', 'work', 'exit']"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "['enter', 'work', 'exit']"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «with» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -23185,34 +23185,34 @@
   },
   {
     "id": 645,
-    "title": "__enter__ — سامانه ثبت‌نام — تمرین 645",
+    "title": "Context مقدار 17 — تمرین 645",
     "level": "متوسط",
     "category": "Context Manager",
     "topic": "__enter__",
-    "statement": "در سناریوی «سامانه ثبت‌نام»، یک مسئله عملی مرتبط با «__enter__» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "__enter__ باید مقدار 17 را برای with برگرداند.",
     "examples": [
-      "ورودی: نمونه 17\nخروجی: نتیجه پردازش نمونه 17"
+      "ورودی: بدون ورودی\nخروجی: 17"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 17\nvalue = input()\nprint(value)",
+    "starter_code": "class C: pass\nwith C() as x: print(x)",
+    "solution": "class C:\n def __enter__(self): return 17\n def __exit__(self,*a): pass\nwith C() as x: print(x)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "17"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "17"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "17"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «__enter__» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -23221,34 +23221,34 @@
   },
   {
     "id": 646,
-    "title": "__exit__ — دفتر کار — تمرین 646",
+    "title": "Context خطا 18 — تمرین 646",
     "level": "متوسط",
     "category": "Context Manager",
     "topic": "__exit__",
-    "statement": "در سناریوی «دفتر کار»، یک برنامه Python برای «__exit__» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "ValueError را سرکوب و SAFE چاپ کنید.",
     "examples": [
-      "ورودی: نمونه 18\nخروجی: نتیجه پردازش نمونه 18"
+      "ورودی: بدون ورودی\nخروجی: SAFE"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 18\nvalue = input()\nprint(value)",
+    "starter_code": "class C: pass\nwith C(): raise ValueError()",
+    "solution": "class C:\n def __enter__(self): pass\n def __exit__(self,t,e,tb):\n  if t is ValueError: print('SAFE'); return True\nwith C(): raise ValueError()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "SAFE"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "SAFE"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "SAFE"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «__exit__» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -23257,34 +23257,34 @@
   },
   {
     "id": 647,
-    "title": "contextlib — رستوران — تمرین 647",
+    "title": "contextlib 19 — تمرین 647",
     "level": "متوسط",
     "category": "Context Manager",
     "topic": "contextlib",
-    "statement": "در سناریوی «رستوران»، مفهوم «contextlib» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "با contextmanager شروع و پایان را چاپ کنید.",
     "examples": [
-      "ورودی: نمونه 19\nخروجی: نتیجه پردازش نمونه 19"
+      "ورودی: بدون ورودی\nخروجی: START\nWORK\nEND"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 19\nvalue = input()\nprint(value)",
+    "starter_code": "from contextlib import contextmanager\n@contextmanager\ndef c(): pass\nwith c(): print('WORK')",
+    "solution": "from contextlib import contextmanager\n@contextmanager\ndef c():\n print('START')\n try: yield\n finally: print('END')\nwith c(): print('WORK')",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "START\nWORK\nEND"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "START\nWORK\nEND"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "START\nWORK\nEND"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «contextlib» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -23293,34 +23293,34 @@
   },
   {
     "id": 648,
-    "title": "مدیریت منبع — انبار کالا — تمرین 648",
+    "title": "Context resource 20 — تمرین 648",
     "level": "متوسط",
     "category": "Context Manager",
     "topic": "مدیریت منبع",
-    "statement": "در سناریوی «انبار کالا»، راه‌حلی خوانا برای مسئله «مدیریت منبع» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "منبع را هنگام ورود active و هنگام خروج inactive کنید.",
     "examples": [
-      "ورودی: نمونه 20\nخروجی: نتیجه پردازش نمونه 20"
+      "ورودی: بدون ورودی\nخروجی: True\nFalse"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 20\nvalue = input()\nprint(value)",
+    "starter_code": "state={'active':False}\nclass R: pass\nwith R(state): print(state['active'])\nprint(state['active'])",
+    "solution": "state={'active':False}\nclass R:\n def __init__(self,s): self.s=s\n def __enter__(self): self.s['active']=True\n def __exit__(self,*a): self.s['active']=False\nwith R(state): print(state['active'])\nprint(state['active'])",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "True\nFalse"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "True\nFalse"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "True\nFalse"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «مدیریت منبع» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -23329,34 +23329,34 @@
   },
   {
     "id": 649,
-    "title": "with — اپلیکیشن مالی — تمرین 649",
+    "title": "Context ورود و خروج 21 — تمرین 649",
     "level": "متوسط",
     "category": "Context Manager",
     "topic": "with",
-    "statement": "در سناریوی «اپلیکیشن مالی»، یک مسئله عملی مرتبط با «with» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "ورود، کار و خروج را در لیست ثبت کنید.",
     "examples": [
-      "ورودی: نمونه 21\nخروجی: نتیجه پردازش نمونه 21"
+      "ورودی: بدون ورودی\nخروجی: ['enter', 'work', 'exit']"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 21\nvalue = input()\nprint(value)",
+    "starter_code": "events=[]\nclass C: pass\nwith C(): events.append('work')\nprint(events)",
+    "solution": "events=[]\nclass C:\n def __enter__(self): events.append('enter')\n def __exit__(self,*a): events.append('exit')\nwith C(): events.append('work')\nprint(events)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "['enter', 'work', 'exit']"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "['enter', 'work', 'exit']"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "['enter', 'work', 'exit']"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «with» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -23365,34 +23365,34 @@
   },
   {
     "id": 650,
-    "title": "__enter__ — سامانه نوبت‌دهی — تمرین 650",
+    "title": "Context مقدار 22 — تمرین 650",
     "level": "متوسط",
     "category": "Context Manager",
     "topic": "__enter__",
-    "statement": "در سناریوی «سامانه نوبت‌دهی»، یک برنامه Python برای «__enter__» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "__enter__ باید مقدار 22 را برای with برگرداند.",
     "examples": [
-      "ورودی: نمونه 22\nخروجی: نتیجه پردازش نمونه 22"
+      "ورودی: بدون ورودی\nخروجی: 22"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 22\nvalue = input()\nprint(value)",
+    "starter_code": "class C: pass\nwith C() as x: print(x)",
+    "solution": "class C:\n def __enter__(self): return 22\n def __exit__(self,*a): pass\nwith C() as x: print(x)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "22"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "22"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "22"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «__enter__» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -23401,34 +23401,34 @@
   },
   {
     "id": 651,
-    "title": "__exit__ — فروشگاه محلی — تمرین 651",
+    "title": "Context خطا 23 — تمرین 651",
     "level": "متوسط",
     "category": "Context Manager",
     "topic": "__exit__",
-    "statement": "در سناریوی «فروشگاه محلی»، مفهوم «__exit__» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "ValueError را سرکوب و SAFE چاپ کنید.",
     "examples": [
-      "ورودی: نمونه 23\nخروجی: نتیجه پردازش نمونه 23"
+      "ورودی: بدون ورودی\nخروجی: SAFE"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 23\nvalue = input()\nprint(value)",
+    "starter_code": "class C: pass\nwith C(): raise ValueError()",
+    "solution": "class C:\n def __enter__(self): pass\n def __exit__(self,t,e,tb):\n  if t is ValueError: print('SAFE'); return True\nwith C(): raise ValueError()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "SAFE"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "SAFE"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "SAFE"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «__exit__» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -23437,34 +23437,34 @@
   },
   {
     "id": 652,
-    "title": "contextlib — مدرسه — تمرین 652",
+    "title": "contextlib 24 — تمرین 652",
     "level": "متوسط",
     "category": "Context Manager",
     "topic": "contextlib",
-    "statement": "در سناریوی «مدرسه»، راه‌حلی خوانا برای مسئله «contextlib» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "با contextmanager شروع و پایان را چاپ کنید.",
     "examples": [
-      "ورودی: نمونه 24\nخروجی: نتیجه پردازش نمونه 24"
+      "ورودی: بدون ورودی\nخروجی: START\nWORK\nEND"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 24\nvalue = input()\nprint(value)",
+    "starter_code": "from contextlib import contextmanager\n@contextmanager\ndef c(): pass\nwith c(): print('WORK')",
+    "solution": "from contextlib import contextmanager\n@contextmanager\ndef c():\n print('START')\n try: yield\n finally: print('END')\nwith c(): print('WORK')",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "START\nWORK\nEND"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "START\nWORK\nEND"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "START\nWORK\nEND"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «contextlib» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -23473,34 +23473,34 @@
   },
   {
     "id": 653,
-    "title": "مدیریت منبع — کتابخانه — تمرین 653",
+    "title": "Context resource 25 — تمرین 653",
     "level": "متوسط",
     "category": "Context Manager",
     "topic": "مدیریت منبع",
-    "statement": "در سناریوی «کتابخانه»، یک مسئله عملی مرتبط با «مدیریت منبع» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "منبع را هنگام ورود active و هنگام خروج inactive کنید.",
     "examples": [
-      "ورودی: نمونه 25\nخروجی: نتیجه پردازش نمونه 25"
+      "ورودی: بدون ورودی\nخروجی: True\nFalse"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 25\nvalue = input()\nprint(value)",
+    "starter_code": "state={'active':False}\nclass R: pass\nwith R(state): print(state['active'])\nprint(state['active'])",
+    "solution": "state={'active':False}\nclass R:\n def __init__(self,s): self.s=s\n def __enter__(self): self.s['active']=True\n def __exit__(self,*a): self.s['active']=False\nwith R(state): print(state['active'])\nprint(state['active'])",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "True\nFalse"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "True\nFalse"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "True\nFalse"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «مدیریت منبع» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -23509,34 +23509,34 @@
   },
   {
     "id": 654,
-    "title": "with — باشگاه ورزشی — تمرین 654",
+    "title": "Context ورود و خروج 26 — تمرین 654",
     "level": "متوسط",
     "category": "Context Manager",
     "topic": "with",
-    "statement": "در سناریوی «باشگاه ورزشی»، یک برنامه Python برای «with» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "ورود، کار و خروج را در لیست ثبت کنید.",
     "examples": [
-      "ورودی: نمونه 26\nخروجی: نتیجه پردازش نمونه 26"
+      "ورودی: بدون ورودی\nخروجی: ['enter', 'work', 'exit']"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 26\nvalue = input()\nprint(value)",
+    "starter_code": "events=[]\nclass C: pass\nwith C(): events.append('work')\nprint(events)",
+    "solution": "events=[]\nclass C:\n def __enter__(self): events.append('enter')\n def __exit__(self,*a): events.append('exit')\nwith C(): events.append('work')\nprint(events)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "['enter', 'work', 'exit']"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "['enter', 'work', 'exit']"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "['enter', 'work', 'exit']"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «with» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -23545,34 +23545,34 @@
   },
   {
     "id": 655,
-    "title": "__enter__ — سامانه ثبت‌نام — تمرین 655",
+    "title": "Context مقدار 27 — تمرین 655",
     "level": "سخت",
     "category": "Context Manager",
     "topic": "__enter__",
-    "statement": "در سناریوی «سامانه ثبت‌نام»، مفهوم «__enter__» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "__enter__ باید مقدار 27 را برای with برگرداند.",
     "examples": [
-      "ورودی: نمونه 27\nخروجی: نتیجه پردازش نمونه 27"
+      "ورودی: بدون ورودی\nخروجی: 27"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 27\nvalue = input()\nprint(value)",
+    "starter_code": "class C: pass\nwith C() as x: print(x)",
+    "solution": "class C:\n def __enter__(self): return 27\n def __exit__(self,*a): pass\nwith C() as x: print(x)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "27"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "27"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "27"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «__enter__» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -23581,34 +23581,34 @@
   },
   {
     "id": 656,
-    "title": "__exit__ — دفتر کار — تمرین 656",
+    "title": "Context خطا 28 — تمرین 656",
     "level": "سخت",
     "category": "Context Manager",
     "topic": "__exit__",
-    "statement": "در سناریوی «دفتر کار»، راه‌حلی خوانا برای مسئله «__exit__» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "ValueError را سرکوب و SAFE چاپ کنید.",
     "examples": [
-      "ورودی: نمونه 28\nخروجی: نتیجه پردازش نمونه 28"
+      "ورودی: بدون ورودی\nخروجی: SAFE"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 28\nvalue = input()\nprint(value)",
+    "starter_code": "class C: pass\nwith C(): raise ValueError()",
+    "solution": "class C:\n def __enter__(self): pass\n def __exit__(self,t,e,tb):\n  if t is ValueError: print('SAFE'); return True\nwith C(): raise ValueError()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "SAFE"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "SAFE"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "SAFE"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «__exit__» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -23617,34 +23617,34 @@
   },
   {
     "id": 657,
-    "title": "contextlib — رستوران — تمرین 657",
+    "title": "contextlib 29 — تمرین 657",
     "level": "سخت",
     "category": "Context Manager",
     "topic": "contextlib",
-    "statement": "در سناریوی «رستوران»، یک مسئله عملی مرتبط با «contextlib» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "با contextmanager شروع و پایان را چاپ کنید.",
     "examples": [
-      "ورودی: نمونه 29\nخروجی: نتیجه پردازش نمونه 29"
+      "ورودی: بدون ورودی\nخروجی: START\nWORK\nEND"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 29\nvalue = input()\nprint(value)",
+    "starter_code": "from contextlib import contextmanager\n@contextmanager\ndef c(): pass\nwith c(): print('WORK')",
+    "solution": "from contextlib import contextmanager\n@contextmanager\ndef c():\n print('START')\n try: yield\n finally: print('END')\nwith c(): print('WORK')",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "START\nWORK\nEND"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "START\nWORK\nEND"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "START\nWORK\nEND"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «contextlib» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -23653,34 +23653,34 @@
   },
   {
     "id": 658,
-    "title": "مدیریت منبع — انبار کالا — تمرین 658",
+    "title": "Context resource 30 — تمرین 658",
     "level": "سخت",
     "category": "Context Manager",
     "topic": "مدیریت منبع",
-    "statement": "در سناریوی «انبار کالا»، یک برنامه Python برای «مدیریت منبع» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "منبع را هنگام ورود active و هنگام خروج inactive کنید.",
     "examples": [
-      "ورودی: نمونه 30\nخروجی: نتیجه پردازش نمونه 30"
+      "ورودی: بدون ورودی\nخروجی: True\nFalse"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 30\nvalue = input()\nprint(value)",
+    "starter_code": "state={'active':False}\nclass R: pass\nwith R(state): print(state['active'])\nprint(state['active'])",
+    "solution": "state={'active':False}\nclass R:\n def __init__(self,s): self.s=s\n def __enter__(self): self.s['active']=True\n def __exit__(self,*a): self.s['active']=False\nwith R(state): print(state['active'])\nprint(state['active'])",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "True\nFalse"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "True\nFalse"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "True\nFalse"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «مدیریت منبع» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
@@ -23689,34 +23689,34 @@
   },
   {
     "id": 659,
-    "title": "with — اپلیکیشن مالی — تمرین 659",
+    "title": "Context ورود و خروج 31 — تمرین 659",
     "level": "سخت",
     "category": "Context Manager",
     "topic": "with",
-    "statement": "در سناریوی «اپلیکیشن مالی»، مفهوم «with» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "ورود، کار و خروج را در لیست ثبت کنید.",
     "examples": [
-      "ورودی: نمونه 31\nخروجی: نتیجه پردازش نمونه 31"
+      "ورودی: بدون ورودی\nخروجی: ['enter', 'work', 'exit']"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Context Manager\n\n",
-    "solution": "# راه‌حل نمونه تمرین 31\nvalue = input()\nprint(value)",
+    "starter_code": "events=[]\nclass C: pass\nwith C(): events.append('work')\nprint(events)",
+    "solution": "events=[]\nclass C:\n def __enter__(self): events.append('enter')\n def __exit__(self,*a): events.append('exit')\nwith C(): events.append('work')\nprint(events)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "",
+        "expected": "['enter', 'work', 'exit']"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "",
+        "expected": "['enter', 'work', 'exit']"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "['enter', 'work', 'exit']"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «with» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار اصلی این مفهوم را مشخص کنید.",
+      "اجرای کد را مرحله‌به‌مرحله دنبال کنید.",
+      "تست‌های مرزی را بررسی کنید."
     ],
     "concepts": [
       "Context Manager",
