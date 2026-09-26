@@ -18145,34 +18145,34 @@
   },
   {
     "id": 505,
-    "title": "class — سامانه ثبت‌نام — تمرین 505",
+    "title": "class — سامانه نوبت‌دهی — تمرین عملی 1",
     "level": "آسان",
     "category": "OOP",
     "topic": "class",
-    "statement": "در سناریوی «سامانه ثبت‌نام»، یک مسئله عملی مرتبط با «class» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه نوبت‌دهی»، کلاس Item بساز که نام را در سازنده بگیرد و متد display عبارت «Item: نام» را چاپ کند.",
     "examples": [
-      "ورودی: نمونه 1\nخروجی: نتیجه پردازش نمونه 1"
+      "ورودی: دینو\\nخروجی: Item: دینو"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 1\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Item:\\n    def __init__(self, name): self.name=name\\n    def display(self): print(\"Item: \"+self.name)\\nItem(input()).display()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "دینو",
+        "expected": "Item: دینو"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "محمد",
+        "expected": "Item: محمد"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "A",
+        "expected": "Item: A"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «class» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -18181,34 +18181,34 @@
   },
   {
     "id": 506,
-    "title": "constructor — دفتر کار — تمرین 506",
+    "title": "constructor — فروشگاه محلی — تمرین عملی 2",
     "level": "آسان",
     "category": "OOP",
     "topic": "constructor",
-    "statement": "در سناریوی «دفتر کار»، یک برنامه Python برای «constructor» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «فروشگاه محلی»، کلاس Item با سازنده نام و قیمت بساز و متد total قیمت را چاپ کند.",
     "examples": [
-      "ورودی: نمونه 2\nخروجی: نتیجه پردازش نمونه 2"
+      "ورودی: کتاب,850\\nخروجی: 850"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 2\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Item:\\n    def __init__(self,name,price): self.name=name; self.price=int(price)\\n    def total(self): print(self.price)\\nn,p=input().split(\",\")\\nItem(n,p).total()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "کتاب,850",
+        "expected": "850"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "کالا,120",
+        "expected": "120"
       },
       {
-        "input": "0",
+        "input": "A,0",
         "expected": "0"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «constructor» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -18217,34 +18217,34 @@
   },
   {
     "id": 507,
-    "title": "method — رستوران — تمرین 507",
+    "title": "method — مدرسه — تمرین عملی 3",
     "level": "آسان",
     "category": "OOP",
     "topic": "method",
-    "statement": "در سناریوی «رستوران»، مفهوم «method» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «مدرسه»، کلاس Counter بساز که متد add اعداد را جمع کند و مقدار نهایی را چاپ کند.",
     "examples": [
-      "ورودی: نمونه 3\nخروجی: نتیجه پردازش نمونه 3"
+      "ورودی: 2 3 5\\nخروجی: 10"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 3\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Counter:\\n    def __init__(self): self.value=0\\n    def add(self,n): self.value+=int(n)\\nc=Counter()\\nfor x in input().split(): c.add(x)\\nprint(c.value)",
     "tests": [
       {
-        "input": "8",
+        "input": "2 3 5",
+        "expected": "10"
+      },
+      {
+        "input": "1 1",
+        "expected": "2"
+      },
+      {
+        "input": "10 0 -2",
         "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
-      },
-      {
-        "input": "0",
-        "expected": "0"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «method» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -18253,34 +18253,34 @@
   },
   {
     "id": 508,
-    "title": "property — انبار کالا — تمرین 508",
+    "title": "property — کتابخانه — تمرین عملی 4",
     "level": "آسان",
     "category": "OOP",
     "topic": "property",
-    "statement": "در سناریوی «انبار کالا»، راه‌حلی خوانا برای مسئله «property» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «کتابخانه»، property برای price بساز؛ قیمت منفی باید خطا بدهد و INVALID چاپ شود.",
     "examples": [
-      "ورودی: نمونه 4\nخروجی: نتیجه پردازش نمونه 4"
+      "ورودی: 120\\nخروجی: 120"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 4\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Product:\\n    def __init__(self): self._price=0\\n    @property\\n    def price(self): return self._price\\n    @price.setter\\n    def price(self,v):\\n        v=int(v)\\n        if v<0: raise ValueError\\n        self._price=v\\np=Product()\\ntry:\\n    p.price=input(); print(p.price)\\nexcept ValueError:\\n    print(\"INVALID\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
+        "input": "120",
+        "expected": "120"
       },
       {
         "input": "0",
         "expected": "0"
+      },
+      {
+        "input": "-5",
+        "expected": "INVALID"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «property» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -18289,34 +18289,34 @@
   },
   {
     "id": 509,
-    "title": "کپسوله‌سازی — اپلیکیشن مالی — تمرین 509",
+    "title": "کپسوله‌سازی — باشگاه ورزشی — تمرین عملی 5",
     "level": "آسان",
     "category": "OOP",
     "topic": "کپسوله‌سازی",
-    "statement": "در سناریوی «اپلیکیشن مالی»، یک مسئله عملی مرتبط با «کپسوله‌سازی» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «باشگاه ورزشی»، property برای price بساز؛ قیمت منفی باید خطا بدهد و INVALID چاپ شود.",
     "examples": [
-      "ورودی: نمونه 5\nخروجی: نتیجه پردازش نمونه 5"
+      "ورودی: 120\\nخروجی: 120"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 5\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Product:\\n    def __init__(self): self._price=0\\n    @property\\n    def price(self): return self._price\\n    @price.setter\\n    def price(self,v):\\n        v=int(v)\\n        if v<0: raise ValueError\\n        self._price=v\\np=Product()\\ntry:\\n    p.price=input(); print(p.price)\\nexcept ValueError:\\n    print(\"INVALID\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
+        "input": "120",
+        "expected": "120"
       },
       {
         "input": "0",
         "expected": "0"
+      },
+      {
+        "input": "-5",
+        "expected": "INVALID"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «کپسوله‌سازی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -18325,34 +18325,34 @@
   },
   {
     "id": 510,
-    "title": "class — سامانه نوبت‌دهی — تمرین 510",
+    "title": "class — سامانه ثبت‌نام — تمرین عملی 6",
     "level": "آسان",
     "category": "OOP",
     "topic": "class",
-    "statement": "در سناریوی «سامانه نوبت‌دهی»، یک برنامه Python برای «class» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه ثبت‌نام»، کلاس Item بساز که نام را در سازنده بگیرد و متد display عبارت «Item: نام» را چاپ کند.",
     "examples": [
-      "ورودی: نمونه 6\nخروجی: نتیجه پردازش نمونه 6"
+      "ورودی: دینو\\nخروجی: Item: دینو"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 6\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Item:\\n    def __init__(self, name): self.name=name\\n    def display(self): print(\"Item: \"+self.name)\\nItem(input()).display()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "دینو",
+        "expected": "Item: دینو"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "محمد",
+        "expected": "Item: محمد"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "A",
+        "expected": "Item: A"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «class» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -18361,34 +18361,34 @@
   },
   {
     "id": 511,
-    "title": "constructor — فروشگاه محلی — تمرین 511",
+    "title": "constructor — دفتر کار — تمرین عملی 7",
     "level": "آسان",
     "category": "OOP",
     "topic": "constructor",
-    "statement": "در سناریوی «فروشگاه محلی»، مفهوم «constructor» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «دفتر کار»، کلاس Item با سازنده نام و قیمت بساز و متد total قیمت را چاپ کند.",
     "examples": [
-      "ورودی: نمونه 7\nخروجی: نتیجه پردازش نمونه 7"
+      "ورودی: کتاب,850\\nخروجی: 850"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 7\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Item:\\n    def __init__(self,name,price): self.name=name; self.price=int(price)\\n    def total(self): print(self.price)\\nn,p=input().split(\",\")\\nItem(n,p).total()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "کتاب,850",
+        "expected": "850"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "کالا,120",
+        "expected": "120"
       },
       {
-        "input": "0",
+        "input": "A,0",
         "expected": "0"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «constructor» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -18397,34 +18397,34 @@
   },
   {
     "id": 512,
-    "title": "method — مدرسه — تمرین 512",
+    "title": "method — رستوران — تمرین عملی 8",
     "level": "آسان",
     "category": "OOP",
     "topic": "method",
-    "statement": "در سناریوی «مدرسه»، راه‌حلی خوانا برای مسئله «method» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «رستوران»، کلاس Counter بساز که متد add اعداد را جمع کند و مقدار نهایی را چاپ کند.",
     "examples": [
-      "ورودی: نمونه 8\nخروجی: نتیجه پردازش نمونه 8"
+      "ورودی: 2 3 5\\nخروجی: 10"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 8\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Counter:\\n    def __init__(self): self.value=0\\n    def add(self,n): self.value+=int(n)\\nc=Counter()\\nfor x in input().split(): c.add(x)\\nprint(c.value)",
     "tests": [
       {
-        "input": "8",
+        "input": "2 3 5",
+        "expected": "10"
+      },
+      {
+        "input": "1 1",
+        "expected": "2"
+      },
+      {
+        "input": "10 0 -2",
         "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
-      },
-      {
-        "input": "0",
-        "expected": "0"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «method» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -18433,34 +18433,34 @@
   },
   {
     "id": 513,
-    "title": "property — کتابخانه — تمرین 513",
+    "title": "property — انبار کالا — تمرین عملی 9",
     "level": "آسان",
     "category": "OOP",
     "topic": "property",
-    "statement": "در سناریوی «کتابخانه»، یک مسئله عملی مرتبط با «property» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «انبار کالا»، property برای price بساز؛ قیمت منفی باید خطا بدهد و INVALID چاپ شود.",
     "examples": [
-      "ورودی: نمونه 9\nخروجی: نتیجه پردازش نمونه 9"
+      "ورودی: 120\\nخروجی: 120"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 9\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Product:\\n    def __init__(self): self._price=0\\n    @property\\n    def price(self): return self._price\\n    @price.setter\\n    def price(self,v):\\n        v=int(v)\\n        if v<0: raise ValueError\\n        self._price=v\\np=Product()\\ntry:\\n    p.price=input(); print(p.price)\\nexcept ValueError:\\n    print(\"INVALID\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
+        "input": "120",
+        "expected": "120"
       },
       {
         "input": "0",
         "expected": "0"
+      },
+      {
+        "input": "-5",
+        "expected": "INVALID"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «property» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -18469,34 +18469,34 @@
   },
   {
     "id": 514,
-    "title": "کپسوله‌سازی — باشگاه ورزشی — تمرین 514",
+    "title": "کپسوله‌سازی — اپلیکیشن مالی — تمرین عملی 10",
     "level": "آسان",
     "category": "OOP",
     "topic": "کپسوله‌سازی",
-    "statement": "در سناریوی «باشگاه ورزشی»، یک برنامه Python برای «کپسوله‌سازی» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «اپلیکیشن مالی»، property برای price بساز؛ قیمت منفی باید خطا بدهد و INVALID چاپ شود.",
     "examples": [
-      "ورودی: نمونه 10\nخروجی: نتیجه پردازش نمونه 10"
+      "ورودی: 120\\nخروجی: 120"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 10\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Product:\\n    def __init__(self): self._price=0\\n    @property\\n    def price(self): return self._price\\n    @price.setter\\n    def price(self,v):\\n        v=int(v)\\n        if v<0: raise ValueError\\n        self._price=v\\np=Product()\\ntry:\\n    p.price=input(); print(p.price)\\nexcept ValueError:\\n    print(\"INVALID\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
+        "input": "120",
+        "expected": "120"
       },
       {
         "input": "0",
         "expected": "0"
+      },
+      {
+        "input": "-5",
+        "expected": "INVALID"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «کپسوله‌سازی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -18505,34 +18505,34 @@
   },
   {
     "id": 515,
-    "title": "class — سامانه ثبت‌نام — تمرین 515",
+    "title": "class — سامانه نوبت‌دهی — تمرین عملی 11",
     "level": "آسان",
     "category": "OOP",
     "topic": "class",
-    "statement": "در سناریوی «سامانه ثبت‌نام»، مفهوم «class» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه نوبت‌دهی»، کلاس Item بساز که نام را در سازنده بگیرد و متد display عبارت «Item: نام» را چاپ کند.",
     "examples": [
-      "ورودی: نمونه 11\nخروجی: نتیجه پردازش نمونه 11"
+      "ورودی: دینو\\nخروجی: Item: دینو"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 11\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Item:\\n    def __init__(self, name): self.name=name\\n    def display(self): print(\"Item: \"+self.name)\\nItem(input()).display()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "دینو",
+        "expected": "Item: دینو"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "محمد",
+        "expected": "Item: محمد"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "A",
+        "expected": "Item: A"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «class» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -18541,34 +18541,34 @@
   },
   {
     "id": 516,
-    "title": "constructor — دفتر کار — تمرین 516",
+    "title": "constructor — فروشگاه محلی — تمرین عملی 12",
     "level": "آسان",
     "category": "OOP",
     "topic": "constructor",
-    "statement": "در سناریوی «دفتر کار»، راه‌حلی خوانا برای مسئله «constructor» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «فروشگاه محلی»، کلاس Item با سازنده نام و قیمت بساز و متد total قیمت را چاپ کند.",
     "examples": [
-      "ورودی: نمونه 12\nخروجی: نتیجه پردازش نمونه 12"
+      "ورودی: کتاب,850\\nخروجی: 850"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 12\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Item:\\n    def __init__(self,name,price): self.name=name; self.price=int(price)\\n    def total(self): print(self.price)\\nn,p=input().split(\",\")\\nItem(n,p).total()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "کتاب,850",
+        "expected": "850"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "کالا,120",
+        "expected": "120"
       },
       {
-        "input": "0",
+        "input": "A,0",
         "expected": "0"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «constructor» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -18577,34 +18577,34 @@
   },
   {
     "id": 517,
-    "title": "method — رستوران — تمرین 517",
+    "title": "method — مدرسه — تمرین عملی 13",
     "level": "آسان",
     "category": "OOP",
     "topic": "method",
-    "statement": "در سناریوی «رستوران»، یک مسئله عملی مرتبط با «method» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «مدرسه»، کلاس Counter بساز که متد add اعداد را جمع کند و مقدار نهایی را چاپ کند.",
     "examples": [
-      "ورودی: نمونه 13\nخروجی: نتیجه پردازش نمونه 13"
+      "ورودی: 2 3 5\\nخروجی: 10"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 13\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Counter:\\n    def __init__(self): self.value=0\\n    def add(self,n): self.value+=int(n)\\nc=Counter()\\nfor x in input().split(): c.add(x)\\nprint(c.value)",
     "tests": [
       {
-        "input": "8",
+        "input": "2 3 5",
+        "expected": "10"
+      },
+      {
+        "input": "1 1",
+        "expected": "2"
+      },
+      {
+        "input": "10 0 -2",
         "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
-      },
-      {
-        "input": "0",
-        "expected": "0"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «method» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -18613,34 +18613,34 @@
   },
   {
     "id": 518,
-    "title": "property — انبار کالا — تمرین 518",
+    "title": "property — کتابخانه — تمرین عملی 14",
     "level": "آسان",
     "category": "OOP",
     "topic": "property",
-    "statement": "در سناریوی «انبار کالا»، یک برنامه Python برای «property» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «کتابخانه»، property برای price بساز؛ قیمت منفی باید خطا بدهد و INVALID چاپ شود.",
     "examples": [
-      "ورودی: نمونه 14\nخروجی: نتیجه پردازش نمونه 14"
+      "ورودی: 120\\nخروجی: 120"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 14\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Product:\\n    def __init__(self): self._price=0\\n    @property\\n    def price(self): return self._price\\n    @price.setter\\n    def price(self,v):\\n        v=int(v)\\n        if v<0: raise ValueError\\n        self._price=v\\np=Product()\\ntry:\\n    p.price=input(); print(p.price)\\nexcept ValueError:\\n    print(\"INVALID\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
+        "input": "120",
+        "expected": "120"
       },
       {
         "input": "0",
         "expected": "0"
+      },
+      {
+        "input": "-5",
+        "expected": "INVALID"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «property» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -18649,34 +18649,34 @@
   },
   {
     "id": 519,
-    "title": "کپسوله‌سازی — اپلیکیشن مالی — تمرین 519",
+    "title": "کپسوله‌سازی — باشگاه ورزشی — تمرین عملی 15",
     "level": "متوسط",
     "category": "OOP",
     "topic": "کپسوله‌سازی",
-    "statement": "در سناریوی «اپلیکیشن مالی»، مفهوم «کپسوله‌سازی» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «باشگاه ورزشی»، property برای price بساز؛ قیمت منفی باید خطا بدهد و INVALID چاپ شود.",
     "examples": [
-      "ورودی: نمونه 15\nخروجی: نتیجه پردازش نمونه 15"
+      "ورودی: 120\\nخروجی: 120"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 15\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Product:\\n    def __init__(self): self._price=0\\n    @property\\n    def price(self): return self._price\\n    @price.setter\\n    def price(self,v):\\n        v=int(v)\\n        if v<0: raise ValueError\\n        self._price=v\\np=Product()\\ntry:\\n    p.price=input(); print(p.price)\\nexcept ValueError:\\n    print(\"INVALID\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
+        "input": "120",
+        "expected": "120"
       },
       {
         "input": "0",
         "expected": "0"
+      },
+      {
+        "input": "-5",
+        "expected": "INVALID"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «کپسوله‌سازی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -18685,34 +18685,34 @@
   },
   {
     "id": 520,
-    "title": "class — سامانه نوبت‌دهی — تمرین 520",
+    "title": "class — سامانه ثبت‌نام — تمرین عملی 16",
     "level": "متوسط",
     "category": "OOP",
     "topic": "class",
-    "statement": "در سناریوی «سامانه نوبت‌دهی»، راه‌حلی خوانا برای مسئله «class» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه ثبت‌نام»، کلاس Item بساز که نام را در سازنده بگیرد و متد display عبارت «Item: نام» را چاپ کند.",
     "examples": [
-      "ورودی: نمونه 16\nخروجی: نتیجه پردازش نمونه 16"
+      "ورودی: دینو\\nخروجی: Item: دینو"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 16\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Item:\\n    def __init__(self, name): self.name=name\\n    def display(self): print(\"Item: \"+self.name)\\nItem(input()).display()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "دینو",
+        "expected": "Item: دینو"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "محمد",
+        "expected": "Item: محمد"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "A",
+        "expected": "Item: A"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «class» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -18721,34 +18721,34 @@
   },
   {
     "id": 521,
-    "title": "constructor — فروشگاه محلی — تمرین 521",
+    "title": "constructor — دفتر کار — تمرین عملی 17",
     "level": "متوسط",
     "category": "OOP",
     "topic": "constructor",
-    "statement": "در سناریوی «فروشگاه محلی»، یک مسئله عملی مرتبط با «constructor» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «دفتر کار»، کلاس Item با سازنده نام و قیمت بساز و متد total قیمت را چاپ کند.",
     "examples": [
-      "ورودی: نمونه 17\nخروجی: نتیجه پردازش نمونه 17"
+      "ورودی: کتاب,850\\nخروجی: 850"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 17\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Item:\\n    def __init__(self,name,price): self.name=name; self.price=int(price)\\n    def total(self): print(self.price)\\nn,p=input().split(\",\")\\nItem(n,p).total()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "کتاب,850",
+        "expected": "850"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "کالا,120",
+        "expected": "120"
       },
       {
-        "input": "0",
+        "input": "A,0",
         "expected": "0"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «constructor» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -18757,34 +18757,34 @@
   },
   {
     "id": 522,
-    "title": "method — مدرسه — تمرین 522",
+    "title": "method — رستوران — تمرین عملی 18",
     "level": "متوسط",
     "category": "OOP",
     "topic": "method",
-    "statement": "در سناریوی «مدرسه»، یک برنامه Python برای «method» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «رستوران»، کلاس Counter بساز که متد add اعداد را جمع کند و مقدار نهایی را چاپ کند.",
     "examples": [
-      "ورودی: نمونه 18\nخروجی: نتیجه پردازش نمونه 18"
+      "ورودی: 2 3 5\\nخروجی: 10"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 18\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Counter:\\n    def __init__(self): self.value=0\\n    def add(self,n): self.value+=int(n)\\nc=Counter()\\nfor x in input().split(): c.add(x)\\nprint(c.value)",
     "tests": [
       {
-        "input": "8",
+        "input": "2 3 5",
+        "expected": "10"
+      },
+      {
+        "input": "1 1",
+        "expected": "2"
+      },
+      {
+        "input": "10 0 -2",
         "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
-      },
-      {
-        "input": "0",
-        "expected": "0"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «method» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -18793,34 +18793,34 @@
   },
   {
     "id": 523,
-    "title": "property — کتابخانه — تمرین 523",
+    "title": "property — انبار کالا — تمرین عملی 19",
     "level": "متوسط",
     "category": "OOP",
     "topic": "property",
-    "statement": "در سناریوی «کتابخانه»، مفهوم «property» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «انبار کالا»، property برای price بساز؛ قیمت منفی باید خطا بدهد و INVALID چاپ شود.",
     "examples": [
-      "ورودی: نمونه 19\nخروجی: نتیجه پردازش نمونه 19"
+      "ورودی: 120\\nخروجی: 120"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 19\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Product:\\n    def __init__(self): self._price=0\\n    @property\\n    def price(self): return self._price\\n    @price.setter\\n    def price(self,v):\\n        v=int(v)\\n        if v<0: raise ValueError\\n        self._price=v\\np=Product()\\ntry:\\n    p.price=input(); print(p.price)\\nexcept ValueError:\\n    print(\"INVALID\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
+        "input": "120",
+        "expected": "120"
       },
       {
         "input": "0",
         "expected": "0"
+      },
+      {
+        "input": "-5",
+        "expected": "INVALID"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «property» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -18829,34 +18829,34 @@
   },
   {
     "id": 524,
-    "title": "کپسوله‌سازی — باشگاه ورزشی — تمرین 524",
+    "title": "کپسوله‌سازی — اپلیکیشن مالی — تمرین عملی 20",
     "level": "متوسط",
     "category": "OOP",
     "topic": "کپسوله‌سازی",
-    "statement": "در سناریوی «باشگاه ورزشی»، راه‌حلی خوانا برای مسئله «کپسوله‌سازی» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «اپلیکیشن مالی»، property برای price بساز؛ قیمت منفی باید خطا بدهد و INVALID چاپ شود.",
     "examples": [
-      "ورودی: نمونه 20\nخروجی: نتیجه پردازش نمونه 20"
+      "ورودی: 120\\nخروجی: 120"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 20\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Product:\\n    def __init__(self): self._price=0\\n    @property\\n    def price(self): return self._price\\n    @price.setter\\n    def price(self,v):\\n        v=int(v)\\n        if v<0: raise ValueError\\n        self._price=v\\np=Product()\\ntry:\\n    p.price=input(); print(p.price)\\nexcept ValueError:\\n    print(\"INVALID\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
+        "input": "120",
+        "expected": "120"
       },
       {
         "input": "0",
         "expected": "0"
+      },
+      {
+        "input": "-5",
+        "expected": "INVALID"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «کپسوله‌سازی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -18865,34 +18865,34 @@
   },
   {
     "id": 525,
-    "title": "class — سامانه ثبت‌نام — تمرین 525",
+    "title": "class — سامانه نوبت‌دهی — تمرین عملی 21",
     "level": "متوسط",
     "category": "OOP",
     "topic": "class",
-    "statement": "در سناریوی «سامانه ثبت‌نام»، یک مسئله عملی مرتبط با «class» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه نوبت‌دهی»، کلاس Item بساز که نام را در سازنده بگیرد و متد display عبارت «Item: نام» را چاپ کند.",
     "examples": [
-      "ورودی: نمونه 21\nخروجی: نتیجه پردازش نمونه 21"
+      "ورودی: دینو\\nخروجی: Item: دینو"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 21\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Item:\\n    def __init__(self, name): self.name=name\\n    def display(self): print(\"Item: \"+self.name)\\nItem(input()).display()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "دینو",
+        "expected": "Item: دینو"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "محمد",
+        "expected": "Item: محمد"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "A",
+        "expected": "Item: A"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «class» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -18901,34 +18901,34 @@
   },
   {
     "id": 526,
-    "title": "constructor — دفتر کار — تمرین 526",
+    "title": "constructor — فروشگاه محلی — تمرین عملی 22",
     "level": "متوسط",
     "category": "OOP",
     "topic": "constructor",
-    "statement": "در سناریوی «دفتر کار»، یک برنامه Python برای «constructor» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «فروشگاه محلی»، کلاس Item با سازنده نام و قیمت بساز و متد total قیمت را چاپ کند.",
     "examples": [
-      "ورودی: نمونه 22\nخروجی: نتیجه پردازش نمونه 22"
+      "ورودی: کتاب,850\\nخروجی: 850"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 22\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Item:\\n    def __init__(self,name,price): self.name=name; self.price=int(price)\\n    def total(self): print(self.price)\\nn,p=input().split(\",\")\\nItem(n,p).total()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "کتاب,850",
+        "expected": "850"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "کالا,120",
+        "expected": "120"
       },
       {
-        "input": "0",
+        "input": "A,0",
         "expected": "0"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «constructor» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -18937,34 +18937,34 @@
   },
   {
     "id": 527,
-    "title": "method — رستوران — تمرین 527",
+    "title": "method — مدرسه — تمرین عملی 23",
     "level": "متوسط",
     "category": "OOP",
     "topic": "method",
-    "statement": "در سناریوی «رستوران»، مفهوم «method» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «مدرسه»، کلاس Counter بساز که متد add اعداد را جمع کند و مقدار نهایی را چاپ کند.",
     "examples": [
-      "ورودی: نمونه 23\nخروجی: نتیجه پردازش نمونه 23"
+      "ورودی: 2 3 5\\nخروجی: 10"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 23\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Counter:\\n    def __init__(self): self.value=0\\n    def add(self,n): self.value+=int(n)\\nc=Counter()\\nfor x in input().split(): c.add(x)\\nprint(c.value)",
     "tests": [
       {
-        "input": "8",
+        "input": "2 3 5",
+        "expected": "10"
+      },
+      {
+        "input": "1 1",
+        "expected": "2"
+      },
+      {
+        "input": "10 0 -2",
         "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
-      },
-      {
-        "input": "0",
-        "expected": "0"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «method» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -18973,34 +18973,34 @@
   },
   {
     "id": 528,
-    "title": "property — انبار کالا — تمرین 528",
+    "title": "property — کتابخانه — تمرین عملی 24",
     "level": "متوسط",
     "category": "OOP",
     "topic": "property",
-    "statement": "در سناریوی «انبار کالا»، راه‌حلی خوانا برای مسئله «property» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «کتابخانه»، property برای price بساز؛ قیمت منفی باید خطا بدهد و INVALID چاپ شود.",
     "examples": [
-      "ورودی: نمونه 24\nخروجی: نتیجه پردازش نمونه 24"
+      "ورودی: 120\\nخروجی: 120"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 24\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Product:\\n    def __init__(self): self._price=0\\n    @property\\n    def price(self): return self._price\\n    @price.setter\\n    def price(self,v):\\n        v=int(v)\\n        if v<0: raise ValueError\\n        self._price=v\\np=Product()\\ntry:\\n    p.price=input(); print(p.price)\\nexcept ValueError:\\n    print(\"INVALID\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
+        "input": "120",
+        "expected": "120"
       },
       {
         "input": "0",
         "expected": "0"
+      },
+      {
+        "input": "-5",
+        "expected": "INVALID"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «property» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -19009,34 +19009,34 @@
   },
   {
     "id": 529,
-    "title": "کپسوله‌سازی — اپلیکیشن مالی — تمرین 529",
+    "title": "کپسوله‌سازی — باشگاه ورزشی — تمرین عملی 25",
     "level": "متوسط",
     "category": "OOP",
     "topic": "کپسوله‌سازی",
-    "statement": "در سناریوی «اپلیکیشن مالی»، یک مسئله عملی مرتبط با «کپسوله‌سازی» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «باشگاه ورزشی»، property برای price بساز؛ قیمت منفی باید خطا بدهد و INVALID چاپ شود.",
     "examples": [
-      "ورودی: نمونه 25\nخروجی: نتیجه پردازش نمونه 25"
+      "ورودی: 120\\nخروجی: 120"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 25\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Product:\\n    def __init__(self): self._price=0\\n    @property\\n    def price(self): return self._price\\n    @price.setter\\n    def price(self,v):\\n        v=int(v)\\n        if v<0: raise ValueError\\n        self._price=v\\np=Product()\\ntry:\\n    p.price=input(); print(p.price)\\nexcept ValueError:\\n    print(\"INVALID\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
+        "input": "120",
+        "expected": "120"
       },
       {
         "input": "0",
         "expected": "0"
+      },
+      {
+        "input": "-5",
+        "expected": "INVALID"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «کپسوله‌سازی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -19045,34 +19045,34 @@
   },
   {
     "id": 530,
-    "title": "class — سامانه نوبت‌دهی — تمرین 530",
+    "title": "class — سامانه ثبت‌نام — تمرین عملی 26",
     "level": "متوسط",
     "category": "OOP",
     "topic": "class",
-    "statement": "در سناریوی «سامانه نوبت‌دهی»، یک برنامه Python برای «class» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه ثبت‌نام»، کلاس Item بساز که نام را در سازنده بگیرد و متد display عبارت «Item: نام» را چاپ کند.",
     "examples": [
-      "ورودی: نمونه 26\nخروجی: نتیجه پردازش نمونه 26"
+      "ورودی: دینو\\nخروجی: Item: دینو"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 26\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Item:\\n    def __init__(self, name): self.name=name\\n    def display(self): print(\"Item: \"+self.name)\\nItem(input()).display()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "دینو",
+        "expected": "Item: دینو"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "محمد",
+        "expected": "Item: محمد"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "A",
+        "expected": "Item: A"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «class» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -19081,34 +19081,34 @@
   },
   {
     "id": 531,
-    "title": "constructor — فروشگاه محلی — تمرین 531",
+    "title": "constructor — دفتر کار — تمرین عملی 27",
     "level": "سخت",
     "category": "OOP",
     "topic": "constructor",
-    "statement": "در سناریوی «فروشگاه محلی»، مفهوم «constructor» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «دفتر کار»، کلاس Item با سازنده نام و قیمت بساز و متد total قیمت را چاپ کند.",
     "examples": [
-      "ورودی: نمونه 27\nخروجی: نتیجه پردازش نمونه 27"
+      "ورودی: کتاب,850\\nخروجی: 850"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 27\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Item:\\n    def __init__(self,name,price): self.name=name; self.price=int(price)\\n    def total(self): print(self.price)\\nn,p=input().split(\",\")\\nItem(n,p).total()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "کتاب,850",
+        "expected": "850"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "کالا,120",
+        "expected": "120"
       },
       {
-        "input": "0",
+        "input": "A,0",
         "expected": "0"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «constructor» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -19117,34 +19117,34 @@
   },
   {
     "id": 532,
-    "title": "method — مدرسه — تمرین 532",
+    "title": "method — رستوران — تمرین عملی 28",
     "level": "سخت",
     "category": "OOP",
     "topic": "method",
-    "statement": "در سناریوی «مدرسه»، راه‌حلی خوانا برای مسئله «method» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «رستوران»، کلاس Counter بساز که متد add اعداد را جمع کند و مقدار نهایی را چاپ کند.",
     "examples": [
-      "ورودی: نمونه 28\nخروجی: نتیجه پردازش نمونه 28"
+      "ورودی: 2 3 5\\nخروجی: 10"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 28\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Counter:\\n    def __init__(self): self.value=0\\n    def add(self,n): self.value+=int(n)\\nc=Counter()\\nfor x in input().split(): c.add(x)\\nprint(c.value)",
     "tests": [
       {
-        "input": "8",
+        "input": "2 3 5",
+        "expected": "10"
+      },
+      {
+        "input": "1 1",
+        "expected": "2"
+      },
+      {
+        "input": "10 0 -2",
         "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
-      },
-      {
-        "input": "0",
-        "expected": "0"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «method» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -19153,34 +19153,34 @@
   },
   {
     "id": 533,
-    "title": "property — کتابخانه — تمرین 533",
+    "title": "property — انبار کالا — تمرین عملی 29",
     "level": "سخت",
     "category": "OOP",
     "topic": "property",
-    "statement": "در سناریوی «کتابخانه»، یک مسئله عملی مرتبط با «property» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «انبار کالا»، property برای price بساز؛ قیمت منفی باید خطا بدهد و INVALID چاپ شود.",
     "examples": [
-      "ورودی: نمونه 29\nخروجی: نتیجه پردازش نمونه 29"
+      "ورودی: 120\\nخروجی: 120"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 29\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Product:\\n    def __init__(self): self._price=0\\n    @property\\n    def price(self): return self._price\\n    @price.setter\\n    def price(self,v):\\n        v=int(v)\\n        if v<0: raise ValueError\\n        self._price=v\\np=Product()\\ntry:\\n    p.price=input(); print(p.price)\\nexcept ValueError:\\n    print(\"INVALID\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
+        "input": "120",
+        "expected": "120"
       },
       {
         "input": "0",
         "expected": "0"
+      },
+      {
+        "input": "-5",
+        "expected": "INVALID"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «property» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -19189,34 +19189,34 @@
   },
   {
     "id": 534,
-    "title": "کپسوله‌سازی — باشگاه ورزشی — تمرین 534",
+    "title": "کپسوله‌سازی — اپلیکیشن مالی — تمرین عملی 30",
     "level": "سخت",
     "category": "OOP",
     "topic": "کپسوله‌سازی",
-    "statement": "در سناریوی «باشگاه ورزشی»، یک برنامه Python برای «کپسوله‌سازی» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «اپلیکیشن مالی»، property برای price بساز؛ قیمت منفی باید خطا بدهد و INVALID چاپ شود.",
     "examples": [
-      "ورودی: نمونه 30\nخروجی: نتیجه پردازش نمونه 30"
+      "ورودی: 120\\nخروجی: 120"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 30\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Product:\\n    def __init__(self): self._price=0\\n    @property\\n    def price(self): return self._price\\n    @price.setter\\n    def price(self,v):\\n        v=int(v)\\n        if v<0: raise ValueError\\n        self._price=v\\np=Product()\\ntry:\\n    p.price=input(); print(p.price)\\nexcept ValueError:\\n    print(\"INVALID\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
+        "input": "120",
+        "expected": "120"
       },
       {
         "input": "0",
         "expected": "0"
+      },
+      {
+        "input": "-5",
+        "expected": "INVALID"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «کپسوله‌سازی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -19225,34 +19225,34 @@
   },
   {
     "id": 535,
-    "title": "class — سامانه ثبت‌نام — تمرین 535",
+    "title": "class — سامانه نوبت‌دهی — تمرین عملی 31",
     "level": "سخت",
     "category": "OOP",
     "topic": "class",
-    "statement": "در سناریوی «سامانه ثبت‌نام»، مفهوم «class» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه نوبت‌دهی»، کلاس Item بساز که نام را در سازنده بگیرد و متد display عبارت «Item: نام» را چاپ کند.",
     "examples": [
-      "ورودی: نمونه 31\nخروجی: نتیجه پردازش نمونه 31"
+      "ورودی: دینو\\nخروجی: Item: دینو"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: OOP\n\n",
-    "solution": "# راه‌حل نمونه تمرین 31\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Item:\\n    def __init__(self, name): self.name=name\\n    def display(self): print(\"Item: \"+self.name)\\nItem(input()).display()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "دینو",
+        "expected": "Item: دینو"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "محمد",
+        "expected": "Item: محمد"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "A",
+        "expected": "Item: A"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «class» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "OOP",
@@ -19261,34 +19261,34 @@
   },
   {
     "id": 536,
-    "title": "ارث‌بری — دفتر کار — تمرین 536",
+    "title": "ارث‌بری — سامانه نوبت‌دهی — تمرین عملی 1",
     "level": "آسان",
     "category": "Inheritance",
     "topic": "ارث‌بری",
-    "statement": "در سناریوی «دفتر کار»، یک مسئله عملی مرتبط با «ارث‌بری» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه نوبت‌دهی»، کلاس Person و فرزند Worker بساز؛ Worker نام را از Person به ارث ببرد و info را اجرا کند.",
     "examples": [
-      "ورودی: نمونه 1\nخروجی: نتیجه پردازش نمونه 1"
+      "ورودی: علی\\nخروجی: Worker: علی"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 1\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Person:\\n    def __init__(self,name): self.name=name\\nclass Worker(Person):\\n    def info(self): print(\"Worker: \"+self.name)\\nWorker(input()).info()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "علی",
+        "expected": "Worker: علی"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "Sara",
+        "expected": "Worker: Sara"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "A",
+        "expected": "Worker: A"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «ارث‌بری» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -19297,34 +19297,34 @@
   },
   {
     "id": 537,
-    "title": "super — رستوران — تمرین 537",
+    "title": "super — فروشگاه محلی — تمرین عملی 2",
     "level": "آسان",
     "category": "Inheritance",
     "topic": "super",
-    "statement": "در سناریوی «رستوران»، یک برنامه Python برای «super» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «فروشگاه محلی»، کلاس پایه Item قیمت را مقداردهی کند و فرزند SpecialItem با super همان مقدار را دریافت و چاپ کند.",
     "examples": [
-      "ورودی: نمونه 2\nخروجی: نتیجه پردازش نمونه 2"
+      "ورودی: 100\\nخروجی: 100"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 2\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Item:\\n    def __init__(self,p): self.price=int(p)\\nclass SpecialItem(Item):\\n    def __init__(self,p): super().__init__(p)\\nprint(SpecialItem(input()).price)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
+        "input": "100",
+        "expected": "100"
       },
       {
         "input": "0",
         "expected": "0"
+      },
+      {
+        "input": "2500",
+        "expected": "2500"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «super» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -19333,34 +19333,34 @@
   },
   {
     "id": 538,
-    "title": "override — انبار کالا — تمرین 538",
+    "title": "override — مدرسه — تمرین عملی 3",
     "level": "آسان",
     "category": "Inheritance",
     "topic": "override",
-    "statement": "در سناریوی «انبار کالا»، مفهوم «override» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «مدرسه»، متد describe کلاس پایه را در Child override کن و خروجی Child باشد.",
     "examples": [
-      "ورودی: نمونه 3\nخروجی: نتیجه پردازش نمونه 3"
+      "ورودی: x\\nخروجی: Child"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 3\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Parent:\\n    def describe(self): print(\"Parent\")\\nclass Child(Parent):\\n    def describe(self): print(\"Child\")\\nChild().describe()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "x",
+        "expected": "Child"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "Child"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "Child"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «override» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -19369,34 +19369,34 @@
   },
   {
     "id": 539,
-    "title": "چندریختی — اپلیکیشن مالی — تمرین 539",
+    "title": "چندریختی — کتابخانه — تمرین عملی 4",
     "level": "آسان",
     "category": "Inheritance",
     "topic": "چندریختی",
-    "statement": "در سناریوی «اپلیکیشن مالی»، راه‌حلی خوانا برای مسئله «چندریختی» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «کتابخانه»، کلاس‌های Card و Cash را بساز که هر دو pay(amount) داشته باشند و با یک حلقه هر دو را اجرا کن.",
     "examples": [
-      "ورودی: نمونه 4\nخروجی: نتیجه پردازش نمونه 4"
+      "ورودی: 100\\nخروجی: card 100\\ncash 100"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 4\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Card:\\n    def pay(self,a): print(\"card\",a)\\nclass Cash:\\n    def pay(self,a): print(\"cash\",a)\\na=input()\\nfor p in (Card(),Cash()): p.pay(a)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
+        "input": "100",
+        "expected": "card 100\\ncash 100"
       },
       {
         "input": "0",
-        "expected": "0"
+        "expected": "card 0\\ncash 0"
+      },
+      {
+        "input": "250",
+        "expected": "card 250\\ncash 250"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «چندریختی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -19405,34 +19405,34 @@
   },
   {
     "id": 540,
-    "title": "MRO — سامانه نوبت‌دهی — تمرین 540",
+    "title": "MRO — باشگاه ورزشی — تمرین عملی 5",
     "level": "آسان",
     "category": "Inheritance",
     "topic": "MRO",
-    "statement": "در سناریوی «سامانه نوبت‌دهی»، یک مسئله عملی مرتبط با «MRO» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «باشگاه ورزشی»، زنجیره A←B←C را بساز و ترتیب MRO کلاس C را چاپ کن.",
     "examples": [
-      "ورودی: نمونه 5\nخروجی: نتیجه پردازش نمونه 5"
+      "ورودی: x\\nخروجی: C B A object"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 5\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class A: pass\\nclass B(A): pass\\nclass C(B): pass\\nprint(*[x.__name__ for x in C.mro()])",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "x",
+        "expected": "C B A object"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "C B A object"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "C B A object"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «MRO» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -19441,34 +19441,34 @@
   },
   {
     "id": 541,
-    "title": "ارث‌بری — فروشگاه محلی — تمرین 541",
+    "title": "ارث‌بری — سامانه ثبت‌نام — تمرین عملی 6",
     "level": "آسان",
     "category": "Inheritance",
     "topic": "ارث‌بری",
-    "statement": "در سناریوی «فروشگاه محلی»، یک برنامه Python برای «ارث‌بری» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه ثبت‌نام»، کلاس Person و فرزند Worker بساز؛ Worker نام را از Person به ارث ببرد و info را اجرا کند.",
     "examples": [
-      "ورودی: نمونه 6\nخروجی: نتیجه پردازش نمونه 6"
+      "ورودی: علی\\nخروجی: Worker: علی"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 6\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Person:\\n    def __init__(self,name): self.name=name\\nclass Worker(Person):\\n    def info(self): print(\"Worker: \"+self.name)\\nWorker(input()).info()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "علی",
+        "expected": "Worker: علی"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "Sara",
+        "expected": "Worker: Sara"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "A",
+        "expected": "Worker: A"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «ارث‌بری» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -19477,34 +19477,34 @@
   },
   {
     "id": 542,
-    "title": "super — مدرسه — تمرین 542",
+    "title": "super — دفتر کار — تمرین عملی 7",
     "level": "آسان",
     "category": "Inheritance",
     "topic": "super",
-    "statement": "در سناریوی «مدرسه»، مفهوم «super» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «دفتر کار»، کلاس پایه Item قیمت را مقداردهی کند و فرزند SpecialItem با super همان مقدار را دریافت و چاپ کند.",
     "examples": [
-      "ورودی: نمونه 7\nخروجی: نتیجه پردازش نمونه 7"
+      "ورودی: 100\\nخروجی: 100"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 7\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Item:\\n    def __init__(self,p): self.price=int(p)\\nclass SpecialItem(Item):\\n    def __init__(self,p): super().__init__(p)\\nprint(SpecialItem(input()).price)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
+        "input": "100",
+        "expected": "100"
       },
       {
         "input": "0",
         "expected": "0"
+      },
+      {
+        "input": "2500",
+        "expected": "2500"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «super» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -19513,34 +19513,34 @@
   },
   {
     "id": 543,
-    "title": "override — کتابخانه — تمرین 543",
+    "title": "override — رستوران — تمرین عملی 8",
     "level": "آسان",
     "category": "Inheritance",
     "topic": "override",
-    "statement": "در سناریوی «کتابخانه»، راه‌حلی خوانا برای مسئله «override» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «رستوران»، متد describe کلاس پایه را در Child override کن و خروجی Child باشد.",
     "examples": [
-      "ورودی: نمونه 8\nخروجی: نتیجه پردازش نمونه 8"
+      "ورودی: x\\nخروجی: Child"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 8\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Parent:\\n    def describe(self): print(\"Parent\")\\nclass Child(Parent):\\n    def describe(self): print(\"Child\")\\nChild().describe()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "x",
+        "expected": "Child"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "Child"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "Child"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «override» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -19549,34 +19549,34 @@
   },
   {
     "id": 544,
-    "title": "چندریختی — باشگاه ورزشی — تمرین 544",
+    "title": "چندریختی — انبار کالا — تمرین عملی 9",
     "level": "آسان",
     "category": "Inheritance",
     "topic": "چندریختی",
-    "statement": "در سناریوی «باشگاه ورزشی»، یک مسئله عملی مرتبط با «چندریختی» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «انبار کالا»، کلاس‌های Card و Cash را بساز که هر دو pay(amount) داشته باشند و با یک حلقه هر دو را اجرا کن.",
     "examples": [
-      "ورودی: نمونه 9\nخروجی: نتیجه پردازش نمونه 9"
+      "ورودی: 100\\nخروجی: card 100\\ncash 100"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 9\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Card:\\n    def pay(self,a): print(\"card\",a)\\nclass Cash:\\n    def pay(self,a): print(\"cash\",a)\\na=input()\\nfor p in (Card(),Cash()): p.pay(a)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
+        "input": "100",
+        "expected": "card 100\\ncash 100"
       },
       {
         "input": "0",
-        "expected": "0"
+        "expected": "card 0\\ncash 0"
+      },
+      {
+        "input": "250",
+        "expected": "card 250\\ncash 250"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «چندریختی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -19585,34 +19585,34 @@
   },
   {
     "id": 545,
-    "title": "MRO — سامانه ثبت‌نام — تمرین 545",
+    "title": "MRO — اپلیکیشن مالی — تمرین عملی 10",
     "level": "آسان",
     "category": "Inheritance",
     "topic": "MRO",
-    "statement": "در سناریوی «سامانه ثبت‌نام»، یک برنامه Python برای «MRO» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «اپلیکیشن مالی»، زنجیره A←B←C را بساز و ترتیب MRO کلاس C را چاپ کن.",
     "examples": [
-      "ورودی: نمونه 10\nخروجی: نتیجه پردازش نمونه 10"
+      "ورودی: x\\nخروجی: C B A object"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 10\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class A: pass\\nclass B(A): pass\\nclass C(B): pass\\nprint(*[x.__name__ for x in C.mro()])",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "x",
+        "expected": "C B A object"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "C B A object"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "C B A object"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «MRO» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -19621,34 +19621,34 @@
   },
   {
     "id": 546,
-    "title": "ارث‌بری — دفتر کار — تمرین 546",
+    "title": "ارث‌بری — سامانه نوبت‌دهی — تمرین عملی 11",
     "level": "آسان",
     "category": "Inheritance",
     "topic": "ارث‌بری",
-    "statement": "در سناریوی «دفتر کار»، مفهوم «ارث‌بری» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه نوبت‌دهی»، کلاس Person و فرزند Worker بساز؛ Worker نام را از Person به ارث ببرد و info را اجرا کند.",
     "examples": [
-      "ورودی: نمونه 11\nخروجی: نتیجه پردازش نمونه 11"
+      "ورودی: علی\\nخروجی: Worker: علی"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 11\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Person:\\n    def __init__(self,name): self.name=name\\nclass Worker(Person):\\n    def info(self): print(\"Worker: \"+self.name)\\nWorker(input()).info()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "علی",
+        "expected": "Worker: علی"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "Sara",
+        "expected": "Worker: Sara"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "A",
+        "expected": "Worker: A"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «ارث‌بری» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -19657,34 +19657,34 @@
   },
   {
     "id": 547,
-    "title": "super — رستوران — تمرین 547",
+    "title": "super — فروشگاه محلی — تمرین عملی 12",
     "level": "آسان",
     "category": "Inheritance",
     "topic": "super",
-    "statement": "در سناریوی «رستوران»، راه‌حلی خوانا برای مسئله «super» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «فروشگاه محلی»، کلاس پایه Item قیمت را مقداردهی کند و فرزند SpecialItem با super همان مقدار را دریافت و چاپ کند.",
     "examples": [
-      "ورودی: نمونه 12\nخروجی: نتیجه پردازش نمونه 12"
+      "ورودی: 100\\nخروجی: 100"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 12\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Item:\\n    def __init__(self,p): self.price=int(p)\\nclass SpecialItem(Item):\\n    def __init__(self,p): super().__init__(p)\\nprint(SpecialItem(input()).price)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
+        "input": "100",
+        "expected": "100"
       },
       {
         "input": "0",
         "expected": "0"
+      },
+      {
+        "input": "2500",
+        "expected": "2500"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «super» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -19693,34 +19693,34 @@
   },
   {
     "id": 548,
-    "title": "override — انبار کالا — تمرین 548",
+    "title": "override — مدرسه — تمرین عملی 13",
     "level": "آسان",
     "category": "Inheritance",
     "topic": "override",
-    "statement": "در سناریوی «انبار کالا»، یک مسئله عملی مرتبط با «override» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «مدرسه»، متد describe کلاس پایه را در Child override کن و خروجی Child باشد.",
     "examples": [
-      "ورودی: نمونه 13\nخروجی: نتیجه پردازش نمونه 13"
+      "ورودی: x\\nخروجی: Child"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 13\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Parent:\\n    def describe(self): print(\"Parent\")\\nclass Child(Parent):\\n    def describe(self): print(\"Child\")\\nChild().describe()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "x",
+        "expected": "Child"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "Child"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "Child"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «override» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -19729,34 +19729,34 @@
   },
   {
     "id": 549,
-    "title": "چندریختی — اپلیکیشن مالی — تمرین 549",
+    "title": "چندریختی — کتابخانه — تمرین عملی 14",
     "level": "آسان",
     "category": "Inheritance",
     "topic": "چندریختی",
-    "statement": "در سناریوی «اپلیکیشن مالی»، یک برنامه Python برای «چندریختی» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «کتابخانه»، کلاس‌های Card و Cash را بساز که هر دو pay(amount) داشته باشند و با یک حلقه هر دو را اجرا کن.",
     "examples": [
-      "ورودی: نمونه 14\nخروجی: نتیجه پردازش نمونه 14"
+      "ورودی: 100\\nخروجی: card 100\\ncash 100"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 14\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Card:\\n    def pay(self,a): print(\"card\",a)\\nclass Cash:\\n    def pay(self,a): print(\"cash\",a)\\na=input()\\nfor p in (Card(),Cash()): p.pay(a)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
+        "input": "100",
+        "expected": "card 100\\ncash 100"
       },
       {
         "input": "0",
-        "expected": "0"
+        "expected": "card 0\\ncash 0"
+      },
+      {
+        "input": "250",
+        "expected": "card 250\\ncash 250"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «چندریختی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -19765,34 +19765,34 @@
   },
   {
     "id": 550,
-    "title": "MRO — سامانه نوبت‌دهی — تمرین 550",
+    "title": "MRO — باشگاه ورزشی — تمرین عملی 15",
     "level": "متوسط",
     "category": "Inheritance",
     "topic": "MRO",
-    "statement": "در سناریوی «سامانه نوبت‌دهی»، مفهوم «MRO» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «باشگاه ورزشی»، زنجیره A←B←C را بساز و ترتیب MRO کلاس C را چاپ کن.",
     "examples": [
-      "ورودی: نمونه 15\nخروجی: نتیجه پردازش نمونه 15"
+      "ورودی: x\\nخروجی: C B A object"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 15\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class A: pass\\nclass B(A): pass\\nclass C(B): pass\\nprint(*[x.__name__ for x in C.mro()])",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "x",
+        "expected": "C B A object"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "C B A object"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "C B A object"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «MRO» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -19801,34 +19801,34 @@
   },
   {
     "id": 551,
-    "title": "ارث‌بری — فروشگاه محلی — تمرین 551",
+    "title": "ارث‌بری — سامانه ثبت‌نام — تمرین عملی 16",
     "level": "متوسط",
     "category": "Inheritance",
     "topic": "ارث‌بری",
-    "statement": "در سناریوی «فروشگاه محلی»، راه‌حلی خوانا برای مسئله «ارث‌بری» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه ثبت‌نام»، کلاس Person و فرزند Worker بساز؛ Worker نام را از Person به ارث ببرد و info را اجرا کند.",
     "examples": [
-      "ورودی: نمونه 16\nخروجی: نتیجه پردازش نمونه 16"
+      "ورودی: علی\\nخروجی: Worker: علی"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 16\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Person:\\n    def __init__(self,name): self.name=name\\nclass Worker(Person):\\n    def info(self): print(\"Worker: \"+self.name)\\nWorker(input()).info()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "علی",
+        "expected": "Worker: علی"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "Sara",
+        "expected": "Worker: Sara"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "A",
+        "expected": "Worker: A"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «ارث‌بری» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -19837,34 +19837,34 @@
   },
   {
     "id": 552,
-    "title": "super — مدرسه — تمرین 552",
+    "title": "super — دفتر کار — تمرین عملی 17",
     "level": "متوسط",
     "category": "Inheritance",
     "topic": "super",
-    "statement": "در سناریوی «مدرسه»، یک مسئله عملی مرتبط با «super» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «دفتر کار»، کلاس پایه Item قیمت را مقداردهی کند و فرزند SpecialItem با super همان مقدار را دریافت و چاپ کند.",
     "examples": [
-      "ورودی: نمونه 17\nخروجی: نتیجه پردازش نمونه 17"
+      "ورودی: 100\\nخروجی: 100"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 17\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Item:\\n    def __init__(self,p): self.price=int(p)\\nclass SpecialItem(Item):\\n    def __init__(self,p): super().__init__(p)\\nprint(SpecialItem(input()).price)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
+        "input": "100",
+        "expected": "100"
       },
       {
         "input": "0",
         "expected": "0"
+      },
+      {
+        "input": "2500",
+        "expected": "2500"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «super» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -19873,34 +19873,34 @@
   },
   {
     "id": 553,
-    "title": "override — کتابخانه — تمرین 553",
+    "title": "override — رستوران — تمرین عملی 18",
     "level": "متوسط",
     "category": "Inheritance",
     "topic": "override",
-    "statement": "در سناریوی «کتابخانه»، یک برنامه Python برای «override» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «رستوران»، متد describe کلاس پایه را در Child override کن و خروجی Child باشد.",
     "examples": [
-      "ورودی: نمونه 18\nخروجی: نتیجه پردازش نمونه 18"
+      "ورودی: x\\nخروجی: Child"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 18\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Parent:\\n    def describe(self): print(\"Parent\")\\nclass Child(Parent):\\n    def describe(self): print(\"Child\")\\nChild().describe()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "x",
+        "expected": "Child"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "Child"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "Child"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «override» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -19909,34 +19909,34 @@
   },
   {
     "id": 554,
-    "title": "چندریختی — باشگاه ورزشی — تمرین 554",
+    "title": "چندریختی — انبار کالا — تمرین عملی 19",
     "level": "متوسط",
     "category": "Inheritance",
     "topic": "چندریختی",
-    "statement": "در سناریوی «باشگاه ورزشی»، مفهوم «چندریختی» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «انبار کالا»، کلاس‌های Card و Cash را بساز که هر دو pay(amount) داشته باشند و با یک حلقه هر دو را اجرا کن.",
     "examples": [
-      "ورودی: نمونه 19\nخروجی: نتیجه پردازش نمونه 19"
+      "ورودی: 100\\nخروجی: card 100\\ncash 100"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 19\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Card:\\n    def pay(self,a): print(\"card\",a)\\nclass Cash:\\n    def pay(self,a): print(\"cash\",a)\\na=input()\\nfor p in (Card(),Cash()): p.pay(a)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
+        "input": "100",
+        "expected": "card 100\\ncash 100"
       },
       {
         "input": "0",
-        "expected": "0"
+        "expected": "card 0\\ncash 0"
+      },
+      {
+        "input": "250",
+        "expected": "card 250\\ncash 250"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «چندریختی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -19945,34 +19945,34 @@
   },
   {
     "id": 555,
-    "title": "MRO — سامانه ثبت‌نام — تمرین 555",
+    "title": "MRO — اپلیکیشن مالی — تمرین عملی 20",
     "level": "متوسط",
     "category": "Inheritance",
     "topic": "MRO",
-    "statement": "در سناریوی «سامانه ثبت‌نام»، راه‌حلی خوانا برای مسئله «MRO» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «اپلیکیشن مالی»، زنجیره A←B←C را بساز و ترتیب MRO کلاس C را چاپ کن.",
     "examples": [
-      "ورودی: نمونه 20\nخروجی: نتیجه پردازش نمونه 20"
+      "ورودی: x\\nخروجی: C B A object"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 20\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class A: pass\\nclass B(A): pass\\nclass C(B): pass\\nprint(*[x.__name__ for x in C.mro()])",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "x",
+        "expected": "C B A object"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "C B A object"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "C B A object"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «MRO» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -19981,34 +19981,34 @@
   },
   {
     "id": 556,
-    "title": "ارث‌بری — دفتر کار — تمرین 556",
+    "title": "ارث‌بری — سامانه نوبت‌دهی — تمرین عملی 21",
     "level": "متوسط",
     "category": "Inheritance",
     "topic": "ارث‌بری",
-    "statement": "در سناریوی «دفتر کار»، یک مسئله عملی مرتبط با «ارث‌بری» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه نوبت‌دهی»، کلاس Person و فرزند Worker بساز؛ Worker نام را از Person به ارث ببرد و info را اجرا کند.",
     "examples": [
-      "ورودی: نمونه 21\nخروجی: نتیجه پردازش نمونه 21"
+      "ورودی: علی\\nخروجی: Worker: علی"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 21\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Person:\\n    def __init__(self,name): self.name=name\\nclass Worker(Person):\\n    def info(self): print(\"Worker: \"+self.name)\\nWorker(input()).info()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "علی",
+        "expected": "Worker: علی"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "Sara",
+        "expected": "Worker: Sara"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "A",
+        "expected": "Worker: A"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «ارث‌بری» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -20017,34 +20017,34 @@
   },
   {
     "id": 557,
-    "title": "super — رستوران — تمرین 557",
+    "title": "super — فروشگاه محلی — تمرین عملی 22",
     "level": "متوسط",
     "category": "Inheritance",
     "topic": "super",
-    "statement": "در سناریوی «رستوران»، یک برنامه Python برای «super» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «فروشگاه محلی»، کلاس پایه Item قیمت را مقداردهی کند و فرزند SpecialItem با super همان مقدار را دریافت و چاپ کند.",
     "examples": [
-      "ورودی: نمونه 22\nخروجی: نتیجه پردازش نمونه 22"
+      "ورودی: 100\\nخروجی: 100"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 22\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Item:\\n    def __init__(self,p): self.price=int(p)\\nclass SpecialItem(Item):\\n    def __init__(self,p): super().__init__(p)\\nprint(SpecialItem(input()).price)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
+        "input": "100",
+        "expected": "100"
       },
       {
         "input": "0",
         "expected": "0"
+      },
+      {
+        "input": "2500",
+        "expected": "2500"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «super» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -20053,34 +20053,34 @@
   },
   {
     "id": 558,
-    "title": "override — انبار کالا — تمرین 558",
+    "title": "override — مدرسه — تمرین عملی 23",
     "level": "متوسط",
     "category": "Inheritance",
     "topic": "override",
-    "statement": "در سناریوی «انبار کالا»، مفهوم «override» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «مدرسه»، متد describe کلاس پایه را در Child override کن و خروجی Child باشد.",
     "examples": [
-      "ورودی: نمونه 23\nخروجی: نتیجه پردازش نمونه 23"
+      "ورودی: x\\nخروجی: Child"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 23\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Parent:\\n    def describe(self): print(\"Parent\")\\nclass Child(Parent):\\n    def describe(self): print(\"Child\")\\nChild().describe()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "x",
+        "expected": "Child"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "Child"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "Child"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «override» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -20089,34 +20089,34 @@
   },
   {
     "id": 559,
-    "title": "چندریختی — اپلیکیشن مالی — تمرین 559",
+    "title": "چندریختی — کتابخانه — تمرین عملی 24",
     "level": "متوسط",
     "category": "Inheritance",
     "topic": "چندریختی",
-    "statement": "در سناریوی «اپلیکیشن مالی»، راه‌حلی خوانا برای مسئله «چندریختی» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «کتابخانه»، کلاس‌های Card و Cash را بساز که هر دو pay(amount) داشته باشند و با یک حلقه هر دو را اجرا کن.",
     "examples": [
-      "ورودی: نمونه 24\nخروجی: نتیجه پردازش نمونه 24"
+      "ورودی: 100\\nخروجی: card 100\\ncash 100"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 24\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Card:\\n    def pay(self,a): print(\"card\",a)\\nclass Cash:\\n    def pay(self,a): print(\"cash\",a)\\na=input()\\nfor p in (Card(),Cash()): p.pay(a)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
+        "input": "100",
+        "expected": "card 100\\ncash 100"
       },
       {
         "input": "0",
-        "expected": "0"
+        "expected": "card 0\\ncash 0"
+      },
+      {
+        "input": "250",
+        "expected": "card 250\\ncash 250"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «چندریختی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -20125,34 +20125,34 @@
   },
   {
     "id": 560,
-    "title": "MRO — سامانه نوبت‌دهی — تمرین 560",
+    "title": "MRO — باشگاه ورزشی — تمرین عملی 25",
     "level": "متوسط",
     "category": "Inheritance",
     "topic": "MRO",
-    "statement": "در سناریوی «سامانه نوبت‌دهی»، یک مسئله عملی مرتبط با «MRO» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «باشگاه ورزشی»، زنجیره A←B←C را بساز و ترتیب MRO کلاس C را چاپ کن.",
     "examples": [
-      "ورودی: نمونه 25\nخروجی: نتیجه پردازش نمونه 25"
+      "ورودی: x\\nخروجی: C B A object"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 25\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class A: pass\\nclass B(A): pass\\nclass C(B): pass\\nprint(*[x.__name__ for x in C.mro()])",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "x",
+        "expected": "C B A object"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "C B A object"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "C B A object"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «MRO» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -20161,34 +20161,34 @@
   },
   {
     "id": 561,
-    "title": "ارث‌بری — فروشگاه محلی — تمرین 561",
+    "title": "ارث‌بری — سامانه ثبت‌نام — تمرین عملی 26",
     "level": "متوسط",
     "category": "Inheritance",
     "topic": "ارث‌بری",
-    "statement": "در سناریوی «فروشگاه محلی»، یک برنامه Python برای «ارث‌بری» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه ثبت‌نام»، کلاس Person و فرزند Worker بساز؛ Worker نام را از Person به ارث ببرد و info را اجرا کند.",
     "examples": [
-      "ورودی: نمونه 26\nخروجی: نتیجه پردازش نمونه 26"
+      "ورودی: علی\\nخروجی: Worker: علی"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 26\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Person:\\n    def __init__(self,name): self.name=name\\nclass Worker(Person):\\n    def info(self): print(\"Worker: \"+self.name)\\nWorker(input()).info()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "علی",
+        "expected": "Worker: علی"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "Sara",
+        "expected": "Worker: Sara"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "A",
+        "expected": "Worker: A"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «ارث‌بری» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -20197,34 +20197,34 @@
   },
   {
     "id": 562,
-    "title": "super — مدرسه — تمرین 562",
+    "title": "super — دفتر کار — تمرین عملی 27",
     "level": "سخت",
     "category": "Inheritance",
     "topic": "super",
-    "statement": "در سناریوی «مدرسه»، مفهوم «super» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «دفتر کار»، کلاس پایه Item قیمت را مقداردهی کند و فرزند SpecialItem با super همان مقدار را دریافت و چاپ کند.",
     "examples": [
-      "ورودی: نمونه 27\nخروجی: نتیجه پردازش نمونه 27"
+      "ورودی: 100\\nخروجی: 100"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 27\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Item:\\n    def __init__(self,p): self.price=int(p)\\nclass SpecialItem(Item):\\n    def __init__(self,p): super().__init__(p)\\nprint(SpecialItem(input()).price)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
+        "input": "100",
+        "expected": "100"
       },
       {
         "input": "0",
         "expected": "0"
+      },
+      {
+        "input": "2500",
+        "expected": "2500"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «super» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -20233,34 +20233,34 @@
   },
   {
     "id": 563,
-    "title": "override — کتابخانه — تمرین 563",
+    "title": "override — رستوران — تمرین عملی 28",
     "level": "سخت",
     "category": "Inheritance",
     "topic": "override",
-    "statement": "در سناریوی «کتابخانه»، راه‌حلی خوانا برای مسئله «override» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «رستوران»، متد describe کلاس پایه را در Child override کن و خروجی Child باشد.",
     "examples": [
-      "ورودی: نمونه 28\nخروجی: نتیجه پردازش نمونه 28"
+      "ورودی: x\\nخروجی: Child"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 28\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Parent:\\n    def describe(self): print(\"Parent\")\\nclass Child(Parent):\\n    def describe(self): print(\"Child\")\\nChild().describe()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "x",
+        "expected": "Child"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "Child"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "Child"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «override» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -20269,34 +20269,34 @@
   },
   {
     "id": 564,
-    "title": "چندریختی — باشگاه ورزشی — تمرین 564",
+    "title": "چندریختی — انبار کالا — تمرین عملی 29",
     "level": "سخت",
     "category": "Inheritance",
     "topic": "چندریختی",
-    "statement": "در سناریوی «باشگاه ورزشی»، یک مسئله عملی مرتبط با «چندریختی» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «انبار کالا»، کلاس‌های Card و Cash را بساز که هر دو pay(amount) داشته باشند و با یک حلقه هر دو را اجرا کن.",
     "examples": [
-      "ورودی: نمونه 29\nخروجی: نتیجه پردازش نمونه 29"
+      "ورودی: 100\\nخروجی: card 100\\ncash 100"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 29\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Card:\\n    def pay(self,a): print(\"card\",a)\\nclass Cash:\\n    def pay(self,a): print(\"cash\",a)\\na=input()\\nfor p in (Card(),Cash()): p.pay(a)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
-      },
-      {
-        "input": "7",
-        "expected": "7"
+        "input": "100",
+        "expected": "card 100\\ncash 100"
       },
       {
         "input": "0",
-        "expected": "0"
+        "expected": "card 0\\ncash 0"
+      },
+      {
+        "input": "250",
+        "expected": "card 250\\ncash 250"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «چندریختی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -20305,34 +20305,34 @@
   },
   {
     "id": 565,
-    "title": "MRO — سامانه ثبت‌نام — تمرین 565",
+    "title": "MRO — اپلیکیشن مالی — تمرین عملی 30",
     "level": "سخت",
     "category": "Inheritance",
     "topic": "MRO",
-    "statement": "در سناریوی «سامانه ثبت‌نام»، یک برنامه Python برای «MRO» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «اپلیکیشن مالی»، زنجیره A←B←C را بساز و ترتیب MRO کلاس C را چاپ کن.",
     "examples": [
-      "ورودی: نمونه 30\nخروجی: نتیجه پردازش نمونه 30"
+      "ورودی: x\\nخروجی: C B A object"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 30\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class A: pass\\nclass B(A): pass\\nclass C(B): pass\\nprint(*[x.__name__ for x in C.mro()])",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "x",
+        "expected": "C B A object"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "1",
+        "expected": "C B A object"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "",
+        "expected": "C B A object"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «MRO» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -20341,34 +20341,34 @@
   },
   {
     "id": 566,
-    "title": "ارث‌بری — دفتر کار — تمرین 566",
+    "title": "ارث‌بری — سامانه نوبت‌دهی — تمرین عملی 31",
     "level": "سخت",
     "category": "Inheritance",
     "topic": "ارث‌بری",
-    "statement": "در سناریوی «دفتر کار»، مفهوم «ارث‌بری» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه نوبت‌دهی»، کلاس Person و فرزند Worker بساز؛ Worker نام را از Person به ارث ببرد و info را اجرا کند.",
     "examples": [
-      "ورودی: نمونه 31\nخروجی: نتیجه پردازش نمونه 31"
+      "ورودی: علی\\nخروجی: Worker: علی"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Inheritance\n\n",
-    "solution": "# راه‌حل نمونه تمرین 31\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "class Person:\\n    def __init__(self,name): self.name=name\\nclass Worker(Person):\\n    def info(self): print(\"Worker: \"+self.name)\\nWorker(input()).info()",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "علی",
+        "expected": "Worker: علی"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "Sara",
+        "expected": "Worker: Sara"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "A",
+        "expected": "Worker: A"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «ارث‌بری» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Inheritance",
@@ -23725,34 +23725,34 @@
   },
   {
     "id": 660,
-    "title": "pattern — سامانه نوبت‌دهی — تمرین 660",
+    "title": "pattern — سامانه نوبت‌دهی — تمرین عملی 1",
     "level": "آسان",
     "category": "Regex",
     "topic": "pattern",
-    "statement": "در سناریوی «سامانه نوبت‌دهی»، یک مسئله عملی مرتبط با «pattern» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه نوبت‌دهی»، با Regex کد پیگیری با قالب دو حرف انگلیسی، خط تیره و چهار رقم را اعتبارسنجی کن؛ معتبر OK و نامعتبر NO چاپ شود.",
     "examples": [
-      "ورودی: نمونه 1\nخروجی: نتیجه پردازش نمونه 1"
+      "ورودی: AB-1234\\nخروجی: OK"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 1\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(\"OK\" if re.fullmatch(r\"[A-Za-z]{2}-\\\\d{4}\", s) else \"NO\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "AB-1234",
+        "expected": "OK"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "ab-0007",
+        "expected": "OK"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "A1-1234",
+        "expected": "NO"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «pattern» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -23761,34 +23761,34 @@
   },
   {
     "id": 661,
-    "title": "search — فروشگاه محلی — تمرین 661",
+    "title": "search — فروشگاه محلی — تمرین عملی 2",
     "level": "آسان",
     "category": "Regex",
     "topic": "search",
-    "statement": "در سناریوی «فروشگاه محلی»، یک برنامه Python برای «search» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «فروشگاه محلی»، با Regex بررسی کن آیا متن شامل شماره‌ای با قالب 09 و سپس 9 رقم است.",
     "examples": [
-      "ورودی: نمونه 2\nخروجی: نتیجه پردازش نمونه 2"
+      "ورودی: تماس 09121234567\\nخروجی: YES"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 2\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(\"YES\" if re.search(r\"09\\\\d{9}\", s) else \"NO\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "تماس 09121234567",
+        "expected": "YES"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "02112345678",
+        "expected": "NO"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "09120000000 فردا",
+        "expected": "YES"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «search» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -23797,34 +23797,34 @@
   },
   {
     "id": 662,
-    "title": "findall — مدرسه — تمرین 662",
+    "title": "findall — مدرسه — تمرین عملی 3",
     "level": "آسان",
     "category": "Regex",
     "topic": "findall",
-    "statement": "در سناریوی «مدرسه»، مفهوم «findall» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «مدرسه»، همه عددهای صحیح متن را با Regex استخراج کن و با فاصله چاپ کن.",
     "examples": [
-      "ورودی: نمونه 3\nخروجی: نتیجه پردازش نمونه 3"
+      "ورودی: کالا 12 و 7\\nخروجی: 12 7"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 3\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(*re.findall(r\"-?\\\\d+\", s))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "کالا 12 و 7",
+        "expected": "12 7"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "منفی -3 و 25",
+        "expected": "-3 25"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "بدون عدد",
+        "expected": ""
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «findall» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -23833,34 +23833,34 @@
   },
   {
     "id": 663,
-    "title": "replace — کتابخانه — تمرین 663",
+    "title": "replace — کتابخانه — تمرین عملی 4",
     "level": "آسان",
     "category": "Regex",
     "topic": "replace",
-    "statement": "در سناریوی «کتابخانه»، راه‌حلی خوانا برای مسئله «replace» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «کتابخانه»، فاصله‌های پشت‌سرهم را با Regex به یک فاصله تبدیل کن و ابتدا و انتهای متن را نیز پاک کن.",
     "examples": [
-      "ورودی: نمونه 4\nخروجی: نتیجه پردازش نمونه 4"
+      "ورودی: سلام    دنیا\\nخروجی: سلام دنیا"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 4\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(re.sub(r\"\\\\s+\", \" \", s).strip())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "سلام    دنیا",
+        "expected": "سلام دنیا"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "  Python   خوب است  ",
+        "expected": "Python خوب است"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "یک متن",
+        "expected": "یک متن"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «replace» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -23869,34 +23869,34 @@
   },
   {
     "id": 664,
-    "title": "اعتبارسنجی — باشگاه ورزشی — تمرین 664",
+    "title": "اعتبارسنجی — باشگاه ورزشی — تمرین عملی 5",
     "level": "آسان",
     "category": "Regex",
     "topic": "اعتبارسنجی",
-    "statement": "در سناریوی «باشگاه ورزشی»، یک مسئله عملی مرتبط با «اعتبارسنجی» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «باشگاه ورزشی»، ایمیل را با Regex اعتبارسنجی کن؛ قالب ساده name@domain.tld باید VALID و بقیه INVALID باشد.",
     "examples": [
-      "ورودی: نمونه 5\nخروجی: نتیجه پردازش نمونه 5"
+      "ورودی: user@example.com\\nخروجی: VALID"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 5\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(\"VALID\" if re.fullmatch(r\"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\\\.[A-Za-z]{2,}\", s) else \"INVALID\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "user@example.com",
+        "expected": "VALID"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "test@mail.ir",
+        "expected": "VALID"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "bad-email",
+        "expected": "INVALID"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «اعتبارسنجی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -23905,34 +23905,34 @@
   },
   {
     "id": 665,
-    "title": "pattern — سامانه ثبت‌نام — تمرین 665",
+    "title": "pattern — سامانه ثبت‌نام — تمرین عملی 6",
     "level": "آسان",
     "category": "Regex",
     "topic": "pattern",
-    "statement": "در سناریوی «سامانه ثبت‌نام»، یک برنامه Python برای «pattern» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه ثبت‌نام»، با Regex کد پیگیری با قالب دو حرف انگلیسی، خط تیره و چهار رقم را اعتبارسنجی کن؛ معتبر OK و نامعتبر NO چاپ شود.",
     "examples": [
-      "ورودی: نمونه 6\nخروجی: نتیجه پردازش نمونه 6"
+      "ورودی: AB-1234\\nخروجی: OK"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 6\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(\"OK\" if re.fullmatch(r\"[A-Za-z]{2}-\\\\d{4}\", s) else \"NO\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "AB-1234",
+        "expected": "OK"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "ab-0007",
+        "expected": "OK"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "A1-1234",
+        "expected": "NO"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «pattern» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -23941,34 +23941,34 @@
   },
   {
     "id": 666,
-    "title": "search — دفتر کار — تمرین 666",
+    "title": "search — دفتر کار — تمرین عملی 7",
     "level": "آسان",
     "category": "Regex",
     "topic": "search",
-    "statement": "در سناریوی «دفتر کار»، مفهوم «search» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «دفتر کار»، با Regex بررسی کن آیا متن شامل شماره‌ای با قالب 09 و سپس 9 رقم است.",
     "examples": [
-      "ورودی: نمونه 7\nخروجی: نتیجه پردازش نمونه 7"
+      "ورودی: تماس 09121234567\\nخروجی: YES"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 7\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(\"YES\" if re.search(r\"09\\\\d{9}\", s) else \"NO\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "تماس 09121234567",
+        "expected": "YES"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "02112345678",
+        "expected": "NO"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "09120000000 فردا",
+        "expected": "YES"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «search» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -23977,34 +23977,34 @@
   },
   {
     "id": 667,
-    "title": "findall — رستوران — تمرین 667",
+    "title": "findall — رستوران — تمرین عملی 8",
     "level": "آسان",
     "category": "Regex",
     "topic": "findall",
-    "statement": "در سناریوی «رستوران»، راه‌حلی خوانا برای مسئله «findall» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «رستوران»، همه عددهای صحیح متن را با Regex استخراج کن و با فاصله چاپ کن.",
     "examples": [
-      "ورودی: نمونه 8\nخروجی: نتیجه پردازش نمونه 8"
+      "ورودی: کالا 12 و 7\\nخروجی: 12 7"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 8\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(*re.findall(r\"-?\\\\d+\", s))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "کالا 12 و 7",
+        "expected": "12 7"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "منفی -3 و 25",
+        "expected": "-3 25"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "بدون عدد",
+        "expected": ""
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «findall» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -24013,34 +24013,34 @@
   },
   {
     "id": 668,
-    "title": "replace — انبار کالا — تمرین 668",
+    "title": "replace — انبار کالا — تمرین عملی 9",
     "level": "آسان",
     "category": "Regex",
     "topic": "replace",
-    "statement": "در سناریوی «انبار کالا»، یک مسئله عملی مرتبط با «replace» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «انبار کالا»، فاصله‌های پشت‌سرهم را با Regex به یک فاصله تبدیل کن و ابتدا و انتهای متن را نیز پاک کن.",
     "examples": [
-      "ورودی: نمونه 9\nخروجی: نتیجه پردازش نمونه 9"
+      "ورودی: سلام    دنیا\\nخروجی: سلام دنیا"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 9\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(re.sub(r\"\\\\s+\", \" \", s).strip())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "سلام    دنیا",
+        "expected": "سلام دنیا"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "  Python   خوب است  ",
+        "expected": "Python خوب است"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "یک متن",
+        "expected": "یک متن"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «replace» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -24049,34 +24049,34 @@
   },
   {
     "id": 669,
-    "title": "اعتبارسنجی — اپلیکیشن مالی — تمرین 669",
+    "title": "اعتبارسنجی — اپلیکیشن مالی — تمرین عملی 10",
     "level": "آسان",
     "category": "Regex",
     "topic": "اعتبارسنجی",
-    "statement": "در سناریوی «اپلیکیشن مالی»، یک برنامه Python برای «اعتبارسنجی» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «اپلیکیشن مالی»، ایمیل را با Regex اعتبارسنجی کن؛ قالب ساده name@domain.tld باید VALID و بقیه INVALID باشد.",
     "examples": [
-      "ورودی: نمونه 10\nخروجی: نتیجه پردازش نمونه 10"
+      "ورودی: user@example.com\\nخروجی: VALID"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 10\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(\"VALID\" if re.fullmatch(r\"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\\\.[A-Za-z]{2,}\", s) else \"INVALID\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "user@example.com",
+        "expected": "VALID"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "test@mail.ir",
+        "expected": "VALID"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "bad-email",
+        "expected": "INVALID"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «اعتبارسنجی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -24085,34 +24085,34 @@
   },
   {
     "id": 670,
-    "title": "pattern — سامانه نوبت‌دهی — تمرین 670",
+    "title": "pattern — سامانه نوبت‌دهی — تمرین عملی 11",
     "level": "آسان",
     "category": "Regex",
     "topic": "pattern",
-    "statement": "در سناریوی «سامانه نوبت‌دهی»، مفهوم «pattern» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه نوبت‌دهی»، با Regex کد پیگیری با قالب دو حرف انگلیسی، خط تیره و چهار رقم را اعتبارسنجی کن؛ معتبر OK و نامعتبر NO چاپ شود.",
     "examples": [
-      "ورودی: نمونه 11\nخروجی: نتیجه پردازش نمونه 11"
+      "ورودی: AB-1234\\nخروجی: OK"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 11\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(\"OK\" if re.fullmatch(r\"[A-Za-z]{2}-\\\\d{4}\", s) else \"NO\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "AB-1234",
+        "expected": "OK"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "ab-0007",
+        "expected": "OK"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "A1-1234",
+        "expected": "NO"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «pattern» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -24121,34 +24121,34 @@
   },
   {
     "id": 671,
-    "title": "search — فروشگاه محلی — تمرین 671",
+    "title": "search — فروشگاه محلی — تمرین عملی 12",
     "level": "آسان",
     "category": "Regex",
     "topic": "search",
-    "statement": "در سناریوی «فروشگاه محلی»، راه‌حلی خوانا برای مسئله «search» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «فروشگاه محلی»، با Regex بررسی کن آیا متن شامل شماره‌ای با قالب 09 و سپس 9 رقم است.",
     "examples": [
-      "ورودی: نمونه 12\nخروجی: نتیجه پردازش نمونه 12"
+      "ورودی: تماس 09121234567\\nخروجی: YES"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 12\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(\"YES\" if re.search(r\"09\\\\d{9}\", s) else \"NO\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "تماس 09121234567",
+        "expected": "YES"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "02112345678",
+        "expected": "NO"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "09120000000 فردا",
+        "expected": "YES"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «search» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -24157,34 +24157,34 @@
   },
   {
     "id": 672,
-    "title": "findall — مدرسه — تمرین 672",
+    "title": "findall — مدرسه — تمرین عملی 13",
     "level": "آسان",
     "category": "Regex",
     "topic": "findall",
-    "statement": "در سناریوی «مدرسه»، یک مسئله عملی مرتبط با «findall» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «مدرسه»، همه عددهای صحیح متن را با Regex استخراج کن و با فاصله چاپ کن.",
     "examples": [
-      "ورودی: نمونه 13\nخروجی: نتیجه پردازش نمونه 13"
+      "ورودی: کالا 12 و 7\\nخروجی: 12 7"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 13\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(*re.findall(r\"-?\\\\d+\", s))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "کالا 12 و 7",
+        "expected": "12 7"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "منفی -3 و 25",
+        "expected": "-3 25"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "بدون عدد",
+        "expected": ""
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «findall» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -24193,34 +24193,34 @@
   },
   {
     "id": 673,
-    "title": "replace — کتابخانه — تمرین 673",
+    "title": "replace — کتابخانه — تمرین عملی 14",
     "level": "آسان",
     "category": "Regex",
     "topic": "replace",
-    "statement": "در سناریوی «کتابخانه»، یک برنامه Python برای «replace» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «کتابخانه»، فاصله‌های پشت‌سرهم را با Regex به یک فاصله تبدیل کن و ابتدا و انتهای متن را نیز پاک کن.",
     "examples": [
-      "ورودی: نمونه 14\nخروجی: نتیجه پردازش نمونه 14"
+      "ورودی: سلام    دنیا\\nخروجی: سلام دنیا"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 14\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(re.sub(r\"\\\\s+\", \" \", s).strip())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "سلام    دنیا",
+        "expected": "سلام دنیا"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "  Python   خوب است  ",
+        "expected": "Python خوب است"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "یک متن",
+        "expected": "یک متن"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «replace» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -24229,34 +24229,34 @@
   },
   {
     "id": 674,
-    "title": "اعتبارسنجی — باشگاه ورزشی — تمرین 674",
+    "title": "اعتبارسنجی — باشگاه ورزشی — تمرین عملی 15",
     "level": "متوسط",
     "category": "Regex",
     "topic": "اعتبارسنجی",
-    "statement": "در سناریوی «باشگاه ورزشی»، مفهوم «اعتبارسنجی» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «باشگاه ورزشی»، ایمیل را با Regex اعتبارسنجی کن؛ قالب ساده name@domain.tld باید VALID و بقیه INVALID باشد.",
     "examples": [
-      "ورودی: نمونه 15\nخروجی: نتیجه پردازش نمونه 15"
+      "ورودی: user@example.com\\nخروجی: VALID"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 15\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(\"VALID\" if re.fullmatch(r\"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\\\.[A-Za-z]{2,}\", s) else \"INVALID\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "user@example.com",
+        "expected": "VALID"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "test@mail.ir",
+        "expected": "VALID"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "bad-email",
+        "expected": "INVALID"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «اعتبارسنجی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -24265,34 +24265,34 @@
   },
   {
     "id": 675,
-    "title": "pattern — سامانه ثبت‌نام — تمرین 675",
+    "title": "pattern — سامانه ثبت‌نام — تمرین عملی 16",
     "level": "متوسط",
     "category": "Regex",
     "topic": "pattern",
-    "statement": "در سناریوی «سامانه ثبت‌نام»، راه‌حلی خوانا برای مسئله «pattern» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه ثبت‌نام»، با Regex کد پیگیری با قالب دو حرف انگلیسی، خط تیره و چهار رقم را اعتبارسنجی کن؛ معتبر OK و نامعتبر NO چاپ شود.",
     "examples": [
-      "ورودی: نمونه 16\nخروجی: نتیجه پردازش نمونه 16"
+      "ورودی: AB-1234\\nخروجی: OK"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 16\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(\"OK\" if re.fullmatch(r\"[A-Za-z]{2}-\\\\d{4}\", s) else \"NO\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "AB-1234",
+        "expected": "OK"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "ab-0007",
+        "expected": "OK"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "A1-1234",
+        "expected": "NO"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «pattern» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -24301,34 +24301,34 @@
   },
   {
     "id": 676,
-    "title": "search — دفتر کار — تمرین 676",
+    "title": "search — دفتر کار — تمرین عملی 17",
     "level": "متوسط",
     "category": "Regex",
     "topic": "search",
-    "statement": "در سناریوی «دفتر کار»، یک مسئله عملی مرتبط با «search» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «دفتر کار»، با Regex بررسی کن آیا متن شامل شماره‌ای با قالب 09 و سپس 9 رقم است.",
     "examples": [
-      "ورودی: نمونه 17\nخروجی: نتیجه پردازش نمونه 17"
+      "ورودی: تماس 09121234567\\nخروجی: YES"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 17\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(\"YES\" if re.search(r\"09\\\\d{9}\", s) else \"NO\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "تماس 09121234567",
+        "expected": "YES"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "02112345678",
+        "expected": "NO"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "09120000000 فردا",
+        "expected": "YES"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «search» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -24337,34 +24337,34 @@
   },
   {
     "id": 677,
-    "title": "findall — رستوران — تمرین 677",
+    "title": "findall — رستوران — تمرین عملی 18",
     "level": "متوسط",
     "category": "Regex",
     "topic": "findall",
-    "statement": "در سناریوی «رستوران»، یک برنامه Python برای «findall» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «رستوران»، همه عددهای صحیح متن را با Regex استخراج کن و با فاصله چاپ کن.",
     "examples": [
-      "ورودی: نمونه 18\nخروجی: نتیجه پردازش نمونه 18"
+      "ورودی: کالا 12 و 7\\nخروجی: 12 7"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 18\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(*re.findall(r\"-?\\\\d+\", s))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "کالا 12 و 7",
+        "expected": "12 7"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "منفی -3 و 25",
+        "expected": "-3 25"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "بدون عدد",
+        "expected": ""
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «findall» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -24373,34 +24373,34 @@
   },
   {
     "id": 678,
-    "title": "replace — انبار کالا — تمرین 678",
+    "title": "replace — انبار کالا — تمرین عملی 19",
     "level": "متوسط",
     "category": "Regex",
     "topic": "replace",
-    "statement": "در سناریوی «انبار کالا»، مفهوم «replace» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «انبار کالا»، فاصله‌های پشت‌سرهم را با Regex به یک فاصله تبدیل کن و ابتدا و انتهای متن را نیز پاک کن.",
     "examples": [
-      "ورودی: نمونه 19\nخروجی: نتیجه پردازش نمونه 19"
+      "ورودی: سلام    دنیا\\nخروجی: سلام دنیا"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 19\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(re.sub(r\"\\\\s+\", \" \", s).strip())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "سلام    دنیا",
+        "expected": "سلام دنیا"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "  Python   خوب است  ",
+        "expected": "Python خوب است"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "یک متن",
+        "expected": "یک متن"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «replace» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -24409,34 +24409,34 @@
   },
   {
     "id": 679,
-    "title": "اعتبارسنجی — اپلیکیشن مالی — تمرین 679",
+    "title": "اعتبارسنجی — اپلیکیشن مالی — تمرین عملی 20",
     "level": "متوسط",
     "category": "Regex",
     "topic": "اعتبارسنجی",
-    "statement": "در سناریوی «اپلیکیشن مالی»، راه‌حلی خوانا برای مسئله «اعتبارسنجی» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «اپلیکیشن مالی»، ایمیل را با Regex اعتبارسنجی کن؛ قالب ساده name@domain.tld باید VALID و بقیه INVALID باشد.",
     "examples": [
-      "ورودی: نمونه 20\nخروجی: نتیجه پردازش نمونه 20"
+      "ورودی: user@example.com\\nخروجی: VALID"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 20\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(\"VALID\" if re.fullmatch(r\"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\\\.[A-Za-z]{2,}\", s) else \"INVALID\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "user@example.com",
+        "expected": "VALID"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "test@mail.ir",
+        "expected": "VALID"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "bad-email",
+        "expected": "INVALID"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «اعتبارسنجی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -24445,34 +24445,34 @@
   },
   {
     "id": 680,
-    "title": "pattern — سامانه نوبت‌دهی — تمرین 680",
+    "title": "pattern — سامانه نوبت‌دهی — تمرین عملی 21",
     "level": "متوسط",
     "category": "Regex",
     "topic": "pattern",
-    "statement": "در سناریوی «سامانه نوبت‌دهی»، یک مسئله عملی مرتبط با «pattern» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه نوبت‌دهی»، با Regex کد پیگیری با قالب دو حرف انگلیسی، خط تیره و چهار رقم را اعتبارسنجی کن؛ معتبر OK و نامعتبر NO چاپ شود.",
     "examples": [
-      "ورودی: نمونه 21\nخروجی: نتیجه پردازش نمونه 21"
+      "ورودی: AB-1234\\nخروجی: OK"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 21\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(\"OK\" if re.fullmatch(r\"[A-Za-z]{2}-\\\\d{4}\", s) else \"NO\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "AB-1234",
+        "expected": "OK"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "ab-0007",
+        "expected": "OK"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "A1-1234",
+        "expected": "NO"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «pattern» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -24481,34 +24481,34 @@
   },
   {
     "id": 681,
-    "title": "search — فروشگاه محلی — تمرین 681",
+    "title": "search — فروشگاه محلی — تمرین عملی 22",
     "level": "متوسط",
     "category": "Regex",
     "topic": "search",
-    "statement": "در سناریوی «فروشگاه محلی»، یک برنامه Python برای «search» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «فروشگاه محلی»، با Regex بررسی کن آیا متن شامل شماره‌ای با قالب 09 و سپس 9 رقم است.",
     "examples": [
-      "ورودی: نمونه 22\nخروجی: نتیجه پردازش نمونه 22"
+      "ورودی: تماس 09121234567\\nخروجی: YES"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 22\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(\"YES\" if re.search(r\"09\\\\d{9}\", s) else \"NO\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "تماس 09121234567",
+        "expected": "YES"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "02112345678",
+        "expected": "NO"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "09120000000 فردا",
+        "expected": "YES"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «search» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -24517,34 +24517,34 @@
   },
   {
     "id": 682,
-    "title": "findall — مدرسه — تمرین 682",
+    "title": "findall — مدرسه — تمرین عملی 23",
     "level": "متوسط",
     "category": "Regex",
     "topic": "findall",
-    "statement": "در سناریوی «مدرسه»، مفهوم «findall» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «مدرسه»، همه عددهای صحیح متن را با Regex استخراج کن و با فاصله چاپ کن.",
     "examples": [
-      "ورودی: نمونه 23\nخروجی: نتیجه پردازش نمونه 23"
+      "ورودی: کالا 12 و 7\\nخروجی: 12 7"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 23\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(*re.findall(r\"-?\\\\d+\", s))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "کالا 12 و 7",
+        "expected": "12 7"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "منفی -3 و 25",
+        "expected": "-3 25"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "بدون عدد",
+        "expected": ""
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «findall» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -24553,34 +24553,34 @@
   },
   {
     "id": 683,
-    "title": "replace — کتابخانه — تمرین 683",
+    "title": "replace — کتابخانه — تمرین عملی 24",
     "level": "متوسط",
     "category": "Regex",
     "topic": "replace",
-    "statement": "در سناریوی «کتابخانه»، راه‌حلی خوانا برای مسئله «replace» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «کتابخانه»، فاصله‌های پشت‌سرهم را با Regex به یک فاصله تبدیل کن و ابتدا و انتهای متن را نیز پاک کن.",
     "examples": [
-      "ورودی: نمونه 24\nخروجی: نتیجه پردازش نمونه 24"
+      "ورودی: سلام    دنیا\\nخروجی: سلام دنیا"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 24\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(re.sub(r\"\\\\s+\", \" \", s).strip())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "سلام    دنیا",
+        "expected": "سلام دنیا"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "  Python   خوب است  ",
+        "expected": "Python خوب است"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "یک متن",
+        "expected": "یک متن"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «replace» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -24589,34 +24589,34 @@
   },
   {
     "id": 684,
-    "title": "اعتبارسنجی — باشگاه ورزشی — تمرین 684",
+    "title": "اعتبارسنجی — باشگاه ورزشی — تمرین عملی 25",
     "level": "متوسط",
     "category": "Regex",
     "topic": "اعتبارسنجی",
-    "statement": "در سناریوی «باشگاه ورزشی»، یک مسئله عملی مرتبط با «اعتبارسنجی» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «باشگاه ورزشی»، ایمیل را با Regex اعتبارسنجی کن؛ قالب ساده name@domain.tld باید VALID و بقیه INVALID باشد.",
     "examples": [
-      "ورودی: نمونه 25\nخروجی: نتیجه پردازش نمونه 25"
+      "ورودی: user@example.com\\nخروجی: VALID"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 25\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(\"VALID\" if re.fullmatch(r\"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\\\.[A-Za-z]{2,}\", s) else \"INVALID\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "user@example.com",
+        "expected": "VALID"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "test@mail.ir",
+        "expected": "VALID"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "bad-email",
+        "expected": "INVALID"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «اعتبارسنجی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -24625,34 +24625,34 @@
   },
   {
     "id": 685,
-    "title": "pattern — سامانه ثبت‌نام — تمرین 685",
+    "title": "pattern — سامانه ثبت‌نام — تمرین عملی 26",
     "level": "متوسط",
     "category": "Regex",
     "topic": "pattern",
-    "statement": "در سناریوی «سامانه ثبت‌نام»، یک برنامه Python برای «pattern» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه ثبت‌نام»، با Regex کد پیگیری با قالب دو حرف انگلیسی، خط تیره و چهار رقم را اعتبارسنجی کن؛ معتبر OK و نامعتبر NO چاپ شود.",
     "examples": [
-      "ورودی: نمونه 26\nخروجی: نتیجه پردازش نمونه 26"
+      "ورودی: AB-1234\\nخروجی: OK"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 26\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(\"OK\" if re.fullmatch(r\"[A-Za-z]{2}-\\\\d{4}\", s) else \"NO\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "AB-1234",
+        "expected": "OK"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "ab-0007",
+        "expected": "OK"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "A1-1234",
+        "expected": "NO"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «pattern» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -24661,34 +24661,34 @@
   },
   {
     "id": 686,
-    "title": "search — دفتر کار — تمرین 686",
+    "title": "search — دفتر کار — تمرین عملی 27",
     "level": "سخت",
     "category": "Regex",
     "topic": "search",
-    "statement": "در سناریوی «دفتر کار»، مفهوم «search» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «دفتر کار»، با Regex بررسی کن آیا متن شامل شماره‌ای با قالب 09 و سپس 9 رقم است.",
     "examples": [
-      "ورودی: نمونه 27\nخروجی: نتیجه پردازش نمونه 27"
+      "ورودی: تماس 09121234567\\nخروجی: YES"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 27\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(\"YES\" if re.search(r\"09\\\\d{9}\", s) else \"NO\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "تماس 09121234567",
+        "expected": "YES"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "02112345678",
+        "expected": "NO"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "09120000000 فردا",
+        "expected": "YES"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «search» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -24697,34 +24697,34 @@
   },
   {
     "id": 687,
-    "title": "findall — رستوران — تمرین 687",
+    "title": "findall — رستوران — تمرین عملی 28",
     "level": "سخت",
     "category": "Regex",
     "topic": "findall",
-    "statement": "در سناریوی «رستوران»، راه‌حلی خوانا برای مسئله «findall» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «رستوران»، همه عددهای صحیح متن را با Regex استخراج کن و با فاصله چاپ کن.",
     "examples": [
-      "ورودی: نمونه 28\nخروجی: نتیجه پردازش نمونه 28"
+      "ورودی: کالا 12 و 7\\nخروجی: 12 7"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 28\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(*re.findall(r\"-?\\\\d+\", s))",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "کالا 12 و 7",
+        "expected": "12 7"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "منفی -3 و 25",
+        "expected": "-3 25"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "بدون عدد",
+        "expected": ""
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «findall» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -24733,34 +24733,34 @@
   },
   {
     "id": 688,
-    "title": "replace — انبار کالا — تمرین 688",
+    "title": "replace — انبار کالا — تمرین عملی 29",
     "level": "سخت",
     "category": "Regex",
     "topic": "replace",
-    "statement": "در سناریوی «انبار کالا»، یک مسئله عملی مرتبط با «replace» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «انبار کالا»، فاصله‌های پشت‌سرهم را با Regex به یک فاصله تبدیل کن و ابتدا و انتهای متن را نیز پاک کن.",
     "examples": [
-      "ورودی: نمونه 29\nخروجی: نتیجه پردازش نمونه 29"
+      "ورودی: سلام    دنیا\\nخروجی: سلام دنیا"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 29\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(re.sub(r\"\\\\s+\", \" \", s).strip())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "سلام    دنیا",
+        "expected": "سلام دنیا"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "  Python   خوب است  ",
+        "expected": "Python خوب است"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "یک متن",
+        "expected": "یک متن"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «replace» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -24769,34 +24769,34 @@
   },
   {
     "id": 689,
-    "title": "اعتبارسنجی — اپلیکیشن مالی — تمرین 689",
+    "title": "اعتبارسنجی — اپلیکیشن مالی — تمرین عملی 30",
     "level": "سخت",
     "category": "Regex",
     "topic": "اعتبارسنجی",
-    "statement": "در سناریوی «اپلیکیشن مالی»، یک برنامه Python برای «اعتبارسنجی» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «اپلیکیشن مالی»، ایمیل را با Regex اعتبارسنجی کن؛ قالب ساده name@domain.tld باید VALID و بقیه INVALID باشد.",
     "examples": [
-      "ورودی: نمونه 30\nخروجی: نتیجه پردازش نمونه 30"
+      "ورودی: user@example.com\\nخروجی: VALID"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 30\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(\"VALID\" if re.fullmatch(r\"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\\\.[A-Za-z]{2,}\", s) else \"INVALID\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "user@example.com",
+        "expected": "VALID"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "test@mail.ir",
+        "expected": "VALID"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "bad-email",
+        "expected": "INVALID"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «اعتبارسنجی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
@@ -24805,34 +24805,34 @@
   },
   {
     "id": 690,
-    "title": "pattern — سامانه نوبت‌دهی — تمرین 690",
+    "title": "pattern — سامانه نوبت‌دهی — تمرین عملی 31",
     "level": "سخت",
     "category": "Regex",
     "topic": "pattern",
-    "statement": "در سناریوی «سامانه نوبت‌دهی»، مفهوم «pattern» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه نوبت‌دهی»، با Regex کد پیگیری با قالب دو حرف انگلیسی، خط تیره و چهار رقم را اعتبارسنجی کن؛ معتبر OK و نامعتبر NO چاپ شود.",
     "examples": [
-      "ورودی: نمونه 31\nخروجی: نتیجه پردازش نمونه 31"
+      "ورودی: AB-1234\\nخروجی: OK"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Regex\n\n",
-    "solution": "# راه‌حل نمونه تمرین 31\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\n",
+    "solution": "import re\\ns=input()\\nprint(\"OK\" if re.fullmatch(r\"[A-Za-z]{2}-\\\\d{4}\", s) else \"NO\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "AB-1234",
+        "expected": "OK"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "ab-0007",
+        "expected": "OK"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "A1-1234",
+        "expected": "NO"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «pattern» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ساختار داده یا کلاس‌های موردنیاز را مشخص کن.",
+      "مفهوم اصلی مبحث را مستقیماً در راه‌حل استفاده کن.",
+      "تست‌های عادی و مرزی را اجرا و خروجی را دقیق مقایسه کن."
     ],
     "concepts": [
       "Regex",
