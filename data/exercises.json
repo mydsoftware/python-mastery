@@ -23729,23 +23729,23 @@
     "level": "آسان",
     "category": "Regex",
     "topic": "pattern",
-    "statement": "در «سامانه نوبت‌دهی»، با Regex کد پیگیری با قالب دو حرف انگلیسی، خط تیره و چهار رقم را اعتبارسنجی کن؛ معتبر OK و نامعتبر NO چاپ شود.",
+    "statement": "کد تخفیف با سه حرف بزرگ و دو رقم را اعتبارسنجی کن. در «نوبت‌دهی»؛ معتبر OK و نامعتبر NO چاپ شود.",
     "examples": [
       "ورودی: AB-1234\\nخروجی: OK"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(\"OK\" if re.fullmatch(r\"[A-Za-z]{2}-\\\\d{4}\", s) else \"NO\")",
+    "solution": "import re\\ns=input()\\nprint(\"OK\" if re.fullmatch(r\"[A-Z]{3}-?\\\\d{2}\", s) else \"NO\")",
     "tests": [
       {
-        "input": "AB-1234",
+        "input": "ABC12",
         "expected": "OK"
       },
       {
-        "input": "ab-0007",
-        "expected": "OK"
+        "input": "bad",
+        "expected": "NO"
       },
       {
-        "input": "A1-1234",
+        "input": "ABC12x",
         "expected": "NO"
       }
     ],
@@ -23770,19 +23770,19 @@
       "ورودی: تماس 09121234567\\nخروجی: YES"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(\"YES\" if re.search(r\"09\\\\d{9}\", s) else \"NO\")",
+    "solution": "import re\\ns=input()\\nprint(\"YES\" if re.search(r\"#[A-Za-z_]+\", s) else \"NO\")",
     "tests": [
       {
-        "input": "تماس 09121234567",
+        "input": "در متن #python",
         "expected": "YES"
       },
       {
-        "input": "02112345678",
+        "input": "بدون الگو",
         "expected": "NO"
       },
       {
-        "input": "09120000000 فردا",
-        "expected": "YES"
+        "input": "x 123",
+        "expected": "NO"
       }
     ],
     "hints": [
@@ -23806,19 +23806,19 @@
       "ورودی: کالا 12 و 7\\nخروجی: 12 7"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(*re.findall(r\"-?\\\\d+\", s))",
+    "solution": "import re\\ns=input()\\nprint(*re.findall(r\"#[A-Za-z_]+\", s))",
     "tests": [
       {
-        "input": "کالا 12 و 7",
-        "expected": "12 7"
+        "input": "Ali Bob",
+        "expected": "Ali Bob"
       },
       {
-        "input": "منفی -3 و 25",
-        "expected": "-3 25"
+        "input": "12 345 6",
+        "expected": "12 345"
       },
       {
-        "input": "بدون عدد",
-        "expected": ""
+        "input": "#python #code",
+        "expected": "#python #code"
       }
     ],
     "hints": [
@@ -23842,19 +23842,19 @@
       "ورودی: سلام    دنیا\\nخروجی: سلام دنیا"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(re.sub(r\"\\\\s+\", \" \", s).strip())",
+    "solution": "import re\\ns=input()\\nprint(re.sub(r\"[aeiou]\", \"*\", s))",
     "tests": [
       {
-        "input": "سلام    دنیا",
-        "expected": "سلام دنیا"
+        "input": "price 120",
+        "expected": "price NUM"
       },
       {
-        "input": "  Python   خوب است  ",
-        "expected": "Python خوب است"
+        "input": "@user",
+        "expected": "USER"
       },
       {
-        "input": "یک متن",
-        "expected": "یک متن"
+        "input": "year 2026",
+        "expected": "year YEAR"
       }
     ],
     "hints": [
@@ -23878,18 +23878,18 @@
       "ورودی: user@example.com\\nخروجی: VALID"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(\"VALID\" if re.fullmatch(r\"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\\\.[A-Za-z]{2,}\", s) else \"INVALID\")",
+    "solution": "import re\\ns=input()\\nprint(\"VALID\" if re.fullmatch(r\"[A-Z]{3}-\\\\d{2}\", s) else \"INVALID\")",
     "tests": [
       {
         "input": "user@example.com",
         "expected": "VALID"
       },
       {
-        "input": "test@mail.ir",
-        "expected": "VALID"
+        "input": "bad",
+        "expected": "INVALID"
       },
       {
-        "input": "bad-email",
+        "input": "123",
         "expected": "INVALID"
       }
     ],
@@ -23909,23 +23909,23 @@
     "level": "آسان",
     "category": "Regex",
     "topic": "pattern",
-    "statement": "در «سامانه ثبت‌نام»، با Regex کد پیگیری با قالب دو حرف انگلیسی، خط تیره و چهار رقم را اعتبارسنجی کن؛ معتبر OK و نامعتبر NO چاپ شود.",
+    "statement": "کد تخفیف با سه حرف بزرگ و دو رقم را اعتبارسنجی کن. در «نوبت‌دهی»؛ معتبر OK و نامعتبر NO چاپ شود.",
     "examples": [
       "ورودی: AB-1234\\nخروجی: OK"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(\"OK\" if re.fullmatch(r\"[A-Za-z]{2}-\\\\d{4}\", s) else \"NO\")",
+    "solution": "import re\\ns=input()\\nprint(\"OK\" if re.fullmatch(r\"[A-Z]{3}-?\\\\d{2}\", s) else \"NO\")",
     "tests": [
       {
-        "input": "AB-1234",
+        "input": "ABC12",
         "expected": "OK"
       },
       {
-        "input": "ab-0007",
-        "expected": "OK"
+        "input": "bad",
+        "expected": "NO"
       },
       {
-        "input": "A1-1234",
+        "input": "ABC12x",
         "expected": "NO"
       }
     ],
@@ -23950,19 +23950,19 @@
       "ورودی: تماس 09121234567\\nخروجی: YES"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(\"YES\" if re.search(r\"09\\\\d{9}\", s) else \"NO\")",
+    "solution": "import re\\ns=input()\\nprint(\"YES\" if re.search(r\"#[A-Za-z_]+\", s) else \"NO\")",
     "tests": [
       {
-        "input": "تماس 09121234567",
+        "input": "در متن https://example.com",
         "expected": "YES"
       },
       {
-        "input": "02112345678",
+        "input": "بدون الگو",
         "expected": "NO"
       },
       {
-        "input": "09120000000 فردا",
-        "expected": "YES"
+        "input": "x 123",
+        "expected": "NO"
       }
     ],
     "hints": [
@@ -23986,19 +23986,19 @@
       "ورودی: کالا 12 و 7\\nخروجی: 12 7"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(*re.findall(r\"-?\\\\d+\", s))",
+    "solution": "import re\\ns=input()\\nprint(*re.findall(r\"#[A-Za-z_]+\", s))",
     "tests": [
       {
-        "input": "کالا 12 و 7",
-        "expected": "12 7"
+        "input": "Ali Bob",
+        "expected": "Ali Bob"
       },
       {
-        "input": "منفی -3 و 25",
-        "expected": "-3 25"
+        "input": "12 345 6",
+        "expected": "12 345"
       },
       {
-        "input": "بدون عدد",
-        "expected": ""
+        "input": "#python #code",
+        "expected": "#python #code"
       }
     ],
     "hints": [
@@ -24022,19 +24022,19 @@
       "ورودی: سلام    دنیا\\nخروجی: سلام دنیا"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(re.sub(r\"\\\\s+\", \" \", s).strip())",
+    "solution": "import re\\ns=input()\\nprint(re.sub(r\"[aeiou]\", \"*\", s))",
     "tests": [
       {
-        "input": "سلام    دنیا",
-        "expected": "سلام دنیا"
+        "input": "price 120",
+        "expected": "price NUM"
       },
       {
-        "input": "  Python   خوب است  ",
-        "expected": "Python خوب است"
+        "input": "@user",
+        "expected": "USER"
       },
       {
-        "input": "یک متن",
-        "expected": "یک متن"
+        "input": "year 2026",
+        "expected": "year YEAR"
       }
     ],
     "hints": [
@@ -24058,18 +24058,18 @@
       "ورودی: user@example.com\\nخروجی: VALID"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(\"VALID\" if re.fullmatch(r\"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\\\.[A-Za-z]{2,}\", s) else \"INVALID\")",
+    "solution": "import re\\ns=input()\\nprint(\"VALID\" if re.fullmatch(r\"[A-Z]{3}-\\\\d{2}\", s) else \"INVALID\")",
     "tests": [
       {
         "input": "user@example.com",
         "expected": "VALID"
       },
       {
-        "input": "test@mail.ir",
-        "expected": "VALID"
+        "input": "bad",
+        "expected": "INVALID"
       },
       {
-        "input": "bad-email",
+        "input": "123",
         "expected": "INVALID"
       }
     ],
@@ -24089,23 +24089,23 @@
     "level": "آسان",
     "category": "Regex",
     "topic": "pattern",
-    "statement": "در «سامانه نوبت‌دهی»، با Regex کد پیگیری با قالب دو حرف انگلیسی، خط تیره و چهار رقم را اعتبارسنجی کن؛ معتبر OK و نامعتبر NO چاپ شود.",
+    "statement": "کد تخفیف با سه حرف بزرگ و دو رقم را اعتبارسنجی کن. در «نوبت‌دهی»؛ معتبر OK و نامعتبر NO چاپ شود.",
     "examples": [
       "ورودی: AB-1234\\nخروجی: OK"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(\"OK\" if re.fullmatch(r\"[A-Za-z]{2}-\\\\d{4}\", s) else \"NO\")",
+    "solution": "import re\\ns=input()\\nprint(\"OK\" if re.fullmatch(r\"[A-Z]{3}-?\\\\d{2}\", s) else \"NO\")",
     "tests": [
       {
-        "input": "AB-1234",
+        "input": "ABC12",
         "expected": "OK"
       },
       {
-        "input": "ab-0007",
-        "expected": "OK"
+        "input": "bad",
+        "expected": "NO"
       },
       {
-        "input": "A1-1234",
+        "input": "ABC12x",
         "expected": "NO"
       }
     ],
@@ -24130,19 +24130,19 @@
       "ورودی: تماس 09121234567\\nخروجی: YES"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(\"YES\" if re.search(r\"09\\\\d{9}\", s) else \"NO\")",
+    "solution": "import re\\ns=input()\\nprint(\"YES\" if re.search(r\"#[A-Za-z_]+\", s) else \"NO\")",
     "tests": [
       {
-        "input": "تماس 09121234567",
+        "input": "در متن #python",
         "expected": "YES"
       },
       {
-        "input": "02112345678",
+        "input": "بدون الگو",
         "expected": "NO"
       },
       {
-        "input": "09120000000 فردا",
-        "expected": "YES"
+        "input": "x 123",
+        "expected": "NO"
       }
     ],
     "hints": [
@@ -24166,19 +24166,19 @@
       "ورودی: کالا 12 و 7\\nخروجی: 12 7"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(*re.findall(r\"-?\\\\d+\", s))",
+    "solution": "import re\\ns=input()\\nprint(*re.findall(r\"#[A-Za-z_]+\", s))",
     "tests": [
       {
-        "input": "کالا 12 و 7",
-        "expected": "12 7"
+        "input": "Ali Bob",
+        "expected": "Ali Bob"
       },
       {
-        "input": "منفی -3 و 25",
-        "expected": "-3 25"
+        "input": "12 345 6",
+        "expected": "12 345"
       },
       {
-        "input": "بدون عدد",
-        "expected": ""
+        "input": "#python #code",
+        "expected": "#python #code"
       }
     ],
     "hints": [
@@ -24202,19 +24202,19 @@
       "ورودی: سلام    دنیا\\nخروجی: سلام دنیا"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(re.sub(r\"\\\\s+\", \" \", s).strip())",
+    "solution": "import re\\ns=input()\\nprint(re.sub(r\"[aeiou]\", \"*\", s))",
     "tests": [
       {
-        "input": "سلام    دنیا",
-        "expected": "سلام دنیا"
+        "input": "price 120",
+        "expected": "price NUM"
       },
       {
-        "input": "  Python   خوب است  ",
-        "expected": "Python خوب است"
+        "input": "@user",
+        "expected": "USER"
       },
       {
-        "input": "یک متن",
-        "expected": "یک متن"
+        "input": "year 2026",
+        "expected": "year YEAR"
       }
     ],
     "hints": [
@@ -24238,18 +24238,18 @@
       "ورودی: user@example.com\\nخروجی: VALID"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(\"VALID\" if re.fullmatch(r\"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\\\.[A-Za-z]{2,}\", s) else \"INVALID\")",
+    "solution": "import re\\ns=input()\\nprint(\"VALID\" if re.fullmatch(r\"[A-Z]{3}-\\\\d{2}\", s) else \"INVALID\")",
     "tests": [
       {
         "input": "user@example.com",
         "expected": "VALID"
       },
       {
-        "input": "test@mail.ir",
-        "expected": "VALID"
+        "input": "bad",
+        "expected": "INVALID"
       },
       {
-        "input": "bad-email",
+        "input": "123",
         "expected": "INVALID"
       }
     ],
@@ -24269,23 +24269,23 @@
     "level": "متوسط",
     "category": "Regex",
     "topic": "pattern",
-    "statement": "در «سامانه ثبت‌نام»، با Regex کد پیگیری با قالب دو حرف انگلیسی، خط تیره و چهار رقم را اعتبارسنجی کن؛ معتبر OK و نامعتبر NO چاپ شود.",
+    "statement": "کد تخفیف با سه حرف بزرگ و دو رقم را اعتبارسنجی کن. در «نوبت‌دهی»؛ معتبر OK و نامعتبر NO چاپ شود.",
     "examples": [
       "ورودی: AB-1234\\nخروجی: OK"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(\"OK\" if re.fullmatch(r\"[A-Za-z]{2}-\\\\d{4}\", s) else \"NO\")",
+    "solution": "import re\\ns=input()\\nprint(\"OK\" if re.fullmatch(r\"[A-Z]{3}-?\\\\d{2}\", s) else \"NO\")",
     "tests": [
       {
-        "input": "AB-1234",
+        "input": "ABC12",
         "expected": "OK"
       },
       {
-        "input": "ab-0007",
-        "expected": "OK"
+        "input": "bad",
+        "expected": "NO"
       },
       {
-        "input": "A1-1234",
+        "input": "ABC12x",
         "expected": "NO"
       }
     ],
@@ -24310,19 +24310,19 @@
       "ورودی: تماس 09121234567\\nخروجی: YES"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(\"YES\" if re.search(r\"09\\\\d{9}\", s) else \"NO\")",
+    "solution": "import re\\ns=input()\\nprint(\"YES\" if re.search(r\"#[A-Za-z_]+\", s) else \"NO\")",
     "tests": [
       {
-        "input": "تماس 09121234567",
+        "input": "در متن https://example.com",
         "expected": "YES"
       },
       {
-        "input": "02112345678",
+        "input": "بدون الگو",
         "expected": "NO"
       },
       {
-        "input": "09120000000 فردا",
-        "expected": "YES"
+        "input": "x 123",
+        "expected": "NO"
       }
     ],
     "hints": [
@@ -24346,19 +24346,19 @@
       "ورودی: کالا 12 و 7\\nخروجی: 12 7"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(*re.findall(r\"-?\\\\d+\", s))",
+    "solution": "import re\\ns=input()\\nprint(*re.findall(r\"#[A-Za-z_]+\", s))",
     "tests": [
       {
-        "input": "کالا 12 و 7",
-        "expected": "12 7"
+        "input": "Ali Bob",
+        "expected": "Ali Bob"
       },
       {
-        "input": "منفی -3 و 25",
-        "expected": "-3 25"
+        "input": "12 345 6",
+        "expected": "12 345"
       },
       {
-        "input": "بدون عدد",
-        "expected": ""
+        "input": "#python #code",
+        "expected": "#python #code"
       }
     ],
     "hints": [
@@ -24382,19 +24382,19 @@
       "ورودی: سلام    دنیا\\nخروجی: سلام دنیا"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(re.sub(r\"\\\\s+\", \" \", s).strip())",
+    "solution": "import re\\ns=input()\\nprint(re.sub(r\"[aeiou]\", \"*\", s))",
     "tests": [
       {
-        "input": "سلام    دنیا",
-        "expected": "سلام دنیا"
+        "input": "price 120",
+        "expected": "price NUM"
       },
       {
-        "input": "  Python   خوب است  ",
-        "expected": "Python خوب است"
+        "input": "@user",
+        "expected": "USER"
       },
       {
-        "input": "یک متن",
-        "expected": "یک متن"
+        "input": "year 2026",
+        "expected": "year YEAR"
       }
     ],
     "hints": [
@@ -24418,18 +24418,18 @@
       "ورودی: user@example.com\\nخروجی: VALID"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(\"VALID\" if re.fullmatch(r\"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\\\.[A-Za-z]{2,}\", s) else \"INVALID\")",
+    "solution": "import re\\ns=input()\\nprint(\"VALID\" if re.fullmatch(r\"[A-Z]{3}-\\\\d{2}\", s) else \"INVALID\")",
     "tests": [
       {
         "input": "user@example.com",
         "expected": "VALID"
       },
       {
-        "input": "test@mail.ir",
-        "expected": "VALID"
+        "input": "bad",
+        "expected": "INVALID"
       },
       {
-        "input": "bad-email",
+        "input": "123",
         "expected": "INVALID"
       }
     ],
@@ -24449,23 +24449,23 @@
     "level": "متوسط",
     "category": "Regex",
     "topic": "pattern",
-    "statement": "در «سامانه نوبت‌دهی»، با Regex کد پیگیری با قالب دو حرف انگلیسی، خط تیره و چهار رقم را اعتبارسنجی کن؛ معتبر OK و نامعتبر NO چاپ شود.",
+    "statement": "کد تخفیف با سه حرف بزرگ و دو رقم را اعتبارسنجی کن. در «نوبت‌دهی»؛ معتبر OK و نامعتبر NO چاپ شود.",
     "examples": [
       "ورودی: AB-1234\\nخروجی: OK"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(\"OK\" if re.fullmatch(r\"[A-Za-z]{2}-\\\\d{4}\", s) else \"NO\")",
+    "solution": "import re\\ns=input()\\nprint(\"OK\" if re.fullmatch(r\"[A-Z]{3}-?\\\\d{2}\", s) else \"NO\")",
     "tests": [
       {
-        "input": "AB-1234",
+        "input": "ABC12",
         "expected": "OK"
       },
       {
-        "input": "ab-0007",
-        "expected": "OK"
+        "input": "bad",
+        "expected": "NO"
       },
       {
-        "input": "A1-1234",
+        "input": "ABC12x",
         "expected": "NO"
       }
     ],
@@ -24490,19 +24490,19 @@
       "ورودی: تماس 09121234567\\nخروجی: YES"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(\"YES\" if re.search(r\"09\\\\d{9}\", s) else \"NO\")",
+    "solution": "import re\\ns=input()\\nprint(\"YES\" if re.search(r\"#[A-Za-z_]+\", s) else \"NO\")",
     "tests": [
       {
-        "input": "تماس 09121234567",
+        "input": "در متن #python",
         "expected": "YES"
       },
       {
-        "input": "02112345678",
+        "input": "بدون الگو",
         "expected": "NO"
       },
       {
-        "input": "09120000000 فردا",
-        "expected": "YES"
+        "input": "x 123",
+        "expected": "NO"
       }
     ],
     "hints": [
@@ -24526,19 +24526,19 @@
       "ورودی: کالا 12 و 7\\nخروجی: 12 7"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(*re.findall(r\"-?\\\\d+\", s))",
+    "solution": "import re\\ns=input()\\nprint(*re.findall(r\"#[A-Za-z_]+\", s))",
     "tests": [
       {
-        "input": "کالا 12 و 7",
-        "expected": "12 7"
+        "input": "Ali Bob",
+        "expected": "Ali Bob"
       },
       {
-        "input": "منفی -3 و 25",
-        "expected": "-3 25"
+        "input": "12 345 6",
+        "expected": "12 345"
       },
       {
-        "input": "بدون عدد",
-        "expected": ""
+        "input": "#python #code",
+        "expected": "#python #code"
       }
     ],
     "hints": [
@@ -24562,19 +24562,19 @@
       "ورودی: سلام    دنیا\\nخروجی: سلام دنیا"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(re.sub(r\"\\\\s+\", \" \", s).strip())",
+    "solution": "import re\\ns=input()\\nprint(re.sub(r\"[aeiou]\", \"*\", s))",
     "tests": [
       {
-        "input": "سلام    دنیا",
-        "expected": "سلام دنیا"
+        "input": "price 120",
+        "expected": "price NUM"
       },
       {
-        "input": "  Python   خوب است  ",
-        "expected": "Python خوب است"
+        "input": "@user",
+        "expected": "USER"
       },
       {
-        "input": "یک متن",
-        "expected": "یک متن"
+        "input": "year 2026",
+        "expected": "year YEAR"
       }
     ],
     "hints": [
@@ -24598,18 +24598,18 @@
       "ورودی: user@example.com\\nخروجی: VALID"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(\"VALID\" if re.fullmatch(r\"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\\\.[A-Za-z]{2,}\", s) else \"INVALID\")",
+    "solution": "import re\\ns=input()\\nprint(\"VALID\" if re.fullmatch(r\"[A-Z]{3}-\\\\d{2}\", s) else \"INVALID\")",
     "tests": [
       {
         "input": "user@example.com",
         "expected": "VALID"
       },
       {
-        "input": "test@mail.ir",
-        "expected": "VALID"
+        "input": "bad",
+        "expected": "INVALID"
       },
       {
-        "input": "bad-email",
+        "input": "123",
         "expected": "INVALID"
       }
     ],
@@ -24629,23 +24629,23 @@
     "level": "متوسط",
     "category": "Regex",
     "topic": "pattern",
-    "statement": "در «سامانه ثبت‌نام»، با Regex کد پیگیری با قالب دو حرف انگلیسی، خط تیره و چهار رقم را اعتبارسنجی کن؛ معتبر OK و نامعتبر NO چاپ شود.",
+    "statement": "کد تخفیف با سه حرف بزرگ و دو رقم را اعتبارسنجی کن. در «نوبت‌دهی»؛ معتبر OK و نامعتبر NO چاپ شود.",
     "examples": [
       "ورودی: AB-1234\\nخروجی: OK"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(\"OK\" if re.fullmatch(r\"[A-Za-z]{2}-\\\\d{4}\", s) else \"NO\")",
+    "solution": "import re\\ns=input()\\nprint(\"OK\" if re.fullmatch(r\"[A-Z]{3}-?\\\\d{2}\", s) else \"NO\")",
     "tests": [
       {
-        "input": "AB-1234",
+        "input": "ABC12",
         "expected": "OK"
       },
       {
-        "input": "ab-0007",
-        "expected": "OK"
+        "input": "bad",
+        "expected": "NO"
       },
       {
-        "input": "A1-1234",
+        "input": "ABC12x",
         "expected": "NO"
       }
     ],
@@ -24670,19 +24670,19 @@
       "ورودی: تماس 09121234567\\nخروجی: YES"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(\"YES\" if re.search(r\"09\\\\d{9}\", s) else \"NO\")",
+    "solution": "import re\\ns=input()\\nprint(\"YES\" if re.search(r\"#[A-Za-z_]+\", s) else \"NO\")",
     "tests": [
       {
-        "input": "تماس 09121234567",
+        "input": "در متن https://example.com",
         "expected": "YES"
       },
       {
-        "input": "02112345678",
+        "input": "بدون الگو",
         "expected": "NO"
       },
       {
-        "input": "09120000000 فردا",
-        "expected": "YES"
+        "input": "x 123",
+        "expected": "NO"
       }
     ],
     "hints": [
@@ -24706,19 +24706,19 @@
       "ورودی: کالا 12 و 7\\nخروجی: 12 7"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(*re.findall(r\"-?\\\\d+\", s))",
+    "solution": "import re\\ns=input()\\nprint(*re.findall(r\"#[A-Za-z_]+\", s))",
     "tests": [
       {
-        "input": "کالا 12 و 7",
-        "expected": "12 7"
+        "input": "Ali Bob",
+        "expected": "Ali Bob"
       },
       {
-        "input": "منفی -3 و 25",
-        "expected": "-3 25"
+        "input": "12 345 6",
+        "expected": "12 345"
       },
       {
-        "input": "بدون عدد",
-        "expected": ""
+        "input": "#python #code",
+        "expected": "#python #code"
       }
     ],
     "hints": [
@@ -24742,19 +24742,19 @@
       "ورودی: سلام    دنیا\\nخروجی: سلام دنیا"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(re.sub(r\"\\\\s+\", \" \", s).strip())",
+    "solution": "import re\\ns=input()\\nprint(re.sub(r\"[aeiou]\", \"*\", s))",
     "tests": [
       {
-        "input": "سلام    دنیا",
-        "expected": "سلام دنیا"
+        "input": "price 120",
+        "expected": "price NUM"
       },
       {
-        "input": "  Python   خوب است  ",
-        "expected": "Python خوب است"
+        "input": "@user",
+        "expected": "USER"
       },
       {
-        "input": "یک متن",
-        "expected": "یک متن"
+        "input": "year 2026",
+        "expected": "year YEAR"
       }
     ],
     "hints": [
@@ -24778,18 +24778,18 @@
       "ورودی: user@example.com\\nخروجی: VALID"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(\"VALID\" if re.fullmatch(r\"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\\\.[A-Za-z]{2,}\", s) else \"INVALID\")",
+    "solution": "import re\\ns=input()\\nprint(\"VALID\" if re.fullmatch(r\"[A-Z]{3}-\\\\d{2}\", s) else \"INVALID\")",
     "tests": [
       {
         "input": "user@example.com",
         "expected": "VALID"
       },
       {
-        "input": "test@mail.ir",
-        "expected": "VALID"
+        "input": "bad",
+        "expected": "INVALID"
       },
       {
-        "input": "bad-email",
+        "input": "123",
         "expected": "INVALID"
       }
     ],
@@ -24809,23 +24809,23 @@
     "level": "سخت",
     "category": "Regex",
     "topic": "pattern",
-    "statement": "در «سامانه نوبت‌دهی»، با Regex کد پیگیری با قالب دو حرف انگلیسی، خط تیره و چهار رقم را اعتبارسنجی کن؛ معتبر OK و نامعتبر NO چاپ شود.",
+    "statement": "کد تخفیف با سه حرف بزرگ و دو رقم را اعتبارسنجی کن. در «نوبت‌دهی»؛ معتبر OK و نامعتبر NO چاپ شود.",
     "examples": [
       "ورودی: AB-1234\\nخروجی: OK"
     ],
     "starter_code": "# جواب خودت را اینجا بنویس\n",
-    "solution": "import re\\ns=input()\\nprint(\"OK\" if re.fullmatch(r\"[A-Za-z]{2}-\\\\d{4}\", s) else \"NO\")",
+    "solution": "import re\\ns=input()\\nprint(\"OK\" if re.fullmatch(r\"[A-Z]{3}-?\\\\d{2}\", s) else \"NO\")",
     "tests": [
       {
-        "input": "AB-1234",
+        "input": "ABC12",
         "expected": "OK"
       },
       {
-        "input": "ab-0007",
-        "expected": "OK"
+        "input": "bad",
+        "expected": "NO"
       },
       {
-        "input": "A1-1234",
+        "input": "ABC12x",
         "expected": "NO"
       }
     ],
