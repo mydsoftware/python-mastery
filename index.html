@@ -23,6 +23,9 @@
       <input id="search" type="search" placeholder="جستجوی تمرین...">
       <button class="btn secondary" onclick="exportExercises()" style="width:100%;margin-bottom:10px">دریافت دیتاست ۱۱۵۵ تمرین</button>
       <select id="category"></select>
+      <label for="pyodideMirror">Mirror Pyodide (اختیاری)</label>
+      <input id="pyodideMirror" type="url" placeholder="https://.../pyodide/v0.27.7/full/">
+      <button class="btn secondary" onclick="savePyodideMirror()" style="width:100%;margin-bottom:10px">ذخیره Mirror و بارگذاری مجدد</button>
       <select id="difficulty">
         <option value="">همه سطح‌ها</option>
         <option value="آسان">آسان</option>
@@ -37,6 +40,7 @@
     </section>
   </main>
 
+  <script>document.getElementById("pyodideMirror").value=localStorage.getItem("python-mastery-pyodide-mirror")||"";</script>
   <script src="app.js"></script>
 </body>
 </html>
