@@ -3,6 +3,8 @@ const PYODIDE_MIRRORS=[
   `https://cdn.jsdelivr.net/pyodide/v${PYODIDE_VERSION}/full/`,
   `https://fastly.jsdelivr.net/pyodide/v${PYODIDE_VERSION}/full/`
 ];
+const PYODIDE_CUSTOM_MIRROR=localStorage.getItem("python-mastery-pyodide-mirror");
+if(PYODIDE_CUSTOM_MIRROR) PYODIDE_MIRRORS.unshift(PYODIDE_CUSTOM_MIRROR.replace(/\\/?$/,"/"));
 
 const categories=[
  "مبانی Python","متغیرها و انواع داده","ورودی/خروجی","شرط‌ها","حلقه‌ها","رشته‌ها",
@@ -254,10 +256,16 @@ function resetCode(){localStorage.removeItem("python-mastery-code-"+exercises[cu
 async function loadPyodide(){
   if(pyodide)return pyodide;
   $("output").textContent="در حال بارگذاری Python...";
-  const script=document.createElement("script"); script.src=PYODIDE_MIRRORS[0]+"pyodide.js";
-  document.head.appendChild(script);
-  await new Promise((resolve,reject)=>{script.onload=resolve;script.onerror=reject});
-  pyodide=await window.loadPyodide({indexURL:PYODIDE_MIRRORS[0]});
+  for(const mirror of PYODIDE_MIRRORS){
+    try{
+      const script=document.createElement("script"); script.src=mirror+"pyodide.js";
+      document.head.appendChild(script);
+      await new Promise((resolve,reject)=>{script.onload=resolve;script.onerror=reject});
+      pyodide=await window.loadPyodide({indexURL:mirror});
+      return pyodide;
+    }catch(error){ console.warn("Pyodide mirror failed:",mirror,error); }
+  }
+  throw new Error("هیچ‌کدام از mirrorهای Pyodide در دسترس نیستند.");
   return pyodide;
 }
 async function runCode(){
@@ -282,7 +290,7 @@ finally:
 `);
       results.push(result.trim());
     }
-    $("output").textContent=results.map((x,i)=>"Test "+(i+1)+": "+(x||"بدون خروجی")).join("\\n");
+    $("output").textContent=results.map((x,i)=>"Test "+(i+1)+": "+(x||"بدون خروجی")).join("\n");
     let passed=0;
     document.querySelectorAll(".test").forEach((el,i)=>{
       const ok=results[i]===String(e.tests[i].expected).trim();
