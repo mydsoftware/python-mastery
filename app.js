@@ -54,138 +54,6 @@ const topicPool={
  "پروژه‌های ترکیبی":["دفترچه مخاطبان","تحلیل متن","مدیریت هزینه","سیستم نمرات","گزارش‌ساز"]
 };
 
-function buildExercises(){
-  const list=[];
-  let id=1;
-  const per=[32,32,32,32,32,32,32,32,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31,31];
-  categories.forEach((cat,ci)=>{
-    const n=per[ci]||30;
-    const topics=topicPool[cat]||["تمرین عملی"];
-    for(let j=0;j<n;j++){
-      const topic=topics[j%topics.length];
-      const difficulty=j<Math.ceil(n*.45)?"آسان":j<Math.ceil(n*.82)?"متوسط":"سخت";
-      const number=id++;
-      list.push({
-        id:number,title:`${topic} — سناریوی ${j+1}`,level:difficulty,category:cat,
-        statement:makeStatement(cat,topic,j,difficulty),
-        example:makeExample(cat,topic,j),
-        starter:starterCode(cat,topic),
-        answer:answerCode(cat,topic,j),
-        tests:testsFor(cat,topic,j),
-        hints:hintsFor(cat,topic)
-      });
-    }
-  });
-  return list.slice(0,1155);
-}
-
-function makeStatement(cat,topic,j,diff){
-  const scenarios={
-    "شرط‌ها":[
-      "یک عدد دریافت کنید و مشخص کنید زوج است یا فرد.",
-      "دو عدد دریافت کنید و بزرگ‌تر را چاپ کنید.",
-      "سن کاربر را دریافت کنید و بر اساس بازه‌های مشخص، وضعیت او را تعیین کنید.",
-      "سه عدد دریافت کنید و بزرگ‌ترین مقدار را بدون استفاده از sorted پیدا کنید.",
-      "یک نمره دریافت کنید و با چند شرط، سطح آن را تعیین کنید."
-    ],
-    "حلقه‌ها":[
-      "یک عدد n دریافت کنید و مجموع اعداد ۱ تا n را محاسبه کنید.",
-      "تمام اعداد زوج بین ۱ تا n را چاپ کنید.",
-      "تعداد ارقام یک عدد را با استفاده از حلقه پیدا کنید.",
-      "مجموع اعداد ورودی را تا زمانی که عدد صفر وارد شود محاسبه کنید.",
-      "یک الگوی ستاره‌ای n سطری تولید کنید."
-    ],
-    "رشته‌ها":[
-      "یک متن دریافت کنید و تعداد حروف آن را بدون احتساب فاصله‌ها پیدا کنید.",
-      "بررسی کنید آیا یک کلمه palindrome است یا خیر.",
-      "تعداد رخداد یک حرف مشخص در متن را محاسبه کنید.",
-      "تمام فاصله‌های اضافی ابتدای و انتهای متن را حذف کنید.",
-      "کلمات یک جمله را بشمارید."
-    ],
-    "List":[
-      "فهرستی از اعداد دریافت کنید و کوچک‌ترین مقدار را پیدا کنید.",
-      "اعداد زوج یک فهرست را در فهرست جدید قرار دهید.",
-      "اعضای تکراری فهرست را حذف کنید.",
-      "فهرست را بدون استفاده از sorted به صورت صعودی مرتب کنید.",
-      "دومین عدد بزرگ فهرست را پیدا کنید."
-    ],
-    "Dictionary":[
-      "فراوانی هر حرف یک متن را با Dictionary محاسبه کنید.",
-      "اطلاعات یک کاربر را با کلیدهای مشخص در Dictionary ذخیره کنید.",
-      "کلید دارای بیشترین مقدار را پیدا کنید.",
-      "دو Dictionary را با یکدیگر ادغام کنید.",
-      "فهرستی از نام‌ها را به Dictionary شمارش فراوانی تبدیل کنید."
-    ],
-    "Functions":[
-      "تابعی بنویسید که عدد را گرفته و زوج یا فرد بودن آن را برگرداند.",
-      "تابعی بنویسید که میانگین چند عدد را محاسبه کند.",
-      "تابعی با مقدار پیش‌فرض برای محاسبه قیمت نهایی بنویسید.",
-      "تابعی بنویسید که بیشترین عضو یک فهرست را برگرداند.",
-      "یک مسئله را به چند تابع کوچک تقسیم کنید."
-    ],
-    "Set":[
-      "تکراری‌های یک فهرست را با Set حذف کنید.",
-      "اشتراک دو مجموعه را پیدا کنید.",
-      "اعضای موجود فقط در مجموعه اول را پیدا کنید.",
-      "اجتماع دو مجموعه را تولید کنید.",
-      "عضویت یک شناسه را در مجموعه بررسی کنید."
-    ],
-    "Tuple":[
-      "اطلاعات یک شخص را در Tuple ذخیره و unpack کنید.",
-      "دو Tuple را به هم متصل کنید.",
-      "تعداد رخداد یک مقدار را در Tuple پیدا کنید.",
-      "جایگاه یک مقدار را در Tuple پیدا کنید.",
-      "یک Tuple تو در تو را پیمایش کنید."
-    ],
-    "Recursion":[
-      "با recursion فاکتوریل یک عدد را محاسبه کنید.",
-      "با recursion مجموع اعداد ۱ تا n را پیدا کنید.",
-      "با recursion یک رشته را معکوس کنید.",
-      "با recursion فیبوناچی nام را محاسبه کنید.",
-      "با recursion تعداد ارقام یک عدد را پیدا کنید."
-    ],
-    "Stack / Queue":[
-      "با Stack درست بودن پرانتزهای یک عبارت را بررسی کنید.",
-      "یک Queue ساده با list پیاده‌سازی کنید.",
-      "عنصر بالای Stack را بدون حذف آن مشاهده کنید.",
-      "عملیات enqueue و dequeue را پیاده‌سازی کنید.",
-      "یک صف اولویت ساده با ساختار مناسب بسازید."
-    ]
-  };
-  const list=scenarios[cat]||[
-    "یک مسئله عملی مرتبط با «"+topic+"» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید.",
-    "یک برنامه Python برای «"+topic+"» بنویسید و حداقل یک حالت مرزی را مدیریت کنید.",
-    "مفهوم «"+topic+"» را در یک سناریوی واقعی پیاده‌سازی کنید.",
-    "راه‌حلی خوانا برای مسئله «"+topic+"» بنویسید و خروجی را مطابق مثال تولید کنید."
-  ];
-  return list[j%list.length]+" سطح: "+diff+"؛ راه‌حل باید قابل تست و خوانا باشد.";
-}
-function makeExample(cat,topic,j){
-  if(cat==="شرط‌ها"&&topic==="زوج یا فرد") return "ورودی: 8\nخروجی: عدد زوج است";
-  return `ورودی: نمونه ${j+1}\nخروجی: نتیجه پردازش نمونه ${j+1}`;
-}
-function starterCode(cat,topic){return `# جواب خودت را اینجا بنویس\n# مبحث: ${cat}\n\n`;}
-function answerCode(cat,topic,j){
-  const a={
-    "شرط‌ها":`n = int(input())\nprint("عدد زوج است" if n % 2 == 0 else "عدد فرد است")`,
-    "رشته‌ها":`text = input()\nprint(text.strip())`,
-    "List":`items = list(map(int, input().split()))\nprint(items)`,
-    "Functions":`def solve(value):\n    return value\n\nprint(solve(input()))`,
-    "Dictionary":`text = input()\ncounts = {}\nfor ch in text:\n    counts[ch] = counts.get(ch, 0) + 1\nprint(counts)`
-  };
-  return a[cat]||`# راه‌حل نمونه تمرین ${j+1}\nvalue = input()\nprint(value)`;
-}
-function testsFor(cat,topic,j){
-  return [
-    {input:"8",expected:cat==="شرط‌ها"?"عدد زوج است":"8"},
-    {input:"7",expected:cat==="شرط‌ها"?"عدد فرد است":"7"},
-    {input:"0",expected:cat==="شرط‌ها"?"عدد زوج است":"0"}
-  ];
-}
-function hintsFor(cat,topic){
-  return [`ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.`,`منطق «${topic}» را به چند گام کوچک تقسیم کنید.`,`خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید.`];
-}
-
 function buildExerciseRecord(e){
   return {
     id:e.id,title:e.title,level:e.level,category:e.category,topic:e.title.split(" — ")[0],
@@ -303,5 +171,11 @@ function updateProgress(){
   $("progressText").textContent=fa(solved.length)+" / ۱۱۵۵";
   $("progressBar").style.width=(solved.length/1155*100)+"%";
 }
-window.runCode=runCode;window.toggleAnswer=toggleAnswer;window.resetCode=resetCode;window.exportExercises=exportExercises;
+function savePyodideMirror(){
+  const value=$("pyodideMirror").value.trim();
+  if(value) localStorage.setItem("python-mastery-pyodide-mirror",value);
+  else localStorage.removeItem("python-mastery-pyodide-mirror");
+  location.reload();
+}
+window.runCode=runCode;window.toggleAnswer=toggleAnswer;window.resetCode=resetCode;window.exportExercises=exportExercises;window.savePyodideMirror=savePyodideMirror;
 init();
