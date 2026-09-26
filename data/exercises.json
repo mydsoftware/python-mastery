@@ -15913,34 +15913,34 @@
   },
   {
     "id": 443,
-    "title": "try/except — کتابخانه — تمرین 443",
+    "title": "try/except — کتابخانه — نسخه عملی 1",
     "level": "آسان",
     "category": "Exceptions",
     "topic": "try/except",
-    "statement": "در سناریوی «کتابخانه»، یک مسئله عملی مرتبط با «try/except» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «کتابخانه»، تعداد صفحات را به عدد تبدیل کن؛ اگر ورودی عدد نبود 0 چاپ کن. فقط با try/except خطا را کنترل کن.",
     "examples": [
-      "ورودی: نمونه 1\nخروجی: نتیجه پردازش نمونه 1"
+      "ورودی: 42\\nخروجی: 42"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 1\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "try:\\n    x=int(input()); print(x)\\nexcept (ValueError, TypeError):\\n    print(0)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "42",
+        "expected": "42"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "-2",
+        "expected": "-2"
       },
       {
-        "input": "0",
+        "input": "x",
         "expected": "0"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «try/except» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -15949,34 +15949,34 @@
   },
   {
     "id": 444,
-    "title": "چند exception — باشگاه ورزشی — تمرین 444",
+    "title": "چند exception — باشگاه ورزشی — نسخه عملی 2",
     "level": "آسان",
     "category": "Exceptions",
     "topic": "چند exception",
-    "statement": "در سناریوی «باشگاه ورزشی»، یک برنامه Python برای «چند exception» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «باشگاه ورزشی»، ورودی را پردازش کن و خطای تبدیل عدد و تقسیم بر صفر را جداگانه مدیریت کن.",
     "examples": [
-      "ورودی: نمونه 2\nخروجی: نتیجه پردازش نمونه 2"
+      "ورودی: 10 2\\nخروجی: 5"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 2\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "try:\\n    a, b = map(int, input().split())\\n    print(a // b)\\nexcept ValueError:\\n    print(\"invalid\")\\nexcept ZeroDivisionError:\\n    print(\"zero\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "10 2",
+        "expected": "5"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "8 0",
+        "expected": "zero"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "x 2",
+        "expected": "invalid"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «چند exception» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -15985,34 +15985,34 @@
   },
   {
     "id": 445,
-    "title": "else/finally — سامانه ثبت‌نام — تمرین 445",
+    "title": "else/finally — سامانه ثبت‌نام — نسخه عملی 3",
     "level": "آسان",
     "category": "Exceptions",
     "topic": "else/finally",
-    "statement": "در سناریوی «سامانه ثبت‌نام»، مفهوم «else/finally» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه ثبت‌نام»، عدد را بخوان؛ در حالت موفقیت آن را با 2 جمع کن و در خطا invalid چاپ کن. از else و finally استفاده کن.",
     "examples": [
-      "ورودی: نمونه 3\nخروجی: نتیجه پردازش نمونه 3"
+      "ورودی: 3\\nخروجی: 5\\ndone"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 3\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "try:\\n    x = int(input())\\nexcept ValueError:\\n    print(\"invalid\")\\nelse:\\n    print(x + 2)\\nfinally:\\n    print(\"done\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "3",
+        "expected": "5\\ndone"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "10",
+        "expected": "12\\ndone"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "x",
+        "expected": "invalid\\ndone"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «else/finally» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -16021,34 +16021,34 @@
   },
   {
     "id": 446,
-    "title": "raise — دفتر کار — تمرین 446",
+    "title": "raise — دفتر کار — نسخه عملی 4",
     "level": "آسان",
     "category": "Exceptions",
     "topic": "raise",
-    "statement": "در سناریوی «دفتر کار»، راه‌حلی خوانا برای مسئله «raise» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «دفتر کار»، مبلغ را بخوان. اگر مقدار منفی بود با raise خطا ایجاد کن؛ در غیر این صورت مقدار را چاپ کن.",
     "examples": [
-      "ورودی: نمونه 4\nخروجی: نتیجه پردازش نمونه 4"
+      "ورودی: 15\\nخروجی: 15"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 4\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "try:\\n    x = int(input())\\n    if x < 0:\\n        raise ValueError(\"negative\")\\n    print(x)\\nexcept ValueError:\\n    print(\"invalid\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "15",
+        "expected": "15"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "9",
+        "expected": "invalid"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "10",
+        "expected": "10"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «raise» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -16057,34 +16057,34 @@
   },
   {
     "id": 447,
-    "title": "exception سفارشی — رستوران — تمرین 447",
+    "title": "exception سفارشی — رستوران — نسخه عملی 5",
     "level": "آسان",
     "category": "Exceptions",
     "topic": "exception سفارشی",
-    "statement": "در سناریوی «رستوران»، یک مسئله عملی مرتبط با «exception سفارشی» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «رستوران»، یک Exception سفارشی برای مقدار نامعتبر بساز؛ اگر عدد ورودی کمتر از 10 بود خطای اختصاصی بده، وگرنه عدد را چاپ کن.",
     "examples": [
-      "ورودی: نمونه 5\nخروجی: نتیجه پردازش نمونه 5"
+      "ورودی: 15\\nخروجی: 15"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 5\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "class InvalidValueError(Exception):\\n    pass\\n\\ntry:\\n    x = int(input())\\n    if x < 10:\\n        raise InvalidValueError()\\n    print(x)\\nexcept InvalidValueError:\\n    print(\"invalid\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "15",
+        "expected": "15"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "9",
+        "expected": "invalid"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "10",
+        "expected": "10"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «exception سفارشی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -16093,34 +16093,34 @@
   },
   {
     "id": 448,
-    "title": "try/except — انبار کالا — تمرین 448",
+    "title": "try/except — انبار کالا — نسخه عملی 6",
     "level": "آسان",
     "category": "Exceptions",
     "topic": "try/except",
-    "statement": "در سناریوی «انبار کالا»، یک برنامه Python برای «try/except» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «انبار کالا»، موجودی را بخوان و خطای ورودی را به پیام عددی 0 تبدیل کن. فقط با try/except خطا را کنترل کن.",
     "examples": [
-      "ورودی: نمونه 6\nخروجی: نتیجه پردازش نمونه 6"
+      "ورودی: 42\\nخروجی: 42"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 6\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "try:\\n    x=int(input()); print(x)\\nexcept (ValueError, TypeError):\\n    print(0)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "42",
+        "expected": "42"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "-2",
+        "expected": "-2"
       },
       {
-        "input": "0",
+        "input": "x",
         "expected": "0"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «try/except» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -16129,34 +16129,34 @@
   },
   {
     "id": 449,
-    "title": "چند exception — اپلیکیشن مالی — تمرین 449",
+    "title": "چند exception — کتابخانه — نسخه عملی 1",
     "level": "آسان",
     "category": "Exceptions",
     "topic": "چند exception",
-    "statement": "در سناریوی «اپلیکیشن مالی»، مفهوم «چند exception» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «کتابخانه»، ورودی را پردازش کن و خطای تبدیل عدد و تقسیم بر صفر را جداگانه مدیریت کن.",
     "examples": [
-      "ورودی: نمونه 7\nخروجی: نتیجه پردازش نمونه 7"
+      "ورودی: 10 2\\nخروجی: 5"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 7\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "try:\\n    a, b = map(int, input().split())\\n    print(a // b)\\nexcept ValueError:\\n    print(\"invalid\")\\nexcept ZeroDivisionError:\\n    print(\"zero\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "10 2",
+        "expected": "5"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "8 0",
+        "expected": "zero"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "x 2",
+        "expected": "invalid"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «چند exception» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -16165,34 +16165,34 @@
   },
   {
     "id": 450,
-    "title": "else/finally — سامانه نوبت‌دهی — تمرین 450",
+    "title": "else/finally — باشگاه ورزشی — نسخه عملی 2",
     "level": "آسان",
     "category": "Exceptions",
     "topic": "else/finally",
-    "statement": "در سناریوی «سامانه نوبت‌دهی»، راه‌حلی خوانا برای مسئله «else/finally» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «باشگاه ورزشی»، عدد را بخوان؛ در حالت موفقیت آن را با 2 جمع کن و در خطا invalid چاپ کن. از else و finally استفاده کن.",
     "examples": [
-      "ورودی: نمونه 8\nخروجی: نتیجه پردازش نمونه 8"
+      "ورودی: 3\\nخروجی: 5\\ndone"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 8\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "try:\\n    x = int(input())\\nexcept ValueError:\\n    print(\"invalid\")\\nelse:\\n    print(x + 2)\\nfinally:\\n    print(\"done\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "3",
+        "expected": "5\\ndone"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "10",
+        "expected": "12\\ndone"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "x",
+        "expected": "invalid\\ndone"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «else/finally» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -16201,34 +16201,34 @@
   },
   {
     "id": 451,
-    "title": "raise — فروشگاه محلی — تمرین 451",
+    "title": "raise — سامانه ثبت‌نام — نسخه عملی 3",
     "level": "آسان",
     "category": "Exceptions",
     "topic": "raise",
-    "statement": "در سناریوی «فروشگاه محلی»، یک مسئله عملی مرتبط با «raise» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه ثبت‌نام»، مبلغ را بخوان. اگر مقدار منفی بود با raise خطا ایجاد کن؛ در غیر این صورت مقدار را چاپ کن.",
     "examples": [
-      "ورودی: نمونه 9\nخروجی: نتیجه پردازش نمونه 9"
+      "ورودی: 15\\nخروجی: 15"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 9\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "try:\\n    x = int(input())\\n    if x < 0:\\n        raise ValueError(\"negative\")\\n    print(x)\\nexcept ValueError:\\n    print(\"invalid\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "15",
+        "expected": "15"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "9",
+        "expected": "invalid"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "10",
+        "expected": "10"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «raise» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -16237,34 +16237,34 @@
   },
   {
     "id": 452,
-    "title": "exception سفارشی — مدرسه — تمرین 452",
+    "title": "exception سفارشی — دفتر کار — نسخه عملی 4",
     "level": "آسان",
     "category": "Exceptions",
     "topic": "exception سفارشی",
-    "statement": "در سناریوی «مدرسه»، یک برنامه Python برای «exception سفارشی» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «دفتر کار»، یک Exception سفارشی برای مقدار نامعتبر بساز؛ اگر عدد ورودی کمتر از 10 بود خطای اختصاصی بده، وگرنه عدد را چاپ کن.",
     "examples": [
-      "ورودی: نمونه 10\nخروجی: نتیجه پردازش نمونه 10"
+      "ورودی: 15\\nخروجی: 15"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 10\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "class InvalidValueError(Exception):\\n    pass\\n\\ntry:\\n    x = int(input())\\n    if x < 10:\\n        raise InvalidValueError()\\n    print(x)\\nexcept InvalidValueError:\\n    print(\"invalid\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "15",
+        "expected": "15"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "9",
+        "expected": "invalid"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "10",
+        "expected": "10"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «exception سفارشی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -16273,34 +16273,34 @@
   },
   {
     "id": 453,
-    "title": "try/except — کتابخانه — تمرین 453",
+    "title": "try/except — رستوران — نسخه عملی 5",
     "level": "آسان",
     "category": "Exceptions",
     "topic": "try/except",
-    "statement": "در سناریوی «کتابخانه»، مفهوم «try/except» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «رستوران»، تعداد غذای سفارش را بخوان و در صورت خطا 0 چاپ کن. فقط با try/except خطا را کنترل کن.",
     "examples": [
-      "ورودی: نمونه 11\nخروجی: نتیجه پردازش نمونه 11"
+      "ورودی: 42\\nخروجی: 42"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 11\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "try:\\n    x=int(input()); print(x)\\nexcept (ValueError, TypeError):\\n    print(0)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "42",
+        "expected": "42"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "-2",
+        "expected": "-2"
       },
       {
-        "input": "0",
+        "input": "x",
         "expected": "0"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «try/except» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -16309,34 +16309,34 @@
   },
   {
     "id": 454,
-    "title": "چند exception — باشگاه ورزشی — تمرین 454",
+    "title": "چند exception — انبار کالا — نسخه عملی 6",
     "level": "آسان",
     "category": "Exceptions",
     "topic": "چند exception",
-    "statement": "در سناریوی «باشگاه ورزشی»، راه‌حلی خوانا برای مسئله «چند exception» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «انبار کالا»، ورودی را پردازش کن و خطای تبدیل عدد و تقسیم بر صفر را جداگانه مدیریت کن.",
     "examples": [
-      "ورودی: نمونه 12\nخروجی: نتیجه پردازش نمونه 12"
+      "ورودی: 10 2\\nخروجی: 5"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 12\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "try:\\n    a, b = map(int, input().split())\\n    print(a // b)\\nexcept ValueError:\\n    print(\"invalid\")\\nexcept ZeroDivisionError:\\n    print(\"zero\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "10 2",
+        "expected": "5"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "8 0",
+        "expected": "zero"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "x 2",
+        "expected": "invalid"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «چند exception» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -16345,34 +16345,34 @@
   },
   {
     "id": 455,
-    "title": "else/finally — سامانه ثبت‌نام — تمرین 455",
+    "title": "else/finally — کتابخانه — نسخه عملی 1",
     "level": "آسان",
     "category": "Exceptions",
     "topic": "else/finally",
-    "statement": "در سناریوی «سامانه ثبت‌نام»، یک مسئله عملی مرتبط با «else/finally» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «کتابخانه»، عدد را بخوان؛ در حالت موفقیت آن را با 2 جمع کن و در خطا invalid چاپ کن. از else و finally استفاده کن.",
     "examples": [
-      "ورودی: نمونه 13\nخروجی: نتیجه پردازش نمونه 13"
+      "ورودی: 3\\nخروجی: 5\\ndone"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 13\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "try:\\n    x = int(input())\\nexcept ValueError:\\n    print(\"invalid\")\\nelse:\\n    print(x + 2)\\nfinally:\\n    print(\"done\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "3",
+        "expected": "5\\ndone"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "10",
+        "expected": "12\\ndone"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "x",
+        "expected": "invalid\\ndone"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «else/finally» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -16381,34 +16381,34 @@
   },
   {
     "id": 456,
-    "title": "raise — دفتر کار — تمرین 456",
+    "title": "raise — باشگاه ورزشی — نسخه عملی 2",
     "level": "آسان",
     "category": "Exceptions",
     "topic": "raise",
-    "statement": "در سناریوی «دفتر کار»، یک برنامه Python برای «raise» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «باشگاه ورزشی»، مبلغ را بخوان. اگر مقدار منفی بود با raise خطا ایجاد کن؛ در غیر این صورت مقدار را چاپ کن.",
     "examples": [
-      "ورودی: نمونه 14\nخروجی: نتیجه پردازش نمونه 14"
+      "ورودی: 15\\nخروجی: 15"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 14\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "try:\\n    x = int(input())\\n    if x < 0:\\n        raise ValueError(\"negative\")\\n    print(x)\\nexcept ValueError:\\n    print(\"invalid\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "15",
+        "expected": "15"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "9",
+        "expected": "invalid"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "10",
+        "expected": "10"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «raise» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -16417,34 +16417,34 @@
   },
   {
     "id": 457,
-    "title": "exception سفارشی — رستوران — تمرین 457",
+    "title": "exception سفارشی — سامانه ثبت‌نام — نسخه عملی 3",
     "level": "متوسط",
     "category": "Exceptions",
     "topic": "exception سفارشی",
-    "statement": "در سناریوی «رستوران»، مفهوم «exception سفارشی» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه ثبت‌نام»، یک Exception سفارشی برای مقدار نامعتبر بساز؛ اگر عدد ورودی کمتر از 10 بود خطای اختصاصی بده، وگرنه عدد را چاپ کن.",
     "examples": [
-      "ورودی: نمونه 15\nخروجی: نتیجه پردازش نمونه 15"
+      "ورودی: 15\\nخروجی: 15"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 15\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "class InvalidValueError(Exception):\\n    pass\\n\\ntry:\\n    x = int(input())\\n    if x < 10:\\n        raise InvalidValueError()\\n    print(x)\\nexcept InvalidValueError:\\n    print(\"invalid\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "15",
+        "expected": "15"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "9",
+        "expected": "invalid"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "10",
+        "expected": "10"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «exception سفارشی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -16453,34 +16453,34 @@
   },
   {
     "id": 458,
-    "title": "try/except — انبار کالا — تمرین 458",
+    "title": "try/except — دفتر کار — نسخه عملی 4",
     "level": "متوسط",
     "category": "Exceptions",
     "topic": "try/except",
-    "statement": "در سناریوی «انبار کالا»، راه‌حلی خوانا برای مسئله «try/except» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «دفتر کار»، مبلغ هزینه را به عدد صحیح تبدیل کن؛ خطای تبدیل را مدیریت کن. فقط با try/except خطا را کنترل کن.",
     "examples": [
-      "ورودی: نمونه 16\nخروجی: نتیجه پردازش نمونه 16"
+      "ورودی: 42\\nخروجی: 42"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 16\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "try:\\n    x=int(input()); print(x)\\nexcept (ValueError, TypeError):\\n    print(0)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "42",
+        "expected": "42"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "-2",
+        "expected": "-2"
       },
       {
-        "input": "0",
+        "input": "x",
         "expected": "0"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «try/except» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -16489,34 +16489,34 @@
   },
   {
     "id": 459,
-    "title": "چند exception — اپلیکیشن مالی — تمرین 459",
+    "title": "چند exception — رستوران — نسخه عملی 5",
     "level": "متوسط",
     "category": "Exceptions",
     "topic": "چند exception",
-    "statement": "در سناریوی «اپلیکیشن مالی»، یک مسئله عملی مرتبط با «چند exception» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «رستوران»، ورودی را پردازش کن و خطای تبدیل عدد و تقسیم بر صفر را جداگانه مدیریت کن.",
     "examples": [
-      "ورودی: نمونه 17\nخروجی: نتیجه پردازش نمونه 17"
+      "ورودی: 10 2\\nخروجی: 5"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 17\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "try:\\n    a, b = map(int, input().split())\\n    print(a // b)\\nexcept ValueError:\\n    print(\"invalid\")\\nexcept ZeroDivisionError:\\n    print(\"zero\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "10 2",
+        "expected": "5"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "8 0",
+        "expected": "zero"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "x 2",
+        "expected": "invalid"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «چند exception» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -16525,34 +16525,34 @@
   },
   {
     "id": 460,
-    "title": "else/finally — سامانه نوبت‌دهی — تمرین 460",
+    "title": "else/finally — انبار کالا — نسخه عملی 6",
     "level": "متوسط",
     "category": "Exceptions",
     "topic": "else/finally",
-    "statement": "در سناریوی «سامانه نوبت‌دهی»، یک برنامه Python برای «else/finally» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «انبار کالا»، عدد را بخوان؛ در حالت موفقیت آن را با 2 جمع کن و در خطا invalid چاپ کن. از else و finally استفاده کن.",
     "examples": [
-      "ورودی: نمونه 18\nخروجی: نتیجه پردازش نمونه 18"
+      "ورودی: 3\\nخروجی: 5\\ndone"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 18\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "try:\\n    x = int(input())\\nexcept ValueError:\\n    print(\"invalid\")\\nelse:\\n    print(x + 2)\\nfinally:\\n    print(\"done\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "3",
+        "expected": "5\\ndone"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "10",
+        "expected": "12\\ndone"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "x",
+        "expected": "invalid\\ndone"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «else/finally» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -16561,34 +16561,34 @@
   },
   {
     "id": 461,
-    "title": "raise — فروشگاه محلی — تمرین 461",
+    "title": "raise — کتابخانه — نسخه عملی 1",
     "level": "متوسط",
     "category": "Exceptions",
     "topic": "raise",
-    "statement": "در سناریوی «فروشگاه محلی»، مفهوم «raise» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «کتابخانه»، مبلغ را بخوان. اگر مقدار منفی بود با raise خطا ایجاد کن؛ در غیر این صورت مقدار را چاپ کن.",
     "examples": [
-      "ورودی: نمونه 19\nخروجی: نتیجه پردازش نمونه 19"
+      "ورودی: 15\\nخروجی: 15"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 19\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "try:\\n    x = int(input())\\n    if x < 0:\\n        raise ValueError(\"negative\")\\n    print(x)\\nexcept ValueError:\\n    print(\"invalid\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "15",
+        "expected": "15"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "9",
+        "expected": "invalid"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "10",
+        "expected": "10"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «raise» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -16597,34 +16597,34 @@
   },
   {
     "id": 462,
-    "title": "exception سفارشی — مدرسه — تمرین 462",
+    "title": "exception سفارشی — باشگاه ورزشی — نسخه عملی 2",
     "level": "متوسط",
     "category": "Exceptions",
     "topic": "exception سفارشی",
-    "statement": "در سناریوی «مدرسه»، راه‌حلی خوانا برای مسئله «exception سفارشی» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «باشگاه ورزشی»، یک Exception سفارشی برای مقدار نامعتبر بساز؛ اگر عدد ورودی کمتر از 10 بود خطای اختصاصی بده، وگرنه عدد را چاپ کن.",
     "examples": [
-      "ورودی: نمونه 20\nخروجی: نتیجه پردازش نمونه 20"
+      "ورودی: 15\\nخروجی: 15"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 20\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "class InvalidValueError(Exception):\\n    pass\\n\\ntry:\\n    x = int(input())\\n    if x < 10:\\n        raise InvalidValueError()\\n    print(x)\\nexcept InvalidValueError:\\n    print(\"invalid\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "15",
+        "expected": "15"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "9",
+        "expected": "invalid"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "10",
+        "expected": "10"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «exception سفارشی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -16633,34 +16633,34 @@
   },
   {
     "id": 463,
-    "title": "try/except — کتابخانه — تمرین 463",
+    "title": "try/except — سامانه ثبت‌نام — نسخه عملی 3",
     "level": "متوسط",
     "category": "Exceptions",
     "topic": "try/except",
-    "statement": "در سناریوی «کتابخانه»، یک مسئله عملی مرتبط با «try/except» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه ثبت‌نام»، تعداد صندلی رزرو را بخوان؛ ورودی نامعتبر را با 0 جایگزین کن. فقط با try/except خطا را کنترل کن.",
     "examples": [
-      "ورودی: نمونه 21\nخروجی: نتیجه پردازش نمونه 21"
+      "ورودی: 42\\nخروجی: 42"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 21\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "try:\\n    x=int(input()); print(x)\\nexcept (ValueError, TypeError):\\n    print(0)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "42",
+        "expected": "42"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "-2",
+        "expected": "-2"
       },
       {
-        "input": "0",
+        "input": "x",
         "expected": "0"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «try/except» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -16669,34 +16669,34 @@
   },
   {
     "id": 464,
-    "title": "چند exception — باشگاه ورزشی — تمرین 464",
+    "title": "چند exception — دفتر کار — نسخه عملی 4",
     "level": "متوسط",
     "category": "Exceptions",
     "topic": "چند exception",
-    "statement": "در سناریوی «باشگاه ورزشی»، یک برنامه Python برای «چند exception» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «دفتر کار»، ورودی را پردازش کن و خطای تبدیل عدد و تقسیم بر صفر را جداگانه مدیریت کن.",
     "examples": [
-      "ورودی: نمونه 22\nخروجی: نتیجه پردازش نمونه 22"
+      "ورودی: 10 2\\nخروجی: 5"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 22\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "try:\\n    a, b = map(int, input().split())\\n    print(a // b)\\nexcept ValueError:\\n    print(\"invalid\")\\nexcept ZeroDivisionError:\\n    print(\"zero\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "10 2",
+        "expected": "5"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "8 0",
+        "expected": "zero"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "x 2",
+        "expected": "invalid"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «چند exception» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -16705,34 +16705,34 @@
   },
   {
     "id": 465,
-    "title": "else/finally — سامانه ثبت‌نام — تمرین 465",
+    "title": "else/finally — رستوران — نسخه عملی 5",
     "level": "متوسط",
     "category": "Exceptions",
     "topic": "else/finally",
-    "statement": "در سناریوی «سامانه ثبت‌نام»، مفهوم «else/finally» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «رستوران»، عدد را بخوان؛ در حالت موفقیت آن را با 2 جمع کن و در خطا invalid چاپ کن. از else و finally استفاده کن.",
     "examples": [
-      "ورودی: نمونه 23\nخروجی: نتیجه پردازش نمونه 23"
+      "ورودی: 3\\nخروجی: 5\\ndone"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 23\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "try:\\n    x = int(input())\\nexcept ValueError:\\n    print(\"invalid\")\\nelse:\\n    print(x + 2)\\nfinally:\\n    print(\"done\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "3",
+        "expected": "5\\ndone"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "10",
+        "expected": "12\\ndone"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "x",
+        "expected": "invalid\\ndone"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «else/finally» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -16741,34 +16741,34 @@
   },
   {
     "id": 466,
-    "title": "raise — دفتر کار — تمرین 466",
+    "title": "raise — انبار کالا — نسخه عملی 6",
     "level": "متوسط",
     "category": "Exceptions",
     "topic": "raise",
-    "statement": "در سناریوی «دفتر کار»، راه‌حلی خوانا برای مسئله «raise» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «انبار کالا»، مبلغ را بخوان. اگر مقدار منفی بود با raise خطا ایجاد کن؛ در غیر این صورت مقدار را چاپ کن.",
     "examples": [
-      "ورودی: نمونه 24\nخروجی: نتیجه پردازش نمونه 24"
+      "ورودی: 15\\nخروجی: 15"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 24\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "try:\\n    x = int(input())\\n    if x < 0:\\n        raise ValueError(\"negative\")\\n    print(x)\\nexcept ValueError:\\n    print(\"invalid\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "15",
+        "expected": "15"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "9",
+        "expected": "invalid"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "10",
+        "expected": "10"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «raise» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -16777,34 +16777,34 @@
   },
   {
     "id": 467,
-    "title": "exception سفارشی — رستوران — تمرین 467",
+    "title": "exception سفارشی — کتابخانه — نسخه عملی 1",
     "level": "متوسط",
     "category": "Exceptions",
     "topic": "exception سفارشی",
-    "statement": "در سناریوی «رستوران»، یک مسئله عملی مرتبط با «exception سفارشی» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «کتابخانه»، یک Exception سفارشی برای مقدار نامعتبر بساز؛ اگر عدد ورودی کمتر از 10 بود خطای اختصاصی بده، وگرنه عدد را چاپ کن.",
     "examples": [
-      "ورودی: نمونه 25\nخروجی: نتیجه پردازش نمونه 25"
+      "ورودی: 15\\nخروجی: 15"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 25\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "class InvalidValueError(Exception):\\n    pass\\n\\ntry:\\n    x = int(input())\\n    if x < 10:\\n        raise InvalidValueError()\\n    print(x)\\nexcept InvalidValueError:\\n    print(\"invalid\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "15",
+        "expected": "15"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "9",
+        "expected": "invalid"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "10",
+        "expected": "10"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «exception سفارشی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -16813,34 +16813,34 @@
   },
   {
     "id": 468,
-    "title": "try/except — انبار کالا — تمرین 468",
+    "title": "try/except — باشگاه ورزشی — نسخه عملی 2",
     "level": "متوسط",
     "category": "Exceptions",
     "topic": "try/except",
-    "statement": "در سناریوی «انبار کالا»، یک برنامه Python برای «try/except» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «باشگاه ورزشی»، سن عضو را بخوان؛ اگر منفی یا غیرقابل‌تبدیل بود 0 چاپ کن. فقط با try/except خطا را کنترل کن.",
     "examples": [
-      "ورودی: نمونه 26\nخروجی: نتیجه پردازش نمونه 26"
+      "ورودی: 42\\nخروجی: 42"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 26\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "try:\\n    x=int(input()); print(x if x>=0 else 0)\\nexcept (ValueError, TypeError):\\n    print(0)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "42",
+        "expected": "42"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "-2",
+        "expected": "-2"
       },
       {
-        "input": "0",
+        "input": "x",
         "expected": "0"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «try/except» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -16849,34 +16849,34 @@
   },
   {
     "id": 469,
-    "title": "چند exception — اپلیکیشن مالی — تمرین 469",
+    "title": "چند exception — سامانه ثبت‌نام — نسخه عملی 3",
     "level": "سخت",
     "category": "Exceptions",
     "topic": "چند exception",
-    "statement": "در سناریوی «اپلیکیشن مالی»، مفهوم «چند exception» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه ثبت‌نام»، ورودی را پردازش کن و خطای تبدیل عدد و تقسیم بر صفر را جداگانه مدیریت کن.",
     "examples": [
-      "ورودی: نمونه 27\nخروجی: نتیجه پردازش نمونه 27"
+      "ورودی: 10 2\\nخروجی: 5"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 27\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "try:\\n    a, b = map(int, input().split())\\n    print(a // b)\\nexcept ValueError:\\n    print(\"invalid\")\\nexcept ZeroDivisionError:\\n    print(\"zero\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "10 2",
+        "expected": "5"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "8 0",
+        "expected": "zero"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "x 2",
+        "expected": "invalid"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «چند exception» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -16885,34 +16885,34 @@
   },
   {
     "id": 470,
-    "title": "else/finally — سامانه نوبت‌دهی — تمرین 470",
+    "title": "else/finally — دفتر کار — نسخه عملی 4",
     "level": "سخت",
     "category": "Exceptions",
     "topic": "else/finally",
-    "statement": "در سناریوی «سامانه نوبت‌دهی»، راه‌حلی خوانا برای مسئله «else/finally» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «دفتر کار»، عدد را بخوان؛ در حالت موفقیت آن را با 2 جمع کن و در خطا invalid چاپ کن. از else و finally استفاده کن.",
     "examples": [
-      "ورودی: نمونه 28\nخروجی: نتیجه پردازش نمونه 28"
+      "ورودی: 3\\nخروجی: 5\\ndone"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 28\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "try:\\n    x = int(input())\\nexcept ValueError:\\n    print(\"invalid\")\\nelse:\\n    print(x + 2)\\nfinally:\\n    print(\"done\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "3",
+        "expected": "5\\ndone"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "10",
+        "expected": "12\\ndone"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "x",
+        "expected": "invalid\\ndone"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «else/finally» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -16921,34 +16921,34 @@
   },
   {
     "id": 471,
-    "title": "raise — فروشگاه محلی — تمرین 471",
+    "title": "raise — رستوران — نسخه عملی 5",
     "level": "سخت",
     "category": "Exceptions",
     "topic": "raise",
-    "statement": "در سناریوی «فروشگاه محلی»، یک مسئله عملی مرتبط با «raise» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «رستوران»، مبلغ را بخوان. اگر مقدار منفی بود با raise خطا ایجاد کن؛ در غیر این صورت مقدار را چاپ کن.",
     "examples": [
-      "ورودی: نمونه 29\nخروجی: نتیجه پردازش نمونه 29"
+      "ورودی: 15\\nخروجی: 15"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 29\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "try:\\n    x = int(input())\\n    if x < 0:\\n        raise ValueError(\"negative\")\\n    print(x)\\nexcept ValueError:\\n    print(\"invalid\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "15",
+        "expected": "15"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "9",
+        "expected": "invalid"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "10",
+        "expected": "10"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «raise» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -16957,34 +16957,34 @@
   },
   {
     "id": 472,
-    "title": "exception سفارشی — مدرسه — تمرین 472",
+    "title": "exception سفارشی — انبار کالا — نسخه عملی 6",
     "level": "سخت",
     "category": "Exceptions",
     "topic": "exception سفارشی",
-    "statement": "در سناریوی «مدرسه»، یک برنامه Python برای «exception سفارشی» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «انبار کالا»، یک Exception سفارشی برای مقدار نامعتبر بساز؛ اگر عدد ورودی کمتر از 10 بود خطای اختصاصی بده، وگرنه عدد را چاپ کن.",
     "examples": [
-      "ورودی: نمونه 30\nخروجی: نتیجه پردازش نمونه 30"
+      "ورودی: 15\\nخروجی: 15"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 30\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "class InvalidValueError(Exception):\\n    pass\\n\\ntry:\\n    x = int(input())\\n    if x < 10:\\n        raise InvalidValueError()\\n    print(x)\\nexcept InvalidValueError:\\n    print(\"invalid\")",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "15",
+        "expected": "15"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "9",
+        "expected": "invalid"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "10",
+        "expected": "10"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «exception سفارشی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -16993,34 +16993,34 @@
   },
   {
     "id": 473,
-    "title": "try/except — کتابخانه — تمرین 473",
+    "title": "try/except — کتابخانه — نسخه عملی 1",
     "level": "سخت",
     "category": "Exceptions",
     "topic": "try/except",
-    "statement": "در سناریوی «کتابخانه»، مفهوم «try/except» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «کتابخانه»، تعداد صفحات را به عدد تبدیل کن؛ اگر ورودی عدد نبود 0 چاپ کن. فقط با try/except خطا را کنترل کن.",
     "examples": [
-      "ورودی: نمونه 31\nخروجی: نتیجه پردازش نمونه 31"
+      "ورودی: 42\\nخروجی: 42"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Exceptions\n\n",
-    "solution": "# راه‌حل نمونه تمرین 31\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "try:\\n    x=int(input()); print(x)\\nexcept (ValueError, TypeError):\\n    print(0)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "42",
+        "expected": "42"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "-2",
+        "expected": "-2"
       },
       {
-        "input": "0",
+        "input": "x",
         "expected": "0"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «try/except» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا مشخص کن کدام بخش ممکن است خطا ایجاد کند.",
+      "نوع Exception مناسب را دقیق انتخاب کن.",
+      "حالت موفقیت و خطا را با تست‌های متفاوت بررسی کن."
     ],
     "concepts": [
       "Exceptions",
@@ -17029,34 +17029,34 @@
   },
   {
     "id": 474,
-    "title": "خواندن فایل — باشگاه ورزشی — تمرین 474",
+    "title": "خواندن فایل — باشگاه ورزشی — نسخه عملی 1",
     "level": "آسان",
     "category": "Files",
     "topic": "خواندن فایل",
-    "statement": "در سناریوی «باشگاه ورزشی»، یک مسئله عملی مرتبط با «خواندن فایل» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «باشگاه ورزشی»، یک متن از ورودی بگیر، آن را در فایل ذخیره کن و با حالت خواندن فایل دوباره بخوان و چاپ کن.",
     "examples": [
-      "ورودی: نمونه 1\nخروجی: نتیجه پردازش نمونه 1"
+      "ورودی: دینو\\nخروجی: دینو"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 1\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "name=input(); open('athlete.txt','w',encoding='utf-8').write(name); print(open('athlete.txt',encoding='utf-8').read())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "دینو",
+        "expected": "دینو"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "سلام دنیا",
+        "expected": "سلام دنیا"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "Python 3",
+        "expected": "Python 3"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «خواندن فایل» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -17065,34 +17065,34 @@
   },
   {
     "id": 475,
-    "title": "نوشتن فایل — سامانه ثبت‌نام — تمرین 475",
+    "title": "نوشتن فایل — سامانه ثبت‌نام — نسخه عملی 2",
     "level": "آسان",
     "category": "Files",
     "topic": "نوشتن فایل",
-    "statement": "در سناریوی «سامانه ثبت‌نام»، یک برنامه Python برای «نوشتن فایل» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه ثبت‌نام»، نام ثبت‌نام‌کننده را در فایل ذخیره و محتوای فایل را چاپ کن. سپس فایل را ببند و با یک with امن محتوای نوشته‌شده را چاپ کن.",
     "examples": [
-      "ورودی: نمونه 2\nخروجی: نتیجه پردازش نمونه 2"
+      "ورودی: گزارش امروز\\nخروجی: گزارش امروز"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 2\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "value=input()\\nwith open('data.txt','w',encoding='utf-8') as f:\\n    f.write(value)\\nwith open('data.txt',encoding='utf-8') as f:\\n    print(f.read())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "گزارش امروز",
+        "expected": "گزارش امروز"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "ثبت نام",
+        "expected": "ثبت نام"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "12345",
+        "expected": "12345"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «نوشتن فایل» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -17101,34 +17101,34 @@
   },
   {
     "id": 476,
-    "title": "append — دفتر کار — تمرین 476",
+    "title": "append — دفتر کار — نسخه عملی 3",
     "level": "آسان",
     "category": "Files",
     "topic": "append",
-    "statement": "در سناریوی «دفتر کار»، مفهوم «append» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «دفتر کار»، دو متن را از دو خط ورودی بگیر و با حالت append در یک فایل ذخیره کن؛ هر متن در یک خط باشد.",
     "examples": [
-      "ورودی: نمونه 3\nخروجی: نتیجه پردازش نمونه 3"
+      "ورودی: اول\\nدوم\\nخروجی: اول\\nدوم"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 3\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "a=input()\\nb=input()\\nwith open('items.txt','w',encoding='utf-8') as f:\\n    f.write(a+'\\\\n')\\nwith open('items.txt','a',encoding='utf-8') as f:\\n    f.write(b+'\\\\n')\\nwith open('items.txt',encoding='utf-8') as f:\\n    print(f.read().strip())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "اول\\nدوم",
+        "expected": "اول\\nدوم"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "A\\nB",
+        "expected": "A\\nB"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "کالا 1\\nکالا 2",
+        "expected": "کالا 1\\nکالا 2"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «append» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -17137,34 +17137,34 @@
   },
   {
     "id": 477,
-    "title": "CSV متنی — رستوران — تمرین 477",
+    "title": "CSV متنی — رستوران — نسخه عملی 4",
     "level": "آسان",
     "category": "Files",
     "topic": "CSV متنی",
-    "statement": "در سناریوی «رستوران»، راه‌حلی خوانا برای مسئله «CSV متنی» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «رستوران»، سه نام و نمره را به شکل name,score در سه خط دریافت کن، سپس فقط نام‌هایی را که نمره حداقل 10 دارند چاپ کن.",
     "examples": [
-      "ورودی: نمونه 4\nخروجی: نتیجه پردازش نمونه 4"
+      "ورودی: Ali,12\\nSara,8\\nReza,15\\nخروجی: Ali\\nReza"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 4\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "for _ in range(3):\\n    name, score = input().split(',')\\n    if int(score) >= 10:\\n        print(name)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "Ali,12\\nSara,8\\nReza,15",
+        "expected": "Ali\\nReza"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "A,9\\nB,10\\nC,11",
+        "expected": "B\\nC"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "دینو,20\\nماه,7\\nابر,13",
+        "expected": "دینو\\nابر"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «CSV متنی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -17173,34 +17173,34 @@
   },
   {
     "id": 478,
-    "title": "مدیریت encoding — انبار کالا — تمرین 478",
+    "title": "مدیریت encoding — انبار کالا — نسخه عملی 5",
     "level": "آسان",
     "category": "Files",
     "topic": "مدیریت encoding",
-    "statement": "در سناریوی «انبار کالا»، یک مسئله عملی مرتبط با «مدیریت encoding» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «انبار کالا»، متن فارسی ورودی را با UTF-8 در فایل ذخیره کن و با همان encoding بخوان و چاپ کن تا متن خراب نشود.",
     "examples": [
-      "ورودی: نمونه 5\nخروجی: نتیجه پردازش نمونه 5"
+      "ورودی: سلام دزفول\\nخروجی: سلام دزفول"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 5\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "text=input()\\nwith open('utf8.txt','w',encoding='utf-8') as f:\\n    f.write(text)\\nwith open('utf8.txt',encoding='utf-8') as f:\\n    print(f.read())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "سلام دزفول",
+        "expected": "سلام دزفول"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "کتاب داستان کودک",
+        "expected": "کتاب داستان کودک"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "ماه روی ابر",
+        "expected": "ماه روی ابر"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «مدیریت encoding» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -17209,34 +17209,34 @@
   },
   {
     "id": 479,
-    "title": "خواندن فایل — اپلیکیشن مالی — تمرین 479",
+    "title": "خواندن فایل — اپلیکیشن مالی — نسخه عملی 6",
     "level": "آسان",
     "category": "Files",
     "topic": "خواندن فایل",
-    "statement": "در سناریوی «اپلیکیشن مالی»، یک برنامه Python برای «خواندن فایل» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «اپلیکیشن مالی»، یک متن از ورودی بگیر، آن را در فایل ذخیره کن و با حالت خواندن فایل دوباره بخوان و چاپ کن.",
     "examples": [
-      "ورودی: نمونه 6\nخروجی: نتیجه پردازش نمونه 6"
+      "ورودی: دینو\\nخروجی: دینو"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 6\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "amount=input(); open('transaction.txt','w',encoding='utf-8').write(amount); print(open('transaction.txt',encoding='utf-8').read())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "دینو",
+        "expected": "دینو"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "سلام دنیا",
+        "expected": "سلام دنیا"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "Python 3",
+        "expected": "Python 3"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «خواندن فایل» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -17245,34 +17245,34 @@
   },
   {
     "id": 480,
-    "title": "نوشتن فایل — سامانه نوبت‌دهی — تمرین 480",
+    "title": "نوشتن فایل — باشگاه ورزشی — نسخه عملی 1",
     "level": "آسان",
     "category": "Files",
     "topic": "نوشتن فایل",
-    "statement": "در سناریوی «سامانه نوبت‌دهی»، مفهوم «نوشتن فایل» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «باشگاه ورزشی»، نام ورزشکار را در فایل متنی بنویس و همان را بخوان. سپس فایل را ببند و با یک with امن محتوای نوشته‌شده را چاپ کن.",
     "examples": [
-      "ورودی: نمونه 7\nخروجی: نتیجه پردازش نمونه 7"
+      "ورودی: گزارش امروز\\nخروجی: گزارش امروز"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 7\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "value=input()\\nwith open('data.txt','w',encoding='utf-8') as f:\\n    f.write(value)\\nwith open('data.txt',encoding='utf-8') as f:\\n    print(f.read())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "گزارش امروز",
+        "expected": "گزارش امروز"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "ثبت نام",
+        "expected": "ثبت نام"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "12345",
+        "expected": "12345"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «نوشتن فایل» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -17281,34 +17281,34 @@
   },
   {
     "id": 481,
-    "title": "append — فروشگاه محلی — تمرین 481",
+    "title": "append — سامانه ثبت‌نام — نسخه عملی 2",
     "level": "آسان",
     "category": "Files",
     "topic": "append",
-    "statement": "در سناریوی «فروشگاه محلی»، راه‌حلی خوانا برای مسئله «append» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه ثبت‌نام»، دو متن را از دو خط ورودی بگیر و با حالت append در یک فایل ذخیره کن؛ هر متن در یک خط باشد.",
     "examples": [
-      "ورودی: نمونه 8\nخروجی: نتیجه پردازش نمونه 8"
+      "ورودی: اول\\nدوم\\nخروجی: اول\\nدوم"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 8\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "a=input()\\nb=input()\\nwith open('items.txt','w',encoding='utf-8') as f:\\n    f.write(a+'\\\\n')\\nwith open('items.txt','a',encoding='utf-8') as f:\\n    f.write(b+'\\\\n')\\nwith open('items.txt',encoding='utf-8') as f:\\n    print(f.read().strip())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "اول\\nدوم",
+        "expected": "اول\\nدوم"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "A\\nB",
+        "expected": "A\\nB"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "کالا 1\\nکالا 2",
+        "expected": "کالا 1\\nکالا 2"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «append» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -17317,34 +17317,34 @@
   },
   {
     "id": 482,
-    "title": "CSV متنی — مدرسه — تمرین 482",
+    "title": "CSV متنی — دفتر کار — نسخه عملی 3",
     "level": "آسان",
     "category": "Files",
     "topic": "CSV متنی",
-    "statement": "در سناریوی «مدرسه»، یک مسئله عملی مرتبط با «CSV متنی» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «دفتر کار»، سه نام و نمره را به شکل name,score در سه خط دریافت کن، سپس فقط نام‌هایی را که نمره حداقل 10 دارند چاپ کن.",
     "examples": [
-      "ورودی: نمونه 9\nخروجی: نتیجه پردازش نمونه 9"
+      "ورودی: Ali,12\\nSara,8\\nReza,15\\nخروجی: Ali\\nReza"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 9\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "for _ in range(3):\\n    name, score = input().split(',')\\n    if int(score) >= 10:\\n        print(name)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "Ali,12\\nSara,8\\nReza,15",
+        "expected": "Ali\\nReza"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "A,9\\nB,10\\nC,11",
+        "expected": "B\\nC"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "دینو,20\\nماه,7\\nابر,13",
+        "expected": "دینو\\nابر"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «CSV متنی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -17353,34 +17353,34 @@
   },
   {
     "id": 483,
-    "title": "مدیریت encoding — کتابخانه — تمرین 483",
+    "title": "مدیریت encoding — رستوران — نسخه عملی 4",
     "level": "آسان",
     "category": "Files",
     "topic": "مدیریت encoding",
-    "statement": "در سناریوی «کتابخانه»، یک برنامه Python برای «مدیریت encoding» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «رستوران»، متن فارسی ورودی را با UTF-8 در فایل ذخیره کن و با همان encoding بخوان و چاپ کن تا متن خراب نشود.",
     "examples": [
-      "ورودی: نمونه 10\nخروجی: نتیجه پردازش نمونه 10"
+      "ورودی: سلام دزفول\\nخروجی: سلام دزفول"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 10\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "text=input()\\nwith open('utf8.txt','w',encoding='utf-8') as f:\\n    f.write(text)\\nwith open('utf8.txt',encoding='utf-8') as f:\\n    print(f.read())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "سلام دزفول",
+        "expected": "سلام دزفول"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "کتاب داستان کودک",
+        "expected": "کتاب داستان کودک"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "ماه روی ابر",
+        "expected": "ماه روی ابر"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «مدیریت encoding» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -17389,34 +17389,34 @@
   },
   {
     "id": 484,
-    "title": "خواندن فایل — باشگاه ورزشی — تمرین 484",
+    "title": "خواندن فایل — انبار کالا — نسخه عملی 5",
     "level": "آسان",
     "category": "Files",
     "topic": "خواندن فایل",
-    "statement": "در سناریوی «باشگاه ورزشی»، مفهوم «خواندن فایل» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «انبار کالا»، یک متن از ورودی بگیر، آن را در فایل ذخیره کن و با حالت خواندن فایل دوباره بخوان و چاپ کن.",
     "examples": [
-      "ورودی: نمونه 11\nخروجی: نتیجه پردازش نمونه 11"
+      "ورودی: دینو\\nخروجی: دینو"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 11\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "code=input(); open('stock.txt','w',encoding='utf-8').write(code); print(open('stock.txt',encoding='utf-8').read())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "دینو",
+        "expected": "دینو"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "سلام دنیا",
+        "expected": "سلام دنیا"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "Python 3",
+        "expected": "Python 3"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «خواندن فایل» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -17425,34 +17425,34 @@
   },
   {
     "id": 485,
-    "title": "نوشتن فایل — سامانه ثبت‌نام — تمرین 485",
+    "title": "نوشتن فایل — اپلیکیشن مالی — نسخه عملی 6",
     "level": "آسان",
     "category": "Files",
     "topic": "نوشتن فایل",
-    "statement": "در سناریوی «سامانه ثبت‌نام»، راه‌حلی خوانا برای مسئله «نوشتن فایل» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «اپلیکیشن مالی»، مبلغ تراکنش را در فایل ذخیره و همان مقدار را چاپ کن. سپس فایل را ببند و با یک with امن محتوای نوشته‌شده را چاپ کن.",
     "examples": [
-      "ورودی: نمونه 12\nخروجی: نتیجه پردازش نمونه 12"
+      "ورودی: گزارش امروز\\nخروجی: گزارش امروز"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 12\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "value=input()\\nwith open('data.txt','w',encoding='utf-8') as f:\\n    f.write(value)\\nwith open('data.txt',encoding='utf-8') as f:\\n    print(f.read())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "گزارش امروز",
+        "expected": "گزارش امروز"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "ثبت نام",
+        "expected": "ثبت نام"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "12345",
+        "expected": "12345"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «نوشتن فایل» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -17461,34 +17461,34 @@
   },
   {
     "id": 486,
-    "title": "append — دفتر کار — تمرین 486",
+    "title": "append — باشگاه ورزشی — نسخه عملی 1",
     "level": "آسان",
     "category": "Files",
     "topic": "append",
-    "statement": "در سناریوی «دفتر کار»، یک مسئله عملی مرتبط با «append» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «باشگاه ورزشی»، دو متن را از دو خط ورودی بگیر و با حالت append در یک فایل ذخیره کن؛ هر متن در یک خط باشد.",
     "examples": [
-      "ورودی: نمونه 13\nخروجی: نتیجه پردازش نمونه 13"
+      "ورودی: اول\\nدوم\\nخروجی: اول\\nدوم"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 13\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "a=input()\\nb=input()\\nwith open('items.txt','w',encoding='utf-8') as f:\\n    f.write(a+'\\\\n')\\nwith open('items.txt','a',encoding='utf-8') as f:\\n    f.write(b+'\\\\n')\\nwith open('items.txt',encoding='utf-8') as f:\\n    print(f.read().strip())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "اول\\nدوم",
+        "expected": "اول\\nدوم"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "A\\nB",
+        "expected": "A\\nB"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "کالا 1\\nکالا 2",
+        "expected": "کالا 1\\nکالا 2"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «append» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -17497,34 +17497,34 @@
   },
   {
     "id": 487,
-    "title": "CSV متنی — رستوران — تمرین 487",
+    "title": "CSV متنی — سامانه ثبت‌نام — نسخه عملی 2",
     "level": "آسان",
     "category": "Files",
     "topic": "CSV متنی",
-    "statement": "در سناریوی «رستوران»، یک برنامه Python برای «CSV متنی» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: آسان؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه ثبت‌نام»، سه نام و نمره را به شکل name,score در سه خط دریافت کن، سپس فقط نام‌هایی را که نمره حداقل 10 دارند چاپ کن.",
     "examples": [
-      "ورودی: نمونه 14\nخروجی: نتیجه پردازش نمونه 14"
+      "ورودی: Ali,12\\nSara,8\\nReza,15\\nخروجی: Ali\\nReza"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 14\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "for _ in range(3):\\n    name, score = input().split(',')\\n    if int(score) >= 10:\\n        print(name)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "Ali,12\\nSara,8\\nReza,15",
+        "expected": "Ali\\nReza"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "A,9\\nB,10\\nC,11",
+        "expected": "B\\nC"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "دینو,20\\nماه,7\\nابر,13",
+        "expected": "دینو\\nابر"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «CSV متنی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -17533,34 +17533,34 @@
   },
   {
     "id": 488,
-    "title": "مدیریت encoding — انبار کالا — تمرین 488",
+    "title": "مدیریت encoding — دفتر کار — نسخه عملی 3",
     "level": "متوسط",
     "category": "Files",
     "topic": "مدیریت encoding",
-    "statement": "در سناریوی «انبار کالا»، مفهوم «مدیریت encoding» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «دفتر کار»، متن فارسی ورودی را با UTF-8 در فایل ذخیره کن و با همان encoding بخوان و چاپ کن تا متن خراب نشود.",
     "examples": [
-      "ورودی: نمونه 15\nخروجی: نتیجه پردازش نمونه 15"
+      "ورودی: سلام دزفول\\nخروجی: سلام دزفول"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 15\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "text=input()\\nwith open('utf8.txt','w',encoding='utf-8') as f:\\n    f.write(text)\\nwith open('utf8.txt',encoding='utf-8') as f:\\n    print(f.read())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "سلام دزفول",
+        "expected": "سلام دزفول"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "کتاب داستان کودک",
+        "expected": "کتاب داستان کودک"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "ماه روی ابر",
+        "expected": "ماه روی ابر"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «مدیریت encoding» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -17569,34 +17569,34 @@
   },
   {
     "id": 489,
-    "title": "خواندن فایل — اپلیکیشن مالی — تمرین 489",
+    "title": "خواندن فایل — رستوران — نسخه عملی 4",
     "level": "متوسط",
     "category": "Files",
     "topic": "خواندن فایل",
-    "statement": "در سناریوی «اپلیکیشن مالی»، راه‌حلی خوانا برای مسئله «خواندن فایل» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «رستوران»، یک متن از ورودی بگیر، آن را در فایل ذخیره کن و با حالت خواندن فایل دوباره بخوان و چاپ کن.",
     "examples": [
-      "ورودی: نمونه 16\nخروجی: نتیجه پردازش نمونه 16"
+      "ورودی: دینو\\nخروجی: دینو"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 16\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "food=input(); open('order.txt','w',encoding='utf-8').write(food); print(open('order.txt',encoding='utf-8').read())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "دینو",
+        "expected": "دینو"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "سلام دنیا",
+        "expected": "سلام دنیا"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "Python 3",
+        "expected": "Python 3"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «خواندن فایل» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -17605,34 +17605,34 @@
   },
   {
     "id": 490,
-    "title": "نوشتن فایل — سامانه نوبت‌دهی — تمرین 490",
+    "title": "نوشتن فایل — انبار کالا — نسخه عملی 5",
     "level": "متوسط",
     "category": "Files",
     "topic": "نوشتن فایل",
-    "statement": "در سناریوی «سامانه نوبت‌دهی»، یک مسئله عملی مرتبط با «نوشتن فایل» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «انبار کالا»، کد کالا را در فایل ذخیره و محتوای آن را چاپ کن. سپس فایل را ببند و با یک with امن محتوای نوشته‌شده را چاپ کن.",
     "examples": [
-      "ورودی: نمونه 17\nخروجی: نتیجه پردازش نمونه 17"
+      "ورودی: گزارش امروز\\nخروجی: گزارش امروز"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 17\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "value=input()\\nwith open('data.txt','w',encoding='utf-8') as f:\\n    f.write(value)\\nwith open('data.txt',encoding='utf-8') as f:\\n    print(f.read())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "گزارش امروز",
+        "expected": "گزارش امروز"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "ثبت نام",
+        "expected": "ثبت نام"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "12345",
+        "expected": "12345"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «نوشتن فایل» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -17641,34 +17641,34 @@
   },
   {
     "id": 491,
-    "title": "append — فروشگاه محلی — تمرین 491",
+    "title": "append — اپلیکیشن مالی — نسخه عملی 6",
     "level": "متوسط",
     "category": "Files",
     "topic": "append",
-    "statement": "در سناریوی «فروشگاه محلی»، یک برنامه Python برای «append» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «اپلیکیشن مالی»، دو متن را از دو خط ورودی بگیر و با حالت append در یک فایل ذخیره کن؛ هر متن در یک خط باشد.",
     "examples": [
-      "ورودی: نمونه 18\nخروجی: نتیجه پردازش نمونه 18"
+      "ورودی: اول\\nدوم\\nخروجی: اول\\nدوم"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 18\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "a=input()\\nb=input()\\nwith open('items.txt','w',encoding='utf-8') as f:\\n    f.write(a+'\\\\n')\\nwith open('items.txt','a',encoding='utf-8') as f:\\n    f.write(b+'\\\\n')\\nwith open('items.txt',encoding='utf-8') as f:\\n    print(f.read().strip())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "اول\\nدوم",
+        "expected": "اول\\nدوم"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "A\\nB",
+        "expected": "A\\nB"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "کالا 1\\nکالا 2",
+        "expected": "کالا 1\\nکالا 2"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «append» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -17677,34 +17677,34 @@
   },
   {
     "id": 492,
-    "title": "CSV متنی — مدرسه — تمرین 492",
+    "title": "CSV متنی — باشگاه ورزشی — نسخه عملی 1",
     "level": "متوسط",
     "category": "Files",
     "topic": "CSV متنی",
-    "statement": "در سناریوی «مدرسه»، مفهوم «CSV متنی» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «باشگاه ورزشی»، سه نام و نمره را به شکل name,score در سه خط دریافت کن، سپس فقط نام‌هایی را که نمره حداقل 10 دارند چاپ کن.",
     "examples": [
-      "ورودی: نمونه 19\nخروجی: نتیجه پردازش نمونه 19"
+      "ورودی: Ali,12\\nSara,8\\nReza,15\\nخروجی: Ali\\nReza"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 19\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "for _ in range(3):\\n    name, score = input().split(',')\\n    if int(score) >= 10:\\n        print(name)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "Ali,12\\nSara,8\\nReza,15",
+        "expected": "Ali\\nReza"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "A,9\\nB,10\\nC,11",
+        "expected": "B\\nC"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "دینو,20\\nماه,7\\nابر,13",
+        "expected": "دینو\\nابر"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «CSV متنی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -17713,34 +17713,34 @@
   },
   {
     "id": 493,
-    "title": "مدیریت encoding — کتابخانه — تمرین 493",
+    "title": "مدیریت encoding — سامانه ثبت‌نام — نسخه عملی 2",
     "level": "متوسط",
     "category": "Files",
     "topic": "مدیریت encoding",
-    "statement": "در سناریوی «کتابخانه»، راه‌حلی خوانا برای مسئله «مدیریت encoding» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه ثبت‌نام»، متن فارسی ورودی را با UTF-8 در فایل ذخیره کن و با همان encoding بخوان و چاپ کن تا متن خراب نشود.",
     "examples": [
-      "ورودی: نمونه 20\nخروجی: نتیجه پردازش نمونه 20"
+      "ورودی: سلام دزفول\\nخروجی: سلام دزفول"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 20\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "text=input()\\nwith open('utf8.txt','w',encoding='utf-8') as f:\\n    f.write(text)\\nwith open('utf8.txt',encoding='utf-8') as f:\\n    print(f.read())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "سلام دزفول",
+        "expected": "سلام دزفول"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "کتاب داستان کودک",
+        "expected": "کتاب داستان کودک"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "ماه روی ابر",
+        "expected": "ماه روی ابر"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «مدیریت encoding» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -17749,34 +17749,34 @@
   },
   {
     "id": 494,
-    "title": "خواندن فایل — باشگاه ورزشی — تمرین 494",
+    "title": "خواندن فایل — دفتر کار — نسخه عملی 3",
     "level": "متوسط",
     "category": "Files",
     "topic": "خواندن فایل",
-    "statement": "در سناریوی «باشگاه ورزشی»، یک مسئله عملی مرتبط با «خواندن فایل» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «دفتر کار»، یک متن از ورودی بگیر، آن را در فایل ذخیره کن و با حالت خواندن فایل دوباره بخوان و چاپ کن.",
     "examples": [
-      "ورودی: نمونه 21\nخروجی: نتیجه پردازش نمونه 21"
+      "ورودی: دینو\\nخروجی: دینو"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 21\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "title=input(); open('report.txt','w',encoding='utf-8').write(title); print(open('report.txt',encoding='utf-8').read())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "دینو",
+        "expected": "دینو"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "سلام دنیا",
+        "expected": "سلام دنیا"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "Python 3",
+        "expected": "Python 3"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «خواندن فایل» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -17785,34 +17785,34 @@
   },
   {
     "id": 495,
-    "title": "نوشتن فایل — سامانه ثبت‌نام — تمرین 495",
+    "title": "نوشتن فایل — رستوران — نسخه عملی 4",
     "level": "متوسط",
     "category": "Files",
     "topic": "نوشتن فایل",
-    "statement": "در سناریوی «سامانه ثبت‌نام»، یک برنامه Python برای «نوشتن فایل» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «رستوران»، نام غذا را در فایل سفارش ذخیره و دوباره بخوان. سپس فایل را ببند و با یک with امن محتوای نوشته‌شده را چاپ کن.",
     "examples": [
-      "ورودی: نمونه 22\nخروجی: نتیجه پردازش نمونه 22"
+      "ورودی: گزارش امروز\\nخروجی: گزارش امروز"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 22\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "value=input()\\nwith open('data.txt','w',encoding='utf-8') as f:\\n    f.write(value)\\nwith open('data.txt',encoding='utf-8') as f:\\n    print(f.read())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "گزارش امروز",
+        "expected": "گزارش امروز"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "ثبت نام",
+        "expected": "ثبت نام"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "12345",
+        "expected": "12345"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «نوشتن فایل» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -17821,34 +17821,34 @@
   },
   {
     "id": 496,
-    "title": "append — دفتر کار — تمرین 496",
+    "title": "append — انبار کالا — نسخه عملی 5",
     "level": "متوسط",
     "category": "Files",
     "topic": "append",
-    "statement": "در سناریوی «دفتر کار»، مفهوم «append» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «انبار کالا»، دو متن را از دو خط ورودی بگیر و با حالت append در یک فایل ذخیره کن؛ هر متن در یک خط باشد.",
     "examples": [
-      "ورودی: نمونه 23\nخروجی: نتیجه پردازش نمونه 23"
+      "ورودی: اول\\nدوم\\nخروجی: اول\\nدوم"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 23\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "a=input()\\nb=input()\\nwith open('items.txt','w',encoding='utf-8') as f:\\n    f.write(a+'\\\\n')\\nwith open('items.txt','a',encoding='utf-8') as f:\\n    f.write(b+'\\\\n')\\nwith open('items.txt',encoding='utf-8') as f:\\n    print(f.read().strip())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "اول\\nدوم",
+        "expected": "اول\\nدوم"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "A\\nB",
+        "expected": "A\\nB"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "کالا 1\\nکالا 2",
+        "expected": "کالا 1\\nکالا 2"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «append» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -17857,34 +17857,34 @@
   },
   {
     "id": 497,
-    "title": "CSV متنی — رستوران — تمرین 497",
+    "title": "CSV متنی — اپلیکیشن مالی — نسخه عملی 6",
     "level": "متوسط",
     "category": "Files",
     "topic": "CSV متنی",
-    "statement": "در سناریوی «رستوران»، راه‌حلی خوانا برای مسئله «CSV متنی» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «اپلیکیشن مالی»، سه نام و نمره را به شکل name,score در سه خط دریافت کن، سپس فقط نام‌هایی را که نمره حداقل 10 دارند چاپ کن.",
     "examples": [
-      "ورودی: نمونه 24\nخروجی: نتیجه پردازش نمونه 24"
+      "ورودی: Ali,12\\nSara,8\\nReza,15\\nخروجی: Ali\\nReza"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 24\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "for _ in range(3):\\n    name, score = input().split(',')\\n    if int(score) >= 10:\\n        print(name)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "Ali,12\\nSara,8\\nReza,15",
+        "expected": "Ali\\nReza"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "A,9\\nB,10\\nC,11",
+        "expected": "B\\nC"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "دینو,20\\nماه,7\\nابر,13",
+        "expected": "دینو\\nابر"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «CSV متنی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -17893,34 +17893,34 @@
   },
   {
     "id": 498,
-    "title": "مدیریت encoding — انبار کالا — تمرین 498",
+    "title": "مدیریت encoding — باشگاه ورزشی — نسخه عملی 1",
     "level": "متوسط",
     "category": "Files",
     "topic": "مدیریت encoding",
-    "statement": "در سناریوی «انبار کالا»، یک مسئله عملی مرتبط با «مدیریت encoding» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «باشگاه ورزشی»، متن فارسی ورودی را با UTF-8 در فایل ذخیره کن و با همان encoding بخوان و چاپ کن تا متن خراب نشود.",
     "examples": [
-      "ورودی: نمونه 25\nخروجی: نتیجه پردازش نمونه 25"
+      "ورودی: سلام دزفول\\nخروجی: سلام دزفول"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 25\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "text=input()\\nwith open('utf8.txt','w',encoding='utf-8') as f:\\n    f.write(text)\\nwith open('utf8.txt',encoding='utf-8') as f:\\n    print(f.read())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "سلام دزفول",
+        "expected": "سلام دزفول"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "کتاب داستان کودک",
+        "expected": "کتاب داستان کودک"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "ماه روی ابر",
+        "expected": "ماه روی ابر"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «مدیریت encoding» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -17929,34 +17929,34 @@
   },
   {
     "id": 499,
-    "title": "خواندن فایل — اپلیکیشن مالی — تمرین 499",
+    "title": "خواندن فایل — سامانه ثبت‌نام — نسخه عملی 2",
     "level": "متوسط",
     "category": "Files",
     "topic": "خواندن فایل",
-    "statement": "در سناریوی «اپلیکیشن مالی»، یک برنامه Python برای «خواندن فایل» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: متوسط؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «سامانه ثبت‌نام»، یک متن از ورودی بگیر، آن را در فایل ذخیره کن و با حالت خواندن فایل دوباره بخوان و چاپ کن.",
     "examples": [
-      "ورودی: نمونه 26\nخروجی: نتیجه پردازش نمونه 26"
+      "ورودی: دینو\\nخروجی: دینو"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 26\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "name=input(); open('registration.txt','w',encoding='utf-8').write(name); print(open('registration.txt',encoding='utf-8').read())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "دینو",
+        "expected": "دینو"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "سلام دنیا",
+        "expected": "سلام دنیا"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "Python 3",
+        "expected": "Python 3"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «خواندن فایل» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -17965,34 +17965,34 @@
   },
   {
     "id": 500,
-    "title": "نوشتن فایل — سامانه نوبت‌دهی — تمرین 500",
+    "title": "نوشتن فایل — دفتر کار — نسخه عملی 3",
     "level": "سخت",
     "category": "Files",
     "topic": "نوشتن فایل",
-    "statement": "در سناریوی «سامانه نوبت‌دهی»، مفهوم «نوشتن فایل» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «دفتر کار»، عنوان گزارش را در فایل ذخیره و سپس چاپ کن. سپس فایل را ببند و با یک with امن محتوای نوشته‌شده را چاپ کن.",
     "examples": [
-      "ورودی: نمونه 27\nخروجی: نتیجه پردازش نمونه 27"
+      "ورودی: گزارش امروز\\nخروجی: گزارش امروز"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 27\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "value=input()\\nwith open('data.txt','w',encoding='utf-8') as f:\\n    f.write(value)\\nwith open('data.txt',encoding='utf-8') as f:\\n    print(f.read())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "گزارش امروز",
+        "expected": "گزارش امروز"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "ثبت نام",
+        "expected": "ثبت نام"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "12345",
+        "expected": "12345"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «نوشتن فایل» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -18001,34 +18001,34 @@
   },
   {
     "id": 501,
-    "title": "append — فروشگاه محلی — تمرین 501",
+    "title": "append — رستوران — نسخه عملی 4",
     "level": "سخت",
     "category": "Files",
     "topic": "append",
-    "statement": "در سناریوی «فروشگاه محلی»، راه‌حلی خوانا برای مسئله «append» بنویسید و خروجی را مطابق مثال تولید کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «رستوران»، دو متن را از دو خط ورودی بگیر و با حالت append در یک فایل ذخیره کن؛ هر متن در یک خط باشد.",
     "examples": [
-      "ورودی: نمونه 28\nخروجی: نتیجه پردازش نمونه 28"
+      "ورودی: اول\\nدوم\\nخروجی: اول\\nدوم"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 28\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "a=input()\\nb=input()\\nwith open('items.txt','w',encoding='utf-8') as f:\\n    f.write(a+'\\\\n')\\nwith open('items.txt','a',encoding='utf-8') as f:\\n    f.write(b+'\\\\n')\\nwith open('items.txt',encoding='utf-8') as f:\\n    print(f.read().strip())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "اول\\nدوم",
+        "expected": "اول\\nدوم"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "A\\nB",
+        "expected": "A\\nB"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "کالا 1\\nکالا 2",
+        "expected": "کالا 1\\nکالا 2"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «append» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -18037,34 +18037,34 @@
   },
   {
     "id": 502,
-    "title": "CSV متنی — مدرسه — تمرین 502",
+    "title": "CSV متنی — انبار کالا — نسخه عملی 5",
     "level": "سخت",
     "category": "Files",
     "topic": "CSV متنی",
-    "statement": "در سناریوی «مدرسه»، یک مسئله عملی مرتبط با «CSV متنی» حل کنید و ورودی، پردازش و خروجی مشخص داشته باشید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «انبار کالا»، سه نام و نمره را به شکل name,score در سه خط دریافت کن، سپس فقط نام‌هایی را که نمره حداقل 10 دارند چاپ کن.",
     "examples": [
-      "ورودی: نمونه 29\nخروجی: نتیجه پردازش نمونه 29"
+      "ورودی: Ali,12\\nSara,8\\nReza,15\\nخروجی: Ali\\nReza"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 29\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "for _ in range(3):\\n    name, score = input().split(',')\\n    if int(score) >= 10:\\n        print(name)",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "Ali,12\\nSara,8\\nReza,15",
+        "expected": "Ali\\nReza"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "A,9\\nB,10\\nC,11",
+        "expected": "B\\nC"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "دینو,20\\nماه,7\\nابر,13",
+        "expected": "دینو\\nابر"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «CSV متنی» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -18073,34 +18073,34 @@
   },
   {
     "id": 503,
-    "title": "مدیریت encoding — کتابخانه — تمرین 503",
+    "title": "مدیریت encoding — اپلیکیشن مالی — نسخه عملی 6",
     "level": "سخت",
     "category": "Files",
     "topic": "مدیریت encoding",
-    "statement": "در سناریوی «کتابخانه»، یک برنامه Python برای «مدیریت encoding» بنویسید و حداقل یک حالت مرزی را مدیریت کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «اپلیکیشن مالی»، متن فارسی ورودی را با UTF-8 در فایل ذخیره کن و با همان encoding بخوان و چاپ کن تا متن خراب نشود.",
     "examples": [
-      "ورودی: نمونه 30\nخروجی: نتیجه پردازش نمونه 30"
+      "ورودی: سلام دزفول\\nخروجی: سلام دزفول"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 30\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "text=input()\\nwith open('utf8.txt','w',encoding='utf-8') as f:\\n    f.write(text)\\nwith open('utf8.txt',encoding='utf-8') as f:\\n    print(f.read())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "سلام دزفول",
+        "expected": "سلام دزفول"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "کتاب داستان کودک",
+        "expected": "کتاب داستان کودک"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "ماه روی ابر",
+        "expected": "ماه روی ابر"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «مدیریت encoding» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
@@ -18109,34 +18109,34 @@
   },
   {
     "id": 504,
-    "title": "خواندن فایل — باشگاه ورزشی — تمرین 504",
+    "title": "خواندن فایل — باشگاه ورزشی — نسخه عملی 1",
     "level": "سخت",
     "category": "Files",
     "topic": "خواندن فایل",
-    "statement": "در سناریوی «باشگاه ورزشی»، مفهوم «خواندن فایل» را در یک سناریوی واقعی پیاده‌سازی کنید. سطح: سخت؛ راه‌حل باید قابل تست و خوانا باشد.",
+    "statement": "در «باشگاه ورزشی»، یک متن از ورودی بگیر، آن را در فایل ذخیره کن و با حالت خواندن فایل دوباره بخوان و چاپ کن.",
     "examples": [
-      "ورودی: نمونه 31\nخروجی: نتیجه پردازش نمونه 31"
+      "ورودی: دینو\\nخروجی: دینو"
     ],
-    "starter_code": "# جواب خودت را اینجا بنویس\n# مبحث: Files\n\n",
-    "solution": "# راه‌حل نمونه تمرین 31\nvalue = input()\nprint(value)",
+    "starter_code": "# جواب خودت را اینجا بنویس\\n",
+    "solution": "name=input(); open('athlete.txt','w',encoding='utf-8').write(name); print(open('athlete.txt',encoding='utf-8').read())",
     "tests": [
       {
-        "input": "8",
-        "expected": "8"
+        "input": "دینو",
+        "expected": "دینو"
       },
       {
-        "input": "7",
-        "expected": "7"
+        "input": "سلام دنیا",
+        "expected": "سلام دنیا"
       },
       {
-        "input": "0",
-        "expected": "0"
+        "input": "Python 3",
+        "expected": "Python 3"
       }
     ],
     "hints": [
-      "ابتدا ورودی و نوع داده مورد نیاز را مشخص کنید.",
-      "منطق «خواندن فایل» را به چند گام کوچک تقسیم کنید.",
-      "خروجی را دقیقاً مطابق مثال چاپ کنید و حالت‌های مرزی را بررسی کنید."
+      "ابتدا حالت فایل و encoding را مشخص کن.",
+      "برای فایل‌ها ترجیحاً از with استفاده کن.",
+      "بعد از نوشتن، خروجی را دوباره از فایل بخوان و بررسی کن."
     ],
     "concepts": [
       "Files",
