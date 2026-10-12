@@ -12,6 +12,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
       - name: Validate JavaScript syntax
         run: |
           node --check app.js
@@ -22,3 +26,5 @@ jobs:
         run: node scripts/validate-ui.mjs
       - name: Validate exercises
         run: node scripts/validate-dataset.mjs
+      - name: Audit solution tests
+        run: python scripts/audit-solutions.py
