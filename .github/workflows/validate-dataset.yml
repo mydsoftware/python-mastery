@@ -18,5 +18,7 @@ jobs:
           node --check pyodide-worker.js
       - name: Validate JSON
         run: node -e "JSON.parse(require('fs').readFileSync('data/exercises.json','utf8')); console.log('JSON OK')"
+      - name: Validate UI and runtime contracts
+        run: node scripts/validate-ui.mjs
       - name: Validate exercises
         run: node scripts/validate-dataset.mjs
