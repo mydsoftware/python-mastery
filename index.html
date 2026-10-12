@@ -3,39 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Python Mastery — 1155 تمرین Python</title>
+  <title>Python Mastery — ۱۱۵۵ تمرین Python</title>
+  <meta name="description" content="محیط تعاملی یادگیری Python با ۱۱۵۵ تمرین، اجرای واقعی کد، تست خودکار و پیشرفت ذخیره‌شده.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#mainContent">پرش به محتوای اصلی</a>
   <header class="topbar">
-    <div>
-      <h1>Python Mastery</h1>
-      <p>۱۱۵۵ تمرین واقعی Python</p>
+    <div class="brand-row">
+      <button id="menuButton" class="icon-btn mobile-only" type="button" aria-label="باز کردن فهرست تمرین‌ها" onclick="toggleSidebar(true)">☰</button>
+      <div><h1>Python Mastery</h1><p>۱۱۵۵ تمرین واقعی Python</p></div>
     </div>
-    <div class="progress-wrap">
+    <div class="progress-wrap" aria-label="پیشرفت حل تمرین‌ها">
       <span id="progressText">۰ / ۱۱۵۵</span>
       <div class="progress"><i id="progressBar"></i></div>
     </div>
   </header>
 
-  <main class="layout">
-    <aside class="sidebar">
-      <input id="search" type="search" placeholder="جستجوی تمرین...">
-      <button class="btn secondary" onclick="exportExercises()" style="width:100%;margin-bottom:10px">دریافت دیتاست ۱۱۵۵ تمرین</button>
+  <main id="mainContent" class="layout">
+    <div id="sidebarBackdrop" class="sidebar-backdrop" onclick="toggleSidebar(false)" aria-hidden="true"></div>
+    <aside id="sidebar" class="sidebar" aria-label="فهرست تمرین‌ها">
+      <div class="sidebar-head">
+        <strong>فهرست تمرین‌ها</strong>
+        <button class="icon-btn mobile-only" type="button" aria-label="بستن فهرست تمرین‌ها" onclick="toggleSidebar(false)">✕</button>
+      </div>
+      <label for="search">جستجو</label>
+      <input id="search" type="search" placeholder="مثلاً حلقه یا تمرین ۱۰" autocomplete="off">
+      <button class="btn secondary full" onclick="exportExercises()">دریافت دیتاست ۱۱۵۵ تمرین</button>
+      <label for="category">مبحث</label>
       <select id="category"></select>
-      <label for="pyodideMirror">Mirror Pyodide (اختیاری)</label>
-      <input id="pyodideMirror" type="url" placeholder="https://.../pyodide/v0.27.7/full/">
-      <button class="btn secondary" onclick="savePyodideMirror()" style="width:100%;margin-bottom:10px">ذخیره Mirror و بارگذاری مجدد</button>
+      <label for="difficulty">سطح</label>
       <select id="difficulty">
-        <option value="">همه سطح‌ها</option>
-        <option value="آسان">آسان</option>
-        <option value="متوسط">متوسط</option>
-        <option value="سخت">سخت</option>
+        <option value="">همه سطح‌ها</option><option value="آسان">آسان</option><option value="متوسط">متوسط</option><option value="سخت">سخت</option>
       </select>
+      <label for="pyodideMirror">Mirror Pyodide (اختیاری)</label>
+      <input id="pyodideMirror" type="url" placeholder="https://.../pyodide/v0.27.7/full/" autocomplete="url">
+      <button class="btn secondary full" onclick="savePyodideMirror()">ذخیره Mirror و بارگذاری مجدد</button>
       <div id="exerciseList"></div>
     </aside>
 
-    <section class="content">
+    <section class="content" aria-label="محتوای تمرین">
       <div id="exercise"></div>
     </section>
   </main>
