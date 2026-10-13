@@ -1,7 +1,6 @@
 import contextlib
 import io
 import json
-import sys
 from pathlib import Path
 from unittest.mock import patch
 
@@ -10,6 +9,13 @@ exercises = json.loads(DATA.read_text(encoding="utf-8"))
 failures = []
 tested = 0
 errors = 0
+normalized_solutions = 0
+normalized_outputs = 0
+
+def normalize(value):
+    if not isinstance(value, str):
+        return value
+    return value.replace("\\\\n", "\n").replace("\\\\t", "\t")
 
 def run_solution(code, input_text):
     output = io.StringIO()
@@ -28,12 +34,17 @@ def run_solution(code, input_text):
         return output.getvalue().strip(), f"{type(exc).__name__}: {exc}"
 
 for exercise in exercises:
-    code = exercise.get("solution", "")
-    tests = exercise.get("tests", [])
-    for index, test in enumerate(tests, start=1):
+    raw_code = exercise.get("solution", "")
+    code = normalize(raw_code)
+    if code != raw_code:
+        normalized_solutions += 1
+    for index, test in enumerate(exercise.get("tests", []), start=1):
         tested += 1
         actual, error = run_solution(code, str(test.get("input", "")))
-        expected = str(test.get("expected", "")).strip()
+        raw_expected = str(test.get("expected", ""))
+        expected = normalize(raw_expected).strip()
+        if expected != raw_expected.strip():
+            normalized_outputs += 1
         if error or actual != expected:
             errors += 1
             if len(failures) < 100:
@@ -47,6 +58,7 @@ for exercise in exercises:
                 })
 
 print(f"Solution audit: exercises={len(exercises)}, tests={tested}, failed={errors}")
+print(f"Normalized for audit: solutions={normalized_solutions}, expected_outputs={normalized_outputs}")
 for item in failures:
     print(
         f"FAIL #{item['id']} {item['title']} | test {item['test']} | "
@@ -54,5 +66,3 @@ for item in failures:
     )
 if errors > len(failures):
     print(f"... {errors - len(failures)} additional failures omitted")
-# This is initially an audit/reporting step; it does not fail CI until the
-# existing dataset has been triaged and its known baseline is established.
