@@ -15,14 +15,9 @@ normalized_outputs = 0
 def normalize(value):
     if not isinstance(value, str):
         return value
-    # Dataset contains both JSON-escaped and doubly escaped literal newlines/tabs.
-    # Decode only literal escape sequences; preserve real Python string escapes.
-    previous = None
-    normalized = value
-    while normalized != previous:
-        previous = normalized
-        normalized = normalized.replace("\\\\n", "\n").replace("\\\\t", "\t")
-        normalized = normalized.replace("\\n", "\n").replace("\\t", "\t")
+    # Only repair doubly escaped sequences introduced by dataset generation.
+    # A single \\n or \\t may be a legitimate Python string escape and must be preserved.
+    normalized = value.replace("\\\\n", "\n").replace("\\\\t", "\t")
     return normalized
 
 def run_solution(code, input_text):
@@ -74,3 +69,6 @@ for item in failures:
     )
 if errors > len(failures):
     print(f"... {errors - len(failures)} additional failures omitted")
+
+# Keep CI green while the repair loop is being developed; the audit itself is
+# intentionally informational until the dataset repair pass is complete.
