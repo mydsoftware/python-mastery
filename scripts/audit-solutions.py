@@ -15,7 +15,15 @@ normalized_outputs = 0
 def normalize(value):
     if not isinstance(value, str):
         return value
-    return value.replace("\\\\n", "\n").replace("\\\\t", "\t")
+    # Dataset contains both JSON-escaped and doubly escaped literal newlines/tabs.
+    # Decode only literal escape sequences; preserve real Python string escapes.
+    previous = None
+    normalized = value
+    while normalized != previous:
+        previous = normalized
+        normalized = normalized.replace("\\\\n", "\n").replace("\\\\t", "\t")
+        normalized = normalized.replace("\\n", "\n").replace("\\t", "\t")
+    return normalized
 
 def run_solution(code, input_text):
     output = io.StringIO()
